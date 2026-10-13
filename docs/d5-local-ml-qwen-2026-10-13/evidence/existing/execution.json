@@ -1,0 +1,9 @@
+{
+  "phase": "existing",
+  "passed": false,
+  "files_unchanged": true,
+  "actual_qwen_calls": 3,
+  "failure": null,
+  "retry": false,
+  "choice_recovery": 0
+}

@@ -1,0 +1,41 @@
+{
+  "type": "read-only independent source and saved-output review; no inference",
+  "software_findings_addressed_before_freeze": [
+    "Immediate per-context-turn stop before next inference",
+    "Check active/excluded financial meaning, not only accepted category",
+    "Do not count generic ML follow-up as focused wage-use success",
+    "Use write-once progress records",
+    "Enforce pinned worker dependencies before loading and in parent handshake"
+  ],
+  "preflight": {
+    "raw_meaning_correct": true,
+    "completed_output": true,
+    "valid_contract": true,
+    "accepted_option": "D5_PENSION_PAYMENTS"
+  },
+  "existing": {
+    "attempted": 3,
+    "correct_raw_final_options": 2,
+    "correct_accepted_candidates": 2,
+    "raw_option_errors": 1,
+    "contract_rejections": 1,
+    "wrong_accepted_candidates": 0,
+    "ML_handled": 0,
+    "Qwen_escalations": 3,
+    "unrun_original_cases": 8,
+    "live_context_turns": 0,
+    "live_control_probes": 0
+  },
+  "failure": {
+    "case": "D5-STD-03",
+    "expected_option": "D5_SALARY",
+    "raw_option": "D5_MULTIPLE",
+    "raw_fact_categories": [
+      "D5_SALARY"
+    ],
+    "validator_reason": "multiple_requires_distinct_active_categories",
+    "candidate": null
+  },
+  "preservation": "STD01 and STD02 earlier successes preserved; STD03 earlier correct answer lost; remaining cases unmeasured. Do not infer preservation from unrun cases.",
+  "conclusion": "Local route implemented but required live gate failed. Stop with no tuning or retries; working GPT remains available. Four actual local Qwen generations total, no external API calls."
+}

@@ -1,0 +1,130 @@
+{
+  "passed": false,
+  "cases": [
+    {
+      "id": "D5-STD-01",
+      "expected": {
+        "kind": "clear",
+        "option": "D5_PENSION_PAYMENTS",
+        "meaning": "Pension pays bills; wages are retained, not spent.",
+        "next": "Confirm pension and exclusion of wages."
+      },
+      "matched": true,
+      "candidate": "D5_PENSION_PAYMENTS",
+      "raw": {
+        "answer_scope": "complete",
+        "evidence": [
+          "My wages stay in savings.",
+          "My pension pays the bills."
+        ],
+        "facts": [
+          {
+            "evidence": "My wages stay in savings.",
+            "owner": "self",
+            "pays_living_costs": "no",
+            "source_category": "D5_SALARY",
+            "source_instance_id": "group_1",
+            "time": "current"
+          },
+          {
+            "evidence": "My pension pays the bills.",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_PENSION_PAYMENTS",
+            "source_instance_id": "group_2",
+            "time": "current"
+          }
+        ],
+        "missing_information": [],
+        "model_abstain": false,
+        "option_id": "D5_PENSION_PAYMENTS",
+        "semantic_bucket": "clarity"
+      },
+      "contract_outcome": "financial_candidate",
+      "ml_calls": 1,
+      "qwen_calls": 1,
+      "route": "ml_then_qwen"
+    },
+    {
+      "id": "D5-STD-02",
+      "expected": {
+        "kind": "clear",
+        "option": "D5_MULTIPLE",
+        "meaning": "Salary and pension both currently pay costs.",
+        "next": "Confirm the two named categories."
+      },
+      "matched": true,
+      "candidate": "D5_MULTIPLE",
+      "raw": {
+        "answer_scope": "complete",
+        "evidence": [
+          "Both my wages and pension pay for everyday costs."
+        ],
+        "facts": [
+          {
+            "evidence": "Both my wages and pension pay for everyday costs.",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_SALARY",
+            "source_instance_id": "group_1",
+            "time": "current"
+          },
+          {
+            "evidence": "Both my wages and pension pay for everyday costs.",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_PENSION_PAYMENTS",
+            "source_instance_id": "group_2",
+            "time": "current"
+          }
+        ],
+        "missing_information": [],
+        "model_abstain": false,
+        "option_id": "D5_MULTIPLE",
+        "semantic_bucket": "clarity"
+      },
+      "contract_outcome": "financial_candidate",
+      "ml_calls": 1,
+      "qwen_calls": 1,
+      "route": "ml_then_qwen"
+    },
+    {
+      "id": "D5-STD-03",
+      "expected": {
+        "kind": "clear",
+        "option": "D5_SALARY",
+        "meaning": "Two employers fund costs; one salary category, not multiple categories.",
+        "next": "Confirm salary or wages."
+      },
+      "matched": false,
+      "candidate": null,
+      "raw": {
+        "answer_scope": "complete",
+        "evidence": [
+          "Pay from my two employers covers my living costs."
+        ],
+        "facts": [
+          {
+            "evidence": "Pay from my two employers covers my living costs.",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_SALARY",
+            "source_instance_id": "group_1",
+            "time": "current"
+          }
+        ],
+        "missing_information": [],
+        "model_abstain": false,
+        "option_id": "D5_MULTIPLE",
+        "semantic_bucket": "clarity"
+      },
+      "contract_outcome": "rejection",
+      "ml_calls": 1,
+      "qwen_calls": 1,
+      "route": "ml_then_qwen"
+    }
+  ],
+  "stop_case": "D5-STD-03",
+  "context_phase_run": false,
+  "raw_meaning_review_required": true
+}

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/Users/husky/.venvs/investwise-d5/bin/python",
+    "demos/d5/test_local_transport.py"
+  ],
+  "timestamp_utc": "2026-10-13T09:37:49.813288+00:00",
+  "exit_code": 0,
+  "tests": 16,
+  "failures": 0,
+  "model_calls": 0,
+  "network_calls": 0,
+  "credentials_accessed": false,
+  "scope": "Mock pipe workers and structural stream events; exact dependency version mismatch enforced before model load and parent ready acceptance. No MLX/model import or loading.",
+  "hashes": {
+    "demos/d5/local_transport.py": "0984d1f878a81159868c6bb2962bd7c511f807cf3a8efa4d5569312fc257e1c7",
+    "demos/d5/local_worker.py": "918abd0e84cc3a652fe5f1750a15d845a7341bd281027a0e47afe957378acb6b",
+    "demos/d5/test_local_transport.py": "d1cc32a8f20fbeb6d31765a4cca786de988abb0666f830c790f2d5dad8b8c6bd",
+    "demos/d5/requirements-local-worker.txt": "73ce124e563ac8592ffb4cab8df78c73ef282ef3fbaf6ba186c7b1a3659b36b8"
+  }
+}

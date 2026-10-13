@@ -1,0 +1,21 @@
+test_completed_output_reuses_worker_and_passes_raw_to_contract (__main__.LocalTransportChecks.test_completed_output_reuses_worker_and_passes_raw_to_contract) ... ok
+test_environment_omits_provider_credentials_and_proxies (__main__.LocalTransportChecks.test_environment_omits_provider_credentials_and_proxies) ... ok
+test_generation_timeout_kills_worker_and_cannot_retry (__main__.LocalTransportChecks.test_generation_timeout_kills_worker_and_cannot_retry) ... ok
+test_length_completed_json_is_rejected (__main__.LocalTransportChecks.test_length_completed_json_is_rejected) ... ok
+test_malformed_worker_json_is_rejected (__main__.LocalTransportChecks.test_malformed_worker_json_is_rejected) ... ok
+test_oversized_worker_output_is_rejected (__main__.LocalTransportChecks.test_oversized_worker_output_is_rejected) ... ok
+test_preparation_preserves_prompt_and_user_data (__main__.LocalTransportChecks.test_preparation_preserves_prompt_and_user_data) ... ok
+test_preparation_rejects_changed_business_prompt_schema_or_context (__main__.LocalTransportChecks.test_preparation_rejects_changed_business_prompt_schema_or_context) ... ok
+test_startup_timeout_kills_worker_without_model_call (__main__.LocalTransportChecks.test_startup_timeout_kills_worker_without_model_call) ... ok
+test_stream_consumes_completion_and_rejects_late_errors (__main__.LocalTransportChecks.test_stream_consumes_completion_and_rejects_late_errors) ... ok
+test_tool_bearing_envelope_is_rejected (__main__.LocalTransportChecks.test_tool_bearing_envelope_is_rejected) ... ok
+test_truncated_worker_output_is_rejected (__main__.LocalTransportChecks.test_truncated_worker_output_is_rejected) ... ok
+test_worker_diagnostics_are_not_retained (__main__.LocalTransportChecks.test_worker_diagnostics_are_not_retained) ... ok
+test_worker_failure_does_not_accept_prior_json (__main__.LocalTransportChecks.test_worker_failure_does_not_accept_prior_json) ... ok
+test_wrong_ready_model_stops_before_call (__main__.LocalTransportChecks.test_wrong_ready_model_stops_before_call) ... ok
+test_wrong_response_model_is_rejected (__main__.LocalTransportChecks.test_wrong_response_model_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.452s
+
+OK

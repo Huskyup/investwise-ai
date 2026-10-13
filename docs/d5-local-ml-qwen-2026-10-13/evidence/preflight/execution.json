@@ -1,0 +1,9 @@
+{
+  "phase": "preflight",
+  "passed": true,
+  "files_unchanged": true,
+  "actual_qwen_calls": 1,
+  "failure": null,
+  "retry": false,
+  "choice_recovery": 0
+}

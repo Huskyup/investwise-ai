@@ -4,7 +4,22 @@ Updated 13 October 2026 · `feature/all-question-ml-prototype`
 
 Maintained delivery repository: [Huskyup/investwise-ai](https://github.com/Huskyup/investwise-ai/tree/feature/all-question-ml-prototype). Use the explicit repository URL below when updating an older checkout whose `origin` may point elsewhere.
 
-## Latest runtime update: same-example context
+## Latest separate experiment: local ML + Qwen
+
+A manually launched [local D5 entry](../demos/d5/LOCAL_README.md) now combines the unchanged main ML predictors with the already cached Qwen3-4B-Instruct-2507-4bit. Controls run first; ML handles eligible first replies only when its existing gates pass, and unresolved or contextual replies use one local Qwen interpretation. Accepted results still require validation and explicit confirmation. There is no retraining, new classifier, main-app integration or GPT fallback.
+
+**The implementation is published, but the local acceptance check did not pass.** All 28 offline checks passed and ML parity matched the original 11 replies exactly. One live preflight passed, then the combined run produced two correct candidates before Qwen selected multiple categories for two employers. The unchanged validator rejected that third reply. The run stopped immediately: eight original replies and all four live context turns remain unrun. No wrong candidate was accepted, but the earlier third-case success was lost. ML handled 0/3 attempted combined replies, so no efficiency gain is claimed. See the [bounded report and receipts](d5-local-ml-qwen-2026-10-13/REPORT.md).
+
+On the owner's Mac, the separate development entry is:
+
+```bash
+"$HOME/.venvs/investwise-d5/bin/python" demos/d5/local_demo.py chat \
+  --worker-python "$HOME/.workbuddy/binaries/python/envs/default/bin/python"
+```
+
+The existing GPT entry, all 15 questions, model weights, training/calibration data and normal app default remain unchanged. For the previously demonstrated company conversation, keep using the GPT command below. Local-only results must not be presented as GPT results or as a completed live dialogue.
+
+## Working GPT runtime: same-example context
 
 The independent terminal now retains earlier raw user replies and authored prompts within the same fictional D5 example. One request to the same GPT-6.1 Sol low interpreter receives that context with the current reply. Follow-ups no longer require every earlier detail to be repeated; explicit corrections should replace the affected relation, while ambiguous references still require clarification. `/change` invalidates confirmation and retains history; `/new` starts with empty history. There is no extra model, training, cascade or dependency.
 

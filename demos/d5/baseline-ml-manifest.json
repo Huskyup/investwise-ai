@@ -1,0 +1,26 @@
+{
+  "version": "d5-local-baseline-snapshot-v1",
+  "source_commit": "701e9abd98934abd978e218fa931daf1d8956b79",
+  "description": "Byte-exact main ML snapshot. Main training/calibration and spec initialise unchanged predictors; packaged D5 runtime supplies controls and candidate vetoes. No supplemental data, feature changes or tuning.",
+  "snapshot_origin": "ai/all_question_ml.py",
+  "snapshot": "demos/d5/baseline_ml.py",
+  "data_directory": "data/nlp/all_questions",
+  "baseline_spec": "config/business-decision-spec.json",
+  "acceptance_spec": "demos/d5/runtime/config/business-decision-spec.json",
+  "files": {
+    "ai/all_question_ml.py": "976738839f60e8cbed977f5ffeeac83374a3cb66f71e30be48af551fe3af143d",
+    "ai/conformal.py": "9438f1b8c8e88d97b447ccda82bba13200ba6e6eb9be27f9a4f1e8167242fad3",
+    "ai/text_classifier.py": "8051914b85bbb1cb06e2dbaed4f85d138924e3ab7a234f1d3fc2c8844b943c15",
+    "ai/question_spec.py": "bc8f6a7353144b2997960148a7609c42738484276e812827180360f6574c6447",
+    "config/business-decision-spec.json": "440ab6ba7e822fc460d142b1d60aa78e0a71eeaed3652145b87b07ddffe9a7b4",
+    "data/nlp/all_questions/train.csv": "96543fe7cc72d8a27403ead432fcf81971b0b93b28a5ed77f9e3770fbda83abf",
+    "data/nlp/all_questions/calibration.csv": "3b63ebddf80f8b5758bcbef9cb8d662741e68de38660455dcc4649106d5792be",
+    "demos/d5/baseline_ml.py": "976738839f60e8cbed977f5ffeeac83374a3cb66f71e30be48af551fe3af143d",
+    "demos/d5/runtime/ai/conformal.py": "9438f1b8c8e88d97b447ccda82bba13200ba6e6eb9be27f9a4f1e8167242fad3",
+    "demos/d5/runtime/ai/text_classifier.py": "8051914b85bbb1cb06e2dbaed4f85d138924e3ab7a234f1d3fc2c8844b943c15",
+    "demos/d5/runtime/ai/question_spec.py": "5c19e511ff0144400363f43bdf887dddb49dc6db0da14b3ca69bd6f1d7f3be63",
+    "demos/d5/runtime/ai/d5_candidate_validation.py": "c4e6ee798566074185d0e55139c9d04bb47cf1cb4009e9d0c8c915a46af3b39c",
+    "demos/d5/runtime/ai/d5_text_classifier.py": "9fc628753c8a1908b68bcd6ef7ab9496d2c32d4ba8a47349caf6c012e2e197ad",
+    "demos/d5/runtime/config/business-decision-spec.json": "77011caa61f1248aad6d3d20e5e51987fa1b60f93e117de0b8f5720215b8abea"
+  }
+}

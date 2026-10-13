@@ -1,0 +1,188 @@
+{
+  "id": "D5-STD-02",
+  "input": "Both my wages and pension pay for everyday costs.",
+  "route": "ml_then_qwen",
+  "ml_calls": 1,
+  "qwen_calls": 1,
+  "actual_model_calls": 1,
+  "ml_evidence": {
+    "source": "all_question_ml",
+    "source_hash": "13b6a8f494c773e90d28e8d105cc1b2de7bbebba20db980331b23397f253c4b8",
+    "identity_sha256": "9c42a1127900a4efc1095d47362f94a312465d62a23050b4fd8132a87a0add8c",
+    "bucket": null,
+    "candidate": null,
+    "intent_set": [
+      "clarity"
+    ],
+    "option_set": [
+      "D5_MULTIPLE",
+      "D5_PENSION_PAYMENTS",
+      "D5_SALARY"
+    ],
+    "intent_probabilities": {
+      "clarity": 0.6688341563707383,
+      "confusion": 0.16853727512175626,
+      "undecided": 0.16262856850750546
+    },
+    "option_probabilities": {
+      "D5_BENEFITS_SUPPORT": 0.10720012297803592,
+      "D5_MULTIPLE": 0.1888916522545121,
+      "D5_NO_REGULAR": 0.09736568321593198,
+      "D5_OTHER_REGULAR": 0.10258631936500132,
+      "D5_PENSION_PAYMENTS": 0.14315201546278594,
+      "D5_SALARY": 0.1389486056449825,
+      "D5_SELF_EMPLOYMENT": 0.11015952158179218,
+      "D5_WITHDRAWALS": 0.11169607949695796
+    },
+    "model_uncertain": true,
+    "reason": "option_model_uncertainty"
+  },
+  "raw": {
+    "answer_scope": "complete",
+    "evidence": [
+      "Both my wages and pension pay for everyday costs."
+    ],
+    "facts": [
+      {
+        "evidence": "Both my wages and pension pay for everyday costs.",
+        "owner": "self",
+        "pays_living_costs": "yes",
+        "source_category": "D5_SALARY",
+        "source_instance_id": "group_1",
+        "time": "current"
+      },
+      {
+        "evidence": "Both my wages and pension pay for everyday costs.",
+        "owner": "self",
+        "pays_living_costs": "yes",
+        "source_category": "D5_PENSION_PAYMENTS",
+        "source_instance_id": "group_2",
+        "time": "current"
+      }
+    ],
+    "missing_information": [],
+    "model_abstain": false,
+    "option_id": "D5_MULTIPLE",
+    "semantic_bucket": "clarity"
+  },
+  "raw_output": "{\"answer_scope\":\"complete\",\"evidence\":[\"Both my wages and pension pay for everyday costs.\"],\"facts\":[{\"evidence\":\"Both my wages and pension pay for everyday costs.\",\"owner\":\"self\",\"pays_living_costs\":\"yes\",\"source_category\":\"D5_SALARY\",\"source_instance_id\":\"group_1\",\"time\":\"current\"},{\"evidence\":\"Both my wages and pension pay for everyday costs.\",\"owner\":\"self\",\"pays_living_costs\":\"yes\",\"source_category\":\"D5_PENSION_PAYMENTS\",\"source_instance_id\":\"group_2\",\"time\":\"current\"}],\"missing_information\":[],\"model_abstain\":false,\"option_id\":\"D5_MULTIPLE\",\"semantic_bucket\":\"clarity\"}",
+  "dialogue_context": {
+    "history": [],
+    "pending_prompt": "What currently pays for your everyday living costs?",
+    "correction_requested": false
+  },
+  "result": {
+    "action": "confirm",
+    "question_id": "D5",
+    "candidate_option_id": "D5_MULTIPLE",
+    "candidate_option_label": "More than one listed source category",
+    "confirmation_text": "I understand your current living-cost funding as:\n\"Both my wages and pension pay for everyday costs.\"\nHave I understood correctly?",
+    "context_details": {},
+    "recorded": false,
+    "bucket": "Clarity",
+    "contract_outcome": "financial_candidate"
+  },
+  "decision": {
+    "outcome": "financial_candidate",
+    "reason": "candidate_requires_confirmation",
+    "semantic_bucket": "clarity",
+    "option_id": "D5_MULTIPLE",
+    "answer_scope": "complete",
+    "input_sha256": "d3266aecde4a75d653fda432d09329c75555aa1b7c1c54bc898b9526a89a8f78",
+    "proposal_sha256": "0443be63b72673857708421c03c195e6c91607e13e8119e3fc5c8d524adc2c1e",
+    "spec_sha256": "de251a7783332cdd75ae11ff3663e1bbea2cc15014883e82475ef0375cfd342c",
+    "contract_sha256": "ccf107a7171a4acc9c13ab2b51de8f9f4c5dc7a8d77bd1394170b26474acce22",
+    "contract_version": "d5-single-interpreter-v2-context-1",
+    "context_sha256": "a51c4aa431753786f8650b97493c6a2a9a5788f3d7207c85b95a2666292243ae",
+    "previous_reply_count": 0
+  },
+  "backend_call": {
+    "backend": "local_qwen_mlx_offline",
+    "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+    "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+    "temperature": 0.0,
+    "max_tokens": 2048,
+    "tools": [],
+    "tool_choice": "none",
+    "store": false,
+    "network": false,
+    "trust_remote_code": false,
+    "constrained_decoder": false,
+    "fresh_generation_cache": true,
+    "local_format_policy": "unchanged_business_prompt_plus_exact_schema_and_topics_v1",
+    "model_files_sha256": {
+      "added_tokens.json": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+      "chat_template.jinja": "40c21f34cf67d8c760ef72f8ad3ae5afad514299d4b06e91dd9a8d705af7b541",
+      "config.json": "574349e5a343236546fda55e4744a76e181f534182d7dc60ff1bad7e7a502849",
+      "generation_config.json": "835fffe355c9438e7a25be099b3fccaa98350b83451f9fd2d99512e74f1ade48",
+      "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "model.safetensors": "2a73c6c248601ab904e035548abd8e6abb65ea27dcb5f342fb0a8910eb44173f",
+      "model.safetensors.index.json": "388d811b8b7c2608dd04cce1bcb04a8bf715d19b42790894e6d3427ff429a777",
+      "special_tokens_map.json": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "tokenizer_config.json": "4397cc477eb6d79715ccd2000accd6b3531928f30029665832fa1b255f24d2b9",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "required_worker_versions": {
+      "mlx": "0.32.3",
+      "mlx-lm": "0.32.0",
+      "transformers": "5.19.0",
+      "tokenizers": "0.23.3"
+    },
+    "business_prompt_sha256": "474f95b7bdbf2dd5b0b2f3ea499b7eab1a06a588ab592c51f9045a1706b7c003",
+    "transport_sha256": "0984d1f878a81159868c6bb2962bd7c511f807cf3a8efa4d5569312fc257e1c7",
+    "worker_sha256": "918abd0e84cc3a652fe5f1750a15d845a7341bd281027a0e47afe957378acb6b",
+    "actual_calls": 1,
+    "retry": false,
+    "output_repair": false,
+    "blocked": false,
+    "status": "completed",
+    "terminal_completed": true,
+    "max_response_bytes": 1048576,
+    "load_timeout_seconds": 60.0,
+    "generation_timeout_seconds": 30.0,
+    "previous_reply_count": 0,
+    "request_sha256": "1879cb2822593abb595462b6cbfe37a0ef178dbdd246807c4bf50c49dccfc785",
+    "schema_sha256": "2f0376ffaa30254c65195b1f0aaad57cc67c84793e8c560084a06a49aecd4659",
+    "worker_metadata": {
+      "protocol": 1,
+      "status": "ready",
+      "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+      "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+      "model_files_sha256": {
+        "added_tokens.json": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+        "chat_template.jinja": "40c21f34cf67d8c760ef72f8ad3ae5afad514299d4b06e91dd9a8d705af7b541",
+        "config.json": "574349e5a343236546fda55e4744a76e181f534182d7dc60ff1bad7e7a502849",
+        "generation_config.json": "835fffe355c9438e7a25be099b3fccaa98350b83451f9fd2d99512e74f1ade48",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "model.safetensors": "2a73c6c248601ab904e035548abd8e6abb65ea27dcb5f342fb0a8910eb44173f",
+        "model.safetensors.index.json": "388d811b8b7c2608dd04cce1bcb04a8bf715d19b42790894e6d3427ff429a777",
+        "special_tokens_map.json": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+        "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "tokenizer_config.json": "4397cc477eb6d79715ccd2000accd6b3531928f30029665832fa1b255f24d2b9",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "offline": true,
+      "trust_remote_code": false,
+      "versions": {
+        "mlx": "0.32.3",
+        "mlx-lm": "0.32.0",
+        "transformers": "5.19.0",
+        "tokenizers": "0.23.3"
+      }
+    },
+    "finish_reason": "stop",
+    "provider_model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+    "usage": {
+      "input_tokens": 2559,
+      "output_tokens": 142
+    },
+    "elapsed_seconds": 15.786052874987945,
+    "stderr_bytes_discarded": 0
+  },
+  "candidate": "D5_MULTIPLE",
+  "selected": null,
+  "confirmed_version": null,
+  "saved_version": null,
+  "answer_source": "d5_single_interpreter_v2"
+}

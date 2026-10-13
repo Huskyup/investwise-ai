@@ -1,0 +1,129 @@
+{
+  "protocol": "D5 local ML plus Qwen bounded integration v1",
+  "date": "2026-10-13",
+  "base_commit": "701e9abd98934abd978e218fa931daf1d8956b79",
+  "repository": "https://github.com/Huskyup/investwise-ai",
+  "branch": "feature/all-question-ml-prototype",
+  "scope": "Separate manual terminal only; working GPT demo, default factory, all fifteen questions, model weights and train/calibration unchanged.",
+  "routing": "Controls first; original first-turn ML singletons plus matching packaged D5 validator; confident nonclear authored dialogue; unresolved first turn one Qwen call; history/correction direct contextual Qwen.",
+  "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+  "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+  "generation": {
+    "temperature": 0,
+    "max_tokens": 2048,
+    "generation_deadline_seconds": 30,
+    "load_deadline_seconds": 60,
+    "response_limit_bytes": 1048576,
+    "strict_contract_limit_bytes": 65536,
+    "tools": [],
+    "network": false,
+    "credentials": false,
+    "retry": false,
+    "repair": false,
+    "fallback": false,
+    "constrained_decoding": false
+  },
+  "preflight": {
+    "calls": 1,
+    "case": "D5-STD-01",
+    "input_source": "docs/d5-semantic-repair/evidence/after/inputs.json",
+    "expected": "Completed valid clarity contract and accepted pension-only candidate; pension pays now, wages excluded. Stop on failure."
+  },
+  "conditional_evaluation": {
+    "first_turn_cases": 11,
+    "context_turns": 4,
+    "new_semantic_inputs": 0,
+    "maximum_qwen_calls": 14,
+    "original_expectations": "docs/d5-semantic-repair/evidence/after/expectations.json",
+    "context_source": "docs/d5-context-verification-2026-10-13/records",
+    "requirements": [
+      "All existing expected first-turn outcomes preserved",
+      "Raw funding relations and contract acceptance scored separately",
+      "Focused wage-use follow-up required before contextual Yes",
+      "Every context turn checked before next call",
+      "No wrong accepted candidate",
+      "Controls zero ML and Qwen calls",
+      "ML share measured only over interpreted first-turn inputs, Help excluded",
+      "No latency or efficiency claim without observed benefit"
+    ],
+    "stop": "First required failure; save evidence, no tuning or retry"
+  },
+  "acceptance_boundary": "ML acceptance is unchanged predictors plus packaged D5 veto, not proof of complete source semantics. A wrong confident ML category can survive; explicit confirmation remains mandatory.",
+  "offline_prerequisites": {
+    "software": {
+      "source": "offline-final/software.json",
+      "sha256": "249de95a6032d1ba59ab5c36ca767b0d0a51f861f0e85833da90926de4c3601b",
+      "result": {
+        "mode": "offline fixtures only; not semantic-performance evidence",
+        "tests_run": 12,
+        "success": true,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "model_inference_calls": 0,
+        "authentication_calls": 0,
+        "hashes": {
+          "demos/d5/local_engine.py": "41ab02338726fc7873032b52ff1303db7abd8fe3a8646f4765b04668991e70ec",
+          "demos/d5/local_session.py": "819e4c5bdf24df1f4d36d9763aa9ec57f349e7502bd71ed4521d93173aacae00",
+          "demos/d5/local_verify.py": "681d91b40d65b3feab981073b735b41594258241975906d2e8e7b1abf90c93fa",
+          "demos/d5/local_worker.py": "918abd0e84cc3a652fe5f1750a15d845a7341bd281027a0e47afe957378acb6b",
+          "demos/d5/local_demo.py": "db3080d3258527e4f5be507a685ef1d5f702d886fd7f78361fa7db4fc66b35ea",
+          "demos/d5/local_transport.py": "0984d1f878a81159868c6bb2962bd7c511f807cf3a8efa4d5569312fc257e1c7",
+          "demos/d5/local_evaluate.py": "b0d18784efabf2c23811554e321d3e400fd5e753cfd8b038bb7831093bc9c7e1"
+        }
+      }
+    },
+    "transport": {
+      "source": "transport-checks-final/software-checks.json",
+      "sha256": "04c43728d3478255f577e4fe497173ef104dbf3b16c58a1e34077fe08d160a2d",
+      "result": {
+        "command": [
+          "/Users/husky/.venvs/investwise-d5/bin/python",
+          "demos/d5/test_local_transport.py"
+        ],
+        "timestamp_utc": "2026-10-13T09:37:49.813288+00:00",
+        "exit_code": 0,
+        "tests": 16,
+        "failures": 0,
+        "model_calls": 0,
+        "network_calls": 0,
+        "credentials_accessed": false,
+        "scope": "Mock pipe workers and structural stream events; exact dependency version mismatch enforced before model load and parent ready acceptance. No MLX/model import or loading.",
+        "hashes": {
+          "demos/d5/local_transport.py": "0984d1f878a81159868c6bb2962bd7c511f807cf3a8efa4d5569312fc257e1c7",
+          "demos/d5/local_worker.py": "918abd0e84cc3a652fe5f1750a15d845a7341bd281027a0e47afe957378acb6b",
+          "demos/d5/test_local_transport.py": "d1cc32a8f20fbeb6d31765a4cca786de988abb0666f830c790f2d5dad8b8c6bd",
+          "demos/d5/requirements-local-worker.txt": "73ce124e563ac8592ffb4cab8df78c73ef282ef3fbaf6ba186c7b1a3659b36b8"
+        }
+      }
+    },
+    "parity": {
+      "source": "baseline-parity/summary.json",
+      "sha256": "80366010169712d0ac9a3ccd2843eff3be055eaf8ce0e9c4ea6d932de21aefa2",
+      "result": {
+        "check": "unchanged_ml_separate_process_parity",
+        "cases": 11,
+        "fields_compared": [
+          "candidate_option_id",
+          "ordinary_bucket",
+          "model_uncertain",
+          "semantic_undecided",
+          "intent_set",
+          "option_set",
+          "intent_probabilities",
+          "option_probabilities"
+        ],
+        "exact_equality": true,
+        "baseline_identities_equal": true,
+        "max_probability_difference": 0.0,
+        "passed": true,
+        "differences": [],
+        "local_qwen_calls": 0,
+        "new_semantic_inputs": 0,
+        "retry": false,
+        "limitation": "Parity verifies reuse of the baseline, not semantic correctness."
+      }
+    }
+  },
+  "development_note": "The first offline fixture incorrectly assumed the old validator would veto withdrawals for the pension/wages-saved reply. That assumption was corrected: limitation remains explicit and tested; unchanged validator rejects an unsupported benefits proposal in the same existing input. Both software runs are retained. No model generation has yet run."
+}

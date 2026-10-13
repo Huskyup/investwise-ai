@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/Users/husky/.venvs/investwise-d5/bin/python",
+    "demos/d5/test_local_transport.py"
+  ],
+  "timestamp_utc": "2026-10-13T09:32:39.593103+00:00",
+  "exit_code": 0,
+  "tests": 16,
+  "failures": 0,
+  "model_calls": 0,
+  "network_calls": 0,
+  "credentials_accessed": false,
+  "scope": "Mock pipe workers and structural stream events; no MLX/model import or loading.",
+  "hashes": {
+    "demos/d5/local_transport.py": "8ea36485e139ce183c0b65d1351cf7167adb1938e23564fc4a4e477682c2a4a2",
+    "demos/d5/local_worker.py": "0a55db2ca6faf3f5eb31f27edb2b454c88e65a788c2477f7343513614a7c851e",
+    "demos/d5/test_local_transport.py": "08703e51d73dbced672be174e5eefe28c60b71c340683e1604b6d3a188a96ab7",
+    "demos/d5/requirements-local-worker.txt": "73ce124e563ac8592ffb4cab8df78c73ef282ef3fbaf6ba186c7b1a3659b36b8"
+  },
+  "development_note": "First run had one test-only macOS /var vs /private/var path expectation failure; corrected expected resolved path. Production code unchanged by that fix."
+}

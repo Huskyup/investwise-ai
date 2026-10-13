@@ -1,0 +1,26 @@
+test_controls_precede_both_models (__main__.LocalChecks.test_controls_precede_both_models) ... ok
+test_history_bound_prevents_either_model (__main__.LocalChecks.test_history_bound_prevents_either_model) ... ok
+test_invalid_qwen_output_remains_unresolved (__main__.LocalChecks.test_invalid_qwen_output_remains_unresolved) ... ok
+test_ml_answer_is_retained_for_a_contextual_correction (__main__.LocalChecks.test_ml_answer_is_retained_for_a_contextual_correction) ... ok
+test_ml_business_veto_falls_through_without_double_clarification (__main__.LocalChecks.test_ml_business_veto_falls_through_without_double_clarification) ... FAIL
+test_ml_candidate_requires_confirmation_and_never_calls_qwen (__main__.LocalChecks.test_ml_candidate_requires_confirmation_and_never_calls_qwen) ... ok
+test_ml_nonclear_results_are_not_model_uncertainty (__main__.LocalChecks.test_ml_nonclear_results_are_not_model_uncertainty) ... ok
+test_runtime_failure_halts_without_retry_or_gpt (__main__.LocalChecks.test_runtime_failure_halts_without_retry_or_gpt) ... ok
+test_saved_four_turn_context_sequence_and_new_reset (__main__.LocalChecks.test_saved_four_turn_context_sequence_and_new_reset) ... ok
+test_stale_ml_candidate_cannot_be_confirmed (__main__.LocalChecks.test_stale_ml_candidate_cannot_be_confirmed) ... ok
+
+======================================================================
+FAIL: test_ml_business_veto_falls_through_without_double_clarification (__main__.LocalChecks.test_ml_business_veto_falls_through_without_double_clarification)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/husky/Desktop/hackathon Bristol 2026/investwise-demo/demos/d5/local_verify.py", line 104, in test_ml_business_veto_falls_through_without_double_clarification
+    self.assertEqual(result['candidate_option_id'], 'D5_PENSION_PAYMENTS')
+AssertionError: 'D5_WITHDRAWALS' != 'D5_PENSION_PAYMENTS'
+- D5_WITHDRAWALS
++ D5_PENSION_PAYMENTS
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.337s
+
+FAILED (failures=1)
