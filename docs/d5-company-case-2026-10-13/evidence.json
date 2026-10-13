@@ -1,0 +1,257 @@
+{
+  "case": "User-entered savings and wages company demonstration",
+  "date": "2026-10-13",
+  "runtime_commit": "ae2c0d2e45b8eec1b15358fe9870b0c1d4fde6de",
+  "publication_authorisation": "User explicitly requested publishing this conversation as a company demo case on the Huskyup branch",
+  "mode": "live manually entered replies; not saved-output replay",
+  "interpretation_only": true,
+  "question": "What currently pays for your everyday living costs?",
+  "actions": [
+    {
+      "step": 1,
+      "mode": "live",
+      "input": "savings",
+      "texts": [
+        "I understand your current living-cost funding as:\n\"savings\"\nHave I understood correctly?"
+      ],
+      "action": "confirm",
+      "bucket": "Clarity",
+      "route": "ml_then_gpt",
+      "ml_calls": 1,
+      "gpt_calls": 1,
+      "replayed_outputs": 0
+    },
+    {
+      "step": 2,
+      "mode": "live",
+      "input": "yes but 50% also come form my wages",
+      "texts": [
+        "Your latest reply: \"yes but 50% also come form my wages\"\nCurrent funding categories: Salary or wages; Savings or investment withdrawals.\nYour specific source wording is quoted below; these are the questionnaire groups.\nSupporting wording from this example:\n\"savings\"; \"yes but 50% also come form my wages\"\nHave I understood correctly?"
+      ],
+      "action": "confirm",
+      "bucket": "Clarity",
+      "route": "gpt_context",
+      "ml_calls": 0,
+      "gpt_calls": 1,
+      "replayed_outputs": 0
+    },
+    {
+      "step": 3,
+      "mode": "live",
+      "input": "/confirm",
+      "texts": [
+        "D5 is confirmed in this session only. This standalone example ends here; no profile has been saved. Use /change, /new or /exit."
+      ],
+      "action": "d5_complete",
+      "bucket": null,
+      "route": "control",
+      "ml_calls": 0,
+      "gpt_calls": 0,
+      "replayed_outputs": 0
+    }
+  ],
+  "interpretation_turns": [
+    {
+      "turn": 1,
+      "input": "savings",
+      "route": "ml_then_gpt",
+      "ml_checks": 1,
+      "live_gpt_requests": 1,
+      "raw_interpretation": {
+        "answer_scope": "complete",
+        "evidence": [
+          "savings"
+        ],
+        "facts": [
+          {
+            "evidence": "savings",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_WITHDRAWALS",
+            "source_instance_id": "group_1",
+            "time": "current"
+          }
+        ],
+        "missing_information": [],
+        "model_abstain": false,
+        "option_id": "D5_WITHDRAWALS",
+        "semantic_bucket": "clarity"
+      },
+      "dialogue_context": {
+        "history": [],
+        "pending_prompt": "What currently pays for your everyday living costs?",
+        "correction_requested": false
+      },
+      "displayed_response": {
+        "action": "confirm",
+        "question_id": "D5",
+        "candidate_option_id": "D5_WITHDRAWALS",
+        "candidate_option_label": "Savings or investment withdrawals",
+        "confirmation_text": "I understand your current living-cost funding as:\n\"savings\"\nHave I understood correctly?",
+        "context_details": {},
+        "recorded": false,
+        "bucket": "Clarity",
+        "contract_outcome": "financial_candidate"
+      },
+      "contract_outcome": "financial_candidate",
+      "accepted_pending_candidate": "D5_WITHDRAWALS",
+      "confirmed_at_interpretation_time": false,
+      "profile_saved_at_interpretation_time": false,
+      "safe_provider_receipt": {
+        "model_requested": "gpt-6.1-sol",
+        "provider_model": "gpt-6.1-sol",
+        "reasoning_effort_requested": "low",
+        "provider_reasoning": {
+          "effort": "low"
+        },
+        "tools": [],
+        "tool_choice": "none",
+        "store": false,
+        "stream": true,
+        "actual_calls": 1,
+        "terminal_completed": true,
+        "status": "completed",
+        "blocked": false,
+        "retry": false,
+        "output_repair": false,
+        "tool_dispatcher_present": false,
+        "elapsed_seconds": 6.526205583009869
+      },
+      "ml_first_check": {
+        "bucket": null,
+        "candidate": null,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_WITHDRAWALS"
+        ],
+        "model_uncertain": true,
+        "reason": "option_model_uncertainty"
+      }
+    },
+    {
+      "turn": 2,
+      "input": "yes but 50% also come form my wages",
+      "route": "gpt_context",
+      "ml_checks": 0,
+      "live_gpt_requests": 1,
+      "raw_interpretation": {
+        "answer_scope": "complete",
+        "evidence": [
+          "savings",
+          "yes but 50% also come form my wages"
+        ],
+        "facts": [
+          {
+            "evidence": "savings",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_WITHDRAWALS",
+            "source_instance_id": "group_1",
+            "time": "current"
+          },
+          {
+            "evidence": "yes but 50% also come form my wages",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_SALARY",
+            "source_instance_id": "group_2",
+            "time": "current"
+          }
+        ],
+        "missing_information": [],
+        "model_abstain": false,
+        "option_id": "D5_MULTIPLE",
+        "semantic_bucket": "clarity"
+      },
+      "dialogue_context": {
+        "history": [
+          {
+            "prompt": "What currently pays for your everyday living costs?",
+            "reply": "savings"
+          }
+        ],
+        "pending_prompt": "I understand your current living-cost funding as:\n\"savings\"\nHave I understood correctly?",
+        "correction_requested": false
+      },
+      "displayed_response": {
+        "action": "confirm",
+        "question_id": "D5",
+        "candidate_option_id": "D5_MULTIPLE",
+        "candidate_option_label": "More than one listed source category",
+        "confirmation_text": "Your latest reply: \"yes but 50% also come form my wages\"\nCurrent funding categories: Salary or wages; Savings or investment withdrawals.\nYour specific source wording is quoted below; these are the questionnaire groups.\nSupporting wording from this example:\n\"savings\"; \"yes but 50% also come form my wages\"\nHave I understood correctly?",
+        "context_details": {},
+        "recorded": false,
+        "bucket": "Clarity",
+        "contract_outcome": "financial_candidate"
+      },
+      "contract_outcome": "financial_candidate",
+      "accepted_pending_candidate": "D5_MULTIPLE",
+      "confirmed_at_interpretation_time": false,
+      "profile_saved_at_interpretation_time": false,
+      "safe_provider_receipt": {
+        "model_requested": "gpt-6.1-sol",
+        "provider_model": "gpt-6.1-sol",
+        "reasoning_effort_requested": "low",
+        "provider_reasoning": {
+          "effort": "low"
+        },
+        "tools": [],
+        "tool_choice": "none",
+        "store": false,
+        "stream": true,
+        "actual_calls": 1,
+        "terminal_completed": true,
+        "status": "completed",
+        "blocked": false,
+        "retry": false,
+        "output_repair": false,
+        "tool_dispatcher_present": false,
+        "elapsed_seconds": 10.18805799994152
+      },
+      "ml_first_check": null
+    }
+  ],
+  "totals": {
+    "ml_checks": 1,
+    "live_gpt_requests": 2,
+    "completed_gpt_outputs": 2,
+    "replayed_outputs": 0,
+    "explicit_confirmations": 1,
+    "confirmation_model_calls": 0,
+    "contract_rejections": 0,
+    "wrong_accepted_candidates_in_this_case": 0,
+    "profile_saves": 0
+  },
+  "final_confirmation_evidence": {
+    "source": "action 3 after the updated mixed-source candidate",
+    "action": "d5_complete",
+    "message": "D5 is confirmed in this session only. This standalone example ends here; no profile has been saved. Use /change, /new or /exit.",
+    "basis": "Recorded completion action; no post-confirmation engine snapshot is fabricated"
+  },
+  "limits": [
+    "Supplementation before explicit confirmation; no /change action or previously confirmed answer replacement",
+    "50% retained as quoted evidence, not a structured ratio or financial calculation",
+    "Grouped withdrawals category does not assert investment withdrawals",
+    "One observed manually entered example, not an independent accuracy benchmark",
+    "No automatic ML training or online learning",
+    "Demo input is not treated as verified personal financial information"
+  ],
+  "source_record_sha256": {
+    "core-action-0001.json": "1e67e1cee07ec4272db592923c75f05806c302d547b98daeaf6bebaab5f589da",
+    "core-action-0002.json": "a99cb61c2818a46f75ee03bcb376fe60c86e0b4739c032f70afcb8d28c36e627",
+    "core-action-0003.json": "030e361b1fabbd85ebfe293eecad53290ea2c9a0dbc45929c6f5ce75e6b20cd2",
+    "reply-0001-aa1ff76e.json": "7318a6b3f15003b7e3c9198e83543e3ef93905904964b276bba6f7f707c315ef",
+    "reply-0002-a8edeb26.json": "a4b2394a1fd416404b5d085b1587165cd8064e2aa9ac850ba8f7bb7ed1f99412"
+  },
+  "publication_activity": {
+    "new_inference_calls": 0,
+    "new_tests": 0,
+    "evaluation_bank_expansion": false,
+    "replay_bank_changed": false,
+    "runtime_changed": false
+  },
+  "redaction": "Allow-listed fields only; no credentials, browser session tokens, private paths, raw HTTP bodies or unrelated actions"
+}

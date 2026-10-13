@@ -6,7 +6,7 @@ Use fictional situations in the demo. This checkpoint is a working prototype wit
 
 ## Separate D5 company demonstration
 
-The [D5 core browser demo](demos/d5/core/README.md) shows the existing ML + GPT conversation, business interpretation, follow-up, correction and explicit confirmation. Launch a reproducible, clearly labelled recorded walkthrough with `sh demos/d5/run_core_demo.sh replay`; use `live` explicitly for new fictional text and the existing ChatGPT connection. This does not change the main application below. The latest live browser attempt stopped on a provider overload; replay is not evidence of live interpretation. See the [delivery report](docs/d5-core-demo-2026-10-13/REPORT.md).
+The [D5 core browser demo](demos/d5/core/README.md) shows the existing ML + GPT conversation, business interpretation, follow-up, correction and explicit confirmation. Launch a reproducible, clearly labelled recorded walkthrough with `sh demos/d5/run_core_demo.sh replay`; use `live` explicitly for new fictional text and the existing ChatGPT connection. This does not change the main application below. The latest [company case](docs/d5-company-case-2026-10-13/CASE.md) records the user's own live savings-plus-wages conversation: two completed GPT requests, retained context and explicit confirmation. The separately authorised existing live guide also passed. The initial overload remains in the [original delivery report](docs/d5-core-demo-2026-10-13/REPORT.md); replay and live evidence are kept distinct.
 
 ## Run locally
 

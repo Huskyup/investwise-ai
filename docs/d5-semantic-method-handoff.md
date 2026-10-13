@@ -4,7 +4,17 @@ Updated 13 October 2026 · `feature/all-question-ml-prototype`
 
 Maintained delivery repository: [Huskyup/investwise-ai](https://github.com/Huskyup/investwise-ai/tree/feature/all-question-ml-prototype). Use the explicit repository URL below when updating an older checkout whose `origin` may point elsewhere.
 
-## Latest delivery: visible and reproducible D5 core demo
+## Latest evidence: the user's own successful live conversation
+
+The [company case and presenter script](d5-company-case-2026-10-13/CASE.md) document the user's manually entered `savings` → `yes but 50% also come form my wages` → `/confirm` conversation. D5 retained savings, added wages, changed the pending option from `D5_WITHDRAWALS` to `D5_MULTIPLE`, and requested confirmation of the combined answer. The final confirmation used no model call and saved no financial profile.
+
+**Observed: one ML check, two completed live GPT requests, zero replayed outputs.** ML was uncertain on the first reply; GPT interpreted both replies. This is supplementation before confirmation, not a `/change` correction or automatic ML learning. The quoted 50% is not a structured allocation or financial calculation, and the grouped withdrawals category does not assert investment withdrawals. The case demonstrates this live wording, not universal free-text reliability. Exact transcript, raw meanings, accepted candidates and safe receipts are in the [curated evidence](d5-company-case-2026-10-13/evidence.json).
+
+Before that user session, the separately authorised retry of the existing browser guide completed all eighteen actions: four live GPT outputs, two ML checks and fourteen zero-call controls, with no wrong accepted candidate, contract rejection or replay. Its [saved summary](d5-company-case-2026-10-13/earlier-live-check.json) is separate from the user's two-call case. The earlier overload receipt is preserved as history; it no longer describes the latest live outcome.
+
+This update publishes already observed evidence only. No inference, tests, evaluation-bank expansion, training, replay additions, code changes, model changes or validation changes were performed. All fifteen questions and the main default remain unchanged. For the company case, select `live` explicitly using the commands in the case guide; the launcher and main-app defaults are unchanged.
+
+## Earlier delivery: visible and reproducible D5 core demo
 
 A separate [local browser entry](../demos/d5/core/README.md) now wraps the same ML + GPT session. From the repository root, run `sh demos/d5/run_core_demo.sh replay` for the fixed recorded walkthrough or deliberately select `live` for new fictional text. The existing terminal and main app defaults are unchanged. No dependency, model, prompt, validator, financial rule or question changed.
 
@@ -12,7 +22,7 @@ The page shows authored follow-ups, current candidate facts and exact quotations
 
 **Delivered verification:** eight focused offline groups passed, preserving the existing eleven outcomes and the full eighteen-action/four-turn context sequence. A real browser completed those eighteen recorded actions with four replayed outputs and zero GPT requests; desktop and narrow layouts were inspected. All fourteen controls used zero ML/GPT/replay calls. The unchanged baseline predictions matched all eleven original references.
 
-**Live boundary:** one real request through the new browser reached GPT but returned `server_is_overloaded` before any model output. The session stopped with no retry, output repair, model substitution or recorded fallback. Thus the visible recorded core demo is reproducible now, while a successful live browser conversation remains unverified in this delivery. Earlier terminal live results remain separate historical evidence. The [report](d5-core-demo-2026-10-13/REPORT.md) contains the safe failure receipt and reproduction commands.
+**Initial live boundary, subsequently resolved by the separately authorised run above:** the first request through the new browser returned `server_is_overloaded` before any model output. That session stopped with no retry, output repair, model substitution or recorded fallback. The original [delivery report](d5-core-demo-2026-10-13/REPORT.md) and safe failure receipt remain unchanged; the later live guide and user-entered success are recorded separately above. Service availability is still required for every live session.
 
 Pull only from Huskyup using the explicit repository URL below. Each server launch creates a fresh private session outside Git. Stop it with Ctrl+C before restarting; New example clears active memory but does not erase private diagnostics. The entry cannot save a profile or advance beyond D5.
 

@@ -23,7 +23,9 @@ sh demos/d5/run_core_demo.sh live
 
 Live mode requires your existing authorised ChatGPT profile and available service access. It makes no inference until you submit a reply. The guide only fills the answer box; **Interpret answer** sends it. You can also enter your own fictional wording. Use **New example** between different fictional people; **Change answer** retains earlier replies while invalidating confirmation. Confirmation itself never makes another model call.
 
-**Current live limitation:** the 13 October browser attempt reached GPT once, then received `server_is_overloaded`. It stopped with no completed model output, retry or fallback. The earlier existing-example live results remain evidence for the unchanged terminal/session path; this new browser round did not complete a live conversation. Replay works without service access, but is never a substitute claim for live free-text understanding.
+**Latest live evidence:** after the first attempt stopped on provider overload, a separately authorised run completed the existing eighteen-action browser guide using four live GPT requests and no replay. The user then entered their own `savings` → `yes but 50% also come form my wages` → `/confirm` example: savings was retained, wages added, and the updated answer confirmed. That separate user example used one ML check and two live GPT requests. See the [company case, exact transcript and presenter script](../../../docs/d5-company-case-2026-10-13/CASE.md). The original failure is retained in the earlier report. These successes do not guarantee service availability or arbitrary new-wording accuracy.
+
+To present the user's example, use live mode, start a fresh example and type those two replies yourself before confirming. Do not use the optional guide or replay button: they refer to a different existing sequence. This publication did not add the user's example to the replay or test banks, or run any further inference or tests.
 
 ## New teammate setup
 
@@ -88,7 +90,7 @@ It reuses the existing eleven replies and four context turns; it also checks mal
 
 - [One-page D5 business standard](BUSINESS_STANDARD.md) and [eleven-case source/relationship matrix](business-examples.json): existing IDs, replies and gold labels, with explicit unknowns and source hashes. Annotation review is agent-authored and independently agent-reviewed; human business sign-off is still needed.
 - FCA (Formal Concept Analysis) is useful here as an **offline coverage/review method**. The matrix exposes actual use, exclusions, timing and category grouping; it is not another runtime interpreter or a source of automatically generated financial rules. No concept-lattice algorithm was added in this delivery.
-- Next: have the business owner review these eleven annotations and wording; then, when service access is available and a new run is authorised, repeat the same live guide. Broader usability research and any ML retraining are separate later decisions.
+- Next: have the business owner review these eleven annotations and wording, and use the documented live examples for company feedback. The separately authorised live guide has now passed. Broader usability research and any ML retraining remain separate later decisions.
 
 Local reply/trace records are written under `~/.local/state/investwise/d5-core-demo/` with owner-only permissions. New example clears active memory, not the existing files. No browser endpoint serves credentials, traces or arbitrary files. Model/service failures stop the session; only fixed safe status text is sent to the browser.
 

@@ -1,0 +1,219 @@
+{
+  "passed": true,
+  "commit": "ae2c0d2e45b8eec1b15358fe9870b0c1d4fde6de",
+  "live_gpt_requests": 4,
+  "completed_model_outputs": 4,
+  "ml_checks": 2,
+  "recorded_outputs": 0,
+  "semantic_turns": [
+    {
+      "case_id": "CONTEXT-01",
+      "input": "My pension pays some bills; I cannot tell whether my wages also do.",
+      "raw_interpretation": {
+        "answer_scope": "partial",
+        "evidence": [
+          "My pension pays some bills; I cannot tell whether my wages also do."
+        ],
+        "facts": [],
+        "missing_information": [
+          "source_use_unknown:D5_SALARY"
+        ],
+        "model_abstain": false,
+        "option_id": null,
+        "semantic_bucket": "undecided"
+      },
+      "contract_outcome": "dialogue_only",
+      "accepted_candidate": null,
+      "backend_receipt": {
+        "model_requested": "gpt-6.1-sol",
+        "reasoning_effort_requested": "low",
+        "tools": [],
+        "tool_choice": "none",
+        "store": false,
+        "stream": true,
+        "actual_calls": 1,
+        "retry": false,
+        "output_repair": false,
+        "previous_reply_count": 0,
+        "tool_dispatcher_present": false,
+        "blocked": false,
+        "terminal_completed": true,
+        "status": "completed",
+        "provider_model": "gpt-6.1-sol",
+        "provider_reasoning": {
+          "effort": "low"
+        },
+        "elapsed_seconds": 6.620928833028302
+      }
+    },
+    {
+      "case_id": "CONTEXT-02",
+      "input": "Yes.",
+      "raw_interpretation": {
+        "answer_scope": "complete",
+        "evidence": [
+          "My pension pays some bills; I cannot tell whether my wages also do.",
+          "Yes."
+        ],
+        "facts": [
+          {
+            "evidence": "My pension pays some bills; I cannot tell whether my wages also do.",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_PENSION_PAYMENTS",
+            "source_instance_id": "group_1",
+            "time": "current"
+          },
+          {
+            "evidence": "My pension pays some bills; I cannot tell whether my wages also do.",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_SALARY",
+            "source_instance_id": "group_2",
+            "time": "current"
+          }
+        ],
+        "missing_information": [],
+        "model_abstain": false,
+        "option_id": "D5_MULTIPLE",
+        "semantic_bucket": "clarity"
+      },
+      "contract_outcome": "financial_candidate",
+      "accepted_candidate": "D5_MULTIPLE",
+      "backend_receipt": {
+        "model_requested": "gpt-6.1-sol",
+        "reasoning_effort_requested": "low",
+        "tools": [],
+        "tool_choice": "none",
+        "store": false,
+        "stream": true,
+        "actual_calls": 1,
+        "retry": false,
+        "output_repair": false,
+        "previous_reply_count": 1,
+        "tool_dispatcher_present": false,
+        "blocked": false,
+        "terminal_completed": true,
+        "status": "completed",
+        "provider_model": "gpt-6.1-sol",
+        "provider_reasoning": {
+          "effort": "low"
+        },
+        "elapsed_seconds": 14.218590916949324
+      }
+    },
+    {
+      "case_id": "CONTEXT-03",
+      "input": "My wages stay in savings.",
+      "raw_interpretation": {
+        "answer_scope": "complete",
+        "evidence": [
+          "My pension pays some bills; I cannot tell whether my wages also do.",
+          "My wages stay in savings."
+        ],
+        "facts": [
+          {
+            "evidence": "My pension pays some bills; I cannot tell whether my wages also do.",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_PENSION_PAYMENTS",
+            "source_instance_id": "group_1",
+            "time": "current"
+          },
+          {
+            "evidence": "My wages stay in savings.",
+            "owner": "self",
+            "pays_living_costs": "no",
+            "source_category": "D5_SALARY",
+            "source_instance_id": "group_2",
+            "time": "current"
+          }
+        ],
+        "missing_information": [],
+        "model_abstain": false,
+        "option_id": "D5_PENSION_PAYMENTS",
+        "semantic_bucket": "clarity"
+      },
+      "contract_outcome": "financial_candidate",
+      "accepted_candidate": "D5_PENSION_PAYMENTS",
+      "backend_receipt": {
+        "model_requested": "gpt-6.1-sol",
+        "reasoning_effort_requested": "low",
+        "tools": [],
+        "tool_choice": "none",
+        "store": false,
+        "stream": true,
+        "actual_calls": 1,
+        "retry": false,
+        "output_repair": false,
+        "previous_reply_count": 2,
+        "tool_dispatcher_present": false,
+        "blocked": false,
+        "terminal_completed": true,
+        "status": "completed",
+        "provider_model": "gpt-6.1-sol",
+        "provider_reasoning": {
+          "effort": "low"
+        },
+        "elapsed_seconds": 9.683748416951858
+      }
+    },
+    {
+      "case_id": "CONTEXT-04",
+      "input": "Yes.",
+      "raw_interpretation": {
+        "answer_scope": "unknown",
+        "evidence": [
+          "Yes."
+        ],
+        "facts": [],
+        "missing_information": [
+          "reply_unclear"
+        ],
+        "model_abstain": true,
+        "option_id": null,
+        "semantic_bucket": null
+      },
+      "contract_outcome": "abstention",
+      "accepted_candidate": null,
+      "backend_receipt": {
+        "model_requested": "gpt-6.1-sol",
+        "reasoning_effort_requested": "low",
+        "tools": [],
+        "tool_choice": "none",
+        "store": false,
+        "stream": true,
+        "actual_calls": 1,
+        "retry": false,
+        "output_repair": false,
+        "previous_reply_count": 0,
+        "tool_dispatcher_present": false,
+        "blocked": false,
+        "terminal_completed": true,
+        "status": "completed",
+        "provider_model": "gpt-6.1-sol",
+        "provider_reasoning": {
+          "effort": "low"
+        },
+        "elapsed_seconds": 8.519750874955207
+      }
+    }
+  ],
+  "checked_ui_actions": 18,
+  "zero_call_controls": 14,
+  "wrong_accepted_candidates": 0,
+  "contract_rejections": 0,
+  "retry": false,
+  "fallback": false,
+  "new_semantic_cases": 0,
+  "profile_saved": false,
+  "repo_files_changed": [],
+  "preserved_files": 409,
+  "scope": "One live run of existing fictional dialogue through actual browser; no guarantee for arbitrary new wording",
+  "provenance": {
+    "purpose": "Separate earlier authorised live guide; existing saved evidence, no new execution",
+    "source_sha256": "ae78f8bb551258c525b4455933c108ba8cb8feadd39f6bedeaa2b5808e14039c",
+    "separate_from_user_case": true,
+    "new_inference_or_tests_for_publication": false
+  }
+}
