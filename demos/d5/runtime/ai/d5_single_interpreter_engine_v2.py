@@ -65,8 +65,10 @@ class D5BusinessStandardEngine(D5SingleInterpreterEngine):
                     "You can name another source or leave this unresolved."
                 ),
                 "complete_answer_needed": (
-                    "Which earlier source are you adding to or changing, and how is it "
-                    "used now? Please name it so I do not guess what you mean."
+                    "For your updated answer, do the sources you mentioned pay your living "
+                    "costs together, does one replace another, or is a source not used for "
+                    "these costs? Please name the sources and say which applies. "
+                    "You can say if you are still unsure."
                 ),
                 "question_meaning": D5_EXPLANATION + " What currently pays these costs for you?",
                 "reply_unclear": (
@@ -75,6 +77,12 @@ class D5BusinessStandardEngine(D5SingleInterpreterEngine):
                 ),
             }.get(topic)
         if question is not None:
+            if topic == "complete_answer_needed" and meaning.evidence:
+                # Validated quotations recall the user's words, not established
+                # funding facts. No source extraction or category guess is made.
+                quotes = "; ".join(json.dumps(quote, ensure_ascii=False)
+                                   for quote in meaning.evidence)
+                question = "Your words: " + quotes + "\n" + question
             if meaning.semantic_bucket == "undecided":
                 question = "It is fine to be unsure. " + question
             result["followup"] = question

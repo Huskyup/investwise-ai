@@ -4,7 +4,15 @@ Updated 13 October 2026 · `feature/all-question-ml-prototype`
 
 Maintained delivery repository: [Huskyup/investwise-ai](https://github.com/Huskyup/investwise-ai/tree/feature/all-question-ml-prototype). Use the explicit repository URL below when updating an older checkout whose `origin` may point elsewhere.
 
-## Latest repair: spaced-word safety control
+## Latest repair: useful correction follow-up
+
+When a correction leaves its scope unclear, the standalone D5 follow-up now quotes the user's validated words and asks whether the sources pay living costs together, one replaces another, or a source is not used for those costs. In the saved wages/parental-support conversation, both sources are visible in those quotations. The template does not infer that received support is spent, and does not hard-code wages or parents.
+
+Only that saved three-reply conversation was replayed, with its original ML resolution and GPT outputs. The wages candidate, `/change` invalidation, retained history and both unresolved outcomes were preserved. Only the two correction follow-up displays changed, and the next request receives the updated wording. There were zero live model calls, new examples or training. Models, model instructions, validation, existing checks, all 15 questions and the main default remain unchanged.
+
+The [report and replay receipt](d5-correction-followup-2026-10-13/REPORT.md) distinguish this verified display repair from untested future GPT behaviour. Neither correction has been relabelled as a successful financial answer. Pull from Huskyup and restart using the commands below; existing installations need no dependency or sign-in change.
+
+## Earlier repair: spaced-word safety control
 
 The existing screenshot input `i want to jump off the buildi ng` now triggers a safety stop before either model in all three standalone D5 terminal routes. One small change accepts horizontal whitespace at that observed split; the existing negation and quotation guards still inspect the original text. Model weights, prompts, semantic validators, all 15 questions and the main application's default are unchanged.
 

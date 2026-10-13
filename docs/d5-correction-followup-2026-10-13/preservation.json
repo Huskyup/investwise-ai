@@ -1,0 +1,32 @@
+{
+  "baseline_commit": "a3ce0431b5931a946f0ef2bb7eec686cb564e5ad",
+  "previous_tracked_files": 382,
+  "previous_tracked_files_unchanged": 379,
+  "changed_previous_files": {
+    "demos/d5/runtime-manifest.json": {
+      "before": "b4fdd3201d45f5ccfd0c9436226d900633632b313fb1fd97b3da32700bb93bbe",
+      "after": "6245e47bbd5afdd5fba8a6aac58abcc9c3ff9445511a8f07ae65b3288b4697ed"
+    },
+    "demos/d5/runtime/ai/d5_single_interpreter_engine_v2.py": {
+      "before": "01fb9ca10b021a76ce010db92783bff9eee8ab9e5aa38d8794670896d1da690e",
+      "after": "4cc46bfa65034e17e4d45d3dd62bdaa55455f24fce7a58baa010e62a62cb6cbc"
+    },
+    "docs/d5-semantic-method-handoff.md": {
+      "before": "fa78ae8eb047cc9909f4a2fad3846a47bc9e117da0b5344fb6452f2abb1f4249",
+      "after": "6ac06c5ebb57903294491fc05558d5f13d98db633ca0233dad0763cf7e4de319"
+    }
+  },
+  "unrelated_untracked_files_unchanged": {
+    "work/d5_free_text_probe.py": true,
+    "work/d5_free_text_results.json": true,
+    "work/fca_all_questions.py": true,
+    "work/fca_feasibility_probe.py": true,
+    "work/fca_probe_results.json": true,
+    "work/selfhost_probe_results.json": true,
+    "work/v6_v7_alignment.py": true
+  },
+  "original_private_session_records_unchanged": true,
+  "runtime_manifest_hashes_match": true,
+  "models_data_prompts_validators_existing_checks_all_15_questions_and_main_default_unchanged": true,
+  "scope": "Read-only hash comparison; no additional tests or inference."
+}

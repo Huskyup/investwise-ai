@@ -1,0 +1,58 @@
+{
+  "mode": "Offline replay of one saved three-reply conversation only",
+  "passed": true,
+  "new_examples": 0,
+  "saved_gpt_outputs_replayed": 3,
+  "saved_ml_resolutions_replayed": 1,
+  "live_gpt_calls": 0,
+  "live_ml_calls": 0,
+  "authentication_calls": 0,
+  "fits": 0,
+  "change_action_zero_calls_and_invalidated_candidate": true,
+  "history_retained_and_new_prompt_supplied_on_next_replay": true,
+  "outcomes": [
+    {
+      "input": "most of my wages",
+      "source_record": "reply-0001-a56f1cc8.json",
+      "source_sha256": "84673fcdf21d4c3ae7c9b4f9d5f2ab5fdbc15ad1c48c2720e17f0d753b2783d9",
+      "saved_raw_output_sha256": "1e31773eb8d2131fc8d53afd5215c1c2ff0d3b61f04768025c6e59f2779af6bb",
+      "saved_route": "ml_then_gpt",
+      "outcome": "financial_candidate",
+      "candidate": "D5_SALARY",
+      "before_followup": null,
+      "after_followup": null,
+      "prior_reply_count": 0,
+      "raw_output_and_nonwording_result_unchanged": true,
+      "passed": true
+    },
+    {
+      "input": "im getting financial support from my parents",
+      "source_record": "reply-0002-1dd7e58e.json",
+      "source_sha256": "05daf2b49896a9690696bcbcd82398e9e8a7ffce23a25780373f428c5db33786",
+      "saved_raw_output_sha256": "1e1917e8f6b652f8f13516ed919c4b09b1e867e1a8e0fdba23ac65ba3fccefd0",
+      "saved_route": "gpt_context",
+      "outcome": "abstention",
+      "candidate": null,
+      "before_followup": "Which earlier source are you adding to or changing, and how is it used now? Please name it so I do not guess what you mean.",
+      "after_followup": "Your words: \"most of my wages\"; \"im getting financial support from my parents\"\nFor your updated answer, do the sources you mentioned pay your living costs together, does one replace another, or is a source not used for these costs? Please name the sources and say which applies. You can say if you are still unsure.",
+      "prior_reply_count": 1,
+      "raw_output_and_nonwording_result_unchanged": true,
+      "passed": true
+    },
+    {
+      "input": "most of my wages",
+      "source_record": "reply-0003-434a8c5c.json",
+      "source_sha256": "90e218080c16750c4e78ae284a6308cc578d6fa03b45344c37cae5de62ee3089",
+      "saved_raw_output_sha256": "6f6d659c97dfde5ad1092bf033d4f9190b54372b7a54f63f79643a48450d8603",
+      "saved_route": "gpt_context",
+      "outcome": "abstention",
+      "candidate": null,
+      "before_followup": "Which earlier source are you adding to or changing, and how is it used now? Please name it so I do not guess what you mean.",
+      "after_followup": "Your words: \"im getting financial support from my parents\"; \"most of my wages\"\nFor your updated answer, do the sources you mentioned pay your living costs together, does one replace another, or is a source not used for these costs? Please name the sources and say which applies. You can say if you are still unsure.",
+      "prior_reply_count": 2,
+      "raw_output_and_nonwording_result_unchanged": true,
+      "passed": true
+    }
+  ],
+  "limit": "Saved outputs were reused despite updated authored prompts. This verifies rendering, provenance and state preservation, not how GPT will answer a new reply."
+}

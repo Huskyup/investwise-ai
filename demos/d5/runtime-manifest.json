@@ -233,10 +233,11 @@
       "source_path": "ai/d5_single_interpreter_engine_v2.py",
       "copied_path": "demos/d5/runtime/ai/d5_single_interpreter_engine_v2.py",
       "source_sha256": "9c9823b607cd52410f3a1645196690f8a028475ee876c0f71391b237fd5f0a73",
-      "copied_sha256": "01fb9ca10b021a76ce010db92783bff9eee8ab9e5aa38d8794670896d1da690e",
+      "copied_sha256": "4cc46bfa65034e17e4d45d3dd62bdaa55455f24fce7a58baa010e62a62cb6cbc",
       "byte_identical": false,
       "runtime_repair": "Quote exact validated active and excluded facts, including exclusions within one category.",
-      "context_update": "Single-question follow-ups, visible context limit and latest reply alongside exact confirmation quotations."
+      "context_update": "Single-question follow-ups, visible context limit and latest reply alongside exact confirmation quotations.",
+      "correction_followup_repair": "Quote verified user evidence and clarify addition, replacement or non-use for living costs; interpretation and validation unchanged."
     },
     "ai/d5_single_interpreter_transport.py": {
       "source_path": "ai/d5_single_interpreter_transport.py",
@@ -945,7 +946,7 @@
     "model_calls": 0,
     "test_cases": 0
   },
-  "runtime_revision": "2026-10-13-safety-spacing",
+  "runtime_revision": "2026-10-13-correction-followup",
   "runtime_repairs": [
     {
       "date": "2026-10-13",
@@ -984,6 +985,23 @@
       ],
       "model_prompt_schema_and_default_unchanged": true,
       "actual_model_calls": 0
+    },
+    {
+      "date": "2026-10-13",
+      "previous_manifest_sha256": "b4fdd3201d45f5ccfd0c9436226d900633632b313fb1fd97b3da32700bb93bbe",
+      "report": "docs/d5-correction-followup-2026-10-13/REPORT.md",
+      "checks": "docs/d5-correction-followup-2026-10-13/checks.json",
+      "files": [
+        {
+          "path": "demos/d5/runtime/ai/d5_single_interpreter_engine_v2.py",
+          "before_sha256": "01fb9ca10b021a76ce010db92783bff9eee8ab9e5aa38d8794670896d1da690e",
+          "after_sha256": "4cc46bfa65034e17e4d45d3dd62bdaa55455f24fce7a58baa010e62a62cb6cbc",
+          "reason": "Quote verified user evidence and clarify addition, replacement or non-use for living costs; interpretation and validation unchanged."
+        }
+      ],
+      "model_prompt_schema_and_default_unchanged": true,
+      "actual_model_calls": 0,
+      "verification": "One saved three-reply conversation replayed; no live inference or claim of resolved correction."
     }
   ],
   "historical_verification_note": "static_verification, import_verification and runtime_repairs describe earlier revisions; they do not validate the later same-example context behaviour.",
