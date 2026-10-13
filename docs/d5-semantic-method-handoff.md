@@ -4,7 +4,13 @@ Updated 13 October 2026 · `feature/all-question-ml-prototype`
 
 Maintained delivery repository: [Huskyup/investwise-ai](https://github.com/Huskyup/investwise-ai/tree/feature/all-question-ml-prototype). Use the explicit repository URL below when updating an older checkout whose `origin` may point elsewhere.
 
-## Latest runtime update: safety and exact confirmation
+## Latest runtime update: same-example context
+
+The independent terminal now retains earlier raw user replies and authored prompts within the same fictional D5 example. One request to the same GPT-6.1 Sol low interpreter receives that context with the current reply. Follow-ups no longer require every earlier detail to be repeated; explicit corrections should replace the affected relation, while ambiguous references still require clarification. `/change` invalidates confirmation and retains history; `/new` starts with empty history. There is no extra model, training, cascade or dependency.
+
+The [context handoff](d5-same-example-context.md) describes the bounded history, exact quote provenance, frozen decision snapshots and control lifecycle. The prompt, request data, context-aware provenance validation and authored wording have changed; the financial JSON schema, model, 15 questions and normal app default have not. **This update has static review and syntax/hash checks only: no tests, saved-output replay or live calls.** All numerical results and the successful live transcript below belong to earlier versions and do not prove contextual interpretation accuracy.
+
+## Earlier runtime update: safety and exact confirmation
 
 The independent D5 terminal now includes two small software repairs:
 
@@ -25,7 +31,7 @@ git pull --ff-only https://github.com/Huskyup/investwise-ai.git feature/all-ques
 
 Close any running D5 terminal before launching again so it loads the repaired runtime. First-time users should follow the [Python 3.12 dependency installation and their own ChatGPT sign-in](../demos/d5/README.md#install-once) before `chat`. Existing installations need no dependency change. Each teammate needs their own eligible account and available usage; credentials remain outside Git. `check-11` is not required to launch.
 
-Only the independent D5 runtime, its manifest and documentation are included in this update. Separate pending main-app safety/follow-up changes and their tests are not included. The model, prompts, schema, validators, all fifteen questions and the normal Streamlit default remain unchanged. The [runtime manifest](../demos/d5/runtime-manifest.json) records the two repair hashes; historical source-reference files and earlier evidence remain unchanged.
+Only the independent D5 runtime, its session adapter, manifest and documentation are included in these runtime updates. Separate pending main-app changes and their tests are not included. The safety/confirmation repair left the prompt and validators unchanged; the later context update changes them as described above. The model, all fifteen questions and normal Streamlit default remain unchanged. The [runtime manifest](../demos/d5/runtime-manifest.json) records each revision; historical source-reference files and earlier evidence remain unchanged.
 
 ## Earlier semantic repair and live demonstration
 
@@ -62,18 +68,18 @@ The counterexample still works: “Both my wages and pension pay for everyday co
 
 ## One interpretation and authored dialogue
 
-Controls run before interpretation. For eligible D5 text, one call receives the current question, approved options, business instructions and original reply. It returns the bucket, proposed option, supported facts, exact quotations, completeness and missing-information topic. The program validates and reuses that immutable decision; confirmation does not request another interpretation.
+Controls run before interpretation. For eligible D5 text, one call receives the current question, approved options, business instructions and original reply. The latest terminal also includes bounded same-example dialogue, as described above. It returns the bucket, proposed option, supported facts, exact quotations, completeness and missing-information topic. The program validates and reuses that immutable decision; confirmation does not request another interpretation.
 
 | Outcome or topic | Behaviour |
 |---|---|
 | Clarity with complete supported funding | Propose the fixed option, quote the exact active/excluded evidence and request confirmation. |
 | `current_funding_unknown` | Ask which sources, if any, actually pay costs now; permit another source or an unresolved answer. This includes receipt-only and holding-only replies. |
 | Undecided with `source_use_unknown:<category>` | Ask neutrally whether the named category pays costs and explicitly allow remaining unsure. |
-| `complete_answer_needed` | Request the complete current answer, including the correction, instead of reconstructing omitted facts. |
+| `complete_answer_needed` | The latest terminal asks which earlier source is being added to or changed when context does not resolve the reference. The earlier tested version requested a complete answer. |
 | Confusion with `question_meaning` | Give the fixed plain-English D5 explanation. Pure Help may be handled before the model. |
 | `reply_unclear` | Acknowledge that the wording was not understood and invite rephrasing. |
 
-For example, case 10 now receives: “It is fine to be unsure. Does money from salary or wages currently pay any of your living costs, or is that still unclear?” The following sentence asks for any other current sources so a subsequent reply can be interpreted as a complete answer. That subsequent answer was not tested in this round.
+In the earlier measured repair, case 10 received: “It is fine to be unsure. Does money from salary or wages currently pay any of your living costs, or is that still unclear?” It then requested the complete answer. The context update asks one source-use question, permitting yes, no or continued uncertainty. A brief subsequent reply has not been tested in this update.
 
 Every nonclear output contains no financial option or facts. Missing information alone is not customer indecision. The existing abstention mechanism also carries an understood information gap: cases 07 and 09 have `semantic_bucket: null`, `model_abstain: true` and a specific topic. Its existing `model_uncertain` diagnostic stays true; the authored wording distinguishes a missing fact from unrecognised language. This adds no fourth customer bucket.
 
@@ -119,9 +125,9 @@ The [D5 question and option snapshot](d5-semantic-repair/source-reference/config
 
 These files remain review references under `docs/`. At the handoff baseline, static dependency inspection found 37 local AI modules: 26 absent from the target branch, six different and five identical. The different shared modules included the conversation engine, pre-model controls, question specification, bounded answers, horizon mapper and all-question resolver. **Copying only the D5 files into the normal `ai/` directory would not reproduce the tested environment.**
 
-The runnable demonstration addresses that gap with the dependency closure in `demos/d5/runtime/`, loaded only by its separate process. Its [runtime manifest](../demos/d5/runtime-manifest.json) identifies original and current hashes, including the two 13 October repairs. The credential provider has only two portability changes: use the current user's home directory and enforce credential storage outside the full checkout. The model, prompt, schema, validators and authored follow-ups remain unchanged. NumPy/scikit-learn are import dependencies of the existing shared types; no classifier is trained or invoked by the D5 demo.
+The runnable demonstration addresses that gap with the dependency closure in `demos/d5/runtime/`, loaded only by its separate process. Its [runtime manifest](../demos/d5/runtime-manifest.json) identifies original and current hashes, including the 13 October repairs and context update. The credential provider has only two portability changes: use the current user's home directory and enforce credential storage outside the full checkout. The model and output schema remain unchanged; the later context update changes the prompt, provenance validation and authored follow-ups. NumPy/scikit-learn are import dependencies of the existing shared types; no classifier is trained or invoked by the D5 demo.
 
-Follow [the installation and launch instructions](../demos/d5/README.md) for Python 3.12 on macOS/Linux. Teammates use their own eligible account and external credentials. No credentials, caches or model artefacts are committed. Use the documented company sequence, or start `chat` and enter your own fictional wording; `check-11` is not a prerequisite. Follow-ups and corrections currently require complete funding statements. Confirmation ends the D5 example; change/new/exit remain available, and other questions and profile saving are disabled there. The main application's full journey and separate save-consent route remain unchanged.
+Follow [the installation and launch instructions](../demos/d5/README.md) for Python 3.12 on macOS/Linux. Teammates use their own eligible account and external credentials. No credentials, caches or model artefacts are committed. Use the documented company sequence, or start `chat` and enter your own fictional wording; `check-11` is not a prerequisite. The latest terminal supplies earlier replies for follow-ups and corrections; use `/new` between independent examples. Confirmation ends the D5 example; change/new/exit remain available, and other questions and profile saving are disabled there. The main application's full journey and separate save-consent route remain unchanged.
 
 ## Evidence and reliability
 

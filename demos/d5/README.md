@@ -2,7 +2,7 @@
 
 This is a manually started **terminal conversation** using the repaired D5 interpreter: GPT-6.1 Sol with low reasoning. You can type new fictional replies, read the interpretation or focused follow-up, confirm a candidate and replace an earlier answer. The normal Streamlit app, its default model route and its 15 questions are unchanged.
 
-One complete live D5 conversation has now succeeded: a focused follow-up, pension-only confirmation, correction and fresh confirmation of mixed funding. It used three existing examples and three model calls. The [saved conversation and transcript](../../docs/d5-live-conversation-2026-10-12/REPORT.md) show what actually happened.
+The earlier current-reply-only version completed one live D5 conversation: a focused follow-up, pension-only confirmation, correction and fresh confirmation of mixed funding. It used three existing examples and three model calls. The [saved conversation and transcript](../../docs/d5-live-conversation-2026-10-12/REPORT.md) show that earlier run. The latest [same-example context update](../../docs/d5-same-example-context.md) has been reviewed statically only; it has not been tested live or through a new evaluation.
 
 ## Install once
 
@@ -48,9 +48,9 @@ git pull --ff-only https://github.com/Huskyup/investwise-ai.git feature/all-ques
 "$HOME/.venvs/investwise-d5/bin/python" demos/d5/demo.py chat
 ```
 
-The 13 October safety and confirmation repairs require no dependency change. They apply to this standalone terminal; the normal Streamlit default is unchanged. First-time users must complete installation and their own sign-in above. No test command is needed before launch.
+The 13 October safety, confirmation and same-example context updates require no dependency change. They apply to this standalone terminal; the normal Streamlit default is unchanged. First-time users must complete installation and their own sign-in above. No test command is needed before launch.
 
-Enter a complete D5 answer on one line. The opening question is:
+Enter a D5 answer on one line. The opening question is:
 
 > What currently pays for your everyday living costs?
 
@@ -60,13 +60,15 @@ For example, use an existing demonstration reply: `My wages stay in savings. My 
 |---|---|
 | `/help` | Explain D5 through the existing Help route. |
 | `/confirm` | Confirm the pending D5 candidate in this session. No new interpretation call. |
-| `/change` | Invalidate the previous D5 answer and request the complete replacement. |
+| `/change` | Invalidate the previous confirmation, retain this example's earlier replies and ask what has changed. |
 | `/pause` / `/resume` | Pause and resume the current example through the existing controls. |
-| `/stop` | Stop this example. Resume does not undo a stop. |
-| `/new` | Explicitly start a separate fictional example with empty answer state. |
+| `/stop` | Stop this example and clear its interpretation history. Resume does not undo a stop. |
+| `/new` | Start a separate fictional example with empty answer state and no earlier dialogue. |
 | `/exit` | Close the terminal demonstration. |
 
-Ordinary replies such as the original pension terminology question go through the same control checks as the interpreter's conversation engine. Follow-ups ask for a complete current funding answer: do not rely on the model remembering an earlier source. Only the current reply, question/options and fixed instructions reach the model.
+Ordinary replies go through the existing control checks before interpretation. Within one example, the same single model request now includes earlier interpreted user replies and the authored prompts they answered. You can answer a focused follow-up briefly or correct one part of an earlier answer. The newest explicit correction should replace the conflicting detail; ambiguous references still require clarification. A short answer does not bypass explicit `/confirm`.
+
+History is local to this running example. `/new` clears it; `/change` keeps it while invalidating confirmation. Pause/resume retains it, but input blocked while paused is never queued for interpretation. Stop or safety-stop clears it. The model receives at most 12 interpreted replies including the current reply, within 32,768 characters of dialogue and prompts. At the limit, the demo asks you to use `/new` and restate the current situation; it does not silently discard earlier facts or summarise them with another model.
 
 Confirmation ends this D5 example rather than opening D6. You can then change D5, start a separate example or exit. This isolated example cannot save a completed financial profile or bypass the main application's separate save-consent workflow. A pause, stop or safety response creates no financial answer. Any human handover shown is simulated; nobody is contacted.
 
@@ -81,22 +83,22 @@ Start `chat` once. Enter each line below separately, read the response, then ent
 | 1 | `I receive wages and pension payments` | A question about which sources actually pay living costs; no assumed financial answer. |
 | 2 | `My wages stay in savings. My pension pays the bills.` | Pension-only candidate, with wages excluded; asks for confirmation. |
 | 3 | `/confirm` | Confirms the pension answer in this session, with zero new model calls. |
-| 4 | `/change` | Invalidates the previous answer and asks for a complete replacement. |
+| 4 | `/change` | Invalidates the previous answer. The latest runtime retains the example's earlier replies for the correction. |
 | 5 | `Both my wages and pension pay for everyday costs.` | New mixed-source candidate with both categories, awaiting fresh confirmation. |
 | 6 | `/confirm` | Confirms the corrected answer, with zero new model calls. |
 | 7 | `/exit` | Ends the session without saving a financial profile. |
 
-Explain the business point: **receiving money does not establish how it is used; one complete interpretation supports a focused follow-up, confirmation and correction.** The transcript records one successful live run, not guaranteed wording or a guarantee that the service will be available at the meeting. If a live request fails, the session stops. The saved transcript can be shown as a labelled recording of the earlier run; it must not be presented as live inference.
+Explain the business point: **receiving money does not establish how it is used; one interpretation supports a focused follow-up, confirmation and correction.** The transcript records one successful live run of the earlier version, not a verification of the new context handling or guaranteed service availability. If a live request fails, the session stops. The saved transcript can be shown as a labelled recording of the earlier run; it must not be presented as live inference.
 
 ## Try your own wording
 
 Use the same `chat` command and type your own fictional D5 answer instead of the demonstration sequence. Use `/new` between independent examples and `/change` to replace an answer within the same example. Read the proposed meaning before using `/confirm`.
 
-For follow-ups and corrections, give the **complete current funding situation** rather than only “yes” or “that too”. Note whether the app interpreted the meaning correctly, asked a useful question, rejected the answer, or encountered a service failure. Your wording is sent live; no new training, default switch or test-bank edit is required. This publication did not run any extra examples or model calls.
+For follow-ups, you can answer the question just asked without repeating all earlier details. For corrections, name what changes; `/change` retains earlier replies within this example. If a reference is unclear, the demo should ask rather than guess. Without `/new`, you remain in the same example: do not introduce a different fictional customer as though it were a continuation. Read the whole confirmation before using `/confirm`. This context behaviour is implemented but has not been measured live in this update.
 
 ## Local records and access failures
 
-Use fictional data. Each launch creates a private directory under `~/.local/state/investwise/d5-demo/` containing replies, raw model output, authored responses and safe backend receipts. These are local diagnostic records, not a saved financial profile. The terminal prints the directory location. Do not commit these directories or authentication files.
+Use fictional data. Each launch creates a private directory under `~/.local/state/investwise/d5-demo/` containing replies, the exact context supplied, raw model output, authored responses and safe backend receipts. These are local diagnostic records, not a saved financial profile. `/new` clears active memory but does not delete these earlier trace files; restarting never reloads them as memory. The terminal prints the directory location. Do not commit these directories or authentication files.
 
 Optional `--profile-dir` and `--output-dir` arguments select external directories; neither can point inside the repository. The output directory must be new. A runtime or access failure stops the session: there is no automatic sign-in, inference retry, model replacement, output repair or cached-answer fallback. Read the safe receipt's stage/code, then resolve access deliberately before a later run.
 
@@ -120,6 +122,8 @@ The previous repair produced seven correct clear candidates, two missing-informa
 
 No model, prompt, schema, semantic validator, business definition or follow-up was changed during the original packaging. At that point, only the credential provider's personal default path and repository containment path were made portable. The subsequent [13 October runtime repair](../../docs/d5-runtime-repair-2026-10-13.md) adds the existing jump-intent safety fix and uses exact user quotations for confirmation, preserving exclusions such as "not investment withdrawals". It uses the same model interpretation and leaves the normal application unchanged.
 
-Numerical packages are import dependencies of existing shared types; the demo does not train or call those classifiers. The [runtime manifest](runtime-manifest.json) records original and current hashes, portability differences, the two runtime repairs and pinned versions. The repair was checked only against existing affected examples using offline replay; it does not establish live service availability.
+The subsequent context update changes the packaged prompt, context-aware evidence validation, authored follow-up wording and request data. It keeps the financial JSON output schema, model and one-call resolver interface unchanged. It adds no retraining, second interpreter, classifier or dependency. Exact quotations may now come from a single earlier user reply, never from assistant text or a fabricated join across replies. The current reply must also be evidenced for a non-abstaining contextual interpretation.
+
+Numerical packages are import dependencies of existing shared types; the demo does not train or call those classifiers. The [runtime manifest](runtime-manifest.json) records original and current hashes, portability differences, runtime updates and pinned versions. The earlier repair's offline results do not validate this later context update. No tests or live requests were run for the context change.
 
 For the semantic method and all eleven before/after cases, read the [technical handoff](../../docs/d5-semantic-method-handoff.md).

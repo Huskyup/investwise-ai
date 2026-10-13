@@ -44,6 +44,7 @@ def main():
         print("InvestWise — independent D5 example | GPT-6.1 Sol, low reasoning")
         print("Use fictional text only. Replies and safe backend traces are recorded locally at:", output)
         print("The normal app is unchanged. This example cannot save a financial profile.")
+        print("Earlier replies are remembered within this example. Use /new for a fresh example.")
         print("Commands: /help /confirm /change /pause /resume /stop /new /exit")
         print("\n" + session.question)
         while True:

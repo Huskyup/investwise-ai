@@ -20,9 +20,11 @@
     "package_init_files": 1,
     "config_files": 3,
     "total_files": 41,
-    "byte_identical_files": 38,
+    "byte_identical_files": 35,
     "portability_modified_files": 1,
-    "runtime_repaired_files": 2
+    "runtime_repaired_files": 2,
+    "context_modified_files": 4,
+    "modification_counts_note": "Repair and context counts overlap for engine_v2; original source hashes and historical repair receipts are preserved."
   },
   "files": {
     "ai/__init__.py": {
@@ -216,8 +218,9 @@
       "source_path": "ai/d5_single_interpreter_contract_v2.py",
       "copied_path": "demos/d5/runtime/ai/d5_single_interpreter_contract_v2.py",
       "source_sha256": "d84bef71c8f17166546c0269397bffdcd058c5b29ccf9d1bfea85dcf870e5e68",
-      "copied_sha256": "d84bef71c8f17166546c0269397bffdcd058c5b29ccf9d1bfea85dcf870e5e68",
-      "byte_identical": true
+      "copied_sha256": "0e810446c424f640ae60372bea46cb57a8f03f2266bf4c6e4b29183a91955de1",
+      "byte_identical": false,
+      "context_update": "Bounded immutable raw dialogue context; exact user-turn evidence; snapshot-bound decisions."
     },
     "ai/d5_single_interpreter_engine.py": {
       "source_path": "ai/d5_single_interpreter_engine.py",
@@ -230,16 +233,18 @@
       "source_path": "ai/d5_single_interpreter_engine_v2.py",
       "copied_path": "demos/d5/runtime/ai/d5_single_interpreter_engine_v2.py",
       "source_sha256": "9c9823b607cd52410f3a1645196690f8a028475ee876c0f71391b237fd5f0a73",
-      "copied_sha256": "e5565831ae865e7d907f2e057312bc22f1b1bec4ec9ecd7fce19a74f1de8f2ec",
+      "copied_sha256": "6e7d579cb7908578addb4b8c8f6c61fdb7d278aa3a47ed81951b445cdf1848a7",
       "byte_identical": false,
-      "runtime_repair": "Quote exact validated active and excluded facts, including exclusions within one category."
+      "runtime_repair": "Quote exact validated active and excluded facts, including exclusions within one category.",
+      "context_update": "Single-question follow-ups, visible context limit and latest reply alongside exact confirmation quotations."
     },
     "ai/d5_single_interpreter_transport.py": {
       "source_path": "ai/d5_single_interpreter_transport.py",
       "copied_path": "demos/d5/runtime/ai/d5_single_interpreter_transport.py",
       "source_sha256": "b18a8356caf5794b54695e34ce639e6267d2b3a6016b3e86515d78948a78e6ee",
-      "copied_sha256": "b18a8356caf5794b54695e34ce639e6267d2b3a6016b3e86515d78948a78e6ee",
-      "byte_identical": true
+      "copied_sha256": "fae4f643277a0bb08fef9112b7f3962a9f2a4cd33131e1015d140186d9e31c7a",
+      "byte_identical": false,
+      "context_update": "Validate the sole added dialogue data field; retain existing passive transport and record context count."
     },
     "ai/d5_text_classifier.py": {
       "source_path": "ai/d5_text_classifier.py",
@@ -323,8 +328,9 @@
       "source_path": "config/d5-single-interpreter-v2-prompt.txt",
       "copied_path": "demos/d5/runtime/config/d5-single-interpreter-v2-prompt.txt",
       "source_sha256": "98f3a1c33cdf876530198b54884178f3f07b48083dbf1dce79a5e4e0dcf8290f",
-      "copied_sha256": "98f3a1c33cdf876530198b54884178f3f07b48083dbf1dce79a5e4e0dcf8290f",
-      "byte_identical": true
+      "copied_sha256": "474f95b7bdbf2dd5b0b2f3ea499b7eab1a06a588ab592c51f9045a1706b7c003",
+      "byte_identical": false,
+      "context_update": "Use explicit same-example replies for follow-ups and corrections; clarify ambiguous references."
     }
   },
   "requirements": {
@@ -938,7 +944,7 @@
     "model_calls": 0,
     "test_cases": 0
   },
-  "runtime_revision": "2026-10-13-safety-and-exact-confirmation",
+  "runtime_revision": "2026-10-13-same-example-context",
   "runtime_repairs": [
     {
       "date": "2026-10-13",
@@ -962,5 +968,53 @@
       "model_prompt_schema_and_default_unchanged": true,
       "actual_model_calls": 0
     }
-  ]
+  ],
+  "historical_verification_note": "static_verification, import_verification and runtime_repairs describe earlier revisions; they do not validate the later same-example context behaviour.",
+  "context_update": {
+    "date": "2026-10-13",
+    "report": "docs/d5-same-example-context.md",
+    "previous_manifest_sha256": "bb71d893bdae84c10c25b88148faf8d2e67ddef4ec1fafe2052733ecb2afefd2",
+    "files": [
+      {
+        "path": "demos/d5/runtime/ai/d5_single_interpreter_contract_v2.py",
+        "before_sha256": "d84bef71c8f17166546c0269397bffdcd058c5b29ccf9d1bfea85dcf870e5e68",
+        "after_sha256": "0e810446c424f640ae60372bea46cb57a8f03f2266bf4c6e4b29183a91955de1",
+        "reason": "Bounded immutable raw dialogue context; exact user-turn evidence; snapshot-bound decisions."
+      },
+      {
+        "path": "demos/d5/runtime/ai/d5_single_interpreter_transport.py",
+        "before_sha256": "b18a8356caf5794b54695e34ce639e6267d2b3a6016b3e86515d78948a78e6ee",
+        "after_sha256": "fae4f643277a0bb08fef9112b7f3962a9f2a4cd33131e1015d140186d9e31c7a",
+        "reason": "Validate the sole added dialogue data field; retain existing passive transport and record context count."
+      },
+      {
+        "path": "demos/d5/runtime/ai/d5_single_interpreter_engine_v2.py",
+        "before_sha256": "e5565831ae865e7d907f2e057312bc22f1b1bec4ec9ecd7fce19a74f1de8f2ec",
+        "after_sha256": "6e7d579cb7908578addb4b8c8f6c61fdb7d278aa3a47ed81951b445cdf1848a7",
+        "reason": "Single-question follow-ups, visible context limit and latest reply alongside exact confirmation quotations."
+      },
+      {
+        "path": "demos/d5/runtime/config/d5-single-interpreter-v2-prompt.txt",
+        "before_sha256": "98f3a1c33cdf876530198b54884178f3f07b48083dbf1dce79a5e4e0dcf8290f",
+        "after_sha256": "474f95b7bdbf2dd5b0b2f3ea499b7eab1a06a588ab592c51f9045a1706b7c003",
+        "reason": "Use explicit same-example replies for follow-ups and corrections; clarify ambiguous references."
+      }
+    ],
+    "session_adapter_files": [
+      "demos/d5/session.py",
+      "demos/d5/demo.py"
+    ],
+    "contract_version": "d5-single-interpreter-v2-context-1",
+    "max_interpreted_replies_per_request": 12,
+    "max_dialogue_characters": 32768,
+    "model_unchanged": true,
+    "financial_output_schema_unchanged": true,
+    "normal_app_default_and_all_15_questions_unchanged": true,
+    "verification": "Static source review and syntax/hash inspection only; no behavioural or semantic pass is claimed.",
+    "credential_reads": 0,
+    "authentication_calls": 0,
+    "model_calls": 0,
+    "test_runs": 0,
+    "new_evaluation_cases": 0
+  }
 }

@@ -1,6 +1,6 @@
 """Versioned D5 schema over the existing bounded, tool-free OAuth transport.
 
-Only the passive schema/prompt change. HTTP compatibility, stream assembly,
+Only the passive schema/prompt and bounded dialogue data change. HTTP compatibility, stream assembly,
 complete response, EOF, metadata, credential and local limits are reused.
 """
 from __future__ import annotations
@@ -17,16 +17,31 @@ from ai.d5_chatgpt_stream_assembly import normalised_chunks
 from ai.d5_chatgpt_plan_diagnostic import failure_details
 from ai.d5_puzzle_interpreter import D5_OPTION_IDS, output_schema as old_schema
 from ai.d5_single_interpreter_contract import output_schema
+from ai.d5_single_interpreter_contract_v2 import D5DialogueContext
 from ai.d5_tool_free_gpt_experiment import generation_schema
-from ai.llm_shadow import canonical_json
+from ai.llm_shadow import canonical_json, strict_json
 
 
 def request_payload(messages, schema):
     if canonical_json(schema) != canonical_json(output_schema()):
         raise ValueError("Only the frozen single-interpreter schema is permitted")
-    # Reuse the exact input/roles/D5/options boundary, then explicitly version
-    # the newly authorised passive schema. No tools or context are added.
-    payload = frozen.request_payload(messages, old_schema(D5_OPTION_IDS))
+    # Validate the sole added data field, then reuse the old role/question/
+    # option/input boundary on a copy. Restore only that validated user data.
+    base_messages = deepcopy(messages)
+    context = None
+    if isinstance(base_messages, list) and len(base_messages) == 2:
+        message = base_messages[1]
+        if isinstance(message, dict) and isinstance(message.get("content"), str):
+            data = strict_json(message["content"])
+            if isinstance(data, dict) and "dialogue_context" in data:
+                context = D5DialogueContext.from_dict(data.pop("dialogue_context"))
+                context.validate(data.get("original_reply"))
+                message["content"] = canonical_json(data)
+    payload = frozen.request_payload(base_messages, old_schema(D5_OPTION_IDS))
+    if context is not None:
+        data = strict_json(payload["input"][0]["content"])
+        data["dialogue_context"] = context.as_dict()
+        payload["input"][0]["content"] = canonical_json(data)
     payload["text"]["format"] = {
         "type": "json_schema", "name": "d5_single_interpreter_v1", "strict": True,
         "schema": generation_schema(deepcopy(schema)),
@@ -47,6 +62,9 @@ class SingleInterpreterGenerator(MissingMimeChatGPTPlanGenerator):
         assembly = {"lock": threading.Lock(), "sealed": False,
                     "detail": {"version": 1, "attempted": False, "applied": False}}
         self._observation = http
+        supplied = strict_json(payload["input"][0]["content"])
+        context_data = supplied.get("dialogue_context", {})
+        previous_replies = len(context_data.get("history", []))
         self.last_call = {
             "backend": "single_interpreter_existing_chatgpt_plan_stream",
             "endpoint": frozen.ENDPOINT, "model_requested": frozen.MODEL,
@@ -55,7 +73,8 @@ class SingleInterpreterGenerator(MissingMimeChatGPTPlanGenerator):
             "timeout_seconds": frozen.TIMEOUT_SECONDS,
             "max_response_bytes": frozen.MAX_RESPONSE_BYTES,
             "provider_output_token_cap": None, "actual_calls": 0,
-            "retry": False, "output_repair": False, "fresh_context": True,
+            "retry": False, "output_repair": False, "fresh_context": previous_replies == 0,
+            "fresh_server_context": True, "previous_reply_count": previous_replies,
             "tool_dispatcher_present": False, "blocked": False,
         }
         started = time.monotonic()

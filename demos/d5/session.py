@@ -1,7 +1,8 @@
-"""Standalone process adapter for the unchanged, packaged D5 interpreter."""
+"""Standalone D5 adapter with bounded, in-memory same-example dialogue."""
 from __future__ import annotations
 
 import json
+from dataclasses import replace
 import os
 from pathlib import Path
 import sys
@@ -10,6 +11,23 @@ import uuid
 HERE = Path(__file__).resolve().parent
 REPOSITORY = HERE.parents[1]
 RUNTIME = HERE / "runtime"
+DISPLAY_KEYS = ("confirmation_text", "followup", "help_prompt", "message", "prompt",
+                "pacing_text", "care_prompt", "support_prompt")
+FALLBACK_MESSAGES = {
+    "pause": "Paused. Use /resume when ready.",
+    "paused": "This example is paused. Use /resume when ready.",
+    "resume": "Ready when you are. Continue this D5 example; earlier replies are still available.",
+    "stop": "This example is stopped.",
+    "safety_stop": "This example has stopped for safety. Any handover here is simulated; nobody has been contacted.",
+    "finish_incomplete_or_pause": "This remains unresolved. You can pause or end this example.",
+}
+
+
+def authored_text(result):
+    texts = list(dict.fromkeys(result[key] for key in DISPLAY_KEYS
+        if isinstance(result.get(key), str) and result[key]))
+    return texts or [FALLBACK_MESSAGES.get(result.get("action"),
+        "The answer remains unresolved. You can ask for help, pause or stop.")]
 
 
 def bootstrap():
@@ -76,9 +94,10 @@ class D5Session:
     def new_example(self):
         if self.failed:
             raise DemoStopped("The session stopped after a failure; no automatic retry")
-        from ai.d5_single_interpreter_contract_v2 import D5SingleInterpreter
+        from ai.d5_single_interpreter_contract_v2 import D5DialogueContext, D5SingleInterpreter
         from ai.d5_single_interpreter_engine_v2 import D5BusinessStandardEngine
         self.captured = {}
+        self.last_record = None
 
         def generate(messages, schema):
             raw = self.backend(messages, schema)
@@ -90,6 +109,24 @@ class D5Session:
             self.spec, d5_interpreter=self.interpreter,
             question_resolver=NoOtherQuestions(), store=NoProfileSave())
         self.engine.state.current_index = self.spec.question_order.index("D5")
+        self.interpreter.context = D5DialogueContext(pending_prompt=self.question)
+
+    def _remember_reply(self, text, result, context):
+        """Only interpreted user text and displayed authored wording become context."""
+        prompt = "\n".join(authored_text(result))
+        self.interpreter.context = replace(context,
+            history=context.history + ((context.pending_prompt or self.question, text),),
+            pending_prompt=prompt, correction_requested=False)
+
+    def _remember_prompt(self, result):
+        """Keep intervening authored controls, without treating user controls as facts."""
+        from ai.d5_single_interpreter_contract_v2 import MAX_CONTEXT_CHARS
+        context = self.interpreter.context
+        # Once over the bound, the interpreter already requires /new. Do not
+        # grow memory indefinitely by appending further control-only messages.
+        if len(context.pending_prompt) <= MAX_CONTEXT_CHARS:
+            self.interpreter.context = replace(context,
+                pending_prompt=context.pending_prompt + "\n" + "\n".join(authored_text(result)))
 
     @property
     def question(self):
@@ -109,7 +146,9 @@ class D5Session:
         if command == "/resume":
             if self.confirmed or self.engine.state.current_question_id != "D5":
                 return {"action": "d5_complete", "message": "D5 has ended. Use /change, /new or /exit."}
-            return self.engine.resume()
+            result = self.engine.resume()
+            self._remember_prompt(result)
+            return result
         if command in {"/confirm", "/change"}:
             if self.engine.state.stopped_for_safety:
                 return {"action": "safety_stop", "message": "This example remains stopped for safety."}
@@ -119,7 +158,12 @@ class D5Session:
                 return {"action": "paused", "message": "Resume before confirming or changing an answer."}
             if command == "/change":
                 result = self.engine.correct_answer("D5")
-                result["message"] = "The previous D5 answer is invalidated. Give the complete replacement answer."
+                result["message"] = (
+                    "The previous D5 answer is invalidated. What should I change? "
+                    "Earlier replies in this example are available; name what is different."
+                )
+                self.interpreter.context = replace(self.interpreter.context,
+                    pending_prompt=result["message"], correction_requested=True)
                 return result
             if self.confirmed:
                 return {"action": "confirmed", "message": "D5 is already confirmed for this example."}
@@ -146,6 +190,7 @@ class D5Session:
         self.backend.last_call = {}
         self.captured.clear()
         before = self.backend.calls
+        context = self.interpreter.context
         try:
             result = self.engine.submit_answer(text)
         except Exception:
@@ -159,6 +204,13 @@ class D5Session:
             raise DemoStopped("The one-interpretation-call boundary was exceeded")
         from ai.llm_shadow import strict_json
         raw = self.captured.get("raw_output")
+        if raw is not None:
+            self._remember_reply(text, result, context)
+        if result.get("action") in {"stop", "safety_stop"}:
+            from ai.d5_single_interpreter_contract_v2 import D5DialogueContext
+            self.interpreter.context = D5DialogueContext()
+        elif raw is None:
+            self._remember_prompt(result)
         try:
             parsed = strict_json(raw) if raw is not None else None
         except ValueError:
@@ -167,6 +219,7 @@ class D5Session:
         answer = self.engine.state.answers["D5"]
         self.last_record = {
             "id": identifier, "input": text, "raw": parsed, "raw_output": raw,
+            "dialogue_context": context.as_dict() if raw is not None else None,
             "result": result, "decision": decision.as_dict() if decision and raw is not None else None,
             "actual_model_calls": self.backend.calls - before,
             "backend_call": dict(self.backend.last_call), "candidate": answer.candidate_option_id,
@@ -182,20 +235,8 @@ def render(result):
     bucket = result.get("bucket")
     if bucket:
         print(f"\n{bucket}")
-    emitted = set()
-    for key in ("confirmation_text", "followup", "help_prompt", "message", "prompt", "pacing_text", "care_prompt", "support_prompt"):
-        text = result.get(key)
-        if isinstance(text, str) and text and text not in emitted:
-            print(text)
-            emitted.add(text)
-    if not emitted:
-        print({"pause": "Paused. Use /resume when ready.",
-               "paused": "This example is paused. Use /resume when ready.",
-               "resume": "Ready when you are. Give your complete current D5 answer.",
-               "stop": "This example is stopped.",
-               "safety_stop": "This example has stopped for safety. Any handover here is simulated; nobody has been contacted.",
-               "finish_incomplete_or_pause": "This remains unresolved. You can pause or end this example."}.get(
-                   action, "The answer remains unresolved. You can ask for help, pause or stop."))
+    for text in authored_text(result):
+        print(text)
     if action in {"care_pause", "pace_pause"}:
         print("You can use /resume when ready, or /stop to end this example.")
     if action == "confirm" or (result.get("candidate_option_id") and result.get("confirmation_text")):

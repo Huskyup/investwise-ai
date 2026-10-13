@@ -31,6 +31,15 @@ class D5BusinessStandardEngine(D5SingleInterpreterEngine):
     def _d5_unresolved(self, **kwargs):
         result = super()._d5_unresolved(**kwargs)
         # Keep care, accessibility, support, pause and exhausted-budget routes.
+        if (self.d5_interpreter.context_limit_reached
+                and result.get("action") in {"clarify", "finish_incomplete_or_pause"}):
+            result.pop("followup", None)
+            result["action"] = "context_limit"
+            result["message"] = (
+                "This example has reached its short conversation limit. No interpretation was made. "
+                "Use /new and give the current funding situation to start afresh."
+            )
+            return result
         if result.get("action") != "clarify":
             return result
         decision = self.d5_interpreter.last_decision
@@ -46,8 +55,7 @@ class D5BusinessStandardEngine(D5SingleInterpreterEngine):
             labels = {option.id: option.label.lower() for option in self.spec.question("D5").options}
             question = (
                 f"Does money from {labels[category]} currently pay any of your living "
-                "costs, or is that still unclear? Please include any other sources "
-                "paying these costs so your reply gives the complete current answer."
+                "costs? You can say yes, no or that you are still unsure."
             )
         else:
             question = {
@@ -57,8 +65,8 @@ class D5BusinessStandardEngine(D5SingleInterpreterEngine):
                     "You can name another source or leave this unresolved."
                 ),
                 "complete_answer_needed": (
-                    "Please give your complete current funding answer, including any "
-                    "correction, so I do not have to guess which sources still apply."
+                    "Which earlier source are you adding to or changing, and how is it "
+                    "used now? Please name it so I do not guess what you mean."
                 ),
                 "question_meaning": D5_EXPLANATION + " What currently pays these costs for you?",
                 "reply_unclear": (
@@ -103,5 +111,8 @@ class D5BusinessStandardEngine(D5SingleInterpreterEngine):
         if excluded:
             quotes = "; ".join(json.dumps(quote, ensure_ascii=False) for quote in excluded)
             playback += f"\nNot counted as current funding, from your words:\n{quotes}"
+        if receipt.decision.context.history:
+            playback = ("Using your latest reply: " + json.dumps(text, ensure_ascii=False)
+                        + "\nThe quotations below are read together with that reply.\n" + playback)
         result["confirmation_text"] = playback + "\nHave I understood correctly?"
         return result

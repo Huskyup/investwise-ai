@@ -22,13 +22,15 @@ from ai.question_spec import BusinessSpec
 
 ROOT = Path(__file__).resolve().parents[1]
 PROMPT_PATH = ROOT / "config/d5-single-interpreter-v2-prompt.txt"
-CONTRACT_VERSION = "d5-single-interpreter-v2"
+CONTRACT_VERSION = "d5-single-interpreter-v2-context-1"
 SOURCE = "d5_single_interpreter_v2"
 MAX_INPUT_CHARS = 32768
 MAX_OUTPUT_BYTES = 65536
 MAX_FACTS = 24
 MAX_EVIDENCE = 32
 MAX_MISSING = 8
+MAX_CONTEXT_TURNS = 12
+MAX_CONTEXT_CHARS = 32768
 SCHEMA_KEYS = frozenset({"semantic_bucket", "option_id", "facts", "evidence",
     "missing_information", "model_abstain", "answer_scope"})
 FACT_KEYS = frozenset({"source_instance_id", "source_category", "owner", "time",
@@ -122,6 +124,53 @@ def _input(text: str) -> None:
         raise D5SingleContractError("invalid_or_oversized_input")
 
 
+@dataclass(frozen=True)
+class D5DialogueContext:
+    """Raw same-example replies and authored prompts, never inferred facts.
+
+    Each history pair is (prompt shown before that reply, original reply).
+    Retain whole turns; reaching the bound requires an explicit new example.
+    """
+
+    history: tuple[tuple[str, str], ...] = ()
+    pending_prompt: str = ""
+    correction_requested: bool = False
+
+    def validate(self, text: str) -> None:
+        _input(text)
+        if (type(self.history) is not tuple or type(self.pending_prompt) is not str
+                or type(self.correction_requested) is not bool):
+            raise D5SingleContractError("invalid_dialogue_context")
+        if len(self.history) >= MAX_CONTEXT_TURNS:
+            raise D5SingleContractError("dialogue_context_limit")
+        size = len(text) + len(self.pending_prompt)
+        for pair in self.history:
+            if (type(pair) is not tuple or len(pair) != 2
+                    or any(type(value) is not str or not value.strip() for value in pair)):
+                raise D5SingleContractError("invalid_dialogue_context")
+            size += sum(len(value) for value in pair)
+        if size > MAX_CONTEXT_CHARS:
+            raise D5SingleContractError("dialogue_context_limit")
+
+    def as_dict(self) -> dict:
+        return {"history": [{"prompt": prompt, "reply": reply} for prompt, reply in self.history],
+            "pending_prompt": self.pending_prompt, "correction_requested": self.correction_requested}
+
+    @classmethod
+    def from_dict(cls, value: object) -> D5DialogueContext:
+        if (not isinstance(value, dict)
+                or set(value) != {"history", "pending_prompt", "correction_requested"}
+                or not isinstance(value["history"], list)
+                or any(not isinstance(turn, dict) or set(turn) != {"prompt", "reply"}
+                       for turn in value["history"])):
+            raise D5SingleContractError("invalid_dialogue_context")
+        return cls(tuple((turn["prompt"], turn["reply"]) for turn in value["history"]),
+                   value["pending_prompt"], value["correction_requested"])
+
+    def user_replies(self, text: str) -> tuple[str, ...]:
+        return tuple(reply for _, reply in self.history) + (text,)
+
+
 def _strings(value: object, name: str, limit: int) -> tuple[str, ...]:
     if (not isinstance(value, list) or len(value) > limit
             or any(not isinstance(item, str) or not item.strip()
@@ -133,7 +182,8 @@ def _strings(value: object, name: str, limit: int) -> tuple[str, ...]:
 
 
 def parse_interpretation(raw: str, text: str,
-                         allowed_option_ids: frozenset[str] = D5_OPTION_IDS) -> D5Interpretation:
+                         allowed_option_ids: frozenset[str] = D5_OPTION_IDS, *,
+                         context: D5DialogueContext = D5DialogueContext()) -> D5Interpretation:
     """Reject structural, provenance and internal-contract errors, never relabel.
 
     Source IDs identify evidenced category/owner/time/use groups. A group may
@@ -141,6 +191,8 @@ def parse_interpretation(raw: str, text: str,
     answer; no source count or semantic entailment is inferred from wording.
     """
     _input(text)
+    context.validate(text)
+    user_replies = context.user_replies(text)
     if frozenset(allowed_option_ids) != D5_OPTION_IDS:
         raise D5SingleContractError("unchanged_d5_option_ids_required")
     if not isinstance(raw, str) or len(raw.encode("utf-8")) > MAX_OUTPUT_BYTES:
@@ -163,8 +215,10 @@ def parse_interpretation(raw: str, text: str,
         raise D5SingleContractError("model_abstain_must_be_boolean")
     evidence = _strings(data["evidence"], "evidence", MAX_EVIDENCE)
     missing = _strings(data["missing_information"], "missing_information", MAX_MISSING)
-    if any(quote not in text for quote in evidence):
+    if any(not any(quote in reply for reply in user_replies) for quote in evidence):
         raise D5SingleContractError("evidence_is_not_exact_reply_span")
+    if context.history and not data["model_abstain"] and not any(quote in text for quote in evidence):
+        raise D5SingleContractError("current_reply_evidence_required")
     if not isinstance(data["facts"], list) or len(data["facts"]) > MAX_FACTS:
         raise D5SingleContractError("facts_invalid_or_oversized")
     facts: list[D5SourceFact] = []
@@ -188,7 +242,8 @@ def parse_interpretation(raw: str, text: str,
                 or item["pays_living_costs"] not in USES):
             raise D5SingleContractError("invalid_fact_relation")
         quote = item["evidence"]
-        if not quote.strip() or quote not in text or quote not in evidence:
+        if (not quote.strip() or not any(quote in reply for reply in user_replies)
+                or quote not in evidence):
             raise D5SingleContractError("fact_evidence_not_exact_listed_span")
         if item["source_category"] == "D5_NO_REGULAR" and item["pays_living_costs"] != "no":
             raise D5SingleContractError("no_regular_requires_negative_cost_use")
@@ -267,15 +322,18 @@ def _contract_hash(prompt: str) -> str:
         "implementation_sha256": sha256_bytes(Path(__file__).read_bytes())})
 
 
-def build_messages(spec: BusinessSpec, text: str, prompt: str | None = None) -> list[dict[str, str]]:
+def build_messages(spec: BusinessSpec, text: str, prompt: str | None = None, *,
+                   context: D5DialogueContext = D5DialogueContext()) -> list[dict[str, str]]:
     _input(text)
+    context.validate(text)
     _spec_hash(spec)
     question = spec.question("D5")
     return [{"role": "system", "content": PROMPT_PATH.read_text(encoding="utf-8") if prompt is None else prompt},
         {"role": "user", "content": canonical_json({
             "current_question": {"id": question.id, "text": question.question},
             "allowed_options": [{"id": option.id, "label": option.label, "definition": option.meaning}
-                for option in question.options], "original_reply": text})}]
+                for option in question.options], "original_reply": text,
+            "dialogue_context": context.as_dict()})}]
 
 
 @dataclass(frozen=True)
@@ -288,6 +346,7 @@ class D5ContractDecision:
     contract_sha256: str
     raw_output: str
     interpretation: D5Interpretation | None
+    context: D5DialogueContext = D5DialogueContext()
 
     def as_dict(self) -> dict:
         """Bounded metadata only; rejected financial material is never exposed."""
@@ -298,17 +357,19 @@ class D5ContractDecision:
             "answer_scope": parsed.answer_scope if parsed else None,
             "input_sha256": self.input_sha256, "proposal_sha256": self.proposal_sha256,
             "spec_sha256": self.spec_sha256, "contract_sha256": self.contract_sha256,
-            "contract_version": CONTRACT_VERSION}
+            "contract_version": CONTRACT_VERSION, "context_sha256": _hash(self.context.as_dict()),
+            "previous_reply_count": len(self.context.history)}
 
 
-def decide(raw: str, text: str, spec: BusinessSpec, *, prompt: str | None = None) -> D5ContractDecision:
+def decide(raw: str, text: str, spec: BusinessSpec, *, prompt: str | None = None,
+           context: D5DialogueContext = D5DialogueContext()) -> D5ContractDecision:
     """Standalone deterministic evaluation; not an issued application decision."""
     _input(text)
     if not isinstance(raw, str):
         raise D5SingleContractError("output_must_be_text")
     frozen_prompt = PROMPT_PATH.read_text(encoding="utf-8") if prompt is None else prompt
     try:
-        parsed = parse_interpretation(raw, text)
+        parsed = parse_interpretation(raw, text, context=context)
         outcome = ("abstention" if parsed.model_abstain else
             "financial_candidate" if parsed.semantic_bucket == "clarity" else "dialogue_only")
         reason = {"abstention": "independent_model_abstention", "financial_candidate": "candidate_requires_confirmation",
@@ -316,7 +377,7 @@ def decide(raw: str, text: str, spec: BusinessSpec, *, prompt: str | None = None
     except D5SingleContractError as exc:
         parsed, outcome, reason = None, "rejection", str(exc)
     return D5ContractDecision(outcome, reason, _text_hash(text), _text_hash(raw),
-        _spec_hash(spec), _contract_hash(frozen_prompt), raw, parsed)
+        _spec_hash(spec), _contract_hash(frozen_prompt), raw, parsed, context)
 
 
 @dataclass(frozen=True)
@@ -347,6 +408,8 @@ class D5SingleInterpreter:
         self.calls = 0
         self.halted = False
         self.last_decision: D5ContractDecision | None = None
+        self.context = D5DialogueContext()
+        self.context_limit_reached = False
         self._issued: dict[int, D5ContractDecision] = {}
 
     def verify_decision(self, decision: D5ContractDecision, text: str, *,
@@ -363,12 +426,14 @@ class D5SingleInterpreter:
             if option_id is not None and (decision.outcome != "financial_candidate"
                     or decision.interpretation is None or decision.interpretation.option_id != option_id):
                 return False
-            return decision == decide(decision.raw_output, text, current_spec, prompt=self.prompt)
+            return decision == decide(decision.raw_output, text, current_spec,
+                                      prompt=self.prompt, context=decision.context)
         except (D5SingleContractError, KeyError, TypeError, ValueError):
             return False
 
     def resolve(self, question_id: str, text: str) -> QuestionMLResolution:
         self.last_decision = None
+        self.context_limit_reached = False
         diagnostic: dict = {"question_id": question_id, "source_hash": self.source_hash,
             "route": SOURCE, "contract_version": CONTRACT_VERSION, "llm_called": False,
             "no_cp": True, "conformal_coverage_guarantee": False,
@@ -385,10 +450,12 @@ class D5SingleInterpreter:
             return D5SingleResolution(model_uncertain=True, source=SOURCE,
                 reason="d5_transport_halted", diagnostics=diagnostic)
         try:
-            messages = build_messages(self.spec, text, self.prompt)
+            context = self.context
+            messages = build_messages(self.spec, text, self.prompt, context=context)
             if _spec_hash(self.spec) != self.spec_sha256 or _contract_hash(self.prompt) != self.contract_sha256:
                 raise D5SingleContractError("contract_or_spec_changed")
         except D5SingleContractError as exc:
+            self.context_limit_reached = str(exc) == "dialogue_context_limit"
             diagnostic["contract_error"] = str(exc)
             return D5SingleResolution(model_uncertain=True, source=SOURCE,
                 reason="d5_contract_rejected", diagnostics=diagnostic)
@@ -409,7 +476,7 @@ class D5SingleInterpreter:
         # Neither this diagnostic dictionary nor its contents authorise a fact.
         if len(raw.encode("utf-8")) <= MAX_OUTPUT_BYTES:
             diagnostic["raw_output"] = raw
-        decision = decide(raw, text, self.spec, prompt=self.prompt)
+        decision = decide(raw, text, self.spec, prompt=self.prompt, context=context)
         self._issued[id(decision)] = decision
         self.last_decision = decision
         diagnostic["contract_decision"] = decision.as_dict()
