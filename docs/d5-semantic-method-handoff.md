@@ -2,6 +2,8 @@
 
 Updated 13 October 2026 · `feature/all-question-ml-prototype`
 
+Maintained delivery repository: [Huskyup/investwise-ai](https://github.com/Huskyup/investwise-ai/tree/feature/all-question-ml-prototype). Use the explicit repository URL below when updating an older checkout whose `origin` may point elsewhere.
+
 ## Latest runtime update: safety and exact confirmation
 
 The independent D5 terminal now includes two small software repairs:
@@ -17,7 +19,7 @@ The [runtime repair report](d5-runtime-repair-2026-10-13.md) and [recorded check
 
 ```bash
 git switch feature/all-question-ml-prototype
-git pull --ff-only origin feature/all-question-ml-prototype
+git pull --ff-only https://github.com/Huskyup/investwise-ai.git feature/all-question-ml-prototype
 "$HOME/.venvs/investwise-d5/bin/python" demos/d5/demo.py chat
 ```
 

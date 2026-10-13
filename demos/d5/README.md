@@ -8,7 +8,14 @@ One complete live D5 conversation has now succeeded: a focused follow-up, pensio
 
 Use **Python 3.12 on macOS or Linux**, a terminal and a local browser for sign-in. The existing credential implementation uses POSIX file locking; native Windows is not supported. Installation requires network access. The package pins match the source experiment; no model weights or additional LLM are downloaded.
 
-From the repository root after pulling `feature/all-question-ml-prototype`:
+For a first checkout, clone the maintained D5 branch from **Huskyup's repository**:
+
+```bash
+git clone --branch feature/all-question-ml-prototype https://github.com/Huskyup/investwise-ai.git
+cd investwise-ai
+```
+
+Then, from the repository root:
 
 ```bash
 python3.12 -m venv "$HOME/.venvs/investwise-d5"
@@ -37,7 +44,7 @@ For an existing installation, close the D5 terminal, update from the repository 
 
 ```bash
 git switch feature/all-question-ml-prototype
-git pull --ff-only origin feature/all-question-ml-prototype
+git pull --ff-only https://github.com/Huskyup/investwise-ai.git feature/all-question-ml-prototype
 "$HOME/.venvs/investwise-d5/bin/python" demos/d5/demo.py chat
 ```
 
