@@ -1,0 +1,621 @@
+{
+  "method": "Normalised equality plus maximum of forward/reverse character SequenceMatcher ratios. Flag at >=0.80 for manual review; this is wording screening, not model scoring or proof of independent semantic families.",
+  "model_calls": 0,
+  "known_rows": 143,
+  "new_rows": 24,
+  "dataset_sha256": {
+    "training": "58f4b353e4e3699e01244dfd9809c70edf105c6a50eed66bd258969b36e1c5ec",
+    "validation": "c5b7c787d8e524190cbaf0f180665d46f038ffcb6367615f26e72459e5b225ba"
+  },
+  "checks": [
+    {
+      "id": "D5-V2-LT-01",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "D5-V2-LV-01",
+          "bank": "v2_new_validation",
+          "text": "I've been moving a little out of my savings each week to cover the food shop and the electricity meter.",
+          "symmetric_character_similarity": 0.5333
+        },
+        {
+          "id": "D5-LT-04",
+          "bank": "v1_training-draft.json",
+          "text": "The money I saved up pays for my food and rent now.",
+          "symmetric_character_similarity": 0.5035
+        },
+        {
+          "id": "SYNTH-V1-D5-TRAIN-027",
+          "bank": "original_train",
+          "text": "I draw money from my savings account for everyday expenses.",
+          "symmetric_character_similarity": 0.4768
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-02",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "D5-LV-02",
+          "bank": "v1_validation-draft.json",
+          "text": "These days, everything I spend on keeping the household going comes out of my savings account.",
+          "symmetric_character_similarity": 0.4862
+        },
+        {
+          "id": "D5-LT-07",
+          "bank": "v1_training-draft.json",
+          "text": "My living costs come from savings as well as my wages.",
+          "symmetric_character_similarity": 0.4789
+        },
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-021",
+          "bank": "original_calibration",
+          "text": "Each month I take an amount out of the savings I already own to pay household costs.",
+          "symmetric_character_similarity": 0.4767
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-03",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-011",
+          "bank": "original_calibration",
+          "text": "The pension payment deposited into my bank account is what I now live on.",
+          "symmetric_character_similarity": 0.4903
+        },
+        {
+          "id": "D5-STD-07",
+          "bank": "existing_eleven",
+          "text": "I have a pension fund, but I have not started drawing from it.",
+          "symmetric_character_similarity": 0.4895
+        },
+        {
+          "id": "D5-V2-LT-10",
+          "bank": "v2_new_training",
+          "text": "My pension definitely covers rent. I'm unsure whether I also spend savings on food.",
+          "symmetric_character_similarity": 0.4878
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-04",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "D5-LT-08",
+          "bank": "v1_training-draft.json",
+          "text": "I spend some of my saved money and some of my salary on everyday bills.",
+          "symmetric_character_similarity": 0.4675
+        },
+        {
+          "id": "D5-LV-08",
+          "bank": "v1_validation-draft.json",
+          "text": "Are you asking how much my daily expenses are, or where the money to cover them comes from?",
+          "symmetric_character_similarity": 0.4509
+        },
+        {
+          "id": "SYNTH-V1-D5-TRAIN-046",
+          "bank": "original_train",
+          "text": "Freelance earnings and regular family support fund my bills now.",
+          "symmetric_character_similarity": 0.449
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-05",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-029",
+          "bank": "original_calibration",
+          "text": "I receive monthly rental payments and use them for my day-to-day costs.",
+          "symmetric_character_similarity": 0.5986
+        },
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-037",
+          "bank": "original_calibration",
+          "text": "I use rental receipts alongside benefits for my current day-to-day expenses.",
+          "symmetric_character_similarity": 0.5921
+        },
+        {
+          "id": "SYNTH-V1-D5-TRAIN-027",
+          "bank": "original_train",
+          "text": "I draw money from my savings account for everyday expenses.",
+          "symmetric_character_similarity": 0.5481
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-06",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "D5-V2-LV-04",
+          "bank": "v2_new_validation",
+          "text": "The pay from my shop job covers the weekly food shop, and I take money from my savings for the rent.",
+          "symmetric_character_similarity": 0.5281
+        },
+        {
+          "id": "D5-V2-LT-07",
+          "bank": "v2_new_training",
+          "text": "Some household costs are covered by the pay from my job, and the rest by money I take out of savings.",
+          "symmetric_character_similarity": 0.4916
+        },
+        {
+          "id": "D5-LV-02",
+          "bank": "v1_validation-draft.json",
+          "text": "These days, everything I spend on keeping the household going comes out of my savings account.",
+          "symmetric_character_similarity": 0.4535
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-07",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-036",
+          "bank": "original_calibration",
+          "text": "The household bills are paid from two sources now: my employee wage and separate freelance earnings.",
+          "symmetric_character_similarity": 0.4975
+        },
+        {
+          "id": "D5-V2-LV-04",
+          "bank": "v2_new_validation",
+          "text": "The pay from my shop job covers the weekly food shop, and I take money from my savings for the rent.",
+          "symmetric_character_similarity": 0.4975
+        },
+        {
+          "id": "D5-V2-LT-06",
+          "bank": "v2_new_training",
+          "text": "Pay from both my jobs goes towards the rent and groceries; I don't use my savings.",
+          "symmetric_character_similarity": 0.4916
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-08",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "SYNTH-V1-D5-TRAIN-025",
+          "bank": "original_train",
+          "text": "I currently pay living costs by withdrawing from savings.",
+          "symmetric_character_similarity": 0.4882
+        },
+        {
+          "id": "D5-LV-07",
+          "bank": "v1_validation-draft.json",
+          "text": "I can't tell whether the money I've been spending on bills is from my wages or my savings.",
+          "symmetric_character_similarity": 0.4625
+        },
+        {
+          "id": "D5-LV-02",
+          "bank": "v1_validation-draft.json",
+          "text": "These days, everything I spend on keeping the household going comes out of my savings account.",
+          "symmetric_character_similarity": 0.454
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-09",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-041",
+          "bank": "original_calibration",
+          "text": "I understand what pays the bills means, but cannot identify my current funding source.",
+          "symmetric_character_similarity": 0.5355
+        },
+        {
+          "id": "D5-STD-10",
+          "bank": "existing_eleven",
+          "text": "My pension pays some bills; I cannot tell whether my wages also do.",
+          "symmetric_character_similarity": 0.5
+        },
+        {
+          "id": "D5-V2-LT-12",
+          "bank": "v2_new_training",
+          "text": "I can name the money I receive, but I cannot work out which of it is going on living costs.",
+          "symmetric_character_similarity": 0.4894
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-10",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "D5-STD-10",
+          "bank": "existing_eleven",
+          "text": "My pension pays some bills; I cannot tell whether my wages also do.",
+          "symmetric_character_similarity": 0.5068
+        },
+        {
+          "id": "D5-V2-LT-03",
+          "bank": "v2_new_training",
+          "text": "My pension has not started yet, so I cover this month's living expenses from savings.",
+          "symmetric_character_similarity": 0.4878
+        },
+        {
+          "id": "SYNTH-V1-D5-TRAIN-013",
+          "bank": "original_train",
+          "text": "My pension payments currently pay my living costs.",
+          "symmetric_character_similarity": 0.4769
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-11",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "D5-LV-07",
+          "bank": "v1_validation-draft.json",
+          "text": "I can't tell whether the money I've been spending on bills is from my wages or my savings.",
+          "symmetric_character_similarity": 0.4944
+        },
+        {
+          "id": "D5-LV-08",
+          "bank": "v1_validation-draft.json",
+          "text": "Are you asking how much my daily expenses are, or where the money to cover them comes from?",
+          "symmetric_character_similarity": 0.4944
+        },
+        {
+          "id": "SYNTH-V1-D5-TRAIN-027",
+          "bank": "original_train",
+          "text": "I draw money from my savings account for everyday expenses.",
+          "symmetric_character_similarity": 0.4898
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-12",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "SYNTH-V1-D5-TRAIN-050",
+          "bank": "original_train",
+          "text": "I have salary income, but haven't said whether I use it for living costs.",
+          "symmetric_character_similarity": 0.525
+        },
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-050",
+          "bank": "original_calibration",
+          "text": "I understand the request but choose not to disclose living-cost funding.",
+          "symmetric_character_similarity": 0.5
+        },
+        {
+          "id": "D5-V2-LV-07",
+          "bank": "v2_new_validation",
+          "text": "I'm honestly not sure whether I'm living off my pay or dipping into the money I'd put aside. I can't work out which is covering things at the moment.",
+          "symmetric_character_similarity": 0.5
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-13",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "SYNTH-V1-D5-TRAIN-037",
+          "bank": "original_train",
+          "text": "I have no regular source of money for living costs.",
+          "symmetric_character_similarity": 0.6324
+        },
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-031",
+          "bank": "original_calibration",
+          "text": "I can confirm there is no recurring source of money for my present living costs.",
+          "symmetric_character_similarity": 0.5939
+        },
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-050",
+          "bank": "original_calibration",
+          "text": "I understand the request but choose not to disclose living-cost funding.",
+          "symmetric_character_similarity": 0.535
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-14",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "SYNTH-V1-D5-TRAIN-028",
+          "bank": "original_train",
+          "text": "At present I use withdrawals from my investments for rent and food.",
+          "symmetric_character_similarity": 0.4444
+        },
+        {
+          "id": "D5-LV-01",
+          "bank": "v1_validation-draft.json",
+          "text": "I'm living off the money I put aside over the years, using it for the rent, groceries and bills.",
+          "symmetric_character_similarity": 0.4339
+        },
+        {
+          "id": "D5-V2-LT-12",
+          "bank": "v2_new_training",
+          "text": "I can name the money I receive, but I cannot work out which of it is going on living costs.",
+          "symmetric_character_similarity": 0.4324
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-15",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "SYNTH-V1-D5-TRAIN-052",
+          "bank": "original_train",
+          "text": "I have no regular source and my salary regularly funds my living costs.",
+          "symmetric_character_similarity": 0.519
+        },
+        {
+          "id": "SYNTH-V1-D5-TRAIN-043",
+          "bank": "original_train",
+          "text": "My salary and savings withdrawals currently fund living costs.",
+          "symmetric_character_similarity": 0.4698
+        },
+        {
+          "id": "D5-V2-LV-05",
+          "bank": "v2_new_validation",
+          "text": "I've got money sitting in a building society account.",
+          "symmetric_character_similarity": 0.4571
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LT-16",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "SYNTH-V1-D5-TRAIN-029",
+          "bank": "original_train",
+          "text": "My current living-cost money comes from spending down savings.",
+          "symmetric_character_similarity": 0.4524
+        },
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-053",
+          "bank": "original_calibration",
+          "text": "What is a withdrawal? I don't understand that choice.",
+          "symmetric_character_similarity": 0.443
+        },
+        {
+          "id": "SYNTH-V1-D5-TRAIN-041",
+          "bank": "original_train",
+          "text": "I have no ongoing source of money for household costs.",
+          "symmetric_character_similarity": 0.425
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LV-01",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "D5-V2-LT-01",
+          "bank": "v2_new_training",
+          "text": "The balance I built up in my savings account is paying for food and electricity at the moment.",
+          "symmetric_character_similarity": 0.5333
+        },
+        {
+          "id": "D5-V2-LV-04",
+          "bank": "v2_new_validation",
+          "text": "The pay from my shop job covers the weekly food shop, and I take money from my savings for the rent.",
+          "symmetric_character_similarity": 0.44
+        },
+        {
+          "id": "D5-V2-LV-02",
+          "bank": "v2_new_validation",
+          "text": "Each month I transfer some of my savings into my current account, then use that to pay the rent and household bills.",
+          "symmetric_character_similarity": 0.4352
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LV-02",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-021",
+          "bank": "original_calibration",
+          "text": "Each month I take an amount out of the savings I already own to pay household costs.",
+          "symmetric_character_similarity": 0.5584
+        },
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-001",
+          "bank": "original_calibration",
+          "text": "The money arriving from my employer is what I currently use to pay routine expenses.",
+          "symmetric_character_similarity": 0.4772
+        },
+        {
+          "id": "SYNTH-V1-D5-TRAIN-027",
+          "bank": "original_train",
+          "text": "I draw money from my savings account for everyday expenses.",
+          "symmetric_character_similarity": 0.4651
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LV-03",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "D5-STD-03",
+          "bank": "existing_eleven",
+          "text": "Pay from my two employers covers my living costs.",
+          "symmetric_character_similarity": 0.4769
+        },
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-054",
+          "bank": "original_calibration",
+          "text": "I'm confused about whether you're asking where money is held or what pays bills.",
+          "symmetric_character_similarity": 0.4596
+        },
+        {
+          "id": "SYNTH-V1-D5-TRAIN-011",
+          "bank": "original_train",
+          "text": "My self-employed work provides the money for rent and food.",
+          "symmetric_character_similarity": 0.4571
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LV-04",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "D5-V2-LT-06",
+          "bank": "v2_new_training",
+          "text": "Pay from both my jobs goes towards the rent and groceries; I don't use my savings.",
+          "symmetric_character_similarity": 0.5281
+        },
+        {
+          "id": "D5-LV-04",
+          "bank": "v1_validation-draft.json",
+          "text": "I pay the rent out of my wages and take money from savings for groceries and the household bills.",
+          "symmetric_character_similarity": 0.5258
+        },
+        {
+          "id": "D5-V2-LT-07",
+          "bank": "v2_new_training",
+          "text": "Some household costs are covered by the pay from my job, and the rest by money I take out of savings.",
+          "symmetric_character_similarity": 0.4975
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LV-05",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "D5-LV-05",
+          "bank": "v1_validation-draft.json",
+          "text": "I've got some savings in a separate bank account.",
+          "symmetric_character_similarity": 0.66
+        },
+        {
+          "id": "D5-V2-LT-15",
+          "bank": "v2_new_training",
+          "text": "I thought you wanted my total savings. Can you explain what funding my living costs means?",
+          "symmetric_character_similarity": 0.4571
+        },
+        {
+          "id": "SYNTH-V1-D5-TRAIN-037",
+          "bank": "original_train",
+          "text": "I have no regular source of money for living costs.",
+          "symmetric_character_similarity": 0.4314
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LV-06",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "D5-STD-03",
+          "bank": "existing_eleven",
+          "text": "Pay from my two employers covers my living costs.",
+          "symmetric_character_similarity": 0.5981
+        },
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-011",
+          "bank": "original_calibration",
+          "text": "The pension payment deposited into my bank account is what I now live on.",
+          "symmetric_character_similarity": 0.5038
+        },
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-001",
+          "bank": "original_calibration",
+          "text": "The money arriving from my employer is what I currently use to pay routine expenses.",
+          "symmetric_character_similarity": 0.493
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LV-07",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "D5-V2-LT-12",
+          "bank": "v2_new_training",
+          "text": "I can name the money I receive, but I cannot work out which of it is going on living costs.",
+          "symmetric_character_similarity": 0.5
+        },
+        {
+          "id": "D5-V2-LT-11",
+          "bank": "v2_new_training",
+          "text": "I don't know which of my accounts the money for everyday spending is actually coming from.",
+          "symmetric_character_similarity": 0.4407
+        },
+        {
+          "id": "D5-V2-LT-09",
+          "bank": "v2_new_training",
+          "text": "I understand you mean what pays my bills, but I can't work out whether I use saved money or my wages.",
+          "symmetric_character_similarity": 0.439
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    },
+    {
+      "id": "D5-V2-LV-08",
+      "exact_normalised_matches": [],
+      "nearest_wording": [
+        {
+          "id": "D5-LV-08",
+          "bank": "v1_validation-draft.json",
+          "text": "Are you asking how much my daily expenses are, or where the money to cover them comes from?",
+          "symmetric_character_similarity": 0.5882
+        },
+        {
+          "id": "D5-V2-LT-09",
+          "bank": "v2_new_training",
+          "text": "I understand you mean what pays my bills, but I can't work out whether I use saved money or my wages.",
+          "symmetric_character_similarity": 0.4673
+        },
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-030",
+          "bank": "original_calibration",
+          "text": "For current living-cost funding, the source is recurring music royalty payments.",
+          "symmetric_character_similarity": 0.4352
+        }
+      ],
+      "automated_near_duplicate_flag": false
+    }
+  ],
+  "pre_human_review_revisions": [
+    "Training LT-12 now explicitly says cannot work out, avoiding possible nondisclosure meaning.",
+    "Separate author revised validation LV-02/LV-03 to avoid close construction matches with opened v1 wording. Other six validation rows unchanged."
+  ],
+  "limitations": [
+    "Training intentionally revisits opened business contrasts; existing-case improvements are regression/development evidence.",
+    "Both banks are AI-authored. Human review does not make them independently human-authored.",
+    "Original intent labels include historical missing-information versus Undecided inconsistencies; original data is unchanged and new approval does not sign off the entire original corpus."
+  ]
+}

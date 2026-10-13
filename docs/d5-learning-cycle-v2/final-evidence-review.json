@@ -1,0 +1,54 @@
+{
+  "review_type": "separate_agent_read_only_evidence_review",
+  "reviewer": "fca_method_assessment",
+  "conclusion": "The saved evidence is consistent. The candidate did not pass the fixed first-turn requirements; no context/live stage should run.",
+  "candidate_builds": 1,
+  "candidate_fit_counts": {
+    "intent": 1,
+    "option": 1
+  },
+  "comparison_cases": 27,
+  "baseline_semantic_parity_cases": 19,
+  "candidate_ml_handled": 0,
+  "candidate_ml_eligible": 25,
+  "candidate_first_blockers": {
+    "intent": 12,
+    "option": 13
+  },
+  "zero_model_controls": 2,
+  "candidate_business_validator_reached": 0,
+  "candidate_correct_accepted": 0,
+  "candidate_wrong_accepted": 0,
+  "baseline_wrong_pending_candidate_ids": [
+    "D5-V2-LV-03"
+  ],
+  "lost_previous_v1_raw_success_ids": [
+    "D5-STD-06"
+  ],
+  "preservation_records": {
+    "passed": 40,
+    "total": 41
+  },
+  "distinct_case_axis_preservation": {
+    "passed": 23,
+    "total": 24
+  },
+  "actual_gpt_calls": 0,
+  "candidate_promoted": false,
+  "evidence_sha256": {
+    "build.json": "b601bd7cd27b0e244bb669efc70f985023dbac5fef76ec5df2c3151f13250fe9",
+    "build.started.json": "0e0e8fb6f3789ac1b1e190741b717aca5af405ae85e75b4d632589c803dd516f",
+    "compare.json": "a8f0bca2a099f3411f1cfe6e126876307b878268b489db493ddfba249313ab32",
+    "compare.started.json": "4aad82a0a997a4ae06a0e039087f0e83961edcad9bb99ade760774d3858e4777",
+    "d5-intent-candidate.joblib": "24086a0f0efe05eb3a69f6ef852c4714cd5e8f954584fa7c210f3cc643402831",
+    "d5-option-candidate.joblib": "7913a715917aefb75286e0b1dd5fbaa4d754faa9c9bad636135d27cab1991852",
+    "freeze.json": "6c1b267618e896bc48b055653dcd1d515fa82a1904331cf339e206c566c3faf2",
+    "protocol.json": "5f41931ac384811dd9b08dda61869b8b6b5138a3dcca9046b8fb4de54f4ad0ca"
+  },
+  "notes": [
+    "The baseline wrong self-employment proposal passed its existing validator but was not selected, confirmed or saved.",
+    "The candidate avoids that commitment by abstaining; its raw financial option remains wrong.",
+    "The two new nonclear raw intent gains remain ambiguous prediction sets, not directly handled dialogue.",
+    "No earlier live GPT conversation was revalidated by this offline cycle."
+  ]
+}

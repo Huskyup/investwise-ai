@@ -1,0 +1,32 @@
+{
+  "verified_at": "2026-10-13T17:49:37.958243+00:00",
+  "method": "Read-only byte-hash comparison after completed formal run; no extra model execution.",
+  "base_commit": "d65d268692cb0c4b015a48f634aea240bd6d6dac",
+  "original_tracked_count": 433,
+  "original_tracked_unchanged": 432,
+  "intended_original_changes": [
+    "docs/d5-semantic-method-handoff.md"
+  ],
+  "frozen_files_unchanged": 71,
+  "unrelated_user_files_unchanged": 7,
+  "new_runtime_source_changes": false,
+  "original_training_calibration_changes": false,
+  "all_fifteen_questions_unchanged": true,
+  "business_validators_unchanged": true,
+  "main_app_and_demo_defaults_unchanged": true,
+  "candidate_builds": 1,
+  "candidate_fit_counts": {
+    "intent": 1,
+    "option": 1
+  },
+  "formal_comparisons": 1,
+  "actual_gpt_calls": 0,
+  "context_or_live_phase_entered": false,
+  "candidate_promoted": false,
+  "publication_target": "Huskyup/investwise-ai:feature/all-question-ml-prototype",
+  "remote_name": "personal",
+  "other_person_repository_touched": false,
+  "model_architecture_or_hyperparameter_changes": false,
+  "isolated_candidate_fitted_coefficients_changed": true,
+  "original_deployed_ml_predictors_unchanged": true
+}

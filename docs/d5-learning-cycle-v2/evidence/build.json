@@ -1,0 +1,56 @@
+{
+  "status": "built_not_promoted",
+  "completed_at": "2026-10-13T17:45:53.337924+00:00",
+  "identity": {
+    "protocol_sha256": "5f41931ac384811dd9b08dda61869b8b6b5138a3dcca9046b8fb4de54f4ad0ca",
+    "artifacts": {
+      "intent": "24086a0f0efe05eb3a69f6ef852c4714cd5e8f954584fa7c210f3cc643402831",
+      "option": "7913a715917aefb75286e0b1dd5fbaa4d754faa9c9bad636135d27cab1991852"
+    },
+    "baseline_identity": "48cb3f1b0799cd8d8758f7a0eddf7cd789ef29b4da8f0ea062b66b5087bda2d1",
+    "baseline_source_hash": "13b6a8f494c773e90d28e8d105cc1b2de7bbebba20db980331b23397f253c4b8",
+    "old_training_sha256": "8d012e23483bfa64b735a90b8dcfa829c3030a099fd449b4232f11c1a8c4dea4",
+    "new_training_sha256": "58f4b353e4e3699e01244dfd9809c70edf105c6a50eed66bd258969b36e1c5ec",
+    "calibration_sha256": "3b63ebddf80f8b5758bcbef9cb8d662741e68de38660455dcc4649106d5792be"
+  },
+  "candidate_identity_sha256": "1c0ca5bee75b70192305617449bd589be8437ebe0f4d785c9bea9fd945ef9e19",
+  "candidate_fit_counts": {
+    "intent": 1,
+    "option": 1
+  },
+  "training_rows": {
+    "intent": 80,
+    "option": 64
+  },
+  "calibration_rows": {
+    "intent": 60,
+    "option": 40
+  },
+  "thresholds": {
+    "intent": 0.7331168060984319,
+    "option": 0.8832800447772394
+  },
+  "alpha": 0.1,
+  "baseline_startup": "unchanged original routine reconstructs 15 intent and 15 option predictors",
+  "other_fourteen_retained": true,
+  "all_questions": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D8",
+    "D9",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15"
+  ],
+  "actual_gpt_calls": 0,
+  "default_changed": false,
+  "candidate_ready_for_demo": false
+}

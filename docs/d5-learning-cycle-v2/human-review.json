@@ -1,0 +1,41 @@
+{
+  "schema_version": "d5-learning-review-v2",
+  "review_type": "human_business_review",
+  "status": "approved",
+  "reviewer": "Huskyup, project business owner, explicit approval in this chat",
+  "reviewed_at": "2026-10-13T18:44:55.309769+01:00",
+  "dataset_sha256": {
+    "training": "58f4b353e4e3699e01244dfd9809c70edf105c6a50eed66bd258969b36e1c5ec",
+    "validation": "c5b7c787d8e524190cbaf0f180665d46f038ffcb6367615f26e72459e5b225ba"
+  },
+  "approved_case_ids": [
+    "D5-V2-LT-01",
+    "D5-V2-LT-02",
+    "D5-V2-LT-03",
+    "D5-V2-LT-04",
+    "D5-V2-LT-05",
+    "D5-V2-LT-06",
+    "D5-V2-LT-07",
+    "D5-V2-LT-08",
+    "D5-V2-LT-09",
+    "D5-V2-LT-10",
+    "D5-V2-LT-11",
+    "D5-V2-LT-12",
+    "D5-V2-LT-13",
+    "D5-V2-LT-14",
+    "D5-V2-LT-15",
+    "D5-V2-LT-16",
+    "D5-V2-LV-01",
+    "D5-V2-LV-02",
+    "D5-V2-LV-03",
+    "D5-V2-LV-04",
+    "D5-V2-LV-05",
+    "D5-V2-LV-06",
+    "D5-V2-LV-07",
+    "D5-V2-LV-08"
+  ],
+  "provenance_acknowledgement": "agent_authored_human_reviewed",
+  "inherited_approval": "docs/d5-learning-cycle-v1/human-review.json",
+  "notes": "Explicit business approval covers these exact sixteen new training rows and eight new validation rows. The old eight training rows retain their separate v1 approval. Draft metadata is retained byte-for-byte; this hash-bound approval is authoritative. AI authorship and fictional status remain explicit.",
+  "approval_statement": "同意这24条的业务含义和用途，继续冻结训练"
+}

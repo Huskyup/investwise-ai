@@ -1,0 +1,33 @@
+{
+  "review_type": "separate_agent_static_review_before_model_execution",
+  "reviewer": "fca_method_assessment",
+  "conclusion": "No remaining material label, overlap or implementation defect identified; explicit human approval is recorded separately.",
+  "new_rows": 24,
+  "original_rows_not_relabelled": true,
+  "recipe": {
+    "intent_train": 80,
+    "option_train": 64,
+    "intent_calibration": 60,
+    "option_calibration": 40
+  },
+  "candidate_fit_limit": {
+    "intent": 1,
+    "option": 1
+  },
+  "comparison_cases": 27,
+  "models_or_tests_run_by_reviewer": false,
+  "revisions_before_human_approval": [
+    "LT-12 clarifies inability to work out source use instead of inability to tell.",
+    "Independent validation author revised LV-02/LV-03 construction to avoid close opened wording."
+  ],
+  "files_sha256": {
+    "docs/d5-learning-cycle-v2/training-additions.json": "58f4b353e4e3699e01244dfd9809c70edf105c6a50eed66bd258969b36e1c5ec",
+    "docs/d5-learning-cycle-v2/validation-draft.json": "c5b7c787d8e524190cbaf0f180665d46f038ffcb6367615f26e72459e5b225ba",
+    "demos/d5/learning_cycle_v2.py": "aaa95d78f1623b5d32bcab3dbd8b35d20120506ea4fb4995347781f7bcfa8d30",
+    "demos/d5/test_learning_cycle_v2.py": "dde4ad3e7d71e756ceae542a80e153b59dad86afa1ca642512f0ad587c5ff9f3"
+  },
+  "limits": [
+    "This is static AI review, not the human business approval or evidence of semantic accuracy.",
+    "Historical intent labels include missing-information examples labelled Undecided; they remain unchanged."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "check_type": "pure_software_fixtures_no_models",
+  "started_at": "2026-10-13T17:45:21.278429+00:00",
+  "completed_at": "2026-10-13T17:45:21.317877+00:00",
+  "tests_run": 23,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "model_import_guard": true,
+  "network_and_subprocess_guard": true,
+  "actual_ml_inference_calls": 0,
+  "candidate_fits": 0,
+  "actual_gpt_calls": 0,
+  "source_sha256": {
+    "demos/d5/learning_cycle_v2.py": "aaa95d78f1623b5d32bcab3dbd8b35d20120506ea4fb4995347781f7bcfa8d30",
+    "demos/d5/test_learning_cycle_v2.py": "dde4ad3e7d71e756ceae542a80e153b59dad86afa1ca642512f0ad587c5ff9f3"
+  }
+}

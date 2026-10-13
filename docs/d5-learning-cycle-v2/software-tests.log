@@ -1,0 +1,28 @@
+test_all_twenty_four_ids_and_hashes_are_required (test_learning_cycle_v2.ReviewAndRecipeTests.test_all_twenty_four_ids_and_hashes_are_required) ... ok
+test_both_artifact_hashes_are_checked_before_loading (test_learning_cycle_v2.ReviewAndRecipeTests.test_both_artifact_hashes_are_checked_before_loading) ... ok
+test_exact_training_and_calibration_recipe (test_learning_cycle_v2.ReviewAndRecipeTests.test_exact_training_and_calibration_recipe) ... ok
+test_frozen_change_and_retry_remain_rejected (test_learning_cycle_v2.ReviewAndRecipeTests.test_frozen_change_and_retry_remain_rejected) ... ok
+test_pending_review_blocks_before_hash_reads (test_learning_cycle_v2.ReviewAndRecipeTests.test_pending_review_blocks_before_hash_reads) ... ok
+test_review_failure_precedes_models_and_phase_start (test_learning_cycle_v2.ReviewAndRecipeTests.test_review_failure_precedes_models_and_phase_start) ... ok
+test_sixteen_training_labels_have_fixed_composition (test_learning_cycle_v2.ReviewAndRecipeTests.test_sixteen_training_labels_have_fixed_composition) ... ok
+test_v1_approval_does_not_approve_new_labels (test_learning_cycle_v2.ReviewAndRecipeTests.test_v1_approval_does_not_approve_new_labels) ... ok
+test_all_opened_and_fresh_clear_options_are_required (test_learning_cycle_v2.UnionScoringTests.test_all_opened_and_fresh_clear_options_are_required) ... ok
+test_baseline_parity_uses_stable_decisions_not_timings (test_learning_cycle_v2.UnionScoringTests.test_baseline_parity_uses_stable_decisions_not_timings) ... ok
+test_clear_confident_wrong_bucket_is_not_safe_escalation (test_learning_cycle_v2.UnionScoringTests.test_clear_confident_wrong_bucket_is_not_safe_escalation) ... ok
+test_false_clarity_wrong_acceptance_and_state_side_effects_fail (test_learning_cycle_v2.UnionScoringTests.test_false_clarity_wrong_acceptance_and_state_side_effects_fail) ... ok
+test_fresh_gain_requires_baseline_escalation_and_real_receipt (test_learning_cycle_v2.UnionScoringTests.test_fresh_gain_requires_baseline_escalation_and_real_receipt) ... ok
+test_help_and_gpt_calls_have_separate_zero_call_gates (test_learning_cycle_v2.UnionScoringTests.test_help_and_gpt_calls_have_separate_zero_call_gates) ... ok
+test_incomplete_and_nonclear_cannot_commit_financially (test_learning_cycle_v2.UnionScoringTests.test_incomplete_and_nonclear_cannot_commit_financially) ... ok
+test_incomplete_cannot_be_labelled_customer_indecision (test_learning_cycle_v2.UnionScoringTests.test_incomplete_cannot_be_labelled_customer_indecision) ... ok
+test_known_gain_cannot_replace_fresh_savings_gain (test_learning_cycle_v2.UnionScoringTests.test_known_gain_cannot_replace_fresh_savings_gain) ... ok
+test_missing_case_or_previous_reference_cannot_pass (test_learning_cycle_v2.UnionScoringTests.test_missing_case_or_previous_reference_cannot_pass) ... ok
+test_passing_first_turn_fixture_still_has_no_demo_profile (test_learning_cycle_v2.UnionScoringTests.test_passing_first_turn_fixture_still_has_no_demo_profile) ... ok
+test_union_keeps_baseline_only_success (test_learning_cycle_v2.UnionScoringTests.test_union_keeps_baseline_only_success) ... ok
+test_union_keeps_previous_accepted_answer (test_learning_cycle_v2.UnionScoringTests.test_union_keeps_previous_accepted_answer) ... ok
+test_union_keeps_previous_correct_confident_dialogue (test_learning_cycle_v2.UnionScoringTests.test_union_keeps_previous_correct_confident_dialogue) ... ok
+test_union_keeps_v1_only_std06_raw_success (test_learning_cycle_v2.UnionScoringTests.test_union_keeps_v1_only_std06_raw_success) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.013s
+
+OK

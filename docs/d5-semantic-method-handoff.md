@@ -4,6 +4,16 @@ Updated 13 October 2026 · `feature/all-question-ml-prototype`
 
 Maintained delivery repository: [Huskyup/investwise-ai](https://github.com/Huskyup/investwise-ai/tree/feature/all-question-ml-prototype). Use the explicit repository URL below when updating an older checkout whose `origin` may point elsewhere.
 
+## Latest D5 learning result: both classifiers updated once
+
+The owner approved 24 new fictional rows for a separate [v2 learning cycle](d5-learning-cycle-v2/README.md). One isolated candidate fitted the existing D5 intent classifier on 80 rows and option classifier on 64 clear rows, with the original calibration sets, algorithm and hyperparameters. The single comparison covered 19 opened cases plus eight separately authored, training-excluded replies.
+
+**Opened clear source predictions improved 2/4 → 4/4, and fresh raw intent improved 4/6 → 6/6. However, fresh clear sources stayed 2/4 and correct ML financial acceptances stayed zero.** All 25 candidate-eligible replies escalated without a GPT call: twelve stopped at the intent gate and thirteen at the option gate. Neither new savings phrase passed the singleton option gate. V2 also lost the previous candidate's raw savings success on D5-STD-06. See [results and exact per-case evidence](d5-learning-cycle-v2/RESULTS.md).
+
+The comparison exposed one **wrong pending financial candidate in the unchanged baseline**: employer pay used for living costs was accepted as self-employment after the existing business veto. Nothing was confirmed or saved. V2 avoided that commitment by retaining uncertainty, while its raw option remained wrong. This is an actual limit on new wording, not a claim that the existing validator guarantees correctness.
+
+Because the required comparison did not pass, there was no extra training, context replay, live dialogue or candidate launch profile. The original code, other fourteen questions, validators, GPT configuration and defaults remain unchanged. Existing commands below still select the original demo. The [company case](d5-learning-cycle-v2/COMPANY_CASE.md) and hash-bound artifacts document a measured learning attempt, not a completed successful flywheel or an efficiency gain.
+
 ## D5 learning cycle: one completed fit and comparison
 
 The business owner approved all sixteen sample meanings and uses, then the [D5 learning cycle](d5-learning-cycle-v1/README.md) froze its data and recipe. One isolated D5 option classifier was fitted using the original 48 training rows plus eight reviewed additions, with unchanged architecture, settings and forty-row recalibration procedure. One comparison covered the eight training-excluded expressions and original eleven examples. The AI-authored, human-reviewed expressions are now opened material, not human-original independent testing.

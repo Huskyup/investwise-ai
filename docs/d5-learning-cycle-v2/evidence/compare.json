@@ -1,0 +1,5161 @@
+{
+  "status": "comparison_complete",
+  "completed_at": "2026-10-13T17:46:08.692864+00:00",
+  "candidate_identity_sha256": "1c0ca5bee75b70192305617449bd589be8437ebe0f4d785c9bea9fd945ef9e19",
+  "protocol_sha256": "5f41931ac384811dd9b08dda61869b8b6b5138a3dcca9046b8fb4de54f4ad0ca",
+  "first_turn_gates_passed": false,
+  "blocking_gates": [
+    {
+      "gate": "all_four_new_clear_raw_options",
+      "case_id": "D5-V2-LV-03",
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "gate": "all_four_new_clear_raw_options",
+      "case_id": "D5-V2-LV-04",
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "gate": "no_new_raw_error_preserve_previous_success",
+      "case_id": "D5-STD-06",
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "gate": "all_eight_opened_and_fresh_clear_raw_options",
+      "case_id": "D5-V2-LV-03"
+    },
+    {
+      "gate": "all_eight_opened_and_fresh_clear_raw_options",
+      "case_id": "D5-V2-LV-04"
+    },
+    {
+      "gate": "at_least_one_fresh_savings_escalation_becomes_ml_acceptance",
+      "case_id": null
+    }
+  ],
+  "new_correct_accepted_validation_savings_ids": [],
+  "preservation_by_case_and_axis": [
+    {
+      "case_id": "D5-LV-01",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-LV-02",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-LV-02",
+      "axis": "raw_option",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-LV-03",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-LV-03",
+      "axis": "raw_option",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-LV-04",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-STD-01",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-STD-02",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-STD-02",
+      "axis": "raw_option",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-STD-03",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-STD-03",
+      "axis": "raw_option",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-STD-04",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-STD-04",
+      "axis": "raw_option",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-STD-05",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-STD-06",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-STD-08",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-STD-08",
+      "axis": "raw_option",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-V2-LV-01",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-V2-LV-01",
+      "axis": "raw_option",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-V2-LV-02",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-V2-LV-02",
+      "axis": "raw_option",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-V2-LV-03",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-V2-LV-04",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "case_id": "D5-LV-01",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-LV-02",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-LV-02",
+      "axis": "raw_option",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-LV-03",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-LV-03",
+      "axis": "raw_option",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-LV-04",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-STD-01",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-STD-02",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-STD-02",
+      "axis": "raw_option",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-STD-03",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-STD-03",
+      "axis": "raw_option",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-STD-04",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-STD-04",
+      "axis": "raw_option",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-STD-05",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-STD-06",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-STD-06",
+      "axis": "raw_option",
+      "preserved": false,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-STD-08",
+      "axis": "raw_intent",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    },
+    {
+      "case_id": "D5-STD-08",
+      "axis": "raw_option",
+      "preserved": true,
+      "compared_with": "frozen_previous_v1_candidate"
+    }
+  ],
+  "candidate_ready_for_demo": false,
+  "remaining_gate": "candidate-specific original four contextual turns and controls; no v2 demo profile yet",
+  "baseline": {
+    "opened_validation": {
+      "cases": 8,
+      "raw_option_denominator": 4,
+      "raw_option_correct": 2,
+      "raw_intent_denominator": 5,
+      "raw_intent_correct": 4,
+      "accepted_correct_financial": 0,
+      "wrong_accepted_financial": 0,
+      "ml_handled": 0,
+      "ml_eligible": 7,
+      "escalation_required_not_executed": 7,
+      "control_handled": 1,
+      "actual_gpt_calls": 0
+    },
+    "existing_regression": {
+      "cases": 11,
+      "raw_option_denominator": 7,
+      "raw_option_correct": 4,
+      "raw_intent_denominator": 8,
+      "raw_intent_correct": 7,
+      "accepted_correct_financial": 0,
+      "wrong_accepted_financial": 0,
+      "ml_handled": 0,
+      "ml_eligible": 10,
+      "escalation_required_not_executed": 10,
+      "control_handled": 1,
+      "actual_gpt_calls": 0
+    },
+    "validation": {
+      "cases": 8,
+      "raw_option_denominator": 4,
+      "raw_option_correct": 2,
+      "raw_intent_denominator": 6,
+      "raw_intent_correct": 4,
+      "accepted_correct_financial": 0,
+      "wrong_accepted_financial": 1,
+      "ml_handled": 1,
+      "ml_eligible": 8,
+      "escalation_required_not_executed": 7,
+      "control_handled": 0,
+      "actual_gpt_calls": 0
+    }
+  },
+  "candidate": {
+    "opened_validation": {
+      "cases": 8,
+      "raw_option_denominator": 4,
+      "raw_option_correct": 4,
+      "raw_intent_denominator": 5,
+      "raw_intent_correct": 4,
+      "accepted_correct_financial": 0,
+      "wrong_accepted_financial": 0,
+      "ml_handled": 0,
+      "ml_eligible": 7,
+      "escalation_required_not_executed": 7,
+      "control_handled": 1,
+      "actual_gpt_calls": 0
+    },
+    "existing_regression": {
+      "cases": 11,
+      "raw_option_denominator": 7,
+      "raw_option_correct": 4,
+      "raw_intent_denominator": 8,
+      "raw_intent_correct": 7,
+      "accepted_correct_financial": 0,
+      "wrong_accepted_financial": 0,
+      "ml_handled": 0,
+      "ml_eligible": 10,
+      "escalation_required_not_executed": 10,
+      "control_handled": 1,
+      "actual_gpt_calls": 0
+    },
+    "validation": {
+      "cases": 8,
+      "raw_option_denominator": 4,
+      "raw_option_correct": 2,
+      "raw_intent_denominator": 6,
+      "raw_intent_correct": 6,
+      "accepted_correct_financial": 0,
+      "wrong_accepted_financial": 0,
+      "ml_handled": 0,
+      "ml_eligible": 8,
+      "escalation_required_not_executed": 8,
+      "control_handled": 0,
+      "actual_gpt_calls": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "D5-LV-01",
+      "split": "opened_validation",
+      "text": "I'm living off the money I put aside over the years, using it for the rent, groceries and bills.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_WITHDRAWALS",
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.4986908112789687,
+              "confusion": 0.20981389743940515,
+              "undecided": 0.29149529128162616
+            },
+            "prediction_set": [
+              "clarity",
+              "undecided"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SELF_EMPLOYMENT",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.11997742611957134,
+              "D5_MULTIPLE": 0.11095282970897376,
+              "D5_NO_REGULAR": 0.11657394787663816,
+              "D5_OTHER_REGULAR": 0.10905779734059445,
+              "D5_PENSION_PAYMENTS": 0.12589381418462642,
+              "D5_SALARY": 0.13379483036079964,
+              "D5_SELF_EMPLOYMENT": 0.16465478093355695,
+              "D5_WITHDRAWALS": 0.11909457347523933
+            },
+            "prediction_set": [
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity",
+          "undecided"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.4384558326304465,
+              "confusion": 0.23571092639602798,
+              "undecided": 0.32583324097352545
+            },
+            "prediction_set": [
+              "clarity",
+              "undecided"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.11017185444226207,
+              "D5_MULTIPLE": 0.1188749921528032,
+              "D5_NO_REGULAR": 0.10467454163456894,
+              "D5_OTHER_REGULAR": 0.10259659017223752,
+              "D5_PENSION_PAYMENTS": 0.11483904015652215,
+              "D5_SALARY": 0.14236138645341687,
+              "D5_SELF_EMPLOYMENT": 0.1524166514917788,
+              "D5_WITHDRAWALS": 0.15406494349641048
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity",
+          "undecided"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.4986908112789687,
+              "confusion": 0.20981389743940515,
+              "undecided": 0.29149529128162616
+            },
+            "prediction_set": [
+              "clarity",
+              "undecided"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SELF_EMPLOYMENT",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.1144342960598484,
+              "D5_MULTIPLE": 0.11332905335234171,
+              "D5_NO_REGULAR": 0.1107680334323463,
+              "D5_OTHER_REGULAR": 0.10386011621878852,
+              "D5_PENSION_PAYMENTS": 0.12239697493428857,
+              "D5_SALARY": 0.12291432081414776,
+              "D5_SELF_EMPLOYMENT": 0.16426813326517734,
+              "D5_WITHDRAWALS": 0.14802907192306133
+            },
+            "prediction_set": [
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity",
+          "undecided"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-LV-02",
+      "split": "opened_validation",
+      "text": "These days, everything I spend on keeping the household going comes out of my savings account.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_WITHDRAWALS",
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5560419741566587,
+              "confusion": 0.2661433621209032,
+              "undecided": 0.17781466372243818
+            },
+            "prediction_set": [
+              "clarity",
+              "confusion"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.1040713898789352,
+              "D5_MULTIPLE": 0.11583543645802225,
+              "D5_NO_REGULAR": 0.1246861841272049,
+              "D5_OTHER_REGULAR": 0.10853961076891415,
+              "D5_PENSION_PAYMENTS": 0.1109813910964318,
+              "D5_SALARY": 0.12024414340424003,
+              "D5_SELF_EMPLOYMENT": 0.11830279915686222,
+              "D5_WITHDRAWALS": 0.19733904510938938
+            },
+            "prediction_set": [
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity",
+          "confusion"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.45497203411007403,
+              "confusion": 0.27122704117856145,
+              "undecided": 0.2738009247113645
+            },
+            "prediction_set": [
+              "clarity",
+              "confusion",
+              "undecided"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.09433295678339214,
+              "D5_MULTIPLE": 0.16225709752155157,
+              "D5_NO_REGULAR": 0.10510628362298882,
+              "D5_OTHER_REGULAR": 0.09889606694964162,
+              "D5_PENSION_PAYMENTS": 0.0983337575338198,
+              "D5_SALARY": 0.1324316283086517,
+              "D5_SELF_EMPLOYMENT": 0.1055010109842024,
+              "D5_WITHDRAWALS": 0.20314119829575186
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity",
+          "confusion",
+          "undecided"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5560419741566587,
+              "confusion": 0.2661433621209032,
+              "undecided": 0.17781466372243818
+            },
+            "prediction_set": [
+              "clarity",
+              "confusion"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.09922270343563448,
+              "D5_MULTIPLE": 0.14662890538883144,
+              "D5_NO_REGULAR": 0.11399695936947966,
+              "D5_OTHER_REGULAR": 0.10347360957223597,
+              "D5_PENSION_PAYMENTS": 0.10492914364539854,
+              "D5_SALARY": 0.11651311450938533,
+              "D5_SELF_EMPLOYMENT": 0.11262438228550094,
+              "D5_WITHDRAWALS": 0.20261118179353368
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity",
+          "confusion"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-LV-03",
+      "split": "opened_validation",
+      "text": "My pay from the supermarket covers my rent, food and bills.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_SALARY",
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.655178775453346,
+              "confusion": 0.17631013521023767,
+              "undecided": 0.1685110893364163
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SALARY",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.1336570090447834,
+              "D5_MULTIPLE": 0.10978295053082854,
+              "D5_NO_REGULAR": 0.09274420775470671,
+              "D5_OTHER_REGULAR": 0.12545356014402528,
+              "D5_PENSION_PAYMENTS": 0.12079913774979005,
+              "D5_SALARY": 0.16883126114814817,
+              "D5_SELF_EMPLOYMENT": 0.12331518467285858,
+              "D5_WITHDRAWALS": 0.12541668895485925
+            },
+            "prediction_set": [
+              "D5_BENEFITS_SUPPORT",
+              "D5_SALARY"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_BENEFITS_SUPPORT",
+          "D5_SALARY"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6346639377468942,
+              "confusion": 0.16550165862993146,
+              "undecided": 0.19983440362317426
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SALARY",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.12190783198333882,
+              "D5_MULTIPLE": 0.12469894379041299,
+              "D5_NO_REGULAR": 0.08302685027214483,
+              "D5_OTHER_REGULAR": 0.1143427918485539,
+              "D5_PENSION_PAYMENTS": 0.10760048906230876,
+              "D5_SALARY": 0.20465094653001503,
+              "D5_SELF_EMPLOYMENT": 0.10988120889005687,
+              "D5_WITHDRAWALS": 0.13389093762316887
+            },
+            "prediction_set": [
+              "D5_BENEFITS_SUPPORT",
+              "D5_MULTIPLE",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_BENEFITS_SUPPORT",
+          "D5_MULTIPLE",
+          "D5_SALARY",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.655178775453346,
+              "confusion": 0.17631013521023767,
+              "undecided": 0.1685110893364163
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SALARY",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.12573330491033066,
+              "D5_MULTIPLE": 0.11198952878643356,
+              "D5_NO_REGULAR": 0.08912775081462956,
+              "D5_OTHER_REGULAR": 0.11816420432580463,
+              "D5_PENSION_PAYMENTS": 0.1134501385224628,
+              "D5_SALARY": 0.1915787887927827,
+              "D5_SELF_EMPLOYMENT": 0.11684150625316003,
+              "D5_WITHDRAWALS": 0.13311477759439597
+            },
+            "prediction_set": [
+              "D5_BENEFITS_SUPPORT",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_BENEFITS_SUPPORT",
+          "D5_SALARY",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-LV-04",
+      "split": "opened_validation",
+      "text": "I pay the rent out of my wages and take money from savings for groceries and the household bills.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_MULTIPLE",
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6899977704833844,
+              "confusion": 0.16090740582022434,
+              "undecided": 0.1490948236963912
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.11410967684760497,
+              "D5_MULTIPLE": 0.1282127448951116,
+              "D5_NO_REGULAR": 0.10625106143997805,
+              "D5_OTHER_REGULAR": 0.10500777382378731,
+              "D5_PENSION_PAYMENTS": 0.11315962735639092,
+              "D5_SALARY": 0.14950524811242258,
+              "D5_SELF_EMPLOYMENT": 0.12357484095604812,
+              "D5_WITHDRAWALS": 0.1601790265686565
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_SALARY",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6306258271271861,
+              "confusion": 0.16955367120300627,
+              "undecided": 0.1998205016698077
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_MULTIPLE",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10333576653775542,
+              "D5_MULTIPLE": 0.17169778502831082,
+              "D5_NO_REGULAR": 0.09169193056908424,
+              "D5_OTHER_REGULAR": 0.09675388034606834,
+              "D5_PENSION_PAYMENTS": 0.10074642873673727,
+              "D5_SALARY": 0.16520206472774454,
+              "D5_SELF_EMPLOYMENT": 0.10960041718589617,
+              "D5_WITHDRAWALS": 0.16097172686840314
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_SALARY",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6899977704833844,
+              "confusion": 0.16090740582022434,
+              "undecided": 0.1490948236963912
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.1074411519190708,
+              "D5_MULTIPLE": 0.15499760527425968,
+              "D5_NO_REGULAR": 0.09626845645023259,
+              "D5_OTHER_REGULAR": 0.09797556856461086,
+              "D5_PENSION_PAYMENTS": 0.10612090451978594,
+              "D5_SALARY": 0.15998302264263142,
+              "D5_SELF_EMPLOYMENT": 0.11697361490167185,
+              "D5_WITHDRAWALS": 0.16023967572773679
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_SALARY",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-LV-05",
+      "split": "opened_validation",
+      "text": "I've got some savings in a separate bank account.",
+      "expected": {
+        "kind": "incomplete",
+        "bucket": null,
+        "option_id": null,
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5665147343111501,
+              "confusion": 0.2414367660812081,
+              "undecided": 0.19204849960764173
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.1075518886045823,
+              "D5_MULTIPLE": 0.13490502894428927,
+              "D5_NO_REGULAR": 0.11023579941903901,
+              "D5_OTHER_REGULAR": 0.11115615890019302,
+              "D5_PENSION_PAYMENTS": 0.10734805778909445,
+              "D5_SALARY": 0.10945286335646448,
+              "D5_SELF_EMPLOYMENT": 0.11107086822498419,
+              "D5_WITHDRAWALS": 0.20827933476135338
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5192647103877416,
+              "confusion": 0.28983748459337694,
+              "undecided": 0.19089780501888143
+            },
+            "prediction_set": [
+              "clarity",
+              "confusion"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10168467245978777,
+              "D5_MULTIPLE": 0.15829388733698074,
+              "D5_NO_REGULAR": 0.10118645340799264,
+              "D5_OTHER_REGULAR": 0.10560449423817743,
+              "D5_PENSION_PAYMENTS": 0.10056937848852762,
+              "D5_SALARY": 0.11772353376736201,
+              "D5_SELF_EMPLOYMENT": 0.10574672531744177,
+              "D5_WITHDRAWALS": 0.20919085498372997
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity",
+          "confusion"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5665147343111501,
+              "confusion": 0.2414367660812081,
+              "undecided": 0.19204849960764173
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10263693054196008,
+              "D5_MULTIPLE": 0.15313944390083709,
+              "D5_NO_REGULAR": 0.10367579000322834,
+              "D5_OTHER_REGULAR": 0.10606494476005436,
+              "D5_PENSION_PAYMENTS": 0.10217366395306512,
+              "D5_SALARY": 0.10980077765075377,
+              "D5_SELF_EMPLOYMENT": 0.1065920553952784,
+              "D5_WITHDRAWALS": 0.21591639379482275
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-LV-06",
+      "split": "opened_validation",
+      "text": "A wage arrives each Friday and I get a pension payment once a month.",
+      "expected": {
+        "kind": "incomplete",
+        "bucket": null,
+        "option_id": null,
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5824956681153735,
+              "confusion": 0.2234658578387512,
+              "undecided": 0.19403847404587543
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_PENSION_PAYMENTS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10889078931644218,
+              "D5_MULTIPLE": 0.1449486689733496,
+              "D5_NO_REGULAR": 0.10317647048355766,
+              "D5_OTHER_REGULAR": 0.10627141081724137,
+              "D5_PENSION_PAYMENTS": 0.21029442638316767,
+              "D5_SALARY": 0.10528946712639586,
+              "D5_SELF_EMPLOYMENT": 0.10687086345756777,
+              "D5_WITHDRAWALS": 0.11425790344227772
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5310393612386871,
+              "confusion": 0.26205031735956397,
+              "undecided": 0.206910321401749
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_PENSION_PAYMENTS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.099477334839542,
+              "D5_MULTIPLE": 0.1387100807486831,
+              "D5_NO_REGULAR": 0.09224379829735535,
+              "D5_OTHER_REGULAR": 0.09730641339387637,
+              "D5_PENSION_PAYMENTS": 0.23173459141761135,
+              "D5_SALARY": 0.10881980786674719,
+              "D5_SELF_EMPLOYMENT": 0.09782898818633966,
+              "D5_WITHDRAWALS": 0.13387898524984498
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5824956681153735,
+              "confusion": 0.2234658578387512,
+              "undecided": 0.19403847404587543
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_PENSION_PAYMENTS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10450333294486933,
+              "D5_MULTIPLE": 0.1436329224878738,
+              "D5_NO_REGULAR": 0.09762649389546,
+              "D5_OTHER_REGULAR": 0.10169384180718878,
+              "D5_PENSION_PAYMENTS": 0.2241234374526186,
+              "D5_SALARY": 0.10567666012324406,
+              "D5_SELF_EMPLOYMENT": 0.10257833993591398,
+              "D5_WITHDRAWALS": 0.12016497135283151
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-LV-07",
+      "split": "opened_validation",
+      "text": "I can't tell whether the money I've been spending on bills is from my wages or my savings.",
+      "expected": {
+        "kind": "undecided",
+        "bucket": "undecided",
+        "option_id": null,
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5663094837515038,
+              "confusion": 0.21799378800674946,
+              "undecided": 0.21569672824174668
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10805603557068573,
+              "D5_MULTIPLE": 0.11239089396732395,
+              "D5_NO_REGULAR": 0.10933611608943841,
+              "D5_OTHER_REGULAR": 0.09624123797547227,
+              "D5_PENSION_PAYMENTS": 0.10381995926144467,
+              "D5_SALARY": 0.1589647211079227,
+              "D5_SELF_EMPLOYMENT": 0.13729401038772926,
+              "D5_WITHDRAWALS": 0.173897025639983
+            },
+            "prediction_set": [
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_SALARY",
+          "D5_SELF_EMPLOYMENT",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.4052260302313543,
+              "confusion": 0.20287443227094054,
+              "undecided": 0.3918995374977051
+            },
+            "prediction_set": [
+              "clarity",
+              "undecided"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SALARY",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.09279914514103017,
+              "D5_MULTIPLE": 0.14151214776285673,
+              "D5_NO_REGULAR": 0.09272933150196204,
+              "D5_OTHER_REGULAR": 0.08132349050555183,
+              "D5_PENSION_PAYMENTS": 0.08832095680497985,
+              "D5_SALARY": 0.1966701055199708,
+              "D5_SELF_EMPLOYMENT": 0.12193096292683077,
+              "D5_WITHDRAWALS": 0.18471385983681773
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity",
+          "undecided"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5663094837515038,
+              "confusion": 0.21799378800674946,
+              "undecided": 0.21569672824174668
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.09871121869011619,
+              "D5_MULTIPLE": 0.12453949201477271,
+              "D5_NO_REGULAR": 0.09882200905039912,
+              "D5_OTHER_REGULAR": 0.08632457530156472,
+              "D5_PENSION_PAYMENTS": 0.09396577612191948,
+              "D5_SALARY": 0.17688666434842562,
+              "D5_SELF_EMPLOYMENT": 0.12600069641439857,
+              "D5_WITHDRAWALS": 0.19474956805840363
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_SALARY",
+          "D5_SELF_EMPLOYMENT",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-LV-08",
+      "split": "opened_validation",
+      "text": "Are you asking how much my daily expenses are, or where the money to cover them comes from?",
+      "expected": {
+        "kind": "confusion",
+        "bucket": "confusion",
+        "option_id": null,
+        "control_required": null
+      },
+      "baseline": {
+        "route": "control",
+        "action": "explain",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": null,
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [],
+        "option_set": [],
+        "ml_uncertain": null,
+        "ml_reason": null,
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": false,
+        "routing_ml_calls": 0,
+        "diagnostic_predictor_calls": 0,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "control",
+        "action": "explain",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": null,
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [],
+        "option_set": [],
+        "ml_uncertain": null,
+        "ml_reason": null,
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": false,
+        "routing_ml_calls": 0,
+        "diagnostic_predictor_calls": 0,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "control",
+        "action": "explain",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": null,
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [],
+        "option_set": [],
+        "ml_uncertain": null,
+        "ml_reason": null,
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": false,
+        "routing_ml_calls": 0,
+        "diagnostic_predictor_calls": 0,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-STD-01",
+      "split": "existing_regression",
+      "text": "My wages stay in savings. My pension pays the bills.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_PENSION_PAYMENTS",
+        "control_required": false
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6341577719497692,
+              "confusion": 0.1912389393052382,
+              "undecided": 0.17460328874499265
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SALARY",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10151320055118704,
+              "D5_MULTIPLE": 0.12392510802363371,
+              "D5_NO_REGULAR": 0.0986234209565264,
+              "D5_OTHER_REGULAR": 0.11237568850901296,
+              "D5_PENSION_PAYMENTS": 0.15833640215595338,
+              "D5_SALARY": 0.16726199765415342,
+              "D5_SELF_EMPLOYMENT": 0.11484062623568203,
+              "D5_WITHDRAWALS": 0.12312355591385106
+            },
+            "prediction_set": [
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_PENSION_PAYMENTS",
+          "D5_SALARY"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.589555922124822,
+              "confusion": 0.17883608541008558,
+              "undecided": 0.23160799246509248
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SALARY",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.09023275788435076,
+              "D5_MULTIPLE": 0.12748284121753442,
+              "D5_NO_REGULAR": 0.08523761308499063,
+              "D5_OTHER_REGULAR": 0.1017361483556816,
+              "D5_PENSION_PAYMENTS": 0.14485626958141476,
+              "D5_SALARY": 0.18100938773051006,
+              "D5_SELF_EMPLOYMENT": 0.10121945522475674,
+              "D5_WITHDRAWALS": 0.16822552692076104
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS",
+          "D5_SALARY",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6341577719497692,
+              "confusion": 0.1912389393052382,
+              "undecided": 0.17460328874499265
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SALARY",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.08893254825465904,
+              "D5_MULTIPLE": 0.12673578779011108,
+              "D5_NO_REGULAR": 0.08571689615088014,
+              "D5_OTHER_REGULAR": 0.09972588199226978,
+              "D5_PENSION_PAYMENTS": 0.15434255687181697,
+              "D5_SALARY": 0.1960550483618148,
+              "D5_SELF_EMPLOYMENT": 0.10264114998953106,
+              "D5_WITHDRAWALS": 0.145850130588917
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS",
+          "D5_SALARY",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-STD-02",
+      "split": "existing_regression",
+      "text": "Both my wages and pension pay for everyday costs.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_MULTIPLE",
+        "control_required": false
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6688341563707383,
+              "confusion": 0.16853727512175626,
+              "undecided": 0.16262856850750546
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_MULTIPLE",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10720012297803592,
+              "D5_MULTIPLE": 0.1888916522545121,
+              "D5_NO_REGULAR": 0.09736568321593198,
+              "D5_OTHER_REGULAR": 0.10258631936500132,
+              "D5_PENSION_PAYMENTS": 0.14315201546278594,
+              "D5_SALARY": 0.1389486056449825,
+              "D5_SELF_EMPLOYMENT": 0.11015952158179218,
+              "D5_WITHDRAWALS": 0.11169607949695796
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS",
+          "D5_SALARY"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6578069801872127,
+              "confusion": 0.14898704762326856,
+              "undecided": 0.19320597218951865
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_MULTIPLE",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.09788880632457182,
+              "D5_MULTIPLE": 0.18944486909935843,
+              "D5_NO_REGULAR": 0.0873838459412757,
+              "D5_OTHER_REGULAR": 0.09439485802821447,
+              "D5_PENSION_PAYMENTS": 0.14200799188470034,
+              "D5_SALARY": 0.1713628837377941,
+              "D5_SELF_EMPLOYMENT": 0.10218315451754746,
+              "D5_WITHDRAWALS": 0.11533359046653774
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS",
+          "D5_SALARY"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6688341563707383,
+              "confusion": 0.16853727512175626,
+              "undecided": 0.16262856850750546
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_MULTIPLE",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.1010159796488566,
+              "D5_MULTIPLE": 0.19027000572440478,
+              "D5_NO_REGULAR": 0.08985921398506039,
+              "D5_OTHER_REGULAR": 0.09607398936458393,
+              "D5_PENSION_PAYMENTS": 0.1434467504471141,
+              "D5_SALARY": 0.1649477161103501,
+              "D5_SELF_EMPLOYMENT": 0.10463653629844255,
+              "D5_WITHDRAWALS": 0.10974980842118734
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS",
+          "D5_SALARY"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-STD-03",
+      "split": "existing_regression",
+      "text": "Pay from my two employers covers my living costs.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_SALARY",
+        "control_required": false
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6777126961866057,
+              "confusion": 0.14249991724292288,
+              "undecided": 0.1797873865704714
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SALARY",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.16232123511895505,
+              "D5_MULTIPLE": 0.09932900223341865,
+              "D5_NO_REGULAR": 0.08621174644392057,
+              "D5_OTHER_REGULAR": 0.11770711426547079,
+              "D5_PENSION_PAYMENTS": 0.10862965543558716,
+              "D5_SALARY": 0.1671651979060103,
+              "D5_SELF_EMPLOYMENT": 0.13153581408355278,
+              "D5_WITHDRAWALS": 0.1271002345130847
+            },
+            "prediction_set": [
+              "D5_BENEFITS_SUPPORT",
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_BENEFITS_SUPPORT",
+          "D5_SALARY",
+          "D5_SELF_EMPLOYMENT"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6419434771003111,
+              "confusion": 0.1643072452383806,
+              "undecided": 0.19374927766130828
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SALARY",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.1495300555560582,
+              "D5_MULTIPLE": 0.12388802049406286,
+              "D5_NO_REGULAR": 0.08022535447129357,
+              "D5_OTHER_REGULAR": 0.1109215334141531,
+              "D5_PENSION_PAYMENTS": 0.10173151094501617,
+              "D5_SALARY": 0.20467295237250882,
+              "D5_SELF_EMPLOYMENT": 0.12308842283997871,
+              "D5_WITHDRAWALS": 0.10594214990692839
+            },
+            "prediction_set": [
+              "D5_BENEFITS_SUPPORT",
+              "D5_MULTIPLE",
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_BENEFITS_SUPPORT",
+          "D5_MULTIPLE",
+          "D5_SALARY",
+          "D5_SELF_EMPLOYMENT"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6777126961866057,
+              "confusion": 0.14249991724292288,
+              "undecided": 0.1797873865704714
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SALARY",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.1517214836215835,
+              "D5_MULTIPLE": 0.11020513005027079,
+              "D5_NO_REGULAR": 0.08548793543166475,
+              "D5_OTHER_REGULAR": 0.11371427218067325,
+              "D5_PENSION_PAYMENTS": 0.1051347720395201,
+              "D5_SALARY": 0.19300385227294714,
+              "D5_SELF_EMPLOYMENT": 0.12648209236429334,
+              "D5_WITHDRAWALS": 0.11425046203904712
+            },
+            "prediction_set": [
+              "D5_BENEFITS_SUPPORT",
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_BENEFITS_SUPPORT",
+          "D5_SALARY",
+          "D5_SELF_EMPLOYMENT"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-STD-04",
+      "split": "existing_regression",
+      "text": "Benefits and regular help from my family pay my bills.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_BENEFITS_SUPPORT",
+        "control_required": false
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6349046925269419,
+              "confusion": 0.18566428271514385,
+              "undecided": 0.1794310247579141
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_BENEFITS_SUPPORT",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.22400709269663052,
+              "D5_MULTIPLE": 0.14113450328752042,
+              "D5_NO_REGULAR": 0.09504004987056867,
+              "D5_OTHER_REGULAR": 0.1066968187274621,
+              "D5_PENSION_PAYMENTS": 0.10069916969801646,
+              "D5_SALARY": 0.10775192954756804,
+              "D5_SELF_EMPLOYMENT": 0.10719883287165251,
+              "D5_WITHDRAWALS": 0.11747160330058137
+            },
+            "prediction_set": [
+              "D5_BENEFITS_SUPPORT",
+              "D5_MULTIPLE"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_BENEFITS_SUPPORT",
+          "D5_MULTIPLE"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6473145623904029,
+              "confusion": 0.1655997428068118,
+              "undecided": 0.1870856948027854
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_BENEFITS_SUPPORT",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.25633073706631837,
+              "D5_MULTIPLE": 0.14387640173210162,
+              "D5_NO_REGULAR": 0.0875689351061572,
+              "D5_OTHER_REGULAR": 0.10030622654741816,
+              "D5_PENSION_PAYMENTS": 0.09266414641914951,
+              "D5_SALARY": 0.11219480688414521,
+              "D5_SELF_EMPLOYMENT": 0.09882194494419717,
+              "D5_WITHDRAWALS": 0.10823680130051272
+            },
+            "prediction_set": [
+              "D5_BENEFITS_SUPPORT",
+              "D5_MULTIPLE"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_BENEFITS_SUPPORT",
+          "D5_MULTIPLE"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6349046925269419,
+              "confusion": 0.18566428271514385,
+              "undecided": 0.1794310247579141
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_BENEFITS_SUPPORT",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.24335226924431289,
+              "D5_MULTIPLE": 0.13899857377940086,
+              "D5_NO_REGULAR": 0.09079492779511016,
+              "D5_OTHER_REGULAR": 0.10352597823799935,
+              "D5_PENSION_PAYMENTS": 0.09671084430831392,
+              "D5_SALARY": 0.10935791286928755,
+              "D5_SELF_EMPLOYMENT": 0.10407608390282418,
+              "D5_WITHDRAWALS": 0.1131834098627512
+            },
+            "prediction_set": [
+              "D5_BENEFITS_SUPPORT",
+              "D5_MULTIPLE"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_BENEFITS_SUPPORT",
+          "D5_MULTIPLE"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-STD-05",
+      "split": "existing_regression",
+      "text": "My brother sends me money every week for rent and food.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_BENEFITS_SUPPORT",
+        "control_required": false
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6165049753141967,
+              "confusion": 0.22215509217844237,
+              "undecided": 0.16133993250736098
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.13625176975682182,
+              "D5_MULTIPLE": 0.10842659124220713,
+              "D5_NO_REGULAR": 0.10344405928409925,
+              "D5_OTHER_REGULAR": 0.11241754816441095,
+              "D5_PENSION_PAYMENTS": 0.1142085666029534,
+              "D5_SALARY": 0.11952854526837677,
+              "D5_SELF_EMPLOYMENT": 0.1464871644515569,
+              "D5_WITHDRAWALS": 0.1592357552295738
+            },
+            "prediction_set": [
+              "D5_BENEFITS_SUPPORT",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_BENEFITS_SUPPORT",
+          "D5_SELF_EMPLOYMENT",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5818100152122956,
+              "confusion": 0.22057767837855766,
+              "undecided": 0.1976123064091469
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.13717244153298225,
+              "D5_MULTIPLE": 0.11307460771388061,
+              "D5_NO_REGULAR": 0.09484962760365535,
+              "D5_OTHER_REGULAR": 0.10807084357620239,
+              "D5_PENSION_PAYMENTS": 0.10871095891831035,
+              "D5_SALARY": 0.1266937347398885,
+              "D5_SELF_EMPLOYMENT": 0.15156215214540417,
+              "D5_WITHDRAWALS": 0.15986563376967636
+            },
+            "prediction_set": [
+              "D5_BENEFITS_SUPPORT",
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_BENEFITS_SUPPORT",
+          "D5_SALARY",
+          "D5_SELF_EMPLOYMENT",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6165049753141967,
+              "confusion": 0.22215509217844237,
+              "undecided": 0.16133993250736098
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.13738101970232078,
+              "D5_MULTIPLE": 0.11202106440848544,
+              "D5_NO_REGULAR": 0.0990932513324258,
+              "D5_OTHER_REGULAR": 0.11002415450873815,
+              "D5_PENSION_PAYMENTS": 0.11163044290377125,
+              "D5_SALARY": 0.1178428505244512,
+              "D5_SELF_EMPLOYMENT": 0.14989765880299077,
+              "D5_WITHDRAWALS": 0.1621095578168166
+            },
+            "prediction_set": [
+              "D5_BENEFITS_SUPPORT",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_BENEFITS_SUPPORT",
+          "D5_SELF_EMPLOYMENT",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-STD-06",
+      "split": "existing_regression",
+      "text": "I use my savings for bills. My pension starts next year.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_WITHDRAWALS",
+        "control_required": false
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6383690615909772,
+              "confusion": 0.17351128523113185,
+              "undecided": 0.18811965317789095
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_PENSION_PAYMENTS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10449165116047737,
+              "D5_MULTIPLE": 0.12592231199738105,
+              "D5_NO_REGULAR": 0.10231238376643861,
+              "D5_OTHER_REGULAR": 0.10286727260820633,
+              "D5_PENSION_PAYMENTS": 0.17362181025665208,
+              "D5_SALARY": 0.12634042153728334,
+              "D5_SELF_EMPLOYMENT": 0.10970648258327316,
+              "D5_WITHDRAWALS": 0.15473766609028805
+            },
+            "prediction_set": [
+              "D5_PENSION_PAYMENTS",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_PENSION_PAYMENTS",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6347810779748149,
+              "confusion": 0.139979663266902,
+              "undecided": 0.22523925875828313
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_PENSION_PAYMENTS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.09206534594124376,
+              "D5_MULTIPLE": 0.1272421354429869,
+              "D5_NO_REGULAR": 0.08804048699013672,
+              "D5_OTHER_REGULAR": 0.08978357306351897,
+              "D5_PENSION_PAYMENTS": 0.1821376585774517,
+              "D5_SALARY": 0.140957337688812,
+              "D5_SELF_EMPLOYMENT": 0.09836353121339754,
+              "D5_WITHDRAWALS": 0.18140993108245249
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS",
+          "D5_SALARY",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6383690615909772,
+              "confusion": 0.17351128523113185,
+              "undecided": 0.18811965317789095
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.09693202164625823,
+              "D5_MULTIPLE": 0.12342496630782127,
+              "D5_NO_REGULAR": 0.09391369594440985,
+              "D5_OTHER_REGULAR": 0.09469826908966875,
+              "D5_PENSION_PAYMENTS": 0.1772978950480362,
+              "D5_SALARY": 0.12148803764426058,
+              "D5_SELF_EMPLOYMENT": 0.10295931623013287,
+              "D5_WITHDRAWALS": 0.18928579808941215
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS",
+          "D5_SALARY",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-STD-07",
+      "split": "existing_regression",
+      "text": "I have a pension fund, but I have not started drawing from it.",
+      "expected": {
+        "kind": "incomplete",
+        "bucket": null,
+        "option_id": null,
+        "control_required": false
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "undecided",
+            "probabilities": {
+              "clarity": 0.38570830111700066,
+              "confusion": 0.17217481862118525,
+              "undecided": 0.4421168802618141
+            },
+            "prediction_set": [
+              "clarity",
+              "undecided"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_NO_REGULAR",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10603103228713881,
+              "D5_MULTIPLE": 0.1326151203056786,
+              "D5_NO_REGULAR": 0.15072855654218809,
+              "D5_OTHER_REGULAR": 0.11947041400767155,
+              "D5_PENSION_PAYMENTS": 0.13519400232345838,
+              "D5_SALARY": 0.111345291625819,
+              "D5_SELF_EMPLOYMENT": 0.11788759696200862,
+              "D5_WITHDRAWALS": 0.1267279859460369
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_NO_REGULAR",
+              "D5_PENSION_PAYMENTS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity",
+          "undecided"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "undecided",
+            "probabilities": {
+              "clarity": 0.40161254225529985,
+              "confusion": 0.18338018407819892,
+              "undecided": 0.41500727366650125
+            },
+            "prediction_set": [
+              "clarity",
+              "undecided"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.09939163913174086,
+              "D5_MULTIPLE": 0.13415607324785608,
+              "D5_NO_REGULAR": 0.135849351895818,
+              "D5_OTHER_REGULAR": 0.11563133423478382,
+              "D5_PENSION_PAYMENTS": 0.1309930182712877,
+              "D5_SALARY": 0.117487129685448,
+              "D5_SELF_EMPLOYMENT": 0.1126547269463465,
+              "D5_WITHDRAWALS": 0.15383672658671893
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_NO_REGULAR",
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity",
+          "undecided"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "undecided",
+            "probabilities": {
+              "clarity": 0.38570830111700066,
+              "confusion": 0.17217481862118525,
+              "undecided": 0.4421168802618141
+            },
+            "prediction_set": [
+              "clarity",
+              "undecided"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_NO_REGULAR",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10247934143348464,
+              "D5_MULTIPLE": 0.13480525455526163,
+              "D5_NO_REGULAR": 0.15102293193095673,
+              "D5_OTHER_REGULAR": 0.11798752850375922,
+              "D5_PENSION_PAYMENTS": 0.1372593188251393,
+              "D5_SALARY": 0.11464892038740444,
+              "D5_SELF_EMPLOYMENT": 0.11592017184878083,
+              "D5_WITHDRAWALS": 0.1258765325152132
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_NO_REGULAR",
+              "D5_PENSION_PAYMENTS",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity",
+          "undecided"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-STD-08",
+      "split": "existing_regression",
+      "text": "I have no regular source paying my living costs at the moment.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_NO_REGULAR",
+        "control_required": false
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.4750753293961852,
+              "confusion": 0.15274705147013756,
+              "undecided": 0.3721776191336773
+            },
+            "prediction_set": [
+              "clarity",
+              "undecided"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_NO_REGULAR",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.1063790816972238,
+              "D5_MULTIPLE": 0.08759863975728475,
+              "D5_NO_REGULAR": 0.3013273125632585,
+              "D5_OTHER_REGULAR": 0.10030652486734265,
+              "D5_PENSION_PAYMENTS": 0.09672808819070693,
+              "D5_SALARY": 0.11475793444555585,
+              "D5_SELF_EMPLOYMENT": 0.10485672211299088,
+              "D5_WITHDRAWALS": 0.08804569636563656
+            },
+            "prediction_set": [
+              "D5_NO_REGULAR"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity",
+          "undecided"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5053965141005551,
+              "confusion": 0.1734351375610534,
+              "undecided": 0.3211683483383916
+            },
+            "prediction_set": [
+              "clarity",
+              "undecided"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_NO_REGULAR",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10051070721170625,
+              "D5_MULTIPLE": 0.08748241105777958,
+              "D5_NO_REGULAR": 0.33331966691203857,
+              "D5_OTHER_REGULAR": 0.09351244519535598,
+              "D5_PENSION_PAYMENTS": 0.087124259122922,
+              "D5_SALARY": 0.10284262497744832,
+              "D5_SELF_EMPLOYMENT": 0.09550604371998853,
+              "D5_WITHDRAWALS": 0.09970184180276073
+            },
+            "prediction_set": [
+              "D5_NO_REGULAR"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity",
+          "undecided"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.4750753293961852,
+              "confusion": 0.15274705147013756,
+              "undecided": 0.3721776191336773
+            },
+            "prediction_set": [
+              "clarity",
+              "undecided"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_NO_REGULAR",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10195484397593639,
+              "D5_MULTIPLE": 0.08854791669777004,
+              "D5_NO_REGULAR": 0.32876534829593385,
+              "D5_OTHER_REGULAR": 0.09556832918420453,
+              "D5_PENSION_PAYMENTS": 0.0910676877591893,
+              "D5_SALARY": 0.10731079258811699,
+              "D5_SELF_EMPLOYMENT": 0.09991604118192536,
+              "D5_WITHDRAWALS": 0.0868690403169234
+            },
+            "prediction_set": [
+              "D5_NO_REGULAR"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity",
+          "undecided"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-STD-09",
+      "split": "existing_regression",
+      "text": "I receive wages and pension payments",
+      "expected": {
+        "kind": "incomplete",
+        "bucket": null,
+        "option_id": null,
+        "control_required": false
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6174431182284369,
+              "confusion": 0.2073310112028025,
+              "undecided": 0.1752258705687606
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_PENSION_PAYMENTS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.09719181632693102,
+              "D5_MULTIPLE": 0.1800720311224779,
+              "D5_NO_REGULAR": 0.10382666823309251,
+              "D5_OTHER_REGULAR": 0.09661101762859187,
+              "D5_PENSION_PAYMENTS": 0.20614849013464803,
+              "D5_SALARY": 0.11553525299582375,
+              "D5_SELF_EMPLOYMENT": 0.09773832664610851,
+              "D5_WITHDRAWALS": 0.1028763969123265
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5974053034546097,
+              "confusion": 0.18860961368484522,
+              "undecided": 0.2139850828605451
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_PENSION_PAYMENTS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.0873971505568446,
+              "D5_MULTIPLE": 0.16550251480418665,
+              "D5_NO_REGULAR": 0.09440529094258619,
+              "D5_OTHER_REGULAR": 0.08767779593865879,
+              "D5_PENSION_PAYMENTS": 0.23787231175030604,
+              "D5_SALARY": 0.12519152001448688,
+              "D5_SELF_EMPLOYMENT": 0.0888632254215441,
+              "D5_WITHDRAWALS": 0.11309019057138678
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS",
+          "D5_SALARY"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6174431182284369,
+              "confusion": 0.2073310112028025,
+              "undecided": 0.1752258705687606
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_PENSION_PAYMENTS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.09137141802111506,
+              "D5_MULTIPLE": 0.17482176191061174,
+              "D5_NO_REGULAR": 0.09779455764093366,
+              "D5_OTHER_REGULAR": 0.0908834016645226,
+              "D5_PENSION_PAYMENTS": 0.22166367896551895,
+              "D5_SALARY": 0.1257045768522686,
+              "D5_SELF_EMPLOYMENT": 0.09218778971651466,
+              "D5_WITHDRAWALS": 0.10557281522851457
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS",
+          "D5_SALARY"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-STD-10",
+      "split": "existing_regression",
+      "text": "My pension pays some bills; I cannot tell whether my wages also do.",
+      "expected": {
+        "kind": "undecided",
+        "bucket": "undecided",
+        "option_id": null,
+        "control_required": false
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5557455592323962,
+              "confusion": 0.2378817473846674,
+              "undecided": 0.20637269338293626
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SALARY",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10917017298273698,
+              "D5_MULTIPLE": 0.11981143327156624,
+              "D5_NO_REGULAR": 0.11153524572754542,
+              "D5_OTHER_REGULAR": 0.12069615878428004,
+              "D5_PENSION_PAYMENTS": 0.15932755704067209,
+              "D5_SALARY": 0.1606018112021096,
+              "D5_SELF_EMPLOYMENT": 0.1117258858829193,
+              "D5_WITHDRAWALS": 0.1071317351081703
+            },
+            "prediction_set": [
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_PENSION_PAYMENTS",
+          "D5_SALARY"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.45300442664981616,
+              "confusion": 0.21045340141337038,
+              "undecided": 0.33654217193681346
+            },
+            "prediction_set": [
+              "clarity",
+              "undecided"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SALARY",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.09673019696540136,
+              "D5_MULTIPLE": 0.1402111753706985,
+              "D5_NO_REGULAR": 0.09862556966246275,
+              "D5_OTHER_REGULAR": 0.10963959768918387,
+              "D5_PENSION_PAYMENTS": 0.15149737380058856,
+              "D5_SALARY": 0.17696775952029364,
+              "D5_SELF_EMPLOYMENT": 0.09979550571101913,
+              "D5_WITHDRAWALS": 0.1265328212803523
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity",
+          "undecided"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5557455592323962,
+              "confusion": 0.2378817473846674,
+              "undecided": 0.20637269338293626
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SALARY",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.099036864940105,
+              "D5_MULTIPLE": 0.13893008074844945,
+              "D5_NO_REGULAR": 0.10139978070052384,
+              "D5_OTHER_REGULAR": 0.11014802592531538,
+              "D5_PENSION_PAYMENTS": 0.15154433080286256,
+              "D5_SALARY": 0.1855438553372777,
+              "D5_SELF_EMPLOYMENT": 0.10194450269103007,
+              "D5_WITHDRAWALS": 0.11145255885443589
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY"
+            ],
+            "threshold": 0.8811152578401586,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS",
+          "D5_SALARY"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-STD-11",
+      "split": "existing_regression",
+      "text": "Does pension mean my fund or payments?",
+      "expected": {
+        "kind": "confusion",
+        "bucket": "confusion",
+        "option_id": null,
+        "control_required": true
+      },
+      "baseline": {
+        "route": "control",
+        "action": "explain",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": null,
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [],
+        "option_set": [],
+        "ml_uncertain": null,
+        "ml_reason": null,
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": false,
+        "routing_ml_calls": 0,
+        "diagnostic_predictor_calls": 0,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "control",
+        "action": "explain",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": null,
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [],
+        "option_set": [],
+        "ml_uncertain": null,
+        "ml_reason": null,
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": false,
+        "routing_ml_calls": 0,
+        "diagnostic_predictor_calls": 0,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": {
+        "route": "control",
+        "action": "explain",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": null,
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [],
+        "option_set": [],
+        "ml_uncertain": null,
+        "ml_reason": null,
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": false,
+        "routing_ml_calls": 0,
+        "diagnostic_predictor_calls": 0,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      }
+    },
+    {
+      "id": "D5-V2-LV-01",
+      "split": "validation",
+      "text": "I've been moving a little out of my savings each week to cover the food shop and the electricity meter.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_WITHDRAWALS",
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5844926368709672,
+              "confusion": 0.22620960349305125,
+              "undecided": 0.18929775963598164
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.1086558207293242,
+              "D5_MULTIPLE": 0.12663632482901732,
+              "D5_NO_REGULAR": 0.12167590949166195,
+              "D5_OTHER_REGULAR": 0.10722195421204883,
+              "D5_PENSION_PAYMENTS": 0.12718289866282687,
+              "D5_SALARY": 0.12943098479172485,
+              "D5_SELF_EMPLOYMENT": 0.12564896445707166,
+              "D5_WITHDRAWALS": 0.1535471428263242
+            },
+            "prediction_set": [
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_SALARY",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5367285349521228,
+              "confusion": 0.22910389420392846,
+              "undecided": 0.23416757084394868
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.09599225580586425,
+              "D5_MULTIPLE": 0.15882711771843075,
+              "D5_NO_REGULAR": 0.09980252915265743,
+              "D5_OTHER_REGULAR": 0.09620886174550412,
+              "D5_PENSION_PAYMENTS": 0.10824976149421202,
+              "D5_SALARY": 0.13503965259205813,
+              "D5_SELF_EMPLOYMENT": 0.10652421956435969,
+              "D5_WITHDRAWALS": 0.19935560192691365
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_SALARY",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": null
+    },
+    {
+      "id": "D5-V2-LV-02",
+      "split": "validation",
+      "text": "Each month I transfer some of my savings into my current account, then use that to pay the rent and household bills.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_WITHDRAWALS",
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6628751269134396,
+              "confusion": 0.17172459211186578,
+              "undecided": 0.16540028097469453
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.1156572626075196,
+              "D5_MULTIPLE": 0.1189430681982263,
+              "D5_NO_REGULAR": 0.10244226992032493,
+              "D5_OTHER_REGULAR": 0.1093843411604653,
+              "D5_PENSION_PAYMENTS": 0.1399811865050103,
+              "D5_SALARY": 0.12061665862576376,
+              "D5_SELF_EMPLOYMENT": 0.11956444203018647,
+              "D5_WITHDRAWALS": 0.17341077095250337
+            },
+            "prediction_set": [
+              "D5_PENSION_PAYMENTS",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_PENSION_PAYMENTS",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6234372697228641,
+              "confusion": 0.19934451333745962,
+              "undecided": 0.1772182169396765
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10578516066013648,
+              "D5_MULTIPLE": 0.15329267779062097,
+              "D5_NO_REGULAR": 0.08895676771749142,
+              "D5_OTHER_REGULAR": 0.10077503763855808,
+              "D5_PENSION_PAYMENTS": 0.12844301439487102,
+              "D5_SALARY": 0.14052493782928094,
+              "D5_SELF_EMPLOYMENT": 0.10919168151251234,
+              "D5_WITHDRAWALS": 0.17303072245652865
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_PENSION_PAYMENTS",
+          "D5_SALARY",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": null
+    },
+    {
+      "id": "D5-V2-LV-03",
+      "split": "validation",
+      "text": "I'm paid fortnightly by my employer, and that's the money I live on between paydays.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_SALARY",
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml",
+        "action": "confirm",
+        "ordinary_bucket": "Clarity",
+        "result_bucket": "Clarity",
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6041228909393088,
+              "confusion": 0.21055985647352995,
+              "undecided": 0.18531725258716114
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SELF_EMPLOYMENT",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.11450611644967343,
+              "D5_MULTIPLE": 0.1156148159296321,
+              "D5_NO_REGULAR": 0.10964225464177624,
+              "D5_OTHER_REGULAR": 0.10688824165932038,
+              "D5_PENSION_PAYMENTS": 0.1171880595004331,
+              "D5_SALARY": 0.1231242237474956,
+              "D5_SELF_EMPLOYMENT": 0.18768965837531587,
+              "D5_WITHDRAWALS": 0.12534662969635327
+            },
+            "prediction_set": [
+              "D5_SELF_EMPLOYMENT"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_SELF_EMPLOYMENT"
+        ],
+        "ml_uncertain": false,
+        "ml_reason": "option_identified_requires_confirmation",
+        "resolver_candidate": "D5_SELF_EMPLOYMENT",
+        "business_validation": {
+          "option_id": "D5_SELF_EMPLOYMENT",
+          "reason": "ml_candidate_passed_d5_vetoes"
+        },
+        "accepted_candidate": "D5_SELF_EMPLOYMENT",
+        "contract_outcome": "ml_financial_candidate",
+        "escalation_required": false,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": true,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.44963799294711093,
+              "confusion": 0.29818511264211506,
+              "undecided": 0.25217689441077396
+            },
+            "prediction_set": [
+              "clarity",
+              "confusion"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SELF_EMPLOYMENT",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10619966795440935,
+              "D5_MULTIPLE": 0.13597981676190923,
+              "D5_NO_REGULAR": 0.09918284667307245,
+              "D5_OTHER_REGULAR": 0.10084351047152543,
+              "D5_PENSION_PAYMENTS": 0.106875415826084,
+              "D5_SALARY": 0.13051430945592682,
+              "D5_SELF_EMPLOYMENT": 0.17104479434202896,
+              "D5_WITHDRAWALS": 0.14935963851504377
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity",
+          "confusion"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": null
+    },
+    {
+      "id": "D5-V2-LV-04",
+      "split": "validation",
+      "text": "The pay from my shop job covers the weekly food shop, and I take money from my savings for the rent.",
+      "expected": {
+        "kind": "clear",
+        "bucket": "clarity",
+        "option_id": "D5_MULTIPLE",
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6808560368958447,
+              "confusion": 0.1706264323338825,
+              "undecided": 0.1485175307702728
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.12804918127129433,
+              "D5_MULTIPLE": 0.10295704326345857,
+              "D5_NO_REGULAR": 0.09324262990613877,
+              "D5_OTHER_REGULAR": 0.10017305266534365,
+              "D5_PENSION_PAYMENTS": 0.10724013011311574,
+              "D5_SALARY": 0.15191706396428217,
+              "D5_SELF_EMPLOYMENT": 0.13805888451787898,
+              "D5_WITHDRAWALS": 0.17836201429848778
+            },
+            "prediction_set": [
+              "D5_BENEFITS_SUPPORT",
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_BENEFITS_SUPPORT",
+          "D5_SALARY",
+          "D5_SELF_EMPLOYMENT",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6514557381304672,
+              "confusion": 0.176415214689927,
+              "undecided": 0.17212904717960578
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SALARY",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.11576012024772872,
+              "D5_MULTIPLE": 0.13533390340446894,
+              "D5_NO_REGULAR": 0.08232675159949175,
+              "D5_OTHER_REGULAR": 0.09092975452358064,
+              "D5_PENSION_PAYMENTS": 0.09515294607836304,
+              "D5_SALARY": 0.192728845222796,
+              "D5_SELF_EMPLOYMENT": 0.12287392841499341,
+              "D5_WITHDRAWALS": 0.1648937505085774
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": true,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_MULTIPLE",
+          "D5_SALARY",
+          "D5_SELF_EMPLOYMENT",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": null
+    },
+    {
+      "id": "D5-V2-LV-05",
+      "split": "validation",
+      "text": "I've got money sitting in a building society account.",
+      "expected": {
+        "kind": "incomplete",
+        "bucket": null,
+        "option_id": null,
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5744673204473728,
+              "confusion": 0.2382735288692399,
+              "undecided": 0.1872591506833873
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.11875359980475021,
+              "D5_MULTIPLE": 0.11197491922480286,
+              "D5_NO_REGULAR": 0.12936510957465902,
+              "D5_OTHER_REGULAR": 0.11237142907093907,
+              "D5_PENSION_PAYMENTS": 0.11861743077905147,
+              "D5_SALARY": 0.11052147469635651,
+              "D5_SELF_EMPLOYMENT": 0.131788926933982,
+              "D5_WITHDRAWALS": 0.1666071099154589
+            },
+            "prediction_set": [
+              "D5_NO_REGULAR",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_NO_REGULAR",
+          "D5_SELF_EMPLOYMENT",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.4407287192717925,
+              "confusion": 0.3457615795036064,
+              "undecided": 0.213509701224601
+            },
+            "prediction_set": [
+              "clarity",
+              "confusion"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.1129307247230406,
+              "D5_MULTIPLE": 0.12649291318845557,
+              "D5_NO_REGULAR": 0.11776060843537009,
+              "D5_OTHER_REGULAR": 0.10855183483604273,
+              "D5_PENSION_PAYMENTS": 0.11136896449623442,
+              "D5_SALARY": 0.11668034075077342,
+              "D5_SELF_EMPLOYMENT": 0.1250846213108094,
+              "D5_WITHDRAWALS": 0.18112999225927376
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_NO_REGULAR",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity",
+          "confusion"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": null
+    },
+    {
+      "id": "D5-V2-LV-06",
+      "split": "validation",
+      "text": "A payment from my employer comes into my account each month.",
+      "expected": {
+        "kind": "incomplete",
+        "bucket": null,
+        "option_id": null,
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.6147506157162532,
+              "confusion": 0.20545060598676199,
+              "undecided": 0.1797987782969848
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.125061029759332,
+              "D5_MULTIPLE": 0.10846065756470984,
+              "D5_NO_REGULAR": 0.1039217452808792,
+              "D5_OTHER_REGULAR": 0.1121882102507302,
+              "D5_PENSION_PAYMENTS": 0.1403696348550624,
+              "D5_SALARY": 0.12161831334068932,
+              "D5_SELF_EMPLOYMENT": 0.12132256841456386,
+              "D5_WITHDRAWALS": 0.1670578405340331
+            },
+            "prediction_set": [
+              "D5_PENSION_PAYMENTS",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_PENSION_PAYMENTS",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5043917775807645,
+              "confusion": 0.31913386484013073,
+              "undecided": 0.17647435757910482
+            },
+            "prediction_set": [
+              "clarity",
+              "confusion"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.1188814549067068,
+              "D5_MULTIPLE": 0.1250217344748491,
+              "D5_NO_REGULAR": 0.09552676484842665,
+              "D5_OTHER_REGULAR": 0.10546857877709603,
+              "D5_PENSION_PAYMENTS": 0.14050952682806203,
+              "D5_SALARY": 0.13386396532644307,
+              "D5_SELF_EMPLOYMENT": 0.11526255549775005,
+              "D5_WITHDRAWALS": 0.1654654193406663
+            },
+            "prediction_set": [
+              "D5_BENEFITS_SUPPORT",
+              "D5_MULTIPLE",
+              "D5_PENSION_PAYMENTS",
+              "D5_SALARY",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": false,
+        "intent_set": [
+          "clarity",
+          "confusion"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": null
+    },
+    {
+      "id": "D5-V2-LV-07",
+      "split": "validation",
+      "text": "I'm honestly not sure whether I'm living off my pay or dipping into the money I'd put aside. I can't work out which is covering things at the moment.",
+      "expected": {
+        "kind": "undecided",
+        "bucket": "undecided",
+        "option_id": null,
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5560248398010317,
+              "confusion": 0.21512685136675078,
+              "undecided": 0.22884830883221755
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_NO_REGULAR",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.1114957026279643,
+              "D5_MULTIPLE": 0.10033850744116336,
+              "D5_NO_REGULAR": 0.15972817942354808,
+              "D5_OTHER_REGULAR": 0.10556813421052597,
+              "D5_PENSION_PAYMENTS": 0.11711419065724102,
+              "D5_SALARY": 0.13510855660551213,
+              "D5_SELF_EMPLOYMENT": 0.1574188590054341,
+              "D5_WITHDRAWALS": 0.11322787002861105
+            },
+            "prediction_set": [
+              "D5_NO_REGULAR",
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_NO_REGULAR",
+          "D5_SALARY",
+          "D5_SELF_EMPLOYMENT"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "undecided",
+            "probabilities": {
+              "clarity": 0.32851989483975236,
+              "confusion": 0.22949455435251473,
+              "undecided": 0.4419855508077329
+            },
+            "prediction_set": [
+              "clarity",
+              "undecided"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10191402827448448,
+              "D5_MULTIPLE": 0.1171386659228412,
+              "D5_NO_REGULAR": 0.1441612786866593,
+              "D5_OTHER_REGULAR": 0.0964447140095005,
+              "D5_PENSION_PAYMENTS": 0.10508238722652473,
+              "D5_SALARY": 0.14260155949990325,
+              "D5_SELF_EMPLOYMENT": 0.14595847712342908,
+              "D5_WITHDRAWALS": 0.14669888925665742
+            },
+            "prediction_set": [
+              "D5_MULTIPLE",
+              "D5_NO_REGULAR",
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity",
+          "undecided"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": null
+    },
+    {
+      "id": "D5-V2-LV-08",
+      "split": "validation",
+      "text": "When you say 'pays for living costs', do you mean whose name is on the bills, or where the money to pay them comes from?",
+      "expected": {
+        "kind": "confusion",
+        "bucket": "confusion",
+        "option_id": null,
+        "control_required": null
+      },
+      "baseline": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "clarity",
+            "probabilities": {
+              "clarity": 0.5524712008299603,
+              "confusion": 0.23226336153962562,
+              "undecided": 0.2152654376304141
+            },
+            "prediction_set": [
+              "clarity"
+            ],
+            "threshold": 0.7564028548675875,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_SELF_EMPLOYMENT",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.11468352935701472,
+              "D5_MULTIPLE": 0.09998303412283971,
+              "D5_NO_REGULAR": 0.12723698976521897,
+              "D5_OTHER_REGULAR": 0.12179471119924286,
+              "D5_PENSION_PAYMENTS": 0.1135761541280079,
+              "D5_SALARY": 0.14039933224932633,
+              "D5_SELF_EMPLOYMENT": 0.15136087534049758,
+              "D5_WITHDRAWALS": 0.1309653738378519
+            },
+            "prediction_set": [
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8721306352047945,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity"
+        ],
+        "option_set": [
+          "D5_SALARY",
+          "D5_SELF_EMPLOYMENT",
+          "D5_WITHDRAWALS"
+        ],
+        "ml_uncertain": true,
+        "ml_reason": "option_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "candidate": {
+        "route": "ml_then_gpt",
+        "action": "escalation_required_not_executed",
+        "ordinary_bucket": null,
+        "result_bucket": null,
+        "raw": {
+          "intent": {
+            "argmax": "confusion",
+            "probabilities": {
+              "clarity": 0.31277096151716766,
+              "confusion": 0.43715183900457166,
+              "undecided": 0.2500771994782607
+            },
+            "prediction_set": [
+              "clarity",
+              "confusion"
+            ],
+            "threshold": 0.7331168060984319,
+            "alpha": 0.1
+          },
+          "option": {
+            "argmax": "D5_WITHDRAWALS",
+            "probabilities": {
+              "D5_BENEFITS_SUPPORT": 0.10826588789789442,
+              "D5_MULTIPLE": 0.11567072223687358,
+              "D5_NO_REGULAR": 0.11770862884913208,
+              "D5_OTHER_REGULAR": 0.11608340369648355,
+              "D5_PENSION_PAYMENTS": 0.10500771024753996,
+              "D5_SALARY": 0.14259314369721798,
+              "D5_SELF_EMPLOYMENT": 0.14169997526589515,
+              "D5_WITHDRAWALS": 0.15297052810896328
+            },
+            "prediction_set": [
+              "D5_NO_REGULAR",
+              "D5_SALARY",
+              "D5_SELF_EMPLOYMENT",
+              "D5_WITHDRAWALS"
+            ],
+            "threshold": 0.8832800447772394,
+            "alpha": 0.1
+          }
+        },
+        "raw_option_scored": false,
+        "raw_intent_scored": true,
+        "intent_set": [
+          "clarity",
+          "confusion"
+        ],
+        "option_set": [],
+        "ml_uncertain": true,
+        "ml_reason": "intent_model_uncertainty",
+        "resolver_candidate": null,
+        "business_validation": null,
+        "accepted_candidate": null,
+        "contract_outcome": null,
+        "escalation_required": true,
+        "routing_ml_calls": 1,
+        "diagnostic_predictor_calls": 2,
+        "actual_gpt_calls": 0,
+        "ml_receipt_issued": false,
+        "selected": null,
+        "confirmed_version": null,
+        "saved_version": null
+      },
+      "previous_v1_candidate": null
+    }
+  ],
+  "previous_baseline_semantic_parity": {
+    "matched": 19,
+    "required": 19
+  },
+  "actual_gpt_calls": 0,
+  "candidate_fits_during_compare": 0,
+  "previous_candidate_rerun": false,
+  "default_changed": false,
+  "validation_used_for_tuning": false,
+  "limitations": [
+    "Fresh eight replies are agent-authored and human-reviewed, not independent human-original evaluation.",
+    "Previous eight validation and original eleven replies are opened preservation evidence.",
+    "Escalation is recorded before any LLM execution; controls are not ML interpretation successes.",
+    "Raw option accuracy is only defined for clear replies; incomplete raw labels have no forced gold."
+  ]
+}

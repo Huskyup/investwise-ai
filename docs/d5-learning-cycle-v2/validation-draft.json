@@ -1,0 +1,121 @@
+{
+  "version": "d5-learning-validation-v2",
+  "authorship": "AI-authored by v2_validation_author separately without new training wording or model results",
+  "review_status": "pending_human_business_review",
+  "review_requirement": "Explicit user business review is required before these draft expectations can be treated as approved.",
+  "language": "UK English",
+  "case_status": "Fictional first-turn D5 replies; no customer follow-up has been invented.",
+  "authoring_sources": [
+    "demos/d5/core/BUSINESS_STANDARD.md",
+    "config/business-decision-spec.json: D5 option meanings"
+  ],
+  "independence_limit": "Separately AI-authored from the business reference and D5 option meanings. No new training drafts, training banks, prediction results, model scores or experiment outputs were inspected. This is not independent human validation or a performance result.",
+  "overlap_revision_note": "Before human business review, the same author, v2_validation_author, revised the wording of D5-V2-LV-02 and D5-V2-LV-03 following static overlap feedback. These two revisions address wording overlap, not model-outcome optimisation. The author did not inspect new training wording or model results.",
+  "nonclear_boundary": "Incomplete, undecided and confusion rows have no financial option. Incomplete rows have no bucket or accepted financial label; missing information alone is not customer indecision or confusion. Business notes are offline review annotations, not runtime financial facts.",
+  "rows": [
+    {
+      "id": "D5-V2-LV-01",
+      "question_id": "D5",
+      "text": "I've been moving a little out of my savings each week to cover the food shop and the electricity meter.",
+      "split": "validation",
+      "kind": "clear",
+      "bucket": "clarity",
+      "option_id": "D5_WITHDRAWALS",
+      "business_meaning": "The customer actively draws on savings for current food and electricity costs. No investment withdrawal, amount or adequacy is implied.",
+      "expected_action": "Propose savings or investment withdrawals, preserving that the stated source is savings, and ask for explicit confirmation.",
+      "source": "Fictional reply separately AI-authored by v2_validation_author from the D5 business standard and option meanings; pending human business review.",
+      "group_id": "D5-V2-LV-01"
+    },
+    {
+      "id": "D5-V2-LV-02",
+      "question_id": "D5",
+      "text": "Each month I transfer some of my savings into my current account, then use that to pay the rent and household bills.",
+      "split": "validation",
+      "kind": "clear",
+      "bucket": "clarity",
+      "option_id": "D5_WITHDRAWALS",
+      "business_meaning": "Previously saved money is being drawn on to pay the customer's present household costs, including rent. The wording does not establish investments or financial sufficiency.",
+      "expected_action": "Propose savings or investment withdrawals on the basis of the stated savings use, and ask the customer to confirm.",
+      "source": "Fictional reply separately AI-authored by v2_validation_author from the D5 business standard and option meanings; pending human business review.",
+      "group_id": "D5-V2-LV-02"
+    },
+    {
+      "id": "D5-V2-LV-03",
+      "question_id": "D5",
+      "text": "I'm paid fortnightly by my employer, and that's the money I live on between paydays.",
+      "split": "validation",
+      "kind": "clear",
+      "bucket": "clarity",
+      "option_id": "D5_SALARY",
+      "business_meaning": "The customer's wages actively pay current living costs. No amount, overall adequacy or other funding source is inferred.",
+      "expected_action": "Propose salary or wages as the supported current funding category and request explicit confirmation.",
+      "source": "Fictional reply separately AI-authored by v2_validation_author from the D5 business standard and option meanings; pending human business review.",
+      "group_id": "D5-V2-LV-03"
+    },
+    {
+      "id": "D5-V2-LV-04",
+      "question_id": "D5",
+      "text": "The pay from my shop job covers the weekly food shop, and I take money from my savings for the rent.",
+      "split": "validation",
+      "kind": "clear",
+      "bucket": "clarity",
+      "option_id": "D5_MULTIPLE",
+      "business_meaning": "Wages and savings withdrawals both actively fund current living costs. These are two distinct categories, with wages used for food and savings used for rent.",
+      "expected_action": "Propose more than one listed source category, name both wages and savings withdrawals, and request confirmation of that stated mixture.",
+      "source": "Fictional reply separately AI-authored by v2_validation_author from the D5 business standard and option meanings; pending human business review.",
+      "group_id": "D5-V2-LV-04"
+    },
+    {
+      "id": "D5-V2-LV-05",
+      "question_id": "D5",
+      "text": "I've got money sitting in a building society account.",
+      "split": "validation",
+      "kind": "incomplete",
+      "bucket": null,
+      "option_id": null,
+      "business_meaning": "The customer reports holding money, but does not establish what currently pays their living costs. Ownership alone supports no accepted funding label.",
+      "expected_action": "Ask whether that money is currently used for living costs or whether something else pays them. Leave the financial option unresolved; do not infer no regular source, indecision or confusion.",
+      "source": "Fictional reply separately AI-authored by v2_validation_author from the D5 business standard and option meanings; pending human business review.",
+      "group_id": "D5-V2-LV-05"
+    },
+    {
+      "id": "D5-V2-LV-06",
+      "question_id": "D5",
+      "text": "A payment from my employer comes into my account each month.",
+      "split": "validation",
+      "kind": "incomplete",
+      "bucket": null,
+      "option_id": null,
+      "business_meaning": "The customer reports receiving money, but does not establish its use for current living costs. Receipt alone supports no accepted funding label.",
+      "expected_action": "Ask whether the payment is used for current living costs or whether those costs are paid another way. Keep the financial option unresolved without assuming that received money is spent.",
+      "source": "Fictional reply separately AI-authored by v2_validation_author from the D5 business standard and option meanings; pending human business review.",
+      "group_id": "D5-V2-LV-06"
+    },
+    {
+      "id": "D5-V2-LV-07",
+      "question_id": "D5",
+      "text": "I'm honestly not sure whether I'm living off my pay or dipping into the money I'd put aside. I can't work out which is covering things at the moment.",
+      "split": "validation",
+      "kind": "undecided",
+      "bucket": "undecided",
+      "option_id": null,
+      "business_meaning": "The customer explicitly cannot establish which money currently funds their living costs. Neither one source nor a mixture is supported as a complete answer.",
+      "expected_action": "Ask neutrally whether they can identify what currently pays those costs, allowing either mentioned possibility, both, another source or continued uncertainty. Keep the option null and nonclear financial facts empty.",
+      "source": "Fictional reply separately AI-authored by v2_validation_author from the D5 business standard and option meanings; pending human business review.",
+      "group_id": "D5-V2-LV-07"
+    },
+    {
+      "id": "D5-V2-LV-08",
+      "question_id": "D5",
+      "text": "When you say 'pays for living costs', do you mean whose name is on the bills, or where the money to pay them comes from?",
+      "split": "validation",
+      "kind": "confusion",
+      "bucket": "confusion",
+      "option_id": null,
+      "business_meaning": "The customer asks what the question means and provides no funding answer. They need an explanation of the relationship between current living costs and the money used to pay them.",
+      "expected_action": "Explain that the question asks where the money actually used for everyday costs comes from, rather than whose name appears on a bill, then invite an answer. Assign no financial option; a pre-model Help response may handle the explanation.",
+      "source": "Fictional reply separately AI-authored by v2_validation_author from the D5 business standard and option meanings; pending human business review.",
+      "group_id": "D5-V2-LV-08"
+    }
+  ]
+}
