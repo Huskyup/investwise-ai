@@ -1,0 +1,417 @@
+{
+  "passed": false,
+  "cases": [
+    {
+      "id": "D5-STD-01",
+      "expected": {
+        "kind": "clear",
+        "option": "D5_PENSION_PAYMENTS",
+        "meaning": "Pension pays bills; wages are retained, not spent.",
+        "next": "Confirm pension and exclusion of wages."
+      },
+      "matched": true,
+      "candidate": "D5_PENSION_PAYMENTS",
+      "raw": {
+        "answer_scope": "complete",
+        "evidence": [
+          "My wages stay in savings.",
+          "My pension pays the bills."
+        ],
+        "facts": [
+          {
+            "evidence": "My wages stay in savings.",
+            "owner": "self",
+            "pays_living_costs": "no",
+            "source_category": "D5_SALARY",
+            "source_instance_id": "group_1",
+            "time": "current"
+          },
+          {
+            "evidence": "My pension pays the bills.",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_PENSION_PAYMENTS",
+            "source_instance_id": "group_2",
+            "time": "current"
+          }
+        ],
+        "missing_information": [],
+        "model_abstain": false,
+        "option_id": "D5_PENSION_PAYMENTS",
+        "semantic_bucket": "clarity"
+      },
+      "contract_outcome": "financial_candidate",
+      "ml_calls": 1,
+      "qwen_calls": 1,
+      "route": "ml_then_qwen"
+    },
+    {
+      "id": "D5-STD-02",
+      "expected": {
+        "kind": "clear",
+        "option": "D5_MULTIPLE",
+        "meaning": "Salary and pension both currently pay costs.",
+        "next": "Confirm the two named categories."
+      },
+      "matched": true,
+      "candidate": "D5_MULTIPLE",
+      "raw": {
+        "answer_scope": "complete",
+        "evidence": [
+          "Both my wages and pension pay for everyday costs."
+        ],
+        "facts": [
+          {
+            "evidence": "Both my wages and pension pay for everyday costs.",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_SALARY",
+            "source_instance_id": "group_1",
+            "time": "current"
+          },
+          {
+            "evidence": "Both my wages and pension pay for everyday costs.",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_PENSION_PAYMENTS",
+            "source_instance_id": "group_2",
+            "time": "current"
+          }
+        ],
+        "missing_information": [],
+        "model_abstain": false,
+        "option_id": "D5_MULTIPLE",
+        "semantic_bucket": "clarity"
+      },
+      "contract_outcome": "financial_candidate",
+      "ml_calls": 1,
+      "qwen_calls": 1,
+      "route": "ml_then_qwen"
+    },
+    {
+      "id": "D5-STD-03",
+      "expected": {
+        "kind": "clear",
+        "option": "D5_SALARY",
+        "meaning": "Two employers fund costs; one salary category, not multiple categories.",
+        "next": "Confirm salary or wages."
+      },
+      "matched": false,
+      "candidate": null,
+      "raw": {
+        "answer_scope": "complete",
+        "evidence": [
+          "Pay from my two employers covers my living costs."
+        ],
+        "facts": [
+          {
+            "evidence": "Pay from my two employers covers my living costs.",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_SALARY",
+            "source_instance_id": "group_1",
+            "time": "current"
+          }
+        ],
+        "missing_information": [],
+        "model_abstain": false,
+        "option_id": "D5_MULTIPLE",
+        "semantic_bucket": "clarity"
+      },
+      "contract_outcome": "rejection",
+      "ml_calls": 1,
+      "qwen_calls": 1,
+      "route": "ml_then_qwen"
+    },
+    {
+      "id": "D5-STD-04",
+      "expected": {
+        "kind": "clear",
+        "option": "D5_BENEFITS_SUPPORT",
+        "meaning": "Benefits and family help are distinct sources in one category.",
+        "next": "Confirm benefits or regular support."
+      },
+      "matched": true,
+      "candidate": "D5_BENEFITS_SUPPORT",
+      "raw": {
+        "answer_scope": "complete",
+        "evidence": [
+          "Benefits and regular help from my family pay my bills."
+        ],
+        "facts": [
+          {
+            "evidence": "Benefits and regular help from my family pay my bills.",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_BENEFITS_SUPPORT",
+            "source_instance_id": "group_1",
+            "time": "current"
+          }
+        ],
+        "missing_information": [],
+        "model_abstain": false,
+        "option_id": "D5_BENEFITS_SUPPORT",
+        "semantic_bucket": "clarity"
+      },
+      "contract_outcome": "financial_candidate",
+      "ml_calls": 1,
+      "qwen_calls": 1,
+      "route": "ml_then_qwen"
+    },
+    {
+      "id": "D5-STD-05",
+      "expected": {
+        "kind": "clear",
+        "option": "D5_BENEFITS_SUPPORT",
+        "meaning": "Customer receives regular support for living costs; do not classify brother's earnings.",
+        "next": "Confirm regular support."
+      },
+      "matched": false,
+      "candidate": null,
+      "raw": {
+        "answer_scope": "partial",
+        "evidence": [
+          "My brother sends me money every week for rent and food."
+        ],
+        "facts": [
+          {
+            "evidence": "My brother sends me money every week for rent and food.",
+            "owner": "other",
+            "pays_living_costs": "yes",
+            "source_category": "D5_BENEFITS_SUPPORT",
+            "source_instance_id": "group_1",
+            "time": "current"
+          }
+        ],
+        "missing_information": [
+          "source_use_unknown:D5_BENEFITS_SUPPORT"
+        ],
+        "model_abstain": false,
+        "option_id": "D5_BENEFITS_SUPPORT",
+        "semantic_bucket": "clarity"
+      },
+      "contract_outcome": "rejection",
+      "ml_calls": 1,
+      "qwen_calls": 1,
+      "route": "ml_then_qwen"
+    },
+    {
+      "id": "D5-STD-06",
+      "expected": {
+        "kind": "clear",
+        "option": "D5_WITHDRAWALS",
+        "meaning": "Current savings withdrawals fund bills; pension is future and excluded.",
+        "next": "Confirm withdrawals without asking irrelevant future-pension details."
+      },
+      "matched": false,
+      "candidate": null,
+      "raw": {
+        "answer_scope": "partial",
+        "evidence": [
+          "I use my savings for bills.",
+          "My pension starts next year."
+        ],
+        "facts": [
+          {
+            "evidence": "I use my savings for bills.",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_OTHER_REGULAR",
+            "source_instance_id": "group_1",
+            "time": "current"
+          },
+          {
+            "evidence": "My pension starts next year.",
+            "owner": "self",
+            "pays_living_costs": "no",
+            "source_category": "D5_PENSION_PAYMENTS",
+            "source_instance_id": "group_2",
+            "time": "future"
+          }
+        ],
+        "missing_information": [
+          "source_use_unknown:D5_PENSION_PAYMENTS"
+        ],
+        "model_abstain": false,
+        "option_id": "D5_OTHER_REGULAR",
+        "semantic_bucket": "clarity"
+      },
+      "contract_outcome": "rejection",
+      "ml_calls": 1,
+      "qwen_calls": 1,
+      "route": "ml_then_qwen"
+    },
+    {
+      "id": "D5-STD-07",
+      "expected": {
+        "kind": "missing_information",
+        "option": null,
+        "meaning": "Undrawn pension holding establishes no active source. Other funding is not known; not no regular source.",
+        "next": "Ask what currently pays living costs; do not infer that the customer misunderstands or is undecided."
+      },
+      "matched": false,
+      "candidate": null,
+      "raw": {
+        "answer_scope": "partial",
+        "evidence": [
+          "I have a pension fund, but I have not started drawing from it."
+        ],
+        "facts": [
+          {
+            "evidence": "I have a pension fund, but I have not started drawing from it.",
+            "owner": "self",
+            "pays_living_costs": "unknown",
+            "source_category": "D5_PENSION_PAYMENTS",
+            "source_instance_id": "group_1",
+            "time": "current"
+          }
+        ],
+        "missing_information": [
+          "source_use_unknown:D5_PENSION_PAYMENTS"
+        ],
+        "model_abstain": false,
+        "option_id": "D5_PENSION_PAYMENTS",
+        "semantic_bucket": "undecided"
+      },
+      "contract_outcome": "rejection",
+      "ml_calls": 1,
+      "qwen_calls": 1,
+      "route": "ml_then_qwen"
+    },
+    {
+      "id": "D5-STD-08",
+      "expected": {
+        "kind": "clear",
+        "option": "D5_NO_REGULAR",
+        "meaning": "Explicit current absence of a regular funding source, not absence of assets.",
+        "next": "Confirm no regular source."
+      },
+      "matched": true,
+      "candidate": "D5_NO_REGULAR",
+      "raw": {
+        "answer_scope": "complete",
+        "evidence": [
+          "I have no regular source paying my living costs at the moment."
+        ],
+        "facts": [
+          {
+            "evidence": "I have no regular source paying my living costs at the moment.",
+            "owner": "self",
+            "pays_living_costs": "no",
+            "source_category": "D5_NO_REGULAR",
+            "source_instance_id": "group_1",
+            "time": "current"
+          }
+        ],
+        "missing_information": [],
+        "model_abstain": false,
+        "option_id": "D5_NO_REGULAR",
+        "semantic_bucket": "clarity"
+      },
+      "contract_outcome": "financial_candidate",
+      "ml_calls": 1,
+      "qwen_calls": 1,
+      "route": "ml_then_qwen"
+    },
+    {
+      "id": "D5-STD-09",
+      "expected": {
+        "kind": "missing_information",
+        "option": null,
+        "meaning": "Receipt of wages and pension alone does not establish spending; do not default to multiple or customer indecision.",
+        "next": "Ask which sources actually fund costs now, allowing another source or neither."
+      },
+      "matched": false,
+      "candidate": "D5_MULTIPLE",
+      "raw": {
+        "answer_scope": "complete",
+        "evidence": [
+          "I receive wages and pension payments"
+        ],
+        "facts": [
+          {
+            "evidence": "I receive wages and pension payments",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_SALARY",
+            "source_instance_id": "group_1",
+            "time": "current"
+          },
+          {
+            "evidence": "I receive wages and pension payments",
+            "owner": "self",
+            "pays_living_costs": "yes",
+            "source_category": "D5_PENSION_PAYMENTS",
+            "source_instance_id": "group_2",
+            "time": "current"
+          }
+        ],
+        "missing_information": [],
+        "model_abstain": false,
+        "option_id": "D5_MULTIPLE",
+        "semantic_bucket": "clarity"
+      },
+      "contract_outcome": "financial_candidate",
+      "ml_calls": 1,
+      "qwen_calls": 1,
+      "route": "ml_then_qwen"
+    },
+    {
+      "id": "D5-STD-10",
+      "expected": {
+        "kind": "undecided",
+        "option": null,
+        "meaning": "Customer explicitly cannot establish whether wages also pay costs; no financial facts/option in nonclear contract output.",
+        "next": "Neutral question focused on wage use; allow unresolved, avoid a generic menu alone."
+      },
+      "matched": false,
+      "candidate": null,
+      "raw": {
+        "answer_scope": "partial",
+        "evidence": [
+          "My pension pays some bills; I cannot tell whether my wages also do."
+        ],
+        "facts": [
+          {
+            "evidence": "My pension pays some bills; I cannot tell whether my wages also do.",
+            "owner": "self",
+            "pays_living_costs": "unknown",
+            "source_category": "D5_PENSION_PAYMENTS",
+            "source_instance_id": "group_1",
+            "time": "current"
+          }
+        ],
+        "missing_information": [
+          "source_use_unknown:D5_SALARY",
+          "source_use_unknown:D5_PENSION_PAYMENTS"
+        ],
+        "model_abstain": false,
+        "option_id": "D5_PENSION_PAYMENTS",
+        "semantic_bucket": "undecided"
+      },
+      "contract_outcome": "rejection",
+      "ml_calls": 1,
+      "qwen_calls": 1,
+      "route": "ml_then_qwen"
+    },
+    {
+      "id": "D5-STD-11",
+      "expected": {
+        "kind": "confusion",
+        "option": null,
+        "meaning": "Terminology question, no personal financial assertion; no financial facts/option.",
+        "next": "Explain current payments used for bills versus a pension holding. If pre-model Help handles it, report dialogue success with zero interpretation calls, not model success."
+      },
+      "matched": true,
+      "candidate": null,
+      "raw": null,
+      "contract_outcome": null,
+      "ml_calls": 0,
+      "qwen_calls": 0,
+      "route": "control"
+    }
+  ],
+  "context_phase_run": false,
+  "scope": "Existing opened examples, not an independent accuracy estimate",
+  "raw_meaning_review_required": true
+}

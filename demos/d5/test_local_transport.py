@@ -95,6 +95,9 @@ class LocalTransportChecks(unittest.TestCase):
         self.assertTrue(prepared[0]["content"].startswith(PROMPT_PATH.read_text()))
         self.assertIn(transport._json(self.schema), prepared[0]["content"])
         self.assertIn('"source_use_unknown:D5_SALARY"', prepared[0]["content"])
+        self.assertTrue(prepared[0]["content"].endswith(transport.LOCAL_CATEGORY_INSTRUCTION))
+        self.assertEqual(self.backend.metadata['local_category_instruction_sha256'],
+                         transport._sha(transport.LOCAL_CATEGORY_INSTRUCTION))
         self.assertNotIn("tools", prepared[1])
 
     def test_preparation_rejects_changed_business_prompt_schema_or_context(self):

@@ -1,0 +1,14 @@
+{
+  "checks": 5,
+  "passed": true,
+  "failures": 0,
+  "errors": 0,
+  "model_calls": 0,
+  "new_semantic_inputs": 0,
+  "scope": "Two existing prompt/contract preparation checks; existing scorer and saved-output sequence; same saved Qwen mismatch confirms complete-bank/context gating.",
+  "source_hashes": {
+    "demos/d5/local_transport.py": "e143db41b5b49a97f9b55a89d3513864a88b56723017895aea2b0496f421432e",
+    "demos/d5/local_evaluate.py": "72c93be33ff25b7665178cd2bd4aa51571d9485c4e0b78b88ad7fc438132a7cb",
+    "demos/d5/test_local_transport.py": "6e25e081c828699f35e7df4bd8a95dccb94a5d91f3b7006f7598043ad8457dd6"
+  }
+}

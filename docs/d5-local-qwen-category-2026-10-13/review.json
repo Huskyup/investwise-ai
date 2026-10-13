@@ -1,0 +1,64 @@
+{
+  "review_mode": "Independent read-only audit of saved requests, raw outputs, decisions and bank summary; no further inference",
+  "matched_dialogue_outcomes": 5,
+  "total_cases": 11,
+  "correct_accepted_candidates": [
+    "D5-STD-01",
+    "D5-STD-02",
+    "D5-STD-04",
+    "D5-STD-08"
+  ],
+  "wrong_accepted_candidates": [
+    "D5-STD-09"
+  ],
+  "contract_rejections": [
+    "D5-STD-03",
+    "D5-STD-05",
+    "D5-STD-06",
+    "D5-STD-07",
+    "D5-STD-10"
+  ],
+  "actual_ml_calls": 10,
+  "actual_qwen_calls": 10,
+  "ml_handled_share": "0/10 eligible interpreted first replies",
+  "control_case": {
+    "id": "D5-STD-11",
+    "ml_calls": 0,
+    "qwen_calls": 0,
+    "outcome": "Help explanation; not free-text model success"
+  },
+  "live_context_turns": 0,
+  "confirmations": 0,
+  "choice_recovery": 0,
+  "retry": false,
+  "prior_local_comparison": [
+    {
+      "id": "D5-STD-01",
+      "before_candidate": "D5_PENSION_PAYMENTS",
+      "after_candidate": "D5_PENSION_PAYMENTS",
+      "raw_output_identical": true
+    },
+    {
+      "id": "D5-STD-02",
+      "before_candidate": "D5_MULTIPLE",
+      "after_candidate": "D5_MULTIPLE",
+      "raw_output_identical": true
+    },
+    {
+      "id": "D5-STD-03",
+      "before_candidate": null,
+      "after_candidate": null,
+      "raw_output_identical": true
+    }
+  ],
+  "missing_prior_comparison": "Cases04\u201311 were not run in the previous local round; their failures cannot be attributed to this prompt change as measured regressions.",
+  "target_change_delivered": true,
+  "target_recovered": false,
+  "key_limit": "Case09 wrongly infers expenditure from income receipt and passes the structural contract; internal consistency does not prove semantic truth.",
+  "prompt_delivery": {
+    "shared_system_prefix_preserved": true,
+    "user_envelope_identical": true,
+    "schema_identical": true,
+    "new_instruction_present": true
+  }
+}

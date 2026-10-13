@@ -1,0 +1,9 @@
+test_preparation_preserves_prompt_and_user_data (test_local_transport.LocalTransportChecks.test_preparation_preserves_prompt_and_user_data) ... ok
+test_preparation_rejects_changed_business_prompt_schema_or_context (test_local_transport.LocalTransportChecks.test_preparation_rejects_changed_business_prompt_schema_or_context) ... ok
+test_scorer_checks_saved_relations_and_specific_followup (local_verify.LocalChecks.test_scorer_checks_saved_relations_and_specific_followup) ... ok
+test_existing_evaluator_sequence_with_saved_outputs_only (local_verify.LocalChecks.test_existing_evaluator_sequence_with_saved_outputs_only) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.634s
+
+OK

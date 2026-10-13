@@ -4,7 +4,15 @@ Updated 13 October 2026 · `feature/all-question-ml-prototype`
 
 Maintained delivery repository: [Huskyup/investwise-ai](https://github.com/Huskyup/investwise-ai/tree/feature/all-question-ml-prototype). Use the explicit repository URL below when updating an older checkout whose `origin` may point elsewhere.
 
-## Latest separate experiment: local ML + Qwen
+## Latest local Qwen prompt check: target error remains
+
+The local Qwen suffix now explicitly tells the model to choose the final option from the distinct active funding categories in its facts. It retains the existing rules for exclusions, incomplete answers, NO_REGULAR and uncertainty. The shared GPT prompt, models, strict validation, routing, all 15 questions and default are unchanged; there is no automatic output relabelling.
+
+**The implemented instruction did not fix two employers being labelled MULTIPLE.** All 11 existing examples were checked once: four correct financial candidates, one wrong financial candidate (received wages/pension treated as expenditure), five rejections and one correct zero-call Help response. The four context turns were skipped because the bank did not pass. Ten Qwen calls were made, with no retries or new examples; ML handled 0/10 eligible replies. The earlier local successes on cases 01/02 were preserved, but target case 03 returned the identical wrong raw category. Cases 04–11 had not previously been run locally, so their failures are not proven regressions caused by this suffix. See the [complete report, before/after comparison and receipts](d5-local-qwen-category-2026-10-13/REPORT.md).
+
+Keep using the working GPT entry for the previously demonstrated company conversation. The local entry remains available for explicit development, with its failed acceptance status documented. This publication records a tested attempt; it does not claim a completed semantic fix.
+
+## Earlier separate experiment: local ML + Qwen
 
 A manually launched [local D5 entry](../demos/d5/LOCAL_README.md) now combines the unchanged main ML predictors with the already cached Qwen3-4B-Instruct-2507-4bit. Controls run first; ML handles eligible first replies only when its existing gates pass, and unresolved or contextual replies use one local Qwen interpretation. Accepted results still require validation and explicit confirmation. There is no retraining, new classifier, main-app integration or GPT fallback.
 

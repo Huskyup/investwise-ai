@@ -1,4 +1,4 @@
-"""Explicit bounded local D5 verification; one preflight before existing cases."""
+"""Bounded local D5 verification; separately recorded prompt-only checks reuse the bank."""
 from __future__ import annotations
 
 import argparse
@@ -165,7 +165,7 @@ def clear_relations_match(record):
     return active == expected_active and excluded == required_excluded
 
 
-def existing(backend, output):
+def existing(backend, output, *, complete_bank=False):
     from local_session import LocalD5Session
     from baseline_ml import build_all_question_ml_resolver
     rows = json.loads((EVIDENCE / 'inputs.json').read_text())['rows']
@@ -190,12 +190,16 @@ def existing(backend, output):
                  'route': record.get('route')}
         scores.append(score)
         print(f"Recorded {row['id']}: {'matched' if matched else 'mismatch'}", flush=True)
-        if not matched:
+        if not matched and not complete_bank:
             write_json(output / 'existing-summary.json', {'passed': False, 'cases': scores,
                 'stop_case': row['id'], 'context_phase_run': False, 'raw_meaning_review_required': True})
             return False
-    write_json(output / 'existing-summary.json', {'passed': True, 'cases': scores,
+    bank_passed = all(score['matched'] for score in scores)
+    write_json(output / 'existing-summary.json', {'passed': bank_passed, 'cases': scores,
+        'context_phase_run': bank_passed,
         'scope': 'Existing opened examples, not an independent accuracy estimate', 'raw_meaning_review_required': True})
+    if not bank_passed:
+        return False
     # Same already-used short-answer/correction sequence; no new fictional cases.
     sequence = [json.loads((CONTEXT_ROOT / f'CONTEXT-{i:02d}.json').read_text()) for i in range(1, 5)]
     session.new_example()
@@ -259,13 +263,25 @@ def existing(backend, output):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('phase', choices=['preflight', 'existing'])
+    parser.add_argument('phase', choices=['preflight', 'existing', 'prompt-check'])
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--preflight-receipt', type=Path)
     parser.add_argument('--worker-python', type=Path)
     parser.add_argument('--model-path', type=Path)
+    parser.add_argument('--protocol', type=Path,
+                        help='Required frozen policy for the separately authorised prompt-check round')
     args = parser.parse_args()
     frozen = frozen_files()
+    if args.phase == 'prompt-check':
+        if args.protocol is None:
+            parser.error('A separate frozen prompt-check protocol is required')
+        protocol_path = args.protocol.resolve()
+        policy = json.loads(protocol_path.read_text())
+        if (policy.get('phase') != 'prompt-check' or policy.get('existing_examples') != 11
+                or policy.get('conditional_context_turns') != 4 or policy.get('retry') is not False
+                or policy.get('source_hashes') != frozen):
+            parser.error('Prompt-check protocol does not match these frozen sources and limits')
+        frozen[str(protocol_path.relative_to(REPOSITORY))] = digest(protocol_path)
     if args.phase == 'existing':
         if args.preflight_receipt is None:
             parser.error('A successful separate preflight receipt is required')
@@ -282,7 +298,8 @@ def main():
     failure = None
     try:
         backend = LocalGenerator(output / 'traces', worker_python=args.worker_python, model_path=args.model_path)
-        passed = preflight(backend, output) if args.phase == 'preflight' else existing(backend, output)
+        passed = (preflight(backend, output) if args.phase == 'preflight'
+                  else existing(backend, output, complete_bank=args.phase == 'prompt-check'))
     except Exception as exc:
         failure = {'type': type(exc).__name__, 'safe_backend_receipt': dict(backend.last_call) if backend else None}
     finally:

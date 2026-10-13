@@ -1,0 +1,9 @@
+{
+  "phase": "prompt-check",
+  "passed": false,
+  "files_unchanged": true,
+  "actual_qwen_calls": 10,
+  "failure": null,
+  "retry": false,
+  "choice_recovery": 0
+}

@@ -33,6 +33,19 @@ PINNED_WORKER_VERSIONS = {
     "transformers": "5.19.0", "tokenizers": "0.23.3",
 }
 BUSINESS_PROMPT_SHA256 = "474f95b7bdbf2dd5b0b2f3ea499b7eab1a06a588ab592c51f9045a1706b7c003"
+LOCAL_CATEGORY_INSTRUCTION = (
+    "LOCAL CATEGORY CONSISTENCY. For a complete Clarity answer with all relevant "
+    "funding relations established, select option_id from the distinct source_category "
+    "values in your facts where owner is self, time is current and pays_living_costs "
+    "is yes. One such category requires that same category as option_id; two or more "
+    "require D5_MULTIPLE. Count categories, not jobs, employers, payers or accounts. "
+    "Excluded sources do not count. No active category does not by itself establish "
+    "D5_NO_REGULAR: retain the existing explicit-absence, incomplete-answer and "
+    "uncertainty instructions. The category count does not establish completeness "
+    "or change Undecided, Confusion or abstention handling. "
+    "Do not invent, alter or omit supported facts to make "
+    "them fit an option. Return only the same required JSON object."
+)
 PINNED_MODEL_FILES = {
     "added_tokens.json": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
     "chat_template.jinja": "40c21f34cf67d8c760ef72f8ad3ae5afad514299d4b06e91dd9a8d705af7b541",
@@ -71,7 +84,7 @@ def _strict_json(value):
 
 
 def prepare_messages(messages, schema):
-    """Pure preparation: preserve business instructions/data; append format only."""
+    """Preserve shared instructions/data; append local format and consistency guidance."""
     from ai.d5_single_interpreter_contract_v2 import (
         D5DialogueContext, MISSING_TOPICS, output_schema)
     from ai.d5_puzzle_interpreter import D5_OPTION_IDS
@@ -108,7 +121,8 @@ def prepare_messages(messages, schema):
         "The schema is a prompt instruction; the application validates the output independently.\n"
         + _json(schema)
         + "\nThe only permitted missing_information items are: "
-        + _json(sorted(MISSING_TOPICS)))
+        + _json(sorted(MISSING_TOPICS))
+        + "\n\n" + LOCAL_CATEGORY_INSTRUCTION)
     return prepared
 
 
@@ -165,7 +179,8 @@ class LocalGenerator:
             "max_tokens": MAX_TOKENS, "tools": [], "tool_choice": "none",
             "store": False, "network": False, "trust_remote_code": False,
             "constrained_decoder": False, "fresh_generation_cache": True,
-            "local_format_policy": "unchanged_business_prompt_plus_exact_schema_and_topics_v1",
+            "local_format_policy": "unchanged_business_prompt_plus_schema_topics_category_consistency_v2",
+            "local_category_instruction_sha256": _sha(LOCAL_CATEGORY_INSTRUCTION),
             "model_files_sha256": dict(PINNED_MODEL_FILES),
             "required_worker_versions": dict(PINNED_WORKER_VERSIONS),
             "business_prompt_sha256": BUSINESS_PROMPT_SHA256,
