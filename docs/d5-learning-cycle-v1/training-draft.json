@@ -1,0 +1,111 @@
+{
+  "version": "d5-learning-training-v1",
+  "authorship": "AI-authored fictional first-turn examples based on the D5 business standard and the recorded demonstration; not verified personal financial data",
+  "review_status": "pending_human_business_review",
+  "rows": [
+    {
+      "id": "D5-LT-01",
+      "question_id": "D5",
+      "split": "train",
+      "kind": "clear",
+      "text": "savings",
+      "bucket": "clarity",
+      "option_id": "D5_WITHDRAWALS",
+      "business_meaning": "A direct answer to the current living-cost question names savings as the funding source. The original pending answer needs explicit business review; only the later mixed-source answer was user-confirmed.",
+      "expected_action": "confirm_if_valid_else_escalate",
+      "source": "Recorded demonstration wording; label proposed for business review",
+      "group_id": "D5-LT-01"
+    },
+    {
+      "id": "D5-LT-02",
+      "question_id": "D5",
+      "split": "train",
+      "kind": "clear",
+      "text": "Just my savings.",
+      "bucket": "clarity",
+      "option_id": "D5_WITHDRAWALS",
+      "business_meaning": "Savings are the sole named source in a direct answer to the current living-cost question.",
+      "expected_action": "confirm_if_valid_else_escalate",
+      "source": "AI-authored fictional training",
+      "group_id": "D5-LT-02"
+    },
+    {
+      "id": "D5-LT-03",
+      "question_id": "D5",
+      "split": "train",
+      "kind": "clear",
+      "text": "I cover my everyday bills using cash I saved up.",
+      "bucket": "clarity",
+      "option_id": "D5_WITHDRAWALS",
+      "business_meaning": "Previously saved cash is actively spent on current bills, not merely held.",
+      "expected_action": "confirm_if_valid_else_escalate",
+      "source": "AI-authored fictional training",
+      "group_id": "D5-LT-03"
+    },
+    {
+      "id": "D5-LT-04",
+      "question_id": "D5",
+      "split": "train",
+      "kind": "clear",
+      "text": "The money I saved up pays for my food and rent now.",
+      "bucket": "clarity",
+      "option_id": "D5_WITHDRAWALS",
+      "business_meaning": "Accumulated savings currently fund food and rent.",
+      "expected_action": "confirm_if_valid_else_escalate",
+      "source": "AI-authored fictional training",
+      "group_id": "D5-LT-04"
+    },
+    {
+      "id": "D5-LT-05",
+      "question_id": "D5",
+      "split": "train",
+      "kind": "clear",
+      "text": "My wages.",
+      "bucket": "clarity",
+      "option_id": "D5_SALARY",
+      "business_meaning": "A direct answer to the current question names employment pay as living-cost funding.",
+      "expected_action": "confirm_if_valid_else_escalate",
+      "source": "AI-authored fictional training",
+      "group_id": "D5-LT-05"
+    },
+    {
+      "id": "D5-LT-06",
+      "question_id": "D5",
+      "split": "train",
+      "kind": "clear",
+      "text": "My pay from work covers my day-to-day costs.",
+      "bucket": "clarity",
+      "option_id": "D5_SALARY",
+      "business_meaning": "Employment pay actively funds current living costs.",
+      "expected_action": "confirm_if_valid_else_escalate",
+      "source": "AI-authored fictional training",
+      "group_id": "D5-LT-06"
+    },
+    {
+      "id": "D5-LT-07",
+      "question_id": "D5",
+      "split": "train",
+      "kind": "clear",
+      "text": "My living costs come from savings as well as my wages.",
+      "bucket": "clarity",
+      "option_id": "D5_MULTIPLE",
+      "business_meaning": "Savings and wages both actively fund current living costs; two questionnaire categories apply.",
+      "expected_action": "confirm_if_valid_else_escalate",
+      "source": "AI-authored fictional training",
+      "group_id": "D5-LT-07"
+    },
+    {
+      "id": "D5-LT-08",
+      "question_id": "D5",
+      "split": "train",
+      "kind": "clear",
+      "text": "I spend some of my saved money and some of my salary on everyday bills.",
+      "bucket": "clarity",
+      "option_id": "D5_MULTIPLE",
+      "business_meaning": "Spending from savings and salary jointly funds current bills; no proportions are inferred.",
+      "expected_action": "confirm_if_valid_else_escalate",
+      "source": "AI-authored fictional training",
+      "group_id": "D5-LT-08"
+    }
+  ]
+}

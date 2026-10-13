@@ -1,0 +1,14 @@
+{
+  "schema_version": "d5-learning-review-v1",
+  "review_type": "human_business_review",
+  "status": "pending",
+  "reviewer": null,
+  "reviewed_at": null,
+  "dataset_sha256": {
+    "training": "8d012e23483bfa64b735a90b8dcfa829c3030a099fd449b4232f11c1a8c4dea4",
+    "validation": "c3bfe84294d23572f4ef690b8f73d7b522cfa1ee40b7da78a4de7f1ec0e7bc1c"
+  },
+  "approved_case_ids": [],
+  "provenance_acknowledgement": "agent_authored_human_reviewed",
+  "notes": "Drafts are AI-authored and pending human review. LT-04 was clarified before approval to say money I saved up, avoiding possible earmarked current wages. No model outputs were used."
+}

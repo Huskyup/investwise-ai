@@ -1,0 +1,20 @@
+{
+  "scope": "Pure software fixtures for review, frozen-file integrity, write-once phases and scoring; not semantic performance",
+  "command": "python -B -m unittest discover -s demos/d5 -p test_learning_cycle.py -v",
+  "python": "3.12.14",
+  "runs": 1,
+  "passed": 26,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "reported_seconds": 0.008,
+  "exit_code": 0,
+  "ml_fits": 0,
+  "ml_predictions": 0,
+  "llm_requests": 0,
+  "human_business_review_status": "pending",
+  "files_sha256": {
+    "demos/d5/learning_cycle.py": "b342ace99ac5cd4e49f7af4b76ae7431a74b59f884aff3589e81fa1746e6d75b",
+    "demos/d5/test_learning_cycle.py": "b822b9a8430569915fe8009472b75de4e569f4b221d075037eb5f1082ac33327"
+  }
+}

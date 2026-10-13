@@ -1,0 +1,32 @@
+test_all_four_new_clear_raw_options_are_required (test_learning_cycle.PureScoringTests.test_all_four_new_clear_raw_options_are_required) ... ok
+test_clear_validation_cannot_keep_wrong_confident_customer_bucket (test_learning_cycle.PureScoringTests.test_clear_validation_cannot_keep_wrong_confident_customer_bucket) ... ok
+test_correct_confident_dialogue_must_be_preserved (test_learning_cycle.PureScoringTests.test_correct_confident_dialogue_must_be_preserved) ... ok
+test_first_turn_gain_does_not_claim_context_or_demo_readiness (test_learning_cycle.PureScoringTests.test_first_turn_gain_does_not_claim_context_or_demo_readiness) ... ok
+test_gpt_execution_would_fail_offline_gate (test_learning_cycle.PureScoringTests.test_gpt_execution_would_fail_offline_gate) ... ok
+test_help_requires_zero_diagnostic_and_route_calls (test_learning_cycle.PureScoringTests.test_help_requires_zero_diagnostic_and_route_calls) ... ok
+test_incomplete_confident_customer_bucket_is_unsafe (test_learning_cycle.PureScoringTests.test_incomplete_confident_customer_bucket_is_unsafe) ... ok
+test_incomplete_raw_intent_has_no_forced_gold (test_learning_cycle.PureScoringTests.test_incomplete_raw_intent_has_no_forced_gold) ... ok
+test_new_raw_false_clarity_fails_separately_from_acceptance (test_learning_cycle.PureScoringTests.test_new_raw_false_clarity_fails_separately_from_acceptance) ... ok
+test_new_wrong_commitment_is_not_hidden_by_veto_or_old_wrong_argmax (test_learning_cycle.PureScoringTests.test_new_wrong_commitment_is_not_hidden_by_veto_or_old_wrong_argmax) ... ok
+test_no_new_accepted_savings_fails (test_learning_cycle.PureScoringTests.test_no_new_accepted_savings_fails) ... ok
+test_previous_correct_accepted_answer_cannot_be_lost (test_learning_cycle.PureScoringTests.test_previous_correct_accepted_answer_cannot_be_lost) ... ok
+test_proposal_does_not_confirm_or_save (test_learning_cycle.PureScoringTests.test_proposal_does_not_confirm_or_save) ... ok
+test_raw_option_is_not_scored_for_nonclear_or_incomplete (test_learning_cycle.PureScoringTests.test_raw_option_is_not_scored_for_nonclear_or_incomplete) ... ok
+test_training_fit_cannot_supply_unseen_gain (test_learning_cycle.PureScoringTests.test_training_fit_cannot_supply_unseen_gain) ... ok
+test_veto_cannot_hide_unsafe_incomplete_resolver_commitment (test_learning_cycle.PureScoringTests.test_veto_cannot_hide_unsafe_incomplete_resolver_commitment) ... ok
+test_wrong_accepted_answer_and_receipt_absence_fail (test_learning_cycle.PureScoringTests.test_wrong_accepted_answer_and_receipt_absence_fail) ... ok
+test_wrong_nonclear_confident_bucket_is_unsafe (test_learning_cycle.PureScoringTests.test_wrong_nonclear_confident_bucket_is_unsafe) ... ok
+test_approved_review_requires_exact_dataset_hashes (test_learning_cycle.ReviewAndFreezeTests.test_approved_review_requires_exact_dataset_hashes) ... ok
+test_changed_frozen_file_rejected (test_learning_cycle.ReviewAndFreezeTests.test_changed_frozen_file_rejected) ... ok
+test_failed_phase_is_not_restarted (test_learning_cycle.ReviewAndFreezeTests.test_failed_phase_is_not_restarted) ... ok
+test_frozen_paths_cannot_escape_root (test_learning_cycle.ReviewAndFreezeTests.test_frozen_paths_cannot_escape_root) ... ok
+test_offline_boundary_blocks_network_and_subprocess (test_learning_cycle.ReviewAndFreezeTests.test_offline_boundary_blocks_network_and_subprocess) ... ok
+test_pending_review_cannot_reach_hash_reads (test_learning_cycle.ReviewAndFreezeTests.test_pending_review_cannot_reach_hash_reads) ... ok
+test_phase_start_is_write_once_without_fitting (test_learning_cycle.ReviewAndFreezeTests.test_phase_start_is_write_once_without_fitting) ... ok
+test_review_failure_precedes_phase_start_or_ml_import (test_learning_cycle.ReviewAndFreezeTests.test_review_failure_precedes_phase_start_or_ml_import) ... ok
+test_review_requires_all_ids_and_timezone (test_learning_cycle.ReviewAndFreezeTests.test_review_requires_all_ids_and_timezone) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.014s
+
+OK

@@ -1,0 +1,21 @@
+{
+  "stage": "preparation_ready_for_human_review",
+  "reviewer": "separate assistant static reviewer",
+  "human_business_review": false,
+  "status": "approved_for_preparation_only",
+  "conclusion": "No remaining blocking defect identified in the offline review, integrity or scoring implementation. This is not candidate or semantic approval.",
+  "reviewed_files_sha256": {
+    "demos/d5/learning_cycle.py": "5a791b181051493a8bb58caebbb9cbad1752769bc535de1f4610d6b2fbfcd0e5",
+    "demos/d5/test_learning_cycle.py": "d76b69b08f15972da28b5302f2c23658567707610d3fa2993731184b47c98a53",
+    "docs/d5-learning-cycle-v1/training-draft.json": "8d012e23483bfa64b735a90b8dcfa829c3030a099fd449b4232f11c1a8c4dea4",
+    "docs/d5-learning-cycle-v1/validation-draft.json": "c3bfe84294d23572f4ef690b8f73d7b522cfa1ee40b7da78a4de7f1ec0e7bc1c"
+  },
+  "software_checks": {
+    "latest_passed": 27,
+    "runs": 2,
+    "models_fitted": 0,
+    "predictions": 0,
+    "gpt_calls": 0
+  },
+  "required_next_step": "Explicit business-owner review of the exact sixteen samples before freezing and fitting."
+}

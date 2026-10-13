@@ -1,0 +1,136 @@
+{
+  "method": "Normalised-text equality and character SequenceMatcher screening only; not model predictions or proof of independent semantic families.",
+  "baseline_D5_rows": 116,
+  "training_rows": 8,
+  "validation_rows": 8,
+  "checks": [
+    {
+      "id": "D5-LT-01",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-TRAIN-053",
+      "nearest_text": "What counts as living-cost funding?",
+      "sequence_similarity": 0.3415,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LT-02",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-TRAIN-019",
+      "nearest_text": "Benefits currently pay my living costs.",
+      "sequence_similarity": 0.4151,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LT-03",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-CALIBRATION-003",
+      "nearest_text": "I pay the household bills out of my salary each month.",
+      "sequence_similarity": 0.44,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LT-04",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-TRAIN-035",
+      "nearest_text": "At present recurring licensing income pays for my food and rent.",
+      "sequence_similarity": 0.6018,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LT-05",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-TRAIN-002",
+      "nearest_text": "I fund regular household bills from my wages.",
+      "sequence_similarity": 0.3077,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LT-06",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-CALIBRATION-004",
+      "nearest_text": "The pay packet from employment funds my day-to-day necessities now.",
+      "sequence_similarity": 0.5505,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LT-07",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-TRAIN-047",
+      "nearest_text": "Current living costs come from salary plus rental receipts.",
+      "sequence_similarity": 0.5766,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LT-08",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-TRAIN-045",
+      "nearest_text": "I use pension payments and rental income for everyday costs.",
+      "sequence_similarity": 0.4961,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LV-01",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-TRAIN-049",
+      "nearest_text": "I know the question, but don't know what currently funds my bills.",
+      "sequence_similarity": 0.4713,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LV-02",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-CALIBRATION-003",
+      "nearest_text": "I pay the household bills out of my salary each month.",
+      "sequence_similarity": 0.5379,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LV-03",
+      "exact_normalised_matches": [],
+      "nearest_id": "D5-LT-06",
+      "nearest_text": "My pay from work covers my day-to-day costs.",
+      "sequence_similarity": 0.58,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LV-04",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-TRAIN-020",
+      "nearest_text": "I use regular financial support from my parents for household bills.",
+      "sequence_similarity": 0.4908,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LV-05",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-CALIBRATION-021",
+      "nearest_text": "Each month I take an amount out of the savings I already own to pay household costs.",
+      "sequence_similarity": 0.4427,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LV-06",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-TRAIN-016",
+      "nearest_text": "At present my retirement pension payments pay for food and rent.",
+      "sequence_similarity": 0.5077,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LV-07",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-CALIBRATION-023",
+      "nearest_text": "I have no wage coming in; the source I use for living costs is withdrawals from savings.",
+      "sequence_similarity": 0.48,
+      "near_duplicate_review_needed": false
+    },
+    {
+      "id": "D5-LV-08",
+      "exact_normalised_matches": [],
+      "nearest_id": "SYNTH-V1-D5-CALIBRATION-002",
+      "nearest_text": "For my present living costs, the source to record is the wage from my job.",
+      "sequence_similarity": 0.4348,
+      "near_duplicate_review_needed": false
+    }
+  ]
+}

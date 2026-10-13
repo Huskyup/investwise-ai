@@ -1,0 +1,24 @@
+{
+  "scope": "Pure software fixtures only; not semantic evaluation",
+  "command": "python -B -m unittest discover -s demos/d5 -p test_learning_cycle.py -v",
+  "python": "3.12.14",
+  "runs": 2,
+  "passed": 27,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "reported_seconds": 0.014,
+  "exit_code": 0,
+  "ml_fits": 0,
+  "ml_predictions": 0,
+  "llm_requests": 0,
+  "human_business_review_status": "pending",
+  "files_sha256": {
+    "demos/d5/learning_cycle.py": "5a791b181051493a8bb58caebbb9cbad1752769bc535de1f4610d6b2fbfcd0e5",
+    "demos/d5/test_learning_cycle.py": "d76b69b08f15972da28b5302f2c23658567707610d3fa2993731184b47c98a53"
+  },
+  "latest_run": 2,
+  "rerun_reason": "Static review exposed an incorrect confident customer-bucket result on a clear validation case; repaired scoring and added one record-only regression fixture.",
+  "previous_run": "software-checks-run-1.json",
+  "latest_log": "software-tests-run-2.log"
+}

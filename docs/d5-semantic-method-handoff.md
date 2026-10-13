@@ -4,6 +4,12 @@ Updated 13 October 2026 · `feature/all-question-ml-prototype`
 
 Maintained delivery repository: [Huskyup/investwise-ai](https://github.com/Huskyup/investwise-ai/tree/feature/all-question-ml-prototype). Use the explicit repository URL below when updating an older checkout whose `origin` may point elsewhere.
 
+## D5 learning cycle preparation
+
+A separate [D5 learning cycle](d5-learning-cycle-v1/README.md) is being prepared from the recorded savings-and-wages case. Its [sixteen-row sample table](d5-learning-cycle-v1/SAMPLE_REVIEW.md) contains eight proposed training additions and eight separately drafted validation expressions. Both are AI-authored and await the business owner's review; they are not human-original independent testing. No candidate has been fitted or compared and no live call has been made for this cycle. The preparation tool passed 27 pure software fixtures after static scoring review; these checks do not establish semantic improvement.
+
+The authorised change is limited to one isolated D5 option classifier using the existing architecture and calibration procedure. Actual improvement requires a previously unaccepted new savings expression to pass the original gates, with preserved correct results. The existing working demo, intent model, fifteen-question specification, validators and defaults remain unchanged. A candidate launch option will only be added after the required comparison and context checks pass.
+
 ## Latest evidence: the user's own successful live conversation
 
 The [company case and presenter script](d5-company-case-2026-10-13/CASE.md) document the user's manually entered `savings` → `yes but 50% also come form my wages` → `/confirm` conversation. D5 retained savings, added wages, changed the pending option from `D5_WITHDRAWALS` to `D5_MULTIPLE`, and requested confirmation of the combined answer. The final confirmation used no model call and saved no financial profile.
@@ -12,7 +18,7 @@ The [company case and presenter script](d5-company-case-2026-10-13/CASE.md) docu
 
 Before that user session, the separately authorised retry of the existing browser guide completed all eighteen actions: four live GPT outputs, two ML checks and fourteen zero-call controls, with no wrong accepted candidate, contract rejection or replay. Its [saved summary](d5-company-case-2026-10-13/earlier-live-check.json) is separate from the user's two-call case. The earlier overload receipt is preserved as history; it no longer describes the latest live outcome.
 
-This update publishes already observed evidence only. No inference, tests, evaluation-bank expansion, training, replay additions, code changes, model changes or validation changes were performed. All fifteen questions and the main default remain unchanged. For the company case, select `live` explicitly using the commands in the case guide; the launcher and main-app defaults are unchanged.
+That publication documented already observed evidence only. No inference, tests, evaluation-bank expansion, training, replay additions, code changes, model changes or validation changes were performed for it. All fifteen questions and the main default remained unchanged. For the company case, select `live` explicitly using the commands in the case guide; the launcher and main-app defaults are unchanged.
 
 ## Earlier delivery: visible and reproducible D5 core demo
 

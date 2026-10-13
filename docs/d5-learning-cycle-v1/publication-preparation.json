@@ -1,0 +1,15 @@
+{
+  "stage": "preparation_only",
+  "repository": "Huskyup/investwise-ai",
+  "remote": "personal",
+  "branch": "feature/all-question-ml-prototype",
+  "base_commit": "0b9ce45283609fbec6fb162e7cd01487f104f1c4",
+  "human_review_status": "pending",
+  "candidate_fits": 0,
+  "semantic_comparison_runs": 0,
+  "live_requests": 0,
+  "candidate_demo_interface_added": false,
+  "default_changed": false,
+  "unrelated_work_preserved": true,
+  "credential_pattern_scan": "No matches in files selected for this publication; no credential files accessed."
+}

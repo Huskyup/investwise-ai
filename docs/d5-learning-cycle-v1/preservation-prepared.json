@@ -1,0 +1,19 @@
+{
+  "stage": "preparation_before_human_review",
+  "base_commit": "0b9ce45283609fbec6fb162e7cd01487f104f1c4",
+  "tracked_files_before": 407,
+  "unchanged_tracked_files": 406,
+  "changed_tracked_files": [
+    "docs/d5-semantic-method-handoff.md"
+  ],
+  "intended_tracked_change": [
+    "docs/d5-semantic-method-handoff.md"
+  ],
+  "untracked_user_work_files": 7,
+  "changed_user_work_files": [],
+  "baseline_manifest_all_match": true,
+  "candidate_fits": 0,
+  "semantic_comparison_runs": 0,
+  "actual_gpt_calls": 0,
+  "default_changed": false
+}
