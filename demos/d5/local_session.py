@@ -1,4 +1,4 @@
-"""Separate local D5 session; the working GPT entry point is unchanged."""
+"""Separate combined D5 session; the working direct-GPT entry point is unchanged."""
 from __future__ import annotations
 
 import hashlib
@@ -46,8 +46,12 @@ def load_baseline(spec):
 
 
 class LocalD5Session(D5Session):
-    """Same terminal actions, with separate ML and local-backend audit counts."""
-    def __init__(self, backend, output_dir, ml_resolver=None):
+    """Same terminal actions, with separate ML and named-backend audit counts."""
+    def __init__(self, backend, output_dir, ml_resolver=None, *, backend_name="qwen"):
+        if backend_name not in {"qwen", "gpt"}:
+            raise ValueError("Unsupported D5 interpretation backend")
+        self.backend_name = backend_name
+        self.backend_calls_key = f"{backend_name}_calls"
         self.output_dir = Path(output_dir)
         self.spec = BusinessSpec.load(RUNTIME / "config/business-decision-spec.json")
         if len(self.spec.question_order) != 15:
@@ -85,7 +89,8 @@ class LocalD5Session(D5Session):
                                               model_metadata=dict(self.backend.metadata))
         self.engine = LocalD5Engine(self.spec, ml_resolver=self.ml_resolver,
             ml_identity=self.ml_identity, d5_interpreter=self.interpreter,
-            question_resolver=NoOtherQuestions(), store=NoProfileSave())
+            question_resolver=NoOtherQuestions(), store=NoProfileSave(),
+            backend_name=self.backend_name)
         self.engine.state.current_index = self.spec.question_order.index("D5")
         self.interpreter.context = D5DialogueContext(pending_prompt=self.question)
 
@@ -100,19 +105,21 @@ class LocalD5Session(D5Session):
         self.backend.case_id = identifier
         self.backend.last_call = {}
         self.captured.clear()
-        before_qwen, before_ml = self.backend.calls, self.ml_calls
+        before_llm, before_ml = self.backend.calls, self.ml_calls
         context = self.interpreter.context
         try:
             result = self.engine.submit_answer(text)
         except Exception:
             self.failed = True
             write_json(self.output_dir / f"{identifier}-failure.json", {
-                "case_id": identifier, "qwen_calls": self.backend.calls - before_qwen,
+                "case_id": identifier, self.backend_calls_key: self.backend.calls - before_llm,
+                "actual_model_calls": self.backend.calls - before_llm,
                 "ml_calls": self.ml_calls - before_ml,
                 "safe_backend_receipt": dict(self.backend.last_call), "retry": False})
-            raise DemoStopped("D5 stopped after a local runtime failure; no retry or fallback") from None
-        qwen_calls, ml_calls = self.backend.calls - before_qwen, self.ml_calls - before_ml
-        if qwen_calls not in {0, 1} or ml_calls not in {0, 1}:
+            location = "local" if self.backend_name == "qwen" else "GPT"
+            raise DemoStopped(f"D5 stopped after a {location} runtime failure; no retry or fallback") from None
+        llm_calls, ml_calls = self.backend.calls - before_llm, self.ml_calls - before_ml
+        if llm_calls not in {0, 1} or ml_calls not in {0, 1}:
             self.failed = True
             raise DemoStopped("The one-call-per-route boundary was exceeded")
         raw = self.captured.get("raw_output")
@@ -131,8 +138,8 @@ class LocalD5Session(D5Session):
         answer = self.engine.state.answers["D5"]
         self.last_record = {
             "id": identifier, "input": text, "route": self.engine.last_route,
-            "ml_calls": ml_calls, "qwen_calls": qwen_calls,
-            "actual_model_calls": qwen_calls, "ml_evidence": self.engine.last_ml_evidence,
+            "ml_calls": ml_calls, self.backend_calls_key: llm_calls,
+            "actual_model_calls": llm_calls, "ml_evidence": self.engine.last_ml_evidence,
             "raw": parsed, "raw_output": raw,
             "dialogue_context": context.as_dict() if interpreted else None,
             "result": result,

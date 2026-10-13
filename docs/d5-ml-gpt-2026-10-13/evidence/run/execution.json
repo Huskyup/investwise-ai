@@ -1,0 +1,10 @@
+{
+  "phase": "ml-gpt-existing",
+  "passed": true,
+  "preflight_passed": true,
+  "files_unchanged": true,
+  "actual_gpt_calls": 15,
+  "failure": null,
+  "retry": false,
+  "choice_recovery": 0
+}

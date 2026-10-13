@@ -1,7 +1,7 @@
-"""Opt-in D5 routing: unchanged first-turn ML, contextual local interpretation.
+"""Opt-in D5 routing: unchanged first-turn ML, contextual interpretation.
 
 ML and LLM candidates have separate receipts. A validator can only retain or
-reject an ML proposal; no ML proposal or probability is sent to the local LLM.
+reject an ML proposal; no ML proposal or probability is sent to the LLM.
 """
 from __future__ import annotations
 
@@ -46,9 +46,12 @@ class MLReceipt:
 
 class LocalD5Engine(D5BusinessStandardEngine):
     def __init__(self, business_spec, *, ml_resolver, ml_identity,
-                 d5_interpreter, question_resolver, store=None):
+                 d5_interpreter, question_resolver, store=None, backend_name="qwen"):
+        if backend_name not in {"qwen", "gpt"}:
+            raise ValueError("Unsupported D5 interpretation backend")
         super().__init__(business_spec, d5_interpreter=d5_interpreter,
                          question_resolver=question_resolver, store=store)
+        self.backend_name = backend_name
         self.ml_resolver = ml_resolver
         self.ml_identity = ml_identity
         self.ml_calls = 0
@@ -153,9 +156,9 @@ class LocalD5Engine(D5BusinessStandardEngine):
                 return self._d5_unresolved(reason=resolved.reason or "ml_dialogue_only",
                     bucket=bucket, outcome="ml_dialogue_only", care=care, support=support,
                     pace=pace, previous_raw=previous_raw)
-            self.last_route = "ml_then_qwen"
+            self.last_route = f"ml_then_{self.backend_name}"
         else:
-            self.last_route = "qwen_context"
+            self.last_route = f"{self.backend_name}_context"
         before = self.d5_interpreter.calls
         result = super()._submit_ml_answer(qid, text, care, support, pace, teachback,
             previous_raw, flags, explicit_selection=explicit_selection)

@@ -1,4 +1,4 @@
-"""Bounded local D5 verification; separately recorded prompt-only checks reuse the bank."""
+"""Bounded D5 verification; separate local and GPT rounds reuse the same bank."""
 from __future__ import annotations
 
 import argparse
@@ -14,7 +14,7 @@ bootstrap()
 from ai.d5_single_interpreter_contract_v2 import D5DialogueContext, D5SingleInterpreter
 from ai.d5_single_interpreter_engine_v2 import D5BusinessStandardEngine
 from ai.question_spec import BusinessSpec
-from local_transport import LocalGenerator
+from local_session import LocalD5Session
 
 EVIDENCE = REPOSITORY / 'docs/d5-semantic-repair/evidence/after'
 CONTEXT_ROOT = REPOSITORY / 'docs/d5-context-verification-2026-10-13/records'
@@ -59,7 +59,9 @@ def pension_meaning(record):
             and clear_relations_match(record))
 
 
-def preflight(backend, output):
+def preflight(backend, output, *, backend_name='qwen'):
+    if backend_name not in {'qwen', 'gpt'}:
+        raise ValueError('Unsupported D5 interpretation backend')
     row = json.loads((EVIDENCE / 'inputs.json').read_text())['rows'][0]
     spec = BusinessSpec.load(RUNTIME / 'config/business-decision-spec.json')
     interpreter = D5SingleInterpreter(spec, backend, model_metadata=backend.metadata)
@@ -68,7 +70,9 @@ def preflight(backend, output):
     engine.state.current_index = spec.question_order.index('D5')
     interpreter.context = D5DialogueContext(pending_prompt=spec.question('D5').question)
     backend.case_id = 'preflight-D5-STD-01'
-    record = {'id': row['id'], 'input': row['text'], 'purpose': 'Direct local backend preflight, not a combined-route score'}
+    name = 'local' if backend_name == 'qwen' else 'GPT'
+    record = {'id': row['id'], 'input': row['text'],
+              'purpose': f'Direct {name} backend preflight, not a combined-route score'}
     try:
         record['result'] = engine.submit_answer(row['text'])
         d = interpreter.last_decision
@@ -83,7 +87,8 @@ def preflight(backend, output):
         record['passed'] = bool(pension_meaning(record) and backend.calls == 1)
     except Exception as exc:
         record.update(passed=False, failure_type=type(exc).__name__)
-    record.update(actual_qwen_calls=backend.calls, backend_call=dict(backend.last_call))
+    record.update({f'actual_{backend_name}_calls': backend.calls,
+                   'backend_call': dict(backend.last_call)})
     write_json(output / 'preflight.json', record)
     return record['passed']
 
@@ -165,8 +170,11 @@ def clear_relations_match(record):
     return active == expected_active and excluded == required_excluded
 
 
-def existing(backend, output, *, complete_bank=False):
-    from local_session import LocalD5Session
+def existing(backend, output, *, complete_bank=False,
+             session_factory=LocalD5Session, backend_name='qwen'):
+    if backend_name not in {'qwen', 'gpt'}:
+        raise ValueError('Unsupported D5 interpretation backend')
+    backend_calls_key = f'{backend_name}_calls'
     from baseline_ml import build_all_question_ml_resolver
     rows = json.loads((EVIDENCE / 'inputs.json').read_text())['rows']
     reference = build_all_question_ml_resolver(
@@ -176,7 +184,7 @@ def existing(backend, output, *, complete_bank=False):
     write_json(output / 'reference-predictions.json', reference_predictions)
     # Labels stay in the scorer and are never passed to LocalD5Session or either model.
     expectations = json.loads((EVIDENCE / 'expectations.json').read_text())['cases']
-    session = LocalD5Session(backend, output)
+    session = session_factory(backend, output, backend_name=backend_name)
     scores = []
     for row in rows:
         session.new_example()
@@ -186,7 +194,7 @@ def existing(backend, output, *, complete_bank=False):
         score = {'id': row['id'], 'expected': expectations[row['id']], 'matched': matched,
                  'candidate': record['candidate'], 'raw': record.get('raw'),
                  'contract_outcome': (record.get('decision') or {}).get('outcome'),
-                 'ml_calls': record.get('ml_calls'), 'qwen_calls': record.get('qwen_calls'),
+                 'ml_calls': record.get('ml_calls'), backend_calls_key: record.get(backend_calls_key),
                  'route': record.get('route')}
         scores.append(score)
         print(f"Recorded {row['id']}: {'matched' if matched else 'mismatch'}", flush=True)
@@ -262,6 +270,7 @@ def existing(backend, output, *, complete_bank=False):
 
 
 def main():
+    from local_transport import LocalGenerator
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('phase', choices=['preflight', 'existing', 'prompt-check'])
     parser.add_argument('--output', type=Path, required=True)

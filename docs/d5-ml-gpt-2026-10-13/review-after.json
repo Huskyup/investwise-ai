@@ -1,0 +1,47 @@
+{
+  "review": "Independent read-only review of actual raw outputs, requests and safe transport receipts",
+  "bank": {
+    "correct_financial_candidates": [
+      "D5-STD-01",
+      "D5-STD-02",
+      "D5-STD-03",
+      "D5-STD-04",
+      "D5-STD-05",
+      "D5-STD-06",
+      "D5-STD-08"
+    ],
+    "correct_missing_funding": [
+      "D5-STD-07",
+      "D5-STD-09"
+    ],
+    "correct_undecided": [
+      "D5-STD-10"
+    ],
+    "zero_call_help": [
+      "D5-STD-11"
+    ],
+    "wrong_accepted_candidates": 0,
+    "contract_rejections": 0,
+    "raw_business_meaning_mismatches": 0
+  },
+  "context_correct": 4,
+  "confirmed_candidates": 2,
+  "zero_call_context_controls": 14,
+  "gpt_calls": 15,
+  "ml_calls": 12,
+  "ml_handled_first_bank_replies": 0,
+  "eligible_first_bank_replies": 10,
+  "request_audit": {
+    "exact_model_low_tools_none_store_false_completed": 15,
+    "unchanged_instructions": 15,
+    "no_ml_guesses_or_labels": 15,
+    "automatic_retries": 0,
+    "output_repairs": 0
+  },
+  "limits": [
+    "Opened examples, not unseen accuracy",
+    "Terminal session harness, not manually typed UI evidence",
+    "Help is pre-model control, not model Confusion success",
+    "No demonstrated ML efficiency gain"
+  ]
+}

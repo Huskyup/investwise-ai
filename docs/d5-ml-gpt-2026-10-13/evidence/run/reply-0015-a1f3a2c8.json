@@ -1,0 +1,23 @@
+{
+  "id": "reply-0015-a1f3a2c8",
+  "input": "My brother sends me money every week for rent and food.",
+  "route": "control",
+  "ml_calls": 0,
+  "gpt_calls": 0,
+  "actual_model_calls": 0,
+  "ml_evidence": null,
+  "raw": null,
+  "raw_output": null,
+  "dialogue_context": null,
+  "result": {
+    "action": "paused",
+    "reason": "conversation_is_paused"
+  },
+  "decision": null,
+  "backend_call": {},
+  "candidate": null,
+  "selected": null,
+  "confirmed_version": null,
+  "saved_version": null,
+  "answer_source": null
+}

@@ -1,0 +1,8 @@
+{
+  "review": "Independent read-only review before inference",
+  "result": "No blocking finding; prompt, strict transport and semantic scoring unchanged; GPT provenance separate from ML; credentials obtained only after software/freeze checks.",
+  "gpt_offline_checks": 17,
+  "qwen_compatibility_checks": 12,
+  "ml_parity_examples": 11,
+  "inference_performed_during_review": false
+}

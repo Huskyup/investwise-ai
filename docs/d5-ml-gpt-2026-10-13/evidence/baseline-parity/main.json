@@ -1,0 +1,335 @@
+{
+  "route": "main",
+  "python": "3.13.12 (main, Feb  4 2026, 00:05:32) [Clang 21.1.4 ]",
+  "executable": "/Users/husky/Desktop/hackathon Bristol 2026/investwise-demo/.venv/bin/python",
+  "versions": {
+    "numpy": "2.5.3",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "implementation_sha256": "976738839f60e8cbed977f5ffeeac83374a3cb66f71e30be48af551fe3af143d",
+  "dependency_sha256": {
+    "conformal": "9438f1b8c8e88d97b447ccda82bba13200ba6e6eb9be27f9a4f1e8167242fad3",
+    "text_classifier": "8051914b85bbb1cb06e2dbaed4f85d138924e3ab7a234f1d3fc2c8844b943c15",
+    "question_spec": "bc8f6a7353144b2997960148a7609c42738484276e812827180360f6574c6447"
+  },
+  "main_spec_sha256": "440ab6ba7e822fc460d142b1d60aa78e0a71eeaed3652145b87b07ddffe9a7b4",
+  "packaged_spec_sha256": "77011caa61f1248aad6d3d20e5e51987fa1b60f93e117de0b8f5720215b8abea",
+  "train_sha256": "96543fe7cc72d8a27403ead432fcf81971b0b93b28a5ed77f9e3770fbda83abf",
+  "calibration_sha256": "3b63ebddf80f8b5758bcbef9cb8d662741e68de38660455dcc4649106d5792be",
+  "inputs_sha256": "6ab9c5e390c849a396f0821b97b6a509bbab54e3d1804405e69c9124987466e2",
+  "resolver_source_hash": "13b6a8f494c773e90d28e8d105cc1b2de7bbebba20db980331b23397f253c4b8",
+  "records": [
+    {
+      "candidate_option_id": null,
+      "ordinary_bucket": null,
+      "model_uncertain": true,
+      "semantic_undecided": false,
+      "intent_set": [
+        "clarity"
+      ],
+      "option_set": [
+        "D5_PENSION_PAYMENTS",
+        "D5_SALARY"
+      ],
+      "intent_probabilities": {
+        "clarity": 0.6341577719497692,
+        "confusion": 0.1912389393052382,
+        "undecided": 0.17460328874499265
+      },
+      "option_probabilities": {
+        "D5_BENEFITS_SUPPORT": 0.10151320055118704,
+        "D5_MULTIPLE": 0.12392510802363371,
+        "D5_NO_REGULAR": 0.0986234209565264,
+        "D5_OTHER_REGULAR": 0.11237568850901296,
+        "D5_PENSION_PAYMENTS": 0.15833640215595338,
+        "D5_SALARY": 0.16726199765415342,
+        "D5_SELF_EMPLOYMENT": 0.11484062623568203,
+        "D5_WITHDRAWALS": 0.12312355591385106
+      },
+      "id": "D5-STD-01",
+      "input": "My wages stay in savings. My pension pays the bills."
+    },
+    {
+      "candidate_option_id": null,
+      "ordinary_bucket": null,
+      "model_uncertain": true,
+      "semantic_undecided": false,
+      "intent_set": [
+        "clarity"
+      ],
+      "option_set": [
+        "D5_MULTIPLE",
+        "D5_PENSION_PAYMENTS",
+        "D5_SALARY"
+      ],
+      "intent_probabilities": {
+        "clarity": 0.6688341563707383,
+        "confusion": 0.16853727512175626,
+        "undecided": 0.16262856850750546
+      },
+      "option_probabilities": {
+        "D5_BENEFITS_SUPPORT": 0.10720012297803592,
+        "D5_MULTIPLE": 0.1888916522545121,
+        "D5_NO_REGULAR": 0.09736568321593198,
+        "D5_OTHER_REGULAR": 0.10258631936500132,
+        "D5_PENSION_PAYMENTS": 0.14315201546278594,
+        "D5_SALARY": 0.1389486056449825,
+        "D5_SELF_EMPLOYMENT": 0.11015952158179218,
+        "D5_WITHDRAWALS": 0.11169607949695796
+      },
+      "id": "D5-STD-02",
+      "input": "Both my wages and pension pay for everyday costs."
+    },
+    {
+      "candidate_option_id": null,
+      "ordinary_bucket": null,
+      "model_uncertain": true,
+      "semantic_undecided": false,
+      "intent_set": [
+        "clarity"
+      ],
+      "option_set": [
+        "D5_BENEFITS_SUPPORT",
+        "D5_SALARY",
+        "D5_SELF_EMPLOYMENT"
+      ],
+      "intent_probabilities": {
+        "clarity": 0.6777126961866057,
+        "confusion": 0.14249991724292288,
+        "undecided": 0.1797873865704714
+      },
+      "option_probabilities": {
+        "D5_BENEFITS_SUPPORT": 0.16232123511895505,
+        "D5_MULTIPLE": 0.09932900223341865,
+        "D5_NO_REGULAR": 0.08621174644392057,
+        "D5_OTHER_REGULAR": 0.11770711426547079,
+        "D5_PENSION_PAYMENTS": 0.10862965543558716,
+        "D5_SALARY": 0.1671651979060103,
+        "D5_SELF_EMPLOYMENT": 0.13153581408355278,
+        "D5_WITHDRAWALS": 0.1271002345130847
+      },
+      "id": "D5-STD-03",
+      "input": "Pay from my two employers covers my living costs."
+    },
+    {
+      "candidate_option_id": null,
+      "ordinary_bucket": null,
+      "model_uncertain": true,
+      "semantic_undecided": false,
+      "intent_set": [
+        "clarity"
+      ],
+      "option_set": [
+        "D5_BENEFITS_SUPPORT",
+        "D5_MULTIPLE"
+      ],
+      "intent_probabilities": {
+        "clarity": 0.6349046925269419,
+        "confusion": 0.18566428271514385,
+        "undecided": 0.1794310247579141
+      },
+      "option_probabilities": {
+        "D5_BENEFITS_SUPPORT": 0.22400709269663052,
+        "D5_MULTIPLE": 0.14113450328752042,
+        "D5_NO_REGULAR": 0.09504004987056867,
+        "D5_OTHER_REGULAR": 0.1066968187274621,
+        "D5_PENSION_PAYMENTS": 0.10069916969801646,
+        "D5_SALARY": 0.10775192954756804,
+        "D5_SELF_EMPLOYMENT": 0.10719883287165251,
+        "D5_WITHDRAWALS": 0.11747160330058137
+      },
+      "id": "D5-STD-04",
+      "input": "Benefits and regular help from my family pay my bills."
+    },
+    {
+      "candidate_option_id": null,
+      "ordinary_bucket": null,
+      "model_uncertain": true,
+      "semantic_undecided": false,
+      "intent_set": [
+        "clarity"
+      ],
+      "option_set": [
+        "D5_BENEFITS_SUPPORT",
+        "D5_SELF_EMPLOYMENT",
+        "D5_WITHDRAWALS"
+      ],
+      "intent_probabilities": {
+        "clarity": 0.6165049753141967,
+        "confusion": 0.22215509217844237,
+        "undecided": 0.16133993250736098
+      },
+      "option_probabilities": {
+        "D5_BENEFITS_SUPPORT": 0.13625176975682182,
+        "D5_MULTIPLE": 0.10842659124220713,
+        "D5_NO_REGULAR": 0.10344405928409925,
+        "D5_OTHER_REGULAR": 0.11241754816441095,
+        "D5_PENSION_PAYMENTS": 0.1142085666029534,
+        "D5_SALARY": 0.11952854526837677,
+        "D5_SELF_EMPLOYMENT": 0.1464871644515569,
+        "D5_WITHDRAWALS": 0.1592357552295738
+      },
+      "id": "D5-STD-05",
+      "input": "My brother sends me money every week for rent and food."
+    },
+    {
+      "candidate_option_id": null,
+      "ordinary_bucket": null,
+      "model_uncertain": true,
+      "semantic_undecided": false,
+      "intent_set": [
+        "clarity"
+      ],
+      "option_set": [
+        "D5_PENSION_PAYMENTS",
+        "D5_WITHDRAWALS"
+      ],
+      "intent_probabilities": {
+        "clarity": 0.6383690615909772,
+        "confusion": 0.17351128523113185,
+        "undecided": 0.18811965317789095
+      },
+      "option_probabilities": {
+        "D5_BENEFITS_SUPPORT": 0.10449165116047737,
+        "D5_MULTIPLE": 0.12592231199738105,
+        "D5_NO_REGULAR": 0.10231238376643861,
+        "D5_OTHER_REGULAR": 0.10286727260820633,
+        "D5_PENSION_PAYMENTS": 0.17362181025665208,
+        "D5_SALARY": 0.12634042153728334,
+        "D5_SELF_EMPLOYMENT": 0.10970648258327316,
+        "D5_WITHDRAWALS": 0.15473766609028805
+      },
+      "id": "D5-STD-06",
+      "input": "I use my savings for bills. My pension starts next year."
+    },
+    {
+      "candidate_option_id": null,
+      "ordinary_bucket": null,
+      "model_uncertain": true,
+      "semantic_undecided": false,
+      "intent_set": [
+        "clarity",
+        "undecided"
+      ],
+      "option_set": [],
+      "intent_probabilities": {
+        "clarity": 0.38570830111700066,
+        "confusion": 0.17217481862118525,
+        "undecided": 0.4421168802618141
+      },
+      "option_probabilities": {},
+      "id": "D5-STD-07",
+      "input": "I have a pension fund, but I have not started drawing from it."
+    },
+    {
+      "candidate_option_id": null,
+      "ordinary_bucket": null,
+      "model_uncertain": true,
+      "semantic_undecided": false,
+      "intent_set": [
+        "clarity",
+        "undecided"
+      ],
+      "option_set": [],
+      "intent_probabilities": {
+        "clarity": 0.4750753293961852,
+        "confusion": 0.15274705147013756,
+        "undecided": 0.3721776191336773
+      },
+      "option_probabilities": {},
+      "id": "D5-STD-08",
+      "input": "I have no regular source paying my living costs at the moment."
+    },
+    {
+      "candidate_option_id": null,
+      "ordinary_bucket": null,
+      "model_uncertain": true,
+      "semantic_undecided": false,
+      "intent_set": [
+        "clarity"
+      ],
+      "option_set": [
+        "D5_MULTIPLE",
+        "D5_PENSION_PAYMENTS"
+      ],
+      "intent_probabilities": {
+        "clarity": 0.6174431182284369,
+        "confusion": 0.2073310112028025,
+        "undecided": 0.1752258705687606
+      },
+      "option_probabilities": {
+        "D5_BENEFITS_SUPPORT": 0.09719181632693102,
+        "D5_MULTIPLE": 0.1800720311224779,
+        "D5_NO_REGULAR": 0.10382666823309251,
+        "D5_OTHER_REGULAR": 0.09661101762859187,
+        "D5_PENSION_PAYMENTS": 0.20614849013464803,
+        "D5_SALARY": 0.11553525299582375,
+        "D5_SELF_EMPLOYMENT": 0.09773832664610851,
+        "D5_WITHDRAWALS": 0.1028763969123265
+      },
+      "id": "D5-STD-09",
+      "input": "I receive wages and pension payments"
+    },
+    {
+      "candidate_option_id": null,
+      "ordinary_bucket": null,
+      "model_uncertain": true,
+      "semantic_undecided": false,
+      "intent_set": [
+        "clarity"
+      ],
+      "option_set": [
+        "D5_PENSION_PAYMENTS",
+        "D5_SALARY"
+      ],
+      "intent_probabilities": {
+        "clarity": 0.5557455592323962,
+        "confusion": 0.2378817473846674,
+        "undecided": 0.20637269338293626
+      },
+      "option_probabilities": {
+        "D5_BENEFITS_SUPPORT": 0.10917017298273698,
+        "D5_MULTIPLE": 0.11981143327156624,
+        "D5_NO_REGULAR": 0.11153524572754542,
+        "D5_OTHER_REGULAR": 0.12069615878428004,
+        "D5_PENSION_PAYMENTS": 0.15932755704067209,
+        "D5_SALARY": 0.1606018112021096,
+        "D5_SELF_EMPLOYMENT": 0.1117258858829193,
+        "D5_WITHDRAWALS": 0.1071317351081703
+      },
+      "id": "D5-STD-10",
+      "input": "My pension pays some bills; I cannot tell whether my wages also do."
+    },
+    {
+      "candidate_option_id": null,
+      "ordinary_bucket": null,
+      "model_uncertain": true,
+      "semantic_undecided": false,
+      "intent_set": [
+        "clarity"
+      ],
+      "option_set": [
+        "D5_MULTIPLE",
+        "D5_PENSION_PAYMENTS"
+      ],
+      "intent_probabilities": {
+        "clarity": 0.6551282986513305,
+        "confusion": 0.1835130246788089,
+        "undecided": 0.16135867666986067
+      },
+      "option_probabilities": {
+        "D5_BENEFITS_SUPPORT": 0.09434723218821185,
+        "D5_MULTIPLE": 0.15886687037595207,
+        "D5_NO_REGULAR": 0.09296038488849923,
+        "D5_OTHER_REGULAR": 0.11670114801344529,
+        "D5_PENSION_PAYMENTS": 0.21400429013659028,
+        "D5_SALARY": 0.10892637255038924,
+        "D5_SELF_EMPLOYMENT": 0.10730323736180951,
+        "D5_WITHDRAWALS": 0.10689046448510242
+      },
+      "id": "D5-STD-11",
+      "input": "Does pension mean my fund or payments?"
+    }
+  ]
+}

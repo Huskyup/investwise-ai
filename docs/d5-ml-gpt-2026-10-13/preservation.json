@@ -1,0 +1,16 @@
+{
+  "baseline_commit": "1eaf9d2bceec402f548c080ef49536b2a3019f73",
+  "previous_tracked_files": 315,
+  "previous_tracked_files_unchanged": 310,
+  "modified_previous_files": [
+    "demos/d5/README.md",
+    "demos/d5/local_engine.py",
+    "demos/d5/local_evaluate.py",
+    "demos/d5/local_session.py",
+    "docs/d5-semantic-method-handoff.md"
+  ],
+  "unexpected_changes": [],
+  "frozen_source_input_files": 74,
+  "frozen_files_unchanged": true,
+  "main_app_default_models_data_15_questions_original_gpt_runtime_and_prior_evidence_unchanged": true
+}

@@ -1,0 +1,23 @@
+{
+  "check": "unchanged_ml_separate_process_parity",
+  "cases": 11,
+  "fields_compared": [
+    "candidate_option_id",
+    "ordinary_bucket",
+    "model_uncertain",
+    "semantic_undecided",
+    "intent_set",
+    "option_set",
+    "intent_probabilities",
+    "option_probabilities"
+  ],
+  "exact_equality": true,
+  "baseline_identities_equal": true,
+  "max_probability_difference": 0.0,
+  "passed": true,
+  "differences": [],
+  "local_qwen_calls": 0,
+  "new_semantic_inputs": 0,
+  "retry": false,
+  "limitation": "Parity verifies reuse of the baseline, not semantic correctness."
+}

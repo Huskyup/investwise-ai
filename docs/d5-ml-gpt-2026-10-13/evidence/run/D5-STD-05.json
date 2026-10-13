@@ -1,0 +1,143 @@
+{
+  "id": "D5-STD-05",
+  "input": "My brother sends me money every week for rent and food.",
+  "route": "ml_then_gpt",
+  "ml_calls": 1,
+  "gpt_calls": 1,
+  "actual_model_calls": 1,
+  "ml_evidence": {
+    "source": "all_question_ml",
+    "source_hash": "13b6a8f494c773e90d28e8d105cc1b2de7bbebba20db980331b23397f253c4b8",
+    "identity_sha256": "9c42a1127900a4efc1095d47362f94a312465d62a23050b4fd8132a87a0add8c",
+    "bucket": null,
+    "candidate": null,
+    "intent_set": [
+      "clarity"
+    ],
+    "option_set": [
+      "D5_BENEFITS_SUPPORT",
+      "D5_SELF_EMPLOYMENT",
+      "D5_WITHDRAWALS"
+    ],
+    "intent_probabilities": {
+      "clarity": 0.6165049753141967,
+      "confusion": 0.22215509217844237,
+      "undecided": 0.16133993250736098
+    },
+    "option_probabilities": {
+      "D5_BENEFITS_SUPPORT": 0.13625176975682182,
+      "D5_MULTIPLE": 0.10842659124220713,
+      "D5_NO_REGULAR": 0.10344405928409925,
+      "D5_OTHER_REGULAR": 0.11241754816441095,
+      "D5_PENSION_PAYMENTS": 0.1142085666029534,
+      "D5_SALARY": 0.11952854526837677,
+      "D5_SELF_EMPLOYMENT": 0.1464871644515569,
+      "D5_WITHDRAWALS": 0.1592357552295738
+    },
+    "model_uncertain": true,
+    "reason": "option_model_uncertainty"
+  },
+  "raw": {
+    "answer_scope": "complete",
+    "evidence": [
+      "My brother sends me money every week for rent and food."
+    ],
+    "facts": [
+      {
+        "evidence": "My brother sends me money every week for rent and food.",
+        "owner": "self",
+        "pays_living_costs": "yes",
+        "source_category": "D5_BENEFITS_SUPPORT",
+        "source_instance_id": "group_1",
+        "time": "current"
+      }
+    ],
+    "missing_information": [],
+    "model_abstain": false,
+    "option_id": "D5_BENEFITS_SUPPORT",
+    "semantic_bucket": "clarity"
+  },
+  "raw_output": "{\"answer_scope\":\"complete\",\"evidence\":[\"My brother sends me money every week for rent and food.\"],\"facts\":[{\"evidence\":\"My brother sends me money every week for rent and food.\",\"owner\":\"self\",\"pays_living_costs\":\"yes\",\"source_category\":\"D5_BENEFITS_SUPPORT\",\"source_instance_id\":\"group_1\",\"time\":\"current\"}],\"missing_information\":[],\"model_abstain\":false,\"option_id\":\"D5_BENEFITS_SUPPORT\",\"semantic_bucket\":\"clarity\"}",
+  "dialogue_context": {
+    "history": [],
+    "pending_prompt": "What currently pays for your everyday living costs?",
+    "correction_requested": false
+  },
+  "result": {
+    "action": "confirm",
+    "question_id": "D5",
+    "candidate_option_id": "D5_BENEFITS_SUPPORT",
+    "candidate_option_label": "Benefits or regular support from someone else",
+    "confirmation_text": "I understand your current living-cost funding as:\n\"My brother sends me money every week for rent and food.\"\nHave I understood correctly?",
+    "context_details": {},
+    "recorded": false,
+    "bucket": "Clarity",
+    "contract_outcome": "financial_candidate"
+  },
+  "decision": {
+    "outcome": "financial_candidate",
+    "reason": "candidate_requires_confirmation",
+    "semantic_bucket": "clarity",
+    "option_id": "D5_BENEFITS_SUPPORT",
+    "answer_scope": "complete",
+    "input_sha256": "ae37958bc10fc0c57729729bbd7d478961094f11953eebfb75bcae57582a33af",
+    "proposal_sha256": "edd419ae8938204a99eef1ed00f1b3c9af201886595e52ccc7433b0f0f1b1ee1",
+    "spec_sha256": "de251a7783332cdd75ae11ff3663e1bbea2cc15014883e82475ef0375cfd342c",
+    "contract_sha256": "ccf107a7171a4acc9c13ab2b51de8f9f4c5dc7a8d77bd1394170b26474acce22",
+    "contract_version": "d5-single-interpreter-v2-context-1",
+    "context_sha256": "a51c4aa431753786f8650b97493c6a2a9a5788f3d7207c85b95a2666292243ae",
+    "previous_reply_count": 0
+  },
+  "backend_call": {
+    "backend": "single_interpreter_existing_chatgpt_plan_stream",
+    "endpoint": "https://api.openai.com/v1/responses",
+    "model_requested": "gpt-6.1-sol",
+    "reasoning_effort_requested": "low",
+    "tools": [],
+    "tool_choice": "none",
+    "store": false,
+    "stream": true,
+    "timeout_seconds": 30,
+    "max_response_bytes": 1048576,
+    "provider_output_token_cap": null,
+    "actual_calls": 1,
+    "retry": false,
+    "output_repair": false,
+    "fresh_context": true,
+    "fresh_server_context": true,
+    "previous_reply_count": 0,
+    "tool_dispatcher_present": false,
+    "blocked": false,
+    "terminal_completed": true,
+    "status": "completed",
+    "provider_model": "gpt-6.1-sol",
+    "provider_reasoning": {
+      "effort": "low"
+    },
+    "usage": {
+      "input_tokens": 2312,
+      "output_tokens": 118,
+      "total_tokens": 2430
+    },
+    "http": {
+      "http_status": 200,
+      "content_type": "other",
+      "single_explicit_content_type": false,
+      "mislabelled_sse_candidate": false,
+      "missing_content_type_candidate": true
+    },
+    "stream_assembly": {
+      "version": 1,
+      "attempted": true,
+      "applied": true,
+      "original_terminal_output_shape": "empty_list",
+      "completed_item_count": 1
+    },
+    "elapsed_seconds": 6.77647295803763
+  },
+  "candidate": "D5_BENEFITS_SUPPORT",
+  "selected": null,
+  "confirmed_version": null,
+  "saved_version": null,
+  "answer_source": "d5_single_interpreter_v2"
+}

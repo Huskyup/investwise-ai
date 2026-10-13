@@ -1,0 +1,131 @@
+{
+  "id": "D5-STD-08",
+  "input": "I have no regular source paying my living costs at the moment.",
+  "route": "ml_then_gpt",
+  "ml_calls": 1,
+  "gpt_calls": 1,
+  "actual_model_calls": 1,
+  "ml_evidence": {
+    "source": "all_question_ml",
+    "source_hash": "13b6a8f494c773e90d28e8d105cc1b2de7bbebba20db980331b23397f253c4b8",
+    "identity_sha256": "9c42a1127900a4efc1095d47362f94a312465d62a23050b4fd8132a87a0add8c",
+    "bucket": null,
+    "candidate": null,
+    "intent_set": [
+      "clarity",
+      "undecided"
+    ],
+    "option_set": [],
+    "intent_probabilities": {
+      "clarity": 0.4750753293961852,
+      "confusion": 0.15274705147013756,
+      "undecided": 0.3721776191336773
+    },
+    "option_probabilities": {},
+    "model_uncertain": true,
+    "reason": "intent_model_uncertainty"
+  },
+  "raw": {
+    "answer_scope": "complete",
+    "evidence": [
+      "I have no regular source paying my living costs at the moment."
+    ],
+    "facts": [
+      {
+        "evidence": "I have no regular source paying my living costs at the moment.",
+        "owner": "self",
+        "pays_living_costs": "no",
+        "source_category": "D5_NO_REGULAR",
+        "source_instance_id": "group_1",
+        "time": "current"
+      }
+    ],
+    "missing_information": [],
+    "model_abstain": false,
+    "option_id": "D5_NO_REGULAR",
+    "semantic_bucket": "clarity"
+  },
+  "raw_output": "{\"answer_scope\":\"complete\",\"evidence\":[\"I have no regular source paying my living costs at the moment.\"],\"facts\":[{\"evidence\":\"I have no regular source paying my living costs at the moment.\",\"owner\":\"self\",\"pays_living_costs\":\"no\",\"source_category\":\"D5_NO_REGULAR\",\"source_instance_id\":\"group_1\",\"time\":\"current\"}],\"missing_information\":[],\"model_abstain\":false,\"option_id\":\"D5_NO_REGULAR\",\"semantic_bucket\":\"clarity\"}",
+  "dialogue_context": {
+    "history": [],
+    "pending_prompt": "What currently pays for your everyday living costs?",
+    "correction_requested": false
+  },
+  "result": {
+    "action": "confirm",
+    "question_id": "D5",
+    "candidate_option_id": "D5_NO_REGULAR",
+    "candidate_option_label": "No regular source",
+    "confirmation_text": "You have no regular source paying your living costs at the moment.\nHave I understood correctly?",
+    "context_details": {},
+    "recorded": false,
+    "bucket": "Clarity",
+    "contract_outcome": "financial_candidate"
+  },
+  "decision": {
+    "outcome": "financial_candidate",
+    "reason": "candidate_requires_confirmation",
+    "semantic_bucket": "clarity",
+    "option_id": "D5_NO_REGULAR",
+    "answer_scope": "complete",
+    "input_sha256": "8e7efb239b3e8b96e1fc853a337585b84af395483204acf3b67cebd957bb56c8",
+    "proposal_sha256": "c4e7df331e327de3c18cf3ae37212bcada3b51f5026cc1f3fb695de9db556aa7",
+    "spec_sha256": "de251a7783332cdd75ae11ff3663e1bbea2cc15014883e82475ef0375cfd342c",
+    "contract_sha256": "ccf107a7171a4acc9c13ab2b51de8f9f4c5dc7a8d77bd1394170b26474acce22",
+    "contract_version": "d5-single-interpreter-v2-context-1",
+    "context_sha256": "a51c4aa431753786f8650b97493c6a2a9a5788f3d7207c85b95a2666292243ae",
+    "previous_reply_count": 0
+  },
+  "backend_call": {
+    "backend": "single_interpreter_existing_chatgpt_plan_stream",
+    "endpoint": "https://api.openai.com/v1/responses",
+    "model_requested": "gpt-6.1-sol",
+    "reasoning_effort_requested": "low",
+    "tools": [],
+    "tool_choice": "none",
+    "store": false,
+    "stream": true,
+    "timeout_seconds": 30,
+    "max_response_bytes": 1048576,
+    "provider_output_token_cap": null,
+    "actual_calls": 1,
+    "retry": false,
+    "output_repair": false,
+    "fresh_context": true,
+    "fresh_server_context": true,
+    "previous_reply_count": 0,
+    "tool_dispatcher_present": false,
+    "blocked": false,
+    "terminal_completed": true,
+    "status": "completed",
+    "provider_model": "gpt-6.1-sol",
+    "provider_reasoning": {
+      "effort": "low"
+    },
+    "usage": {
+      "input_tokens": 2313,
+      "output_tokens": 116,
+      "total_tokens": 2429
+    },
+    "http": {
+      "http_status": 200,
+      "content_type": "other",
+      "single_explicit_content_type": false,
+      "mislabelled_sse_candidate": false,
+      "missing_content_type_candidate": true
+    },
+    "stream_assembly": {
+      "version": 1,
+      "attempted": true,
+      "applied": true,
+      "original_terminal_output_shape": "empty_list",
+      "completed_item_count": 1
+    },
+    "elapsed_seconds": 7.551397833973169
+  },
+  "candidate": "D5_NO_REGULAR",
+  "selected": null,
+  "confirmed_version": null,
+  "saved_version": null,
+  "answer_source": "d5_single_interpreter_v2"
+}

@@ -1,0 +1,19 @@
+{
+  "mode": "offline fixtures only; not semantic-performance evidence",
+  "tests_run": 12,
+  "success": true,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "model_inference_calls": 0,
+  "authentication_calls": 0,
+  "hashes": {
+    "demos/d5/local_engine.py": "ca4318db8a77faa66dbdd0caabd51deb4c7950cfbc2646eedbbcc805380ffde2",
+    "demos/d5/local_session.py": "0a2de462a6c36524c586c980f35db82ebdf986f89857b1ec554a90f3a994041d",
+    "demos/d5/local_verify.py": "681d91b40d65b3feab981073b735b41594258241975906d2e8e7b1abf90c93fa",
+    "demos/d5/local_worker.py": "918abd0e84cc3a652fe5f1750a15d845a7341bd281027a0e47afe957378acb6b",
+    "demos/d5/local_demo.py": "db3080d3258527e4f5be507a685ef1d5f702d886fd7f78361fa7db4fc66b35ea",
+    "demos/d5/local_transport.py": "e143db41b5b49a97f9b55a89d3513864a88b56723017895aea2b0496f421432e",
+    "demos/d5/local_evaluate.py": "2433d6e18b09b60d40d7dec82937b9d8b6540f5fd151f13f7d56e1327b177d6a"
+  }
+}

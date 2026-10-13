@@ -2,6 +2,8 @@
 
 This is a manually started **terminal conversation** using the repaired D5 interpreter: GPT-6.1 Sol with low reasoning. You can type new fictional replies, read the interpretation or focused follow-up, confirm a candidate and replace an earlier answer. The normal Streamlit default model route and all 15 questions are unchanged. Separately reviewed main-app safety and uncertainty-follow-up repairs are described in the handoff.
 
+An optional [ML + GPT terminal](GPT_ML_README.md) is now available through `gpt_ml_demo.py chat`. It passed the same 11 existing examples and four context turns; ML escalated all eligible first replies, so there is no measured efficiency gain. The direct-GPT command documented here is unchanged.
+
 The [13 October context verification](../../docs/d5-context-verification-2026-10-13/REPORT.md) completed four real model calls: a focused follow-up, short `Yes.`, a correction affecting wages only, and `Yes.` after `/new`. Both financial candidates were correct and explicitly confirmed; controls made no additional calls. A stale quotation in confirmation was found during the run and its presentation repaired afterwards using saved-output replay. This is one bounded conversation, not a general accuracy benchmark. The [earlier three-call conversation](../../docs/d5-live-conversation-2026-10-12/REPORT.md) remains available separately.
 
 ## Install once

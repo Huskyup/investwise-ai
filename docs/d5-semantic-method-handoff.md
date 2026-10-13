@@ -4,7 +4,28 @@ Updated 13 October 2026 · `feature/all-question-ml-prototype`
 
 Maintained delivery repository: [Huskyup/investwise-ai](https://github.com/Huskyup/investwise-ai/tree/feature/all-question-ml-prototype). Use the explicit repository URL below when updating an older checkout whose `origin` may point elsewhere.
 
-## Latest local Qwen prompt check: target error remains
+## Latest delivery: separate ML + GPT-6.1 Sol low terminal
+
+The [combined GPT entry](../demos/d5/GPT_ML_README.md) reuses the unchanged ML routing and the working GPT interpreter. Controls precede both models; eligible first replies use the unchanged ML predictors plus the packaged D5 business validator. Unresolved replies escalate once to GPT without ML guesses. Subsequent same-example replies and corrections go directly to contextual GPT. Model weights, data, prompt, strict validation, all 15 questions and the main default remain unchanged. The original direct-GPT and local Qwen commands remain separate options.
+
+**The bounded live check passed:** one existing-example preflight, all 11 existing outcomes (ten model-interpreted replies and one zero-call Help response), and all four existing context turns. Seven first-answer financial candidates were correct, with no wrong accepted candidate or contract rejection; the other interpreted answers correctly asked for information or handled indecision. The contextual mixed-source and pension-only corrected answers were both explicitly confirmed. Fourteen context controls or blocked inputs used zero ML/GPT calls. Total: 15 GPT requests, no retries or choice recovery. See the [report, per-case comparison and safe receipts](d5-ml-gpt-2026-10-13/REPORT.md).
+
+**ML handled 0/10 eligible bank replies independently; all escalated to GPT.** This demonstrates a working combined route on known examples, not improved ML accuracy, a speed saving or reliability on arbitrary new text. The unchanged baseline was verified exactly on the same 11 inputs. Software checks reused existing fixtures: 17 GPT checks and 12 Qwen-compatibility checks passed.
+
+On the owner's Mac, close the older D5 terminal and run:
+
+```bash
+cd "/Users/husky/Desktop/hackathon Bristol 2026/investwise-demo"
+git switch feature/all-question-ml-prototype
+git pull --ff-only https://github.com/Huskyup/investwise-ai.git feature/all-question-ml-prototype
+"$HOME/.venvs/investwise-d5/bin/python" demos/d5/gpt_ml_demo.py chat
+```
+
+Existing installations need no new dependency or login while their ChatGPT access works. New teammates follow the original [installation and their own sign-in](../demos/d5/README.md#install-once). The model is hosted and requires available account usage; this entry provides no paid-API or local-model fallback. New session traces and credentials stay outside the repository. It cannot save a financial profile or advance beyond D5. The main application's separate save-consent workflow remains unchanged.
+
+Company explanation: **“We use our existing ML as the first check, and a constrained GPT interpreter when it is uncertain or needs earlier dialogue. The business standard distinguishes money received from money actually used, groups two employers as one salary category, and keeps confirmation under application control. These existing examples worked; on this set GPT still did all the interpretation.”**
+
+## Earlier local Qwen prompt check: target error remains
 
 The local Qwen suffix now explicitly tells the model to choose the final option from the distinct active funding categories in its facts. It retains the existing rules for exclusions, incomplete answers, NO_REGULAR and uncertainty. The shared GPT prompt, models, strict validation, routing, all 15 questions and default are unchanged; there is no automatic output relabelling.
 
@@ -154,7 +175,7 @@ The [D5 question and option snapshot](d5-semantic-repair/source-reference/config
 
 These files remain review references under `docs/`. At the handoff baseline, static dependency inspection found 37 local AI modules: 26 absent from the target branch, six different and five identical. The different shared modules included the conversation engine, pre-model controls, question specification, bounded answers, horizon mapper and all-question resolver. **Copying only the D5 files into the normal `ai/` directory would not reproduce the tested environment.**
 
-The runnable demonstration addresses that gap with the dependency closure in `demos/d5/runtime/`, loaded only by its separate process. Its [runtime manifest](../demos/d5/runtime-manifest.json) identifies original and current hashes, including the 13 October repairs and context update. The credential provider has only two portability changes: use the current user's home directory and enforce credential storage outside the full checkout. The model and output schema remain unchanged; the later context update changes the prompt, provenance validation and authored follow-ups. NumPy/scikit-learn are import dependencies of the existing shared types; no classifier is trained or invoked by the D5 demo.
+The runnable demonstration addresses that gap with the dependency closure in `demos/d5/runtime/`, loaded only by its separate process. Its [runtime manifest](../demos/d5/runtime-manifest.json) identifies original and current hashes, including the 13 October repairs and context update. The credential provider has only two portability changes: use the current user's home directory and enforce credential storage outside the full checkout. The model and output schema remain unchanged; the later context update changes the prompt, provenance validation and authored follow-ups. NumPy/scikit-learn are import dependencies of the existing shared types; no classifier is trained or invoked by the original direct-GPT demo. The separate combined entry described above runs the unchanged ML predictors.
 
 Follow [the installation and launch instructions](../demos/d5/README.md) for Python 3.12 on macOS/Linux. Teammates use their own eligible account and external credentials. No credentials, caches or model artefacts are committed. Use the documented company sequence, or start `chat` and enter your own fictional wording; `check-11` is not a prerequisite. The latest terminal supplies earlier replies for follow-ups and corrections; use `/new` between independent examples. Confirmation ends the D5 example; change/new/exit remain available, and other questions and profile saving are disabled there. The main application's full journey and separate save-consent route remain unchanged.
 

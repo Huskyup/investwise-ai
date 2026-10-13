@@ -1,0 +1,24 @@
+{
+  "id": "reply-0014-befd29c3",
+  "input": "pause",
+  "route": "control",
+  "ml_calls": 0,
+  "gpt_calls": 0,
+  "actual_model_calls": 0,
+  "ml_evidence": null,
+  "raw": null,
+  "raw_output": null,
+  "dialogue_context": null,
+  "result": {
+    "action": "pause",
+    "question_id": "D5",
+    "reason": "User requested pause or stop."
+  },
+  "decision": null,
+  "backend_call": {},
+  "candidate": null,
+  "selected": null,
+  "confirmed_version": null,
+  "saved_version": null,
+  "answer_source": null
+}
