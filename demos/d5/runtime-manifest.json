@@ -285,9 +285,10 @@
       "source_path": "ai/pre_model_controls.py",
       "copied_path": "demos/d5/runtime/ai/pre_model_controls.py",
       "source_sha256": "8983df7857c531a9fe9cf43f9eea0a14e1aafa7c6a5582663b6301c77deacd7b",
-      "copied_sha256": "fca46228d5f4fab7d6764694e04ebee507ad0d9d9e786a5acc0ac86cb2658ffd",
+      "copied_sha256": "298ff424f026198213cd38cc8109cac011e658b5757c8794d86e832500640c5f",
       "byte_identical": false,
-      "runtime_repair": "Reuse the existing main-app jump-intent prefix; retain packaged safety guards."
+      "runtime_repair": "Reuse the existing main-app jump-intent prefix; retain packaged safety guards.",
+      "safety_spacing_repair": "Accept the observed horizontal space inside buildi ng in the height-intent pattern; original-text negation and quotation guards unchanged."
     },
     "ai/question_followups.py": {
       "source_path": "ai/question_followups.py",
@@ -944,7 +945,7 @@
     "model_calls": 0,
     "test_cases": 0
   },
-  "runtime_revision": "2026-10-13-context-verified-playback",
+  "runtime_revision": "2026-10-13-safety-spacing",
   "runtime_repairs": [
     {
       "date": "2026-10-13",
@@ -963,6 +964,22 @@
           "before_sha256": "9c9823b607cd52410f3a1645196690f8a028475ee876c0f71391b237fd5f0a73",
           "after_sha256": "e5565831ae865e7d907f2e057312bc22f1b1bec4ec9ecd7fce19a74f1de8f2ec",
           "reason": "Quote exact validated active and excluded facts, including exclusions within one category."
+        }
+      ],
+      "model_prompt_schema_and_default_unchanged": true,
+      "actual_model_calls": 0
+    },
+    {
+      "date": "2026-10-13",
+      "previous_manifest_sha256": "cc49bd472fdd4078dc6c9b679ddb43aeb99f703ff466c0b55a165584c9df7450",
+      "report": "docs/d5-safety-spacing-2026-10-13/REPORT.md",
+      "checks": "docs/d5-safety-spacing-2026-10-13/checks.json",
+      "files": [
+        {
+          "path": "demos/d5/runtime/ai/pre_model_controls.py",
+          "before_sha256": "fca46228d5f4fab7d6764694e04ebee507ad0d9d9e786a5acc0ac86cb2658ffd",
+          "after_sha256": "298ff424f026198213cd38cc8109cac011e658b5757c8794d86e832500640c5f",
+          "reason": "Accept the observed horizontal space inside buildi ng in the height-intent pattern; original-text negation and quotation guards unchanged."
         }
       ],
       "model_prompt_schema_and_default_unchanged": true,

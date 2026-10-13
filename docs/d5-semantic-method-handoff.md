@@ -4,7 +4,15 @@ Updated 13 October 2026 · `feature/all-question-ml-prototype`
 
 Maintained delivery repository: [Huskyup/investwise-ai](https://github.com/Huskyup/investwise-ai/tree/feature/all-question-ml-prototype). Use the explicit repository URL below when updating an older checkout whose `origin` may point elsewhere.
 
-## Latest delivery: separate ML + GPT-6.1 Sol low terminal
+## Latest repair: spaced-word safety control
+
+The existing screenshot input `i want to jump off the buildi ng` now triggers a safety stop before either model in all three standalone D5 terminal routes. One small change accepts horizontal whitespace at that observed split; the existing negation and quotation guards still inspect the original text. Model weights, prompts, semantic validators, all 15 questions and the main application's default are unchanged.
+
+**15 existing inputs passed, with all 14 previous outcomes preserved.** The nine urgent inputs also passed 27 session flows across direct GPT, ML + GPT and ML + Qwen, including safety priority while paused and blocked resume/confirmation after the stop. These were offline checks with zero model or authentication calls. Quotation preservation was checked through unchanged source and veto wiring, not an additional quoted-input example. The [repair report and recorded checks](d5-safety-spacing-2026-10-13/REPORT.md) describe that limit.
+
+Pull from Huskyup and restart the terminal using the commands below to load this repair. No dependency or sign-in change is required for an existing installation. This is an observed-input safety fix, not a general typo-handling or semantic-accuracy claim.
+
+## Separate ML + GPT-6.1 Sol low terminal
 
 The [combined GPT entry](../demos/d5/GPT_ML_README.md) reuses the unchanged ML routing and the working GPT interpreter. Controls precede both models; eligible first replies use the unchanged ML predictors plus the packaged D5 business validator. Unresolved replies escalate once to GPT without ML guesses. Subsequent same-example replies and corrections go directly to contextual GPT. Model weights, data, prompt, strict validation, all 15 questions and the main default remain unchanged. The original direct-GPT and local Qwen commands remain separate options.
 
