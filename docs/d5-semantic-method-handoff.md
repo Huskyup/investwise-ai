@@ -8,7 +8,9 @@ Maintained delivery repository: [Huskyup/investwise-ai](https://github.com/Husky
 
 The independent terminal now retains earlier raw user replies and authored prompts within the same fictional D5 example. One request to the same GPT-6.1 Sol low interpreter receives that context with the current reply. Follow-ups no longer require every earlier detail to be repeated; explicit corrections should replace the affected relation, while ambiguous references still require clarification. `/change` invalidates confirmation and retains history; `/new` starts with empty history. There is no extra model, training, cascade or dependency.
 
-The [context handoff](d5-same-example-context.md) describes the bounded history, exact quote provenance, frozen decision snapshots and control lifecycle. The prompt, request data, context-aware provenance validation and authored wording have changed; the financial JSON schema, model, 15 questions and normal app default have not. **This update has static review and syntax/hash checks only: no tests, saved-output replay or live calls.** All numerical results and the successful live transcript below belong to earlier versions and do not prove contextual interpretation accuracy.
+The [context handoff](d5-same-example-context.md) describes the bounded history, exact quote provenance, frozen decision snapshots and control lifecycle. The prompt, request data, context-aware provenance validation and authored wording changed in the context implementation; the financial JSON schema, model, 15 questions and normal app default model route did not. **A bounded live verification now completed four model calls:** an uncertain wages-use answer, `Yes.` resolving it, a wages-only correction retaining pension, and a fresh `Yes.` after `/new`. All four raw outcomes matched expectations; both financial candidates were correct and separately confirmed. Fourteen control or blocked-input actions made zero calls. This is one known-meaning dialogue, not a new accuracy benchmark.
+
+The live run exposed a display issue: an older quote still contained uncertainty after `Yes.` resolved it. Confirmation now separates current category labels from exact historical supporting quotations. This last rendering repair was checked against the saved outputs offline, with no additional inference. See the [report, transcript and receipts](d5-context-verification-2026-10-13/REPORT.md).
 
 ## Earlier runtime update: safety and exact confirmation
 
@@ -19,7 +21,7 @@ The independent D5 terminal now includes two small software repairs:
 
 The saved model response already contained that distinction. This fixes its presentation rather than training or changing the model. The same verified interpretation is reused; no extra model call, financial wording classifier or cascade is added.
 
-The [runtime repair report](d5-runtime-repair-2026-10-13.md) and [recorded checks](d5-runtime-repair-2026-10-13.json) cover **22 existing affected inputs only**: ten safety examples, seven published clear replies and five replies from the existing screenshot session. All scoped checks passed offline; candidates, follow-ups, confirmation and correction were preserved. This publication runs no further tests or inference and does not establish current provider availability.
+The [runtime repair report](d5-runtime-repair-2026-10-13.md) and [recorded checks](d5-runtime-repair-2026-10-13.json) cover **22 existing affected inputs only**: ten safety examples, seven published clear replies and five replies from the existing screenshot session. All scoped checks passed offline; candidates, follow-ups, confirmation and correction were preserved. That historical publication made no further inference calls; the subsequent context verification is recorded separately above.
 
 **Teammate update, from the repository root:**
 
@@ -31,7 +33,11 @@ git pull --ff-only https://github.com/Huskyup/investwise-ai.git feature/all-ques
 
 Close any running D5 terminal before launching again so it loads the repaired runtime. First-time users should follow the [Python 3.12 dependency installation and their own ChatGPT sign-in](../demos/d5/README.md#install-once) before `chat`. Existing installations need no dependency change. Each teammate needs their own eligible account and available usage; credentials remain outside Git. `check-11` is not required to launch.
 
-Only the independent D5 runtime, its session adapter, manifest and documentation are included in these runtime updates. Separate pending main-app changes and their tests are not included. The safety/confirmation repair left the prompt and validators unchanged; the later context update changes them as described above. The model, all fifteen questions and normal Streamlit default remain unchanged. The [runtime manifest](../demos/d5/runtime-manifest.json) records each revision; historical source-reference files and earlier evidence remain unchanged.
+The independent runtime remains separate from the normal application. The safety/confirmation repair left the prompt and validators unchanged; the later context update changes them as described above. The model, all fifteen questions and normal Streamlit default model route remain unchanged. The [runtime manifest](../demos/d5/runtime-manifest.json) records each revision; historical source-reference files and earlier evidence remain unchanged.
+
+## Separately reviewed main-app repairs
+
+The four previously pending main-app files are now included as two separate changes: `ai/pre_model_controls.py` with its safety tests, and `ai/conversation_engine.py` with its ML conversation tests. The first recognises the missed first-person height-danger intent forms. The second uses approved option labels for follow-ups when the existing ML option model cannot separate two or three candidates; larger sets and intent uncertainty retain their previous route. Neither change creates or accepts a new financial interpretation. Safety, support and pause responses retain priority, D11 retains its required own-words explanation, and the clarification limit still ends the attempt. These are safety and dialogue improvements, not an ML accuracy claim. The model factory, thresholds, validators, datasets and question specification are unchanged.
 
 ## Earlier semantic repair and live demonstration
 
@@ -79,7 +85,7 @@ Controls run before interpretation. For eligible D5 text, one call receives the 
 | Confusion with `question_meaning` | Give the fixed plain-English D5 explanation. Pure Help may be handled before the model. |
 | `reply_unclear` | Acknowledge that the wording was not understood and invite rephrasing. |
 
-In the earlier measured repair, case 10 received: “It is fine to be unsure. Does money from salary or wages currently pay any of your living costs, or is that still unclear?” It then requested the complete answer. The context update asks one source-use question, permitting yes, no or continued uncertainty. A brief subsequent reply has not been tested in this update.
+In the earlier measured repair, case 10 received: “It is fine to be unsure. Does money from salary or wages currently pay any of your living costs, or is that still unclear?” It then requested the complete answer. The context update asks one source-use question, permitting yes, no or continued uncertainty. In the new live sequence, `Yes.` resolved wages use while retaining the previously stated pension funding.
 
 Every nonclear output contains no financial option or facts. Missing information alone is not customer indecision. The existing abstention mechanism also carries an understood information gap: cases 07 and 09 have `semantic_bucket: null`, `model_abstain: true` and a specific topic. Its existing `model_uncertain` diagnostic stays true; the authored wording distinguishes a missing fact from unrecognised language. This adds no fourth customer bucket.
 

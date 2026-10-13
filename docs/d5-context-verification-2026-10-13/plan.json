@@ -1,0 +1,172 @@
+{
+  "created_utc": "2026-10-13T08:40:55.707345+00:00",
+  "base_commit": "d7238a3513c5dffae47b6d0117c2ef463a27b263",
+  "entry_point": "demos/d5/demo.py chat",
+  "purpose": "Bounded same-example context verification through actual terminal, not an independent semantic benchmark",
+  "maximum_model_calls": 4,
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "tools": [],
+  "tool_choice": "none",
+  "store": false,
+  "retry": false,
+  "stop_on_service_or_unexpected_behaviour": true,
+  "labels_supplied_to_interpreter": false,
+  "choice_recovery": 0,
+  "new_semantic_bank_cases": 0,
+  "new_context_turns": [
+    "Yes.",
+    "My wages stay in savings."
+  ],
+  "steps": [
+    {
+      "input": "/help",
+      "calls": 0,
+      "expect": "Authored D5 explanation; no model."
+    },
+    {
+      "input": "My pension pays some bills; I cannot tell whether my wages also do.",
+      "source": "D5-STD-10 unchanged",
+      "calls": 1,
+      "expect": "Undecided, no financial candidate; salary-use follow-up."
+    },
+    {
+      "input": "/pause",
+      "calls": 0,
+      "expect": "Pause."
+    },
+    {
+      "input": "My brother sends me money every week for rent and food.",
+      "source": "D5-STD-05 unchanged, blocked while paused",
+      "calls": 0,
+      "expect": "Remain paused; this text must not enter interpreted history."
+    },
+    {
+      "input": "/resume",
+      "calls": 0,
+      "expect": "Resume same example."
+    },
+    {
+      "input": "Yes.",
+      "source": "Short response to existing salary-use follow-up",
+      "calls": 1,
+      "expect": "Clarity D5_MULTIPLE; pension and wages active; no support fact from paused input; unconfirmed."
+    },
+    {
+      "input": "/confirm",
+      "calls": 0,
+      "expect": "Confirm MULTIPLE; no saved profile."
+    },
+    {
+      "input": "/change",
+      "calls": 0,
+      "expect": "Invalidate confirmation, retain raw earlier replies."
+    },
+    {
+      "input": "My wages stay in savings.",
+      "source": "First sentence of D5-STD-01; targeted correction",
+      "calls": 1,
+      "expect": "Clarity D5_PENSION_PAYMENTS; pension stays active, wages excluded; fresh confirmation required."
+    },
+    {
+      "input": "/confirm",
+      "calls": 0,
+      "expect": "Confirm corrected pension-only answer; no save."
+    },
+    {
+      "input": "/new",
+      "calls": 0,
+      "expect": "Clear history and answer state."
+    },
+    {
+      "input": "Yes.",
+      "source": "Same short response after reset",
+      "calls": 1,
+      "expect": "No financial candidate or facts; clarify missing meaning, no previous pension or wages."
+    },
+    {
+      "input": "/stop",
+      "calls": 0,
+      "expect": "Stop and clear active history."
+    },
+    {
+      "input": "/resume",
+      "calls": 0,
+      "expect": "Cannot resume stopped example."
+    },
+    {
+      "input": "My wages stay in savings. My pension pays the bills.",
+      "source": "D5-STD-01 unchanged, post-stop",
+      "calls": 0,
+      "expect": "Remain stopped; no interpretation."
+    },
+    {
+      "input": "/new",
+      "calls": 0,
+      "expect": "Separate fictional example."
+    },
+    {
+      "input": "I want to jump off a building",
+      "source": "Existing safety probe, fictional verification input",
+      "calls": 0,
+      "expect": "Safety stop; no model call."
+    },
+    {
+      "input": "/confirm",
+      "calls": 0,
+      "expect": "Safety stop cannot be confirmed."
+    },
+    {
+      "input": "/exit",
+      "calls": 0,
+      "expect": "End process, no profile saved."
+    }
+  ],
+  "runtime_hashes": {
+    "demos/d5/check_eleven.py": "bc1ecc61013b25de7fe51ee9879d1310c54b073f4623d24876cb1cf6873045e4",
+    "demos/d5/demo.py": "d64c2b104bfdacfbfd20da777252f6dec11c5c6e010a2015da1b36af4c541318",
+    "demos/d5/requirements.txt": "0fc66604ce0dd850b426d2fd268f39b6c12f1d54655620f368c4c7e41eb93e2e",
+    "demos/d5/runtime/ai/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/d5/runtime/ai/all_question_ml.py": "e59854f80b102dfd8d9d561c3f3e88d82ee2f24e816138625cef9c7b23817284",
+    "demos/d5/runtime/ai/bounded_answers.py": "41ac26e73992ab81025a9af8c3df4cf66c598d91cc318d84e1b35aca278b17db",
+    "demos/d5/runtime/ai/conformal.py": "9438f1b8c8e88d97b447ccda82bba13200ba6e6eb9be27f9a4f1e8167242fad3",
+    "demos/d5/runtime/ai/conversation_engine.py": "28bcc16d8b37aab692b1e065163871555d6c3dd7a98c59ff38c8430096f40285",
+    "demos/d5/runtime/ai/conversation_state.py": "ebaea8e9265e35f9a222d5d6ca9417564655f82af2543d6b92e84e9d26196bf3",
+    "demos/d5/runtime/ai/d12_adapter.py": "3344f1c00b134b6362e08fb2929a633c7740da797d06a2f56efbae4c95942638",
+    "demos/d5/runtime/ai/d5_candidate_validation.py": "c4e6ee798566074185d0e55139c9d04bb47cf1cb4009e9d0c8c915a46af3b39c",
+    "demos/d5/runtime/ai/d5_candidate_validation_v6.py": "ee952118ca756def1de91f9034a83acc9ef1d92b8e37b48b8c8072b269bfab80",
+    "demos/d5/runtime/ai/d5_candidate_validation_v7.py": "d7dde66ee78e78ee1d7b5d243acf8970dcbe937c8217c4d52b500a107916ff03",
+    "demos/d5/runtime/ai/d5_candidate_validation_v8.py": "3d728e8b84517f974ef2c98c82d6608b5a0be26e68df2a7c6b212d09064c078f",
+    "demos/d5/runtime/ai/d5_chatgpt_auth.py": "d5b2fd66580c68728ab952f3cc832cc7c20ba85487346158ea2f887b72167160",
+    "demos/d5/runtime/ai/d5_chatgpt_header_diagnostic.py": "5b6c18bc5d15be197490c98d44247fb2f16d08177b58b594ee74005f5c3f73cd",
+    "demos/d5/runtime/ai/d5_chatgpt_missing_mime.py": "2726bf0e844aa2e8323fa762a5639153ccc263aa1b6a2a8653ace04b64a54078",
+    "demos/d5/runtime/ai/d5_chatgpt_plan_diagnostic.py": "e9cda34f09ad3bf01395db4b09d2e6a24b3ef9506bcd0566c1690af97e9e1b7a",
+    "demos/d5/runtime/ai/d5_chatgpt_plan_transport.py": "ca7406ebd05522230e67d96b558f5e9b7c38a3bf9f4d38428a16fa65b59c00c5",
+    "demos/d5/runtime/ai/d5_chatgpt_sse_compat.py": "b222f97be065162a769fb7f97120c2e341367bb1762631b06417b9f91456bb84",
+    "demos/d5/runtime/ai/d5_chatgpt_stream_assembly.py": "050a5e02e6532bbae835d24d52c3647ddeb6936eac95754fc37160c699b52571",
+    "demos/d5/runtime/ai/d5_llm_grounding.py": "3be7935f03520ad5896d7f460d2486c68acb0aba2f98c6cf466ea76d9b46f3c3",
+    "demos/d5/runtime/ai/d5_llm_grounding_v5.py": "b4fb04a837ffaf6e5109d5845f1ecd67a63430171fc91b662721bea146e2c098",
+    "demos/d5/runtime/ai/d5_llm_grounding_v6.py": "2f6c0e8f9bff880aa74dd6f61d7fae455769ab88b388091bd2fe98eaa4c40e36",
+    "demos/d5/runtime/ai/d5_llm_grounding_v7.py": "7edb39a8458822d245cd193e56d26bed41f7092fb2f0f08c3adcd2ba5599b911",
+    "demos/d5/runtime/ai/d5_llm_grounding_v8.py": "aed9368c72308b2921379f2ced62549e0b273ee8c54d474cd9c6203c6221f825",
+    "demos/d5/runtime/ai/d5_puzzle_interpreter.py": "fc5f9b24e1bb8a1ca81f45c576d26395fe2a63cbf606d10030f9492f47c2e864",
+    "demos/d5/runtime/ai/d5_single_interpreter_contract.py": "ee4b49b8b217fde094ec2a89caf7a5aa937a8303a44315cde89a6cef0d2223cb",
+    "demos/d5/runtime/ai/d5_single_interpreter_contract_v2.py": "0e810446c424f640ae60372bea46cb57a8f03f2266bf4c6e4b29183a91955de1",
+    "demos/d5/runtime/ai/d5_single_interpreter_engine.py": "c83447df12d37f3c096a2d2367f060c2d3c622395592896eefd0fe74b3b6d3e2",
+    "demos/d5/runtime/ai/d5_single_interpreter_engine_v2.py": "6e7d579cb7908578addb4b8c8f6c61fdb7d278aa3a47ed81951b445cdf1848a7",
+    "demos/d5/runtime/ai/d5_single_interpreter_transport.py": "fae4f643277a0bb08fef9112b7f3962a9f2a4cd33131e1015d140186d9e31c7a",
+    "demos/d5/runtime/ai/d5_text_classifier.py": "9fc628753c8a1908b68bcd6ef7ab9496d2c32d4ba8a47349caf6c012e2e197ad",
+    "demos/d5/runtime/ai/d5_tool_free_gpt_experiment.py": "e4ea2ae23e1292e5d773b427bc657812ea895c4a9da8d1e94a341f423ae2e254",
+    "demos/d5/runtime/ai/deterministic_conversation.py": "6799bdb9a2bbaf6bb141e59b9fe7d10e50450eaf06dcf45a887d4f2d881ece5e",
+    "demos/d5/runtime/ai/horizon_mapper.py": "2e5bac8ae15a66b874e05ed57417a3ac92b0d23d81d1d7393536619e67dcbb54",
+    "demos/d5/runtime/ai/llm_shadow.py": "57b7a3ccfdc543895ffaae35c3f342bcf06ec074eeb9dc512b277a5e571113b6",
+    "demos/d5/runtime/ai/pre_model_controls.py": "fca46228d5f4fab7d6764694e04ebee507ad0d9d9e786a5acc0ac86cb2658ffd",
+    "demos/d5/runtime/ai/question_followups.py": "393054bfe109dc94a515e560286bf2f5024a72fd6a95befd5ac1cc7ae56457bb",
+    "demos/d5/runtime/ai/question_spec.py": "5c19e511ff0144400363f43bdf887dddb49dc6db0da14b3ca69bd6f1d7f3be63",
+    "demos/d5/runtime/ai/text_classifier.py": "8051914b85bbb1cb06e2dbaed4f85d138924e3ab7a234f1d3fc2c8844b943c15",
+    "demos/d5/runtime/config/business-decision-spec.json": "77011caa61f1248aad6d3d20e5e51987fa1b60f93e117de0b8f5720215b8abea",
+    "demos/d5/runtime/config/d5-single-interpreter-v1-prompt.txt": "9149ae9e9a3e12dce89f3e18a499d88f271bd77ce5b4c4aca172fb47adeb1a70",
+    "demos/d5/runtime/config/d5-single-interpreter-v2-prompt.txt": "474f95b7bdbf2dd5b0b2f3ea499b7eab1a06a588ab592c51f9045a1706b7c003",
+    "demos/d5/session.py": "42adab3869cc093c2bb713baef0eebd6c4d6b37bf3d7de9be490b3922e1eb673"
+  }
+}

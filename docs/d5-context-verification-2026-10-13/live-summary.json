@@ -1,0 +1,21 @@
+{
+  "mode": "actual_standalone_terminal_live",
+  "completed_model_requests": 4,
+  "correct_raw_semantic_outcomes": 4,
+  "correct_accepted_candidates": 2,
+  "accepted_candidate_denominator": 2,
+  "contract_rejections": 0,
+  "wrong_accepted_candidates": 0,
+  "zero_call_actions": 14,
+  "explicit_confirmations": 2,
+  "short_followup_resolved": true,
+  "targeted_correction_preserved_pension": true,
+  "new_example_dropped_old_sources": true,
+  "paused_input_excluded_from_history": true,
+  "choice_recovery": 0,
+  "service_failures": 0,
+  "retry": false,
+  "additional_models": 0,
+  "limits": "One planned conversation using known source meanings plus short contextual turns; no independent accuracy estimate. Live candidate/contract/control checks passed, but old quote-led playback remained unclear and was repaired afterwards without new model calls.",
+  "post_live_repair": "Authored confirmation separates current verified categories from historical supporting quotations."
+}

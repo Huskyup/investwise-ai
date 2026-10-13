@@ -1,0 +1,96 @@
+{
+  "scope": "Offline rendered results using exactly four previously completed live outputs",
+  "actual_model_calls": 0,
+  "authentication_calls": 0,
+  "new_semantic_evaluation_cases": 0,
+  "records": [
+    {
+      "source_id": "CONTEXT-01",
+      "input": "My pension pays some bills; I cannot tell whether my wages also do.",
+      "mode": "saved_output_replay_after_authored_playback_repair",
+      "actual_model_calls": 0,
+      "fixture_replays": 1,
+      "raw_output_unchanged": true,
+      "candidate": null,
+      "decision_outcome": "dialogue_only",
+      "result": {
+        "action": "clarify",
+        "question_id": "D5",
+        "reason": "authored_dialogue_only",
+        "clarification_turns": 1,
+        "profile_complete": false,
+        "recorded": false,
+        "followup": "It is fine to be unsure. Does money from salary or wages currently pay any of your living costs? You can say yes, no or that you are still unsure.",
+        "bucket": "Undecided",
+        "model_uncertain": false,
+        "contract_outcome": "dialogue_only",
+        "clarification_topic": "source_use_unknown:D5_SALARY"
+      }
+    },
+    {
+      "source_id": "CONTEXT-02",
+      "input": "Yes.",
+      "mode": "saved_output_replay_after_authored_playback_repair",
+      "actual_model_calls": 0,
+      "fixture_replays": 1,
+      "raw_output_unchanged": true,
+      "candidate": "D5_MULTIPLE",
+      "decision_outcome": "financial_candidate",
+      "result": {
+        "action": "confirm",
+        "question_id": "D5",
+        "candidate_option_id": "D5_MULTIPLE",
+        "candidate_option_label": "More than one listed source category",
+        "confirmation_text": "Your latest reply: \"Yes.\"\nCurrent funding categories: Salary or wages; Pension payments.\nYour specific source wording is quoted below; these are the questionnaire groups.\nSupporting wording from this example:\n\"My pension pays some bills; I cannot tell whether my wages also do.\"\nHave I understood correctly?",
+        "context_details": {},
+        "recorded": false,
+        "bucket": "Clarity",
+        "contract_outcome": "financial_candidate"
+      }
+    },
+    {
+      "source_id": "CONTEXT-03",
+      "input": "My wages stay in savings.",
+      "mode": "saved_output_replay_after_authored_playback_repair",
+      "actual_model_calls": 0,
+      "fixture_replays": 1,
+      "raw_output_unchanged": true,
+      "candidate": "D5_PENSION_PAYMENTS",
+      "decision_outcome": "financial_candidate",
+      "result": {
+        "action": "confirm",
+        "question_id": "D5",
+        "candidate_option_id": "D5_PENSION_PAYMENTS",
+        "candidate_option_label": "Pension payments",
+        "confirmation_text": "Your latest reply: \"My wages stay in savings.\"\nCurrent funding categories: Pension payments.\nYour specific source wording is quoted below; these are the questionnaire groups.\nSupporting wording from this example:\n\"My pension pays some bills; I cannot tell whether my wages also do.\"\nNot counted as current funding, from your words:\n\"My wages stay in savings.\"\nHave I understood correctly?",
+        "context_details": {},
+        "recorded": false,
+        "bucket": "Clarity",
+        "contract_outcome": "financial_candidate"
+      }
+    },
+    {
+      "source_id": "CONTEXT-04",
+      "input": "Yes.",
+      "mode": "saved_output_replay_after_authored_playback_repair",
+      "actual_model_calls": 0,
+      "fixture_replays": 1,
+      "raw_output_unchanged": true,
+      "candidate": null,
+      "decision_outcome": "abstention",
+      "result": {
+        "action": "clarify",
+        "question_id": "D5",
+        "reason": "independent_model_abstention",
+        "clarification_turns": 1,
+        "profile_complete": false,
+        "recorded": false,
+        "followup": "I haven't understood your wording. Could you describe what pays your living costs in another way? You can leave this unresolved.",
+        "bucket": null,
+        "model_uncertain": true,
+        "contract_outcome": "abstention",
+        "clarification_topic": "reply_unclear"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "scope": "Main-app ML follow-up software interactions only; no semantic evaluation bank expansion",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "--basetemp=/tmp/pytest-investwise-context-20261013",
+    "-q",
+    "tests/test_ml_conversation.py"
+  ],
+  "cwd": "/Users/husky/Desktop/hackathon Bristol 2026/investwise-demo",
+  "started_at_utc": "2026-10-13T08:43:42.376406+00:00",
+  "finished_at_utc": "2026-10-13T08:43:43.818004+00:00",
+  "exit_code": 0,
+  "stdout": "........................................                                 [100%]\n40 passed in 1.12s\n",
+  "stderr": "",
+  "model_calls": 0,
+  "authentication_calls": 0,
+  "network_calls": 0,
+  "changes": [
+    "Preserve required own-words follow-up during teachback",
+    "Only tag set-informed follow-up when displayed"
+  ]
+}

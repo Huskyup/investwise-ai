@@ -1,0 +1,100 @@
+{
+  "input": "My wages stay in savings.",
+  "raw": {
+    "answer_scope": "complete",
+    "evidence": [
+      "My pension pays some bills; I cannot tell whether my wages also do.",
+      "My wages stay in savings."
+    ],
+    "facts": [
+      {
+        "evidence": "My pension pays some bills; I cannot tell whether my wages also do.",
+        "owner": "self",
+        "pays_living_costs": "yes",
+        "source_category": "D5_PENSION_PAYMENTS",
+        "source_instance_id": "group_1",
+        "time": "current"
+      },
+      {
+        "evidence": "My wages stay in savings.",
+        "owner": "self",
+        "pays_living_costs": "no",
+        "source_category": "D5_SALARY",
+        "source_instance_id": "group_2",
+        "time": "current"
+      }
+    ],
+    "missing_information": [],
+    "model_abstain": false,
+    "option_id": "D5_PENSION_PAYMENTS",
+    "semantic_bucket": "clarity"
+  },
+  "raw_output": "{\"answer_scope\":\"complete\",\"evidence\":[\"My pension pays some bills; I cannot tell whether my wages also do.\",\"My wages stay in savings.\"],\"facts\":[{\"evidence\":\"My pension pays some bills; I cannot tell whether my wages also do.\",\"owner\":\"self\",\"pays_living_costs\":\"yes\",\"source_category\":\"D5_PENSION_PAYMENTS\",\"source_instance_id\":\"group_1\",\"time\":\"current\"},{\"evidence\":\"My wages stay in savings.\",\"owner\":\"self\",\"pays_living_costs\":\"no\",\"source_category\":\"D5_SALARY\",\"source_instance_id\":\"group_2\",\"time\":\"current\"}],\"missing_information\":[],\"model_abstain\":false,\"option_id\":\"D5_PENSION_PAYMENTS\",\"semantic_bucket\":\"clarity\"}",
+  "dialogue_context": {
+    "history": [
+      {
+        "prompt": "What currently pays for your everyday living costs?\nThis asks what pays your housing, food and bills now. Pension payments count when you receive and use them for these costs; simply holding money inside a pension fund does not count. Receiving money does not by itself mean you spend it on living costs. You can name one source or several. Benefits and regular support share one answer category.",
+        "reply": "My pension pays some bills; I cannot tell whether my wages also do."
+      },
+      {
+        "prompt": "It is fine to be unsure. Does money from salary or wages currently pay any of your living costs? You can say yes, no or that you are still unsure.\nPaused. Use /resume when ready.\nThis example is paused. Use /resume when ready.\nReady when you are. Continue this D5 example; earlier replies are still available.",
+        "reply": "Yes."
+      }
+    ],
+    "pending_prompt": "The previous D5 answer is invalidated. What should I change? Earlier replies in this example are available; name what is different.",
+    "correction_requested": true
+  },
+  "result": {
+    "action": "confirm",
+    "question_id": "D5",
+    "candidate_option_id": "D5_PENSION_PAYMENTS",
+    "candidate_option_label": "Pension payments",
+    "confirmation_text": "Using your latest reply: \"My wages stay in savings.\"\nThe quotations below are read together with that reply.\nI understand your current living-cost funding as:\n\"My pension pays some bills; I cannot tell whether my wages also do.\"\nNot counted as current funding, from your words:\n\"My wages stay in savings.\"\nHave I understood correctly?",
+    "context_details": {},
+    "recorded": false,
+    "bucket": "Clarity",
+    "contract_outcome": "financial_candidate"
+  },
+  "decision": {
+    "outcome": "financial_candidate",
+    "reason": "candidate_requires_confirmation",
+    "semantic_bucket": "clarity",
+    "option_id": "D5_PENSION_PAYMENTS",
+    "answer_scope": "complete",
+    "input_sha256": "4e5468879d9a12964d3bb41cb15cf6250b6194426049d57fe6389e341ecdb5b9",
+    "proposal_sha256": "de2a380b64607daf737976b282df88aa1572e5893baae139d3d4af08dfb14524",
+    "spec_sha256": "de251a7783332cdd75ae11ff3663e1bbea2cc15014883e82475ef0375cfd342c",
+    "contract_sha256": "ccf107a7171a4acc9c13ab2b51de8f9f4c5dc7a8d77bd1394170b26474acce22",
+    "contract_version": "d5-single-interpreter-v2-context-1",
+    "context_sha256": "db7c8df429cdcd8e445d68387cb6e1b563d12c2c483d6c84e11c8332337681e5",
+    "previous_reply_count": 2
+  },
+  "actual_model_calls": 1,
+  "candidate": "D5_PENSION_PAYMENTS",
+  "selected": null,
+  "confirmed_version": null,
+  "saved_version": null,
+  "id": "CONTEXT-03",
+  "backend_call": {
+    "model_requested": "gpt-6.1-sol",
+    "provider_model": "gpt-6.1-sol",
+    "reasoning_effort_requested": "low",
+    "tools": [],
+    "tool_choice": "none",
+    "store": false,
+    "status": "completed",
+    "terminal_completed": true,
+    "actual_calls": 1,
+    "retry": false,
+    "output_repair": false,
+    "previous_reply_count": 2,
+    "fresh_server_context": true,
+    "elapsed_seconds": 12.04225345805753,
+    "usage": {
+      "input_tokens": 2502,
+      "output_tokens": 171,
+      "total_tokens": 2673
+    }
+  },
+  "private_record_sha256": "a0ac04f87691fdf832db40ad4014114a477e7eaef31cd6372e45ededceef4683"
+}

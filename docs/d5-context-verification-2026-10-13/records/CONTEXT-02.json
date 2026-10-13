@@ -1,0 +1,96 @@
+{
+  "input": "Yes.",
+  "raw": {
+    "answer_scope": "complete",
+    "evidence": [
+      "My pension pays some bills; I cannot tell whether my wages also do.",
+      "Yes."
+    ],
+    "facts": [
+      {
+        "evidence": "My pension pays some bills; I cannot tell whether my wages also do.",
+        "owner": "self",
+        "pays_living_costs": "yes",
+        "source_category": "D5_PENSION_PAYMENTS",
+        "source_instance_id": "group_1",
+        "time": "current"
+      },
+      {
+        "evidence": "My pension pays some bills; I cannot tell whether my wages also do.",
+        "owner": "self",
+        "pays_living_costs": "yes",
+        "source_category": "D5_SALARY",
+        "source_instance_id": "group_2",
+        "time": "current"
+      }
+    ],
+    "missing_information": [],
+    "model_abstain": false,
+    "option_id": "D5_MULTIPLE",
+    "semantic_bucket": "clarity"
+  },
+  "raw_output": "{\"answer_scope\":\"complete\",\"evidence\":[\"My pension pays some bills; I cannot tell whether my wages also do.\",\"Yes.\"],\"facts\":[{\"evidence\":\"My pension pays some bills; I cannot tell whether my wages also do.\",\"owner\":\"self\",\"pays_living_costs\":\"yes\",\"source_category\":\"D5_PENSION_PAYMENTS\",\"source_instance_id\":\"group_1\",\"time\":\"current\"},{\"evidence\":\"My pension pays some bills; I cannot tell whether my wages also do.\",\"owner\":\"self\",\"pays_living_costs\":\"yes\",\"source_category\":\"D5_SALARY\",\"source_instance_id\":\"group_2\",\"time\":\"current\"}],\"missing_information\":[],\"model_abstain\":false,\"option_id\":\"D5_MULTIPLE\",\"semantic_bucket\":\"clarity\"}",
+  "dialogue_context": {
+    "history": [
+      {
+        "prompt": "What currently pays for your everyday living costs?\nThis asks what pays your housing, food and bills now. Pension payments count when you receive and use them for these costs; simply holding money inside a pension fund does not count. Receiving money does not by itself mean you spend it on living costs. You can name one source or several. Benefits and regular support share one answer category.",
+        "reply": "My pension pays some bills; I cannot tell whether my wages also do."
+      }
+    ],
+    "pending_prompt": "It is fine to be unsure. Does money from salary or wages currently pay any of your living costs? You can say yes, no or that you are still unsure.\nPaused. Use /resume when ready.\nThis example is paused. Use /resume when ready.\nReady when you are. Continue this D5 example; earlier replies are still available.",
+    "correction_requested": false
+  },
+  "result": {
+    "action": "confirm",
+    "question_id": "D5",
+    "candidate_option_id": "D5_MULTIPLE",
+    "candidate_option_label": "More than one listed source category",
+    "confirmation_text": "Using your latest reply: \"Yes.\"\nThe quotations below are read together with that reply.\nI understand your current living-cost funding as:\n\"My pension pays some bills; I cannot tell whether my wages also do.\"\nHave I understood correctly?",
+    "context_details": {},
+    "recorded": false,
+    "bucket": "Clarity",
+    "contract_outcome": "financial_candidate"
+  },
+  "decision": {
+    "outcome": "financial_candidate",
+    "reason": "candidate_requires_confirmation",
+    "semantic_bucket": "clarity",
+    "option_id": "D5_MULTIPLE",
+    "answer_scope": "complete",
+    "input_sha256": "5f9a2b795615ba6a3d5455fd5624d773fbca5bcd16249c421fd37411dc9837da",
+    "proposal_sha256": "5519136845b1d336f9f129425302dcb5533533721a5ce9b4f70392a3000f408e",
+    "spec_sha256": "de251a7783332cdd75ae11ff3663e1bbea2cc15014883e82475ef0375cfd342c",
+    "contract_sha256": "ccf107a7171a4acc9c13ab2b51de8f9f4c5dc7a8d77bd1394170b26474acce22",
+    "contract_version": "d5-single-interpreter-v2-context-1",
+    "context_sha256": "6c35efbceb7abc24a4c82526980297c4f6a650db760325ca94e2874b64f10ca3",
+    "previous_reply_count": 1
+  },
+  "actual_model_calls": 1,
+  "candidate": "D5_MULTIPLE",
+  "selected": null,
+  "confirmed_version": null,
+  "saved_version": null,
+  "id": "CONTEXT-02",
+  "backend_call": {
+    "model_requested": "gpt-6.1-sol",
+    "provider_model": "gpt-6.1-sol",
+    "reasoning_effort_requested": "low",
+    "tools": [],
+    "tool_choice": "none",
+    "store": false,
+    "status": "completed",
+    "terminal_completed": true,
+    "actual_calls": 1,
+    "retry": false,
+    "output_repair": false,
+    "previous_reply_count": 1,
+    "fresh_server_context": true,
+    "elapsed_seconds": 11.246992792002857,
+    "usage": {
+      "input_tokens": 2464,
+      "output_tokens": 174,
+      "total_tokens": 2638
+    }
+  },
+  "private_record_sha256": "fe7a41d7def3664d0c718b1df2077e2d41a949157afb737ad7df4c9ac0bf3308"
+}

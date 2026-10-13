@@ -1,0 +1,26 @@
+test_authored_prompt_is_never_financial_quote_evidence (__main__.ContextChecks.test_authored_prompt_is_never_financial_quote_evidence) ... ok
+test_change_retains_history_invalidates_confirmation_and_replaces_candidate (__main__.ContextChecks.test_change_retains_history_invalidates_confirmation_and_replaces_candidate) ... ok
+test_character_limit_rejects_without_call (__main__.ContextChecks.test_character_limit_rejects_without_call) ... ok
+test_confirmation_uses_issued_snapshot_after_session_history_appends (__main__.ContextChecks.test_confirmation_uses_issued_snapshot_after_session_history_appends) ... ok
+test_context_does_not_authorise_ignoring_the_current_reply (__main__.ContextChecks.test_context_does_not_authorise_ignoring_the_current_reply) ... ok
+test_context_requires_immutable_typed_turns (__main__.ContextChecks.test_context_requires_immutable_typed_turns) ... ok
+test_current_reply_and_separate_earlier_user_spans_are_valid (__main__.ContextChecks.test_current_reply_and_separate_earlier_user_spans_are_valid) ... ok
+test_exact_quotes_cannot_be_joined_across_user_turns (__main__.ContextChecks.test_exact_quotes_cannot_be_joined_across_user_turns) ... ok
+test_existing_help_reply_is_not_sent_to_interpreter_or_remembered (__main__.ContextChecks.test_existing_help_reply_is_not_sent_to_interpreter_or_remembered) ... ok
+test_existing_replies_are_forwarded_without_changing_original_text (__main__.ContextChecks.test_existing_replies_are_forwarded_without_changing_original_text) ... ok
+test_existing_safety_input_clears_history_and_blocks_later_calls (__main__.ContextChecks.test_existing_safety_input_clears_history_and_blocks_later_calls) ... ok
+test_existing_source_followup_is_one_short_answerable_question (__main__.ContextChecks.test_existing_source_followup_is_one_short_answerable_question) ... ok
+test_help_pause_paused_input_and_resume_make_no_calls_or_user_memory (__main__.ContextChecks.test_help_pause_paused_input_and_resume_make_no_calls_or_user_memory) ... ok
+test_new_clears_history_and_old_answer (__main__.ContextChecks.test_new_clears_history_and_old_answer) ... ok
+test_prior_reply_is_not_valid_evidence_without_context (__main__.ContextChecks.test_prior_reply_is_not_valid_evidence_without_context) ... ok
+test_saved_live_conversation_with_repaired_current_meaning_playback (__main__.ContextChecks.test_saved_live_conversation_with_repaired_current_meaning_playback)
+Replay four already-recorded outputs; do not claim new live evidence. ... ok
+test_stop_clears_history_and_later_inputs_cannot_infer (__main__.ContextChecks.test_stop_clears_history_and_later_inputs_cannot_infer) ... ok
+test_transport_rejects_unrecognised_context_fields (__main__.ContextChecks.test_transport_rejects_unrecognised_context_fields) ... ok
+test_transport_retains_interpretation_only_boundaries (__main__.ContextChecks.test_transport_retains_interpretation_only_boundaries) ... ok
+test_turn_limit_preserves_whole_history_and_invalidates_stale_candidate (__main__.ContextChecks.test_turn_limit_preserves_whole_history_and_invalidates_stale_candidate) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.722s
+
+OK

@@ -103,6 +103,17 @@ class D5BusinessStandardEngine(D5SingleInterpreterEngine):
         else:
             quotes = "; ".join(json.dumps(quote, ensure_ascii=False) for quote in active)
             playback = f"I understand your current living-cost funding as:\n{quotes}"
+        if receipt.decision.context.history:
+            categories = {fact.source_category for fact in meaning.facts if fact.currently_funds_customer}
+            labels = [option.label for option in self.spec.question("D5").options if option.id in categories]
+            if labels:
+                # Historical quotes may still contain uncertainty which the
+                # current reply has resolved. State the verified relation first;
+                # retain quotes as provenance, not as the current conclusion.
+                playback = ("Current funding categories: " + "; ".join(labels) + ".\n"
+                            "Your specific source wording is quoted below; these are the questionnaire groups.\n"
+                            "Supporting wording from this example:\n" + quotes)
+            playback = "Your latest reply: " + json.dumps(text, ensure_ascii=False) + "\n" + playback
         excluded = list(dict.fromkeys(fact.evidence for fact in meaning.facts
                         if not fact.currently_funds_customer
                         and fact.source_category != "D5_NO_REGULAR"
@@ -111,8 +122,5 @@ class D5BusinessStandardEngine(D5SingleInterpreterEngine):
         if excluded:
             quotes = "; ".join(json.dumps(quote, ensure_ascii=False) for quote in excluded)
             playback += f"\nNot counted as current funding, from your words:\n{quotes}"
-        if receipt.decision.context.history:
-            playback = ("Using your latest reply: " + json.dumps(text, ensure_ascii=False)
-                        + "\nThe quotations below are read together with that reply.\n" + playback)
         result["confirmation_text"] = playback + "\nHave I understood correctly?"
         return result

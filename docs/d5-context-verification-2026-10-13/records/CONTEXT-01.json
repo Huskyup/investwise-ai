@@ -1,0 +1,77 @@
+{
+  "input": "My pension pays some bills; I cannot tell whether my wages also do.",
+  "raw": {
+    "answer_scope": "partial",
+    "evidence": [
+      "My pension pays some bills; I cannot tell whether my wages also do."
+    ],
+    "facts": [],
+    "missing_information": [
+      "source_use_unknown:D5_SALARY"
+    ],
+    "model_abstain": false,
+    "option_id": null,
+    "semantic_bucket": "undecided"
+  },
+  "raw_output": "{\"answer_scope\":\"partial\",\"evidence\":[\"My pension pays some bills; I cannot tell whether my wages also do.\"],\"facts\":[],\"missing_information\":[\"source_use_unknown:D5_SALARY\"],\"model_abstain\":false,\"option_id\":null,\"semantic_bucket\":\"undecided\"}",
+  "dialogue_context": {
+    "history": [],
+    "pending_prompt": "What currently pays for your everyday living costs?\nThis asks what pays your housing, food and bills now. Pension payments count when you receive and use them for these costs; simply holding money inside a pension fund does not count. Receiving money does not by itself mean you spend it on living costs. You can name one source or several. Benefits and regular support share one answer category.",
+    "correction_requested": false
+  },
+  "result": {
+    "action": "clarify",
+    "question_id": "D5",
+    "reason": "authored_dialogue_only",
+    "clarification_turns": 1,
+    "profile_complete": false,
+    "recorded": false,
+    "followup": "It is fine to be unsure. Does money from salary or wages currently pay any of your living costs? You can say yes, no or that you are still unsure.",
+    "bucket": "Undecided",
+    "model_uncertain": false,
+    "contract_outcome": "dialogue_only",
+    "clarification_topic": "source_use_unknown:D5_SALARY"
+  },
+  "decision": {
+    "outcome": "dialogue_only",
+    "reason": "authored_dialogue_only",
+    "semantic_bucket": "undecided",
+    "option_id": null,
+    "answer_scope": "partial",
+    "input_sha256": "c823783b28d8c4bd56b16098fc86f01382c8cbf4b59a5e7465eb4fbd065959b5",
+    "proposal_sha256": "888cd95b9140fb6eda2619b2f7b12b682427b5391c726c8fbb4009a0ae699ad2",
+    "spec_sha256": "de251a7783332cdd75ae11ff3663e1bbea2cc15014883e82475ef0375cfd342c",
+    "contract_sha256": "ccf107a7171a4acc9c13ab2b51de8f9f4c5dc7a8d77bd1394170b26474acce22",
+    "contract_version": "d5-single-interpreter-v2-context-1",
+    "context_sha256": "b1740a696bb41e8dc7d2ffe515cf24eeb8e7d82213c27e6511578280e61874cf",
+    "previous_reply_count": 0
+  },
+  "actual_model_calls": 1,
+  "candidate": null,
+  "selected": null,
+  "confirmed_version": null,
+  "saved_version": null,
+  "id": "CONTEXT-01",
+  "backend_call": {
+    "model_requested": "gpt-6.1-sol",
+    "provider_model": "gpt-6.1-sol",
+    "reasoning_effort_requested": "low",
+    "tools": [],
+    "tool_choice": "none",
+    "store": false,
+    "status": "completed",
+    "terminal_completed": true,
+    "actual_calls": 1,
+    "retry": false,
+    "output_repair": false,
+    "previous_reply_count": 0,
+    "fresh_server_context": true,
+    "elapsed_seconds": 7.565984749933705,
+    "usage": {
+      "input_tokens": 2383,
+      "output_tokens": 73,
+      "total_tokens": 2456
+    }
+  },
+  "private_record_sha256": "d8546ecfe5f2e86d5dc66850dbd47972bd06f4abfb68086b97e11946140405e6"
+}

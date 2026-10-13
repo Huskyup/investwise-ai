@@ -233,7 +233,7 @@
       "source_path": "ai/d5_single_interpreter_engine_v2.py",
       "copied_path": "demos/d5/runtime/ai/d5_single_interpreter_engine_v2.py",
       "source_sha256": "9c9823b607cd52410f3a1645196690f8a028475ee876c0f71391b237fd5f0a73",
-      "copied_sha256": "6e7d579cb7908578addb4b8c8f6c61fdb7d278aa3a47ed81951b445cdf1848a7",
+      "copied_sha256": "01fb9ca10b021a76ce010db92783bff9eee8ab9e5aa38d8794670896d1da690e",
       "byte_identical": false,
       "runtime_repair": "Quote exact validated active and excluded facts, including exclusions within one category.",
       "context_update": "Single-question follow-ups, visible context limit and latest reply alongside exact confirmation quotations."
@@ -944,7 +944,7 @@
     "model_calls": 0,
     "test_cases": 0
   },
-  "runtime_revision": "2026-10-13-same-example-context",
+  "runtime_revision": "2026-10-13-context-verified-playback",
   "runtime_repairs": [
     {
       "date": "2026-10-13",
@@ -1016,5 +1016,24 @@
     "model_calls": 0,
     "test_runs": 0,
     "new_evaluation_cases": 0
+  },
+  "context_verification": {
+    "date": "2026-10-13",
+    "report": "docs/d5-context-verification-2026-10-13/REPORT.md",
+    "pre_live_plan": "docs/d5-context-verification-2026-10-13/plan.json",
+    "live_model_calls": 4,
+    "expected_raw_outcomes": 4,
+    "correct_financial_candidates": 2,
+    "zero_call_control_actions": 14,
+    "offline_checks_after_playback_repair": 20,
+    "live_runtime_unchanged_during_run": true,
+    "post_live_repair": {
+      "path": "demos/d5/runtime/ai/d5_single_interpreter_engine_v2.py",
+      "before_sha256": "6e7d579cb7908578addb4b8c8f6c61fdb7d278aa3a47ed81951b445cdf1848a7",
+      "after_sha256": "01fb9ca10b021a76ce010db92783bff9eee8ab9e5aa38d8794670896d1da690e",
+      "reason": "Separate current funding categories from historical supporting quotations after a short contextual answer.",
+      "verification": "Replay exactly four saved live outputs offline; no further model call."
+    },
+    "limits": "One known-meaning contextual sequence; not a general accuracy benchmark. Historical context_update verification describes the original implementation only."
   }
 }

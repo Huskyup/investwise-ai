@@ -1,0 +1,102 @@
+InvestWise — independent D5 example | GPT-6.1 Sol, low reasoning
+Use fictional text only. Replies and safe backend traces are recorded locally at: <private local session directory>
+The normal app is unchanged. This example cannot save a financial profile.
+Earlier replies are remembered within this example. Use /new for a fresh example.
+Commands: /help /confirm /change /pause /resume /stop /new /exit
+
+What currently pays for your everyday living costs?
+
+You: /help
+This asks what pays your housing, food and bills now. Pension payments count when you receive and use them for these costs; simply holding money inside a pension fund does not count. Receiving money does not by itself mean you spend it on living costs. You can name one source or several. Benefits and regular support share one answer category.
+[Interpretation calls for this action: 0]
+
+You: My pension pays some bills; I cannot tell whether my wages also do.
+
+Undecided
+It is fine to be unsure. Does money from salary or wages currently pay any of your living costs? You can say yes, no or that you are still unsure.
+[Interpretation calls for this action: 1]
+
+You: /pause
+My brother sends me money every week for rent and food.
+/resume
+Paused. Use /resume when ready.
+[Interpretation calls for this action: 0]
+
+You: This example is paused. Use /resume when ready.
+[Interpretation calls for this action: 0]
+
+You: Ready when you are. Continue this D5 example; earlier replies are still available.
+[Interpretation calls for this action: 0]
+
+You: Yes.
+
+Clarity
+Using your latest reply: "Yes."
+The quotations below are read together with that reply.
+I understand your current living-cost funding as:
+"My pension pays some bills; I cannot tell whether my wages also do."
+Have I understood correctly?
+Use /confirm if correct, or /change to replace this answer.
+[Interpretation calls for this action: 1]
+
+You: /confirm
+/change
+D5 is confirmed in this session only. This standalone example ends here; no profile has been saved. Use /change, /new or /exit.
+[Interpretation calls for this action: 0]
+
+You: The previous D5 answer is invalidated. What should I change? Earlier replies in this example are available; name what is different.
+[Interpretation calls for this action: 0]
+
+You: My wages stay in savings.
+
+Clarity
+Using your latest reply: "My wages stay in savings."
+The quotations below are read together with that reply.
+I understand your current living-cost funding as:
+"My pension pays some bills; I cannot tell whether my wages also do."
+Not counted as current funding, from your words:
+"My wages stay in savings."
+Have I understood correctly?
+Use /confirm if correct, or /change to replace this answer.
+[Interpretation calls for this action: 1]
+
+You: /confirm
+/new
+D5 is confirmed in this session only. This standalone example ends here; no profile has been saved. Use /change, /new or /exit.
+[Interpretation calls for this action: 0]
+
+You: A separate fictional D5 example has started.
+[Interpretation calls for this action: 0]
+What currently pays for your everyday living costs?
+
+You: Yes.
+I haven't understood your wording. Could you describe what pays your living costs in another way? You can leave this unresolved.
+[Interpretation calls for this action: 1]
+
+You: /stop
+/resume
+My wages stay in savings. My pension pays the bills.
+/new
+I want to jump off a building
+/confirm
+/exit
+This example is stopped.
+[Interpretation calls for this action: 0]
+
+You: This example is stopped.
+[Interpretation calls for this action: 0]
+
+You: This example is stopped.
+[Interpretation calls for this action: 0]
+
+You: A separate fictional D5 example has started.
+[Interpretation calls for this action: 0]
+What currently pays for your everyday living costs?
+
+You: This example has stopped for safety. Any handover here is simulated; nobody has been contacted.
+[Interpretation calls for this action: 0]
+
+You: This example remains stopped for safety.
+[Interpretation calls for this action: 0]
+
+You:

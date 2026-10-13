@@ -1,0 +1,77 @@
+{
+  "input": "Yes.",
+  "raw": {
+    "answer_scope": "unknown",
+    "evidence": [
+      "Yes."
+    ],
+    "facts": [],
+    "missing_information": [
+      "reply_unclear"
+    ],
+    "model_abstain": true,
+    "option_id": null,
+    "semantic_bucket": null
+  },
+  "raw_output": "{\"answer_scope\":\"unknown\",\"evidence\":[\"Yes.\"],\"facts\":[],\"missing_information\":[\"reply_unclear\"],\"model_abstain\":true,\"option_id\":null,\"semantic_bucket\":null}",
+  "dialogue_context": {
+    "history": [],
+    "pending_prompt": "What currently pays for your everyday living costs?",
+    "correction_requested": false
+  },
+  "result": {
+    "action": "clarify",
+    "question_id": "D5",
+    "reason": "independent_model_abstention",
+    "clarification_turns": 1,
+    "profile_complete": false,
+    "recorded": false,
+    "followup": "I haven't understood your wording. Could you describe what pays your living costs in another way? You can leave this unresolved.",
+    "bucket": null,
+    "model_uncertain": true,
+    "contract_outcome": "abstention",
+    "clarification_topic": "reply_unclear"
+  },
+  "decision": {
+    "outcome": "abstention",
+    "reason": "independent_model_abstention",
+    "semantic_bucket": null,
+    "option_id": null,
+    "answer_scope": "unknown",
+    "input_sha256": "5f9a2b795615ba6a3d5455fd5624d773fbca5bcd16249c421fd37411dc9837da",
+    "proposal_sha256": "f3b4642639d83ccdcdc0498edb6833ee15ef018f590c8c45428a50b075815319",
+    "spec_sha256": "de251a7783332cdd75ae11ff3663e1bbea2cc15014883e82475ef0375cfd342c",
+    "contract_sha256": "ccf107a7171a4acc9c13ab2b51de8f9f4c5dc7a8d77bd1394170b26474acce22",
+    "contract_version": "d5-single-interpreter-v2-context-1",
+    "context_sha256": "a51c4aa431753786f8650b97493c6a2a9a5788f3d7207c85b95a2666292243ae",
+    "previous_reply_count": 0
+  },
+  "actual_model_calls": 1,
+  "candidate": null,
+  "selected": null,
+  "confirmed_version": null,
+  "saved_version": null,
+  "id": "CONTEXT-04",
+  "backend_call": {
+    "model_requested": "gpt-6.1-sol",
+    "provider_model": "gpt-6.1-sol",
+    "reasoning_effort_requested": "low",
+    "tools": [],
+    "tool_choice": "none",
+    "store": false,
+    "status": "completed",
+    "terminal_completed": true,
+    "actual_calls": 1,
+    "retry": false,
+    "output_repair": false,
+    "previous_reply_count": 0,
+    "fresh_server_context": true,
+    "elapsed_seconds": 5.945460416027345,
+    "usage": {
+      "input_tokens": 2302,
+      "output_tokens": 53,
+      "total_tokens": 2355
+    }
+  },
+  "private_record_sha256": "debba20a1d426b09df4511bb39021e42b82d9791e3c13c25aa234c47e4c2e92a"
+}

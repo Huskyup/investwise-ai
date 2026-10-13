@@ -1,0 +1,47 @@
+{
+  "scope": "Previously selected 51 affected checks plus five software interaction regressions; no expanded semantic evaluation bank",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "--basetemp=/tmp/pytest-investwise-context-20261013",
+    "-q",
+    "tests/test_bounded_semantics.py::test_explicit_first_person_height_danger_stops_before_financial_mapping",
+    "tests/test_bounded_semantics.py::test_other_or_explicitly_negated_jumping_is_not_an_urgent_intent_match",
+    "tests/test_ml_conversation.py",
+    "tests/test_conversation_shell.py::test_candidate_is_not_recorded_until_confirmation",
+    "tests/test_conversation_shell.py::test_pause_resume_preserves_candidate_and_confirmed_progress",
+    "tests/test_safety_holds.py::test_clear_answer_plus_help_gets_support_before_confirmation",
+    "tests/test_safety_holds.py::test_explicit_break_with_clear_answer_pauses_before_confirmation_without_distress",
+    "tests/test_safety_holds.py::test_grieving_and_explicit_break_preserve_both_care_and_control_flags"
+  ],
+  "cwd": "/Users/husky/Desktop/hackathon Bristol 2026/investwise-demo",
+  "started_at_utc": "2026-10-13T08:55:53.853414+00:00",
+  "finished_at_utc": "2026-10-13T08:55:55.423726+00:00",
+  "exit_code": 0,
+  "stdout": "........................................................                 [100%]\n56 passed in 1.22s\n",
+  "stderr": "",
+  "model_calls": 0,
+  "authentication_calls": 0,
+  "network_calls": 0,
+  "file_sha256_before": {
+    "ai/pre_model_controls.py": "4e9a981c5e0e0cc53545b914355509d43616a904326aaf53379a37bd1e7002c4",
+    "ai/conversation_engine.py": "9dba61f4ab72e0a32bb7f6cde39c78f94f7e7926a460f20e6004ae68fe06e327",
+    "tests/test_bounded_semantics.py": "379570217327a67f3ddb03355fd05c883f00ca762d530121a3beca76993677f1",
+    "tests/test_ml_conversation.py": "4d9f896333d35298115a689d6abb2b694223b664bdf0c149480558f2dee2413a"
+  },
+  "file_sha256_after": {
+    "ai/pre_model_controls.py": "4e9a981c5e0e0cc53545b914355509d43616a904326aaf53379a37bd1e7002c4",
+    "ai/conversation_engine.py": "9dba61f4ab72e0a32bb7f6cde39c78f94f7e7926a460f20e6004ae68fe06e327",
+    "tests/test_bounded_semantics.py": "379570217327a67f3ddb03355fd05c883f00ca762d530121a3beca76993677f1",
+    "tests/test_ml_conversation.py": "4d9f896333d35298115a689d6abb2b694223b664bdf0c149480558f2dee2413a"
+  },
+  "files_unchanged_during_run": true,
+  "changes_checked": [
+    "Expanded urgent-safety wording with existing negative guards",
+    "Approved-label follow-up for two or three uncertain ML options",
+    "Preserve required own-words follow-up during teachback",
+    "Only tag set-informed follow-up when displayed",
+    "Suppress further question follow-up at clarification limit"
+  ]
+}

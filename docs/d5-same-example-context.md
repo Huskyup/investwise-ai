@@ -2,7 +2,7 @@
 
 13 October 2026 · Maintained only in [Huskyup/investwise-ai](https://github.com/Huskyup/investwise-ai/tree/feature/all-question-ml-prototype).
 
-The standalone terminal now carries earlier user replies into its existing D5 interpretation request. This removes the architectural requirement to repeat the entire funding situation after every follow-up or correction. It does not establish that the model resolves every short reference correctly: no tests, replay, authentication or live inference were run for this update.
+The standalone terminal carries earlier user replies into its existing D5 interpretation request. One bounded live conversation now verifies a short `Yes.`, a targeted correction and a clean `/new`: four model calls produced the four expected outcomes, including two correct financial candidates. This removes the requirement to repeat the entire funding situation in that demonstrated sequence; it does not establish that every short reference will be understood. See the [recorded verification](d5-context-verification-2026-10-13/REPORT.md).
 
 ## What changes
 
@@ -12,7 +12,7 @@ The prompt asks the model to retain unaffected user-established facts, apply the
 
 The existing financial output schema is unchanged. Context-aware validation accepts quotations only from one actual user reply at a time. Authored assistant text and joins across turns cannot supply evidence. Non-abstaining contextual outputs must also quote the current reply. Existing category, relation, duplicate, completeness and no-financial-payload checks remain. These structural checks cannot prove that a correction was semantically understood.
 
-Each issued immutable decision binds the exact context snapshot used for that call, in addition to the existing current-input, specification, prompt and output hashes. Confirmation recomputes against that frozen snapshot, even after the session has appended another turn. The engine still checks the unmodified current input and versioned candidate receipt. Contextual confirmation displays the latest reply alongside the exact source quotations; nothing confirms or saves automatically.
+Each issued immutable decision binds the exact context snapshot used for that call, in addition to the existing current-input, specification, prompt and output hashes. Confirmation recomputes against that frozen snapshot, even after the session has appended another turn. The engine still checks the unmodified current input and versioned candidate receipt. Contextual confirmation displays the latest reply, current funding categories and exact supporting quotations separately; nothing confirms or saves automatically. This presentation was repaired after the live run because an older quotation still contained uncertainty resolved by `Yes.`. The repaired rendering is checked by replaying the saved outputs, without further model calls.
 
 ## Lifecycle and limits
 
@@ -32,7 +32,7 @@ The existing private diagnostic files now include the context snapshot. Clearing
 
 ## Scope and use
 
-Only the manually started D5 terminal is changed. All 15 questions, trained models, normal app factory/default and existing experiment evidence remain unchanged. No fusion, new financial wording rules, dependencies or training are added. Prompt, request data, validator provenance scope and follow-up wording have changed; this must not be described as a weights improvement or a measured accuracy gain.
+This context feature applies only to the manually started D5 terminal. All 15 questions, trained models, normal app factory/default model route and existing experiment evidence remain unchanged. Separately authorised main-app safety and uncertainty-follow-up repairs are documented in the [verification report](d5-context-verification-2026-10-13/REPORT.md); they change those conversation behaviours. No fusion, dependencies or training are added. The earlier context implementation changed the prompt, request data, validator provenance scope and follow-up wording; this must not be described as a weights improvement or a general accuracy gain.
 
 From the checkout root, use the existing launch command:
 
@@ -40,4 +40,4 @@ From the checkout root, use the existing launch command:
 "$HOME/.venvs/investwise-d5/bin/python" demos/d5/demo.py chat
 ```
 
-Use `/new` for a different fictional example, and `/change` for a correction to the same example. Existing eligible sign-in and dependencies are required; see the [run instructions](../demos/d5/README.md). No test command is required to launch. Static review and syntax/hash checks are the only verification in this update; the earlier eleven-case comparison, 22-input repair replay and successful live transcript describe earlier versions and do not validate contextual follow-ups.
+Use `/new` for a different fictional example, and `/change` for a correction to the same example. Existing eligible sign-in and dependencies are required; see the [run instructions](../demos/d5/README.md). No test command is required to launch. The new four-call transcript and offline software checks validate the bounded behaviours stated above. The earlier eleven-case comparison and 22-input repair replay remain historical evidence for their own versions.

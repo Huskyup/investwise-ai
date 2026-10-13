@@ -1,0 +1,63 @@
+{
+  "base_commit": "d7238a3513c5dffae47b6d0117c2ef463a27b263",
+  "comparison": "Working tree snapshot before live verification; already-pending main-app safety edits included in that snapshot.",
+  "previous_tracked_files": 194,
+  "unchanged_from_snapshot": 187,
+  "changed_from_snapshot": {
+    "ai/conversation_engine.py": {
+      "before": "f4b7eb76cf768d280a111ffcaa8481efe2d92c00c44b07779422fc4a187df41d",
+      "after": "9dba61f4ab72e0a32bb7f6cde39c78f94f7e7926a460f20e6004ae68fe06e327"
+    },
+    "demos/d5/README.md": {
+      "before": "5b2aeaa5b7d0679757a47ada4aaa80d62aed7ff7057795430007292ae97f3bc9",
+      "after": "72c9fb1f16c698a1748bf34934e284d4210592442f69579498f40e8c2aeb3ffb"
+    },
+    "demos/d5/runtime-manifest.json": {
+      "before": "0a3fcad96bf33f16a783fed8e57f6ca9d90cc2297b3900f6e04ae00facecaa2f",
+      "after": "cc49bd472fdd4078dc6c9b679ddb43aeb99f703ff466c0b55a165584c9df7450"
+    },
+    "demos/d5/runtime/ai/d5_single_interpreter_engine_v2.py": {
+      "before": "6e7d579cb7908578addb4b8c8f6c61fdb7d278aa3a47ed81951b445cdf1848a7",
+      "after": "01fb9ca10b021a76ce010db92783bff9eee8ab9e5aa38d8794670896d1da690e"
+    },
+    "docs/d5-same-example-context.md": {
+      "before": "a5ee4d20ab7d587f41fe28fcd169158cf673a208f2d23eda1c6104b96bf190b1",
+      "after": "bb8b52fd9c21155c61def7cc72ac63bd722a781d81c7e84e9a334ab5dc68e71a"
+    },
+    "docs/d5-semantic-method-handoff.md": {
+      "before": "fe7e962ef8ceec92e731a7b82dddb4cd2501958c4ab8eb6f97d8cf2ec7d2817d",
+      "after": "35ad505d2f00954d4e2f2b44045f04e7a1bf860ad31bdc28d8da8142ad117348"
+    },
+    "tests/test_ml_conversation.py": {
+      "before": "e6aea91c20d0bc5bcff665d1ec01ef89ada680276794ddfb65d057b76b815ddc",
+      "after": "4d9f896333d35298115a689d6abb2b694223b664bdf0c149480558f2dee2413a"
+    }
+  },
+  "protected_files": {
+    "config/business-decision-spec.json": "440ab6ba7e822fc460d142b1d60aa78e0a71eeaed3652145b87b07ddffe9a7b4",
+    "demos/d5/runtime/config/business-decision-spec.json": "77011caa61f1248aad6d3d20e5e51987fa1b60f93e117de0b8f5720215b8abea",
+    "ai/conversation_factory.py": "7e7e564d641beb4636180633c5fd4e4a32e14f08e7aabf46d3a8675e28d77498",
+    "ai/all_question_ml.py": "976738839f60e8cbed977f5ffeeac83374a3cb66f71e30be48af551fe3af143d",
+    "ai/conformal.py": "9438f1b8c8e88d97b447ccda82bba13200ba6e6eb9be27f9a4f1e8167242fad3",
+    "ai/text_classifier.py": "8051914b85bbb1cb06e2dbaed4f85d138924e3ab7a234f1d3fc2c8844b943c15",
+    "demos/d5/runtime/config/d5-single-interpreter-v2-prompt.txt": "474f95b7bdbf2dd5b0b2f3ea499b7eab1a06a588ab592c51f9045a1706b7c003",
+    "demos/d5/runtime/ai/d5_single_interpreter_contract_v2.py": "0e810446c424f640ae60372bea46cb57a8f03f2266bf4c6e4b29183a91955de1",
+    "demos/d5/runtime/ai/d5_single_interpreter_transport.py": "fae4f643277a0bb08fef9112b7f3962a9f2a4cd33131e1015d140186d9e31c7a"
+  },
+  "previous_d5_evidence_files_unchanged": 60,
+  "runtime_manifest_hashes_match": 41,
+  "main_app_tested_file_hashes_match": true,
+  "offline_tested_file_hashes_match": true,
+  "default_model_route_unchanged": true,
+  "all_15_questions_unchanged": true,
+  "trained_models_and_data_unchanged": true,
+  "main_app_safety_and_followup_behaviour_changed_as_authorised": true,
+  "publication_scan": {
+    "files_scanned": 24,
+    "secret_pattern_matches": 0,
+    "credential_files_read": false,
+    "limitation": "Pattern scan of this publication only; not a credential rotation or whole-history audit."
+  },
+  "personal_remote": "https://github.com/Huskyup/investwise-ai.git",
+  "unrelated_work_files_staged": false
+}

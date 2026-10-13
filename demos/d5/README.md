@@ -1,8 +1,8 @@
 # Run the independent D5 demonstration
 
-This is a manually started **terminal conversation** using the repaired D5 interpreter: GPT-6.1 Sol with low reasoning. You can type new fictional replies, read the interpretation or focused follow-up, confirm a candidate and replace an earlier answer. The normal Streamlit app, its default model route and its 15 questions are unchanged.
+This is a manually started **terminal conversation** using the repaired D5 interpreter: GPT-6.1 Sol with low reasoning. You can type new fictional replies, read the interpretation or focused follow-up, confirm a candidate and replace an earlier answer. The normal Streamlit default model route and all 15 questions are unchanged. Separately reviewed main-app safety and uncertainty-follow-up repairs are described in the handoff.
 
-The earlier current-reply-only version completed one live D5 conversation: a focused follow-up, pension-only confirmation, correction and fresh confirmation of mixed funding. It used three existing examples and three model calls. The [saved conversation and transcript](../../docs/d5-live-conversation-2026-10-12/REPORT.md) show that earlier run. The latest [same-example context update](../../docs/d5-same-example-context.md) has been reviewed statically only; it has not been tested live or through a new evaluation.
+The [13 October context verification](../../docs/d5-context-verification-2026-10-13/REPORT.md) completed four real model calls: a focused follow-up, short `Yes.`, a correction affecting wages only, and `Yes.` after `/new`. Both financial candidates were correct and explicitly confirmed; controls made no additional calls. A stale quotation in confirmation was found during the run and its presentation repaired afterwards using saved-output replay. This is one bounded conversation, not a general accuracy benchmark. The [earlier three-call conversation](../../docs/d5-live-conversation-2026-10-12/REPORT.md) remains available separately.
 
 ## Install once
 
@@ -48,7 +48,7 @@ git pull --ff-only https://github.com/Huskyup/investwise-ai.git feature/all-ques
 "$HOME/.venvs/investwise-d5/bin/python" demos/d5/demo.py chat
 ```
 
-The 13 October safety, confirmation and same-example context updates require no dependency change. They apply to this standalone terminal; the normal Streamlit default is unchanged. First-time users must complete installation and their own sign-in above. No test command is needed before launch.
+The 13 October safety, confirmation and same-example context updates require no dependency change. First-time users must complete installation and their own sign-in above. No test command is needed before launch.
 
 Enter a D5 answer on one line. The opening question is:
 
@@ -76,25 +76,26 @@ The screen shows the number of interpretation calls for each action. Financial i
 
 ## Use it for the company demonstration
 
-Start `chat` once. Enter each line below separately, read the response, then enter the next line. These are the exact existing examples used in the successful conversation; there is no need to run `check-11` first.
+Start `chat` once. Enter each line below separately, read the response, then enter the next line. This is the funding sequence from the recorded four-call context verification, omitting its separate control probes. There is no need to run `check-11` first.
 
 | Step | What to enter | What to look for |
 |---|---|---|
-| 1 | `I receive wages and pension payments` | A question about which sources actually pay living costs; no assumed financial answer. |
-| 2 | `My wages stay in savings. My pension pays the bills.` | Pension-only candidate, with wages excluded; asks for confirmation. |
-| 3 | `/confirm` | Confirms the pension answer in this session, with zero new model calls. |
-| 4 | `/change` | Invalidates the previous answer. The latest runtime retains the example's earlier replies for the correction. |
-| 5 | `Both my wages and pension pay for everyday costs.` | New mixed-source candidate with both categories, awaiting fresh confirmation. |
-| 6 | `/confirm` | Confirms the corrected answer, with zero new model calls. |
-| 7 | `/exit` | Ends the session without saving a financial profile. |
+| 1 | `My pension pays some bills; I cannot tell whether my wages also do.` | An Undecided response asking whether wages also pay living costs. |
+| 2 | `Yes.` | Pension and wages remain active; a mixed-source candidate awaits confirmation. |
+| 3 | `/confirm` | Confirms the mixed-source answer with zero new model calls. |
+| 4 | `/change` | Invalidates confirmation while retaining this example's replies. |
+| 5 | `My wages stay in savings.` | Wages are excluded; pension is retained. A pension-only candidate awaits fresh confirmation. |
+| 6 | `/confirm` | Confirms the corrected answer with zero new model calls. |
+| 7 | `/new` then `Yes.` on a separate line | Asks for clarification; the previous funding situation must not carry over. |
+| 8 | `/exit` | Ends the session without saving a financial profile. |
 
-Explain the business point: **receiving money does not establish how it is used; one interpretation supports a focused follow-up, confirmation and correction.** The transcript records one successful live run of the earlier version, not a verification of the new context handling or guaranteed service availability. If a live request fails, the session stops. The saved transcript can be shown as a labelled recording of the earlier run; it must not be presented as live inference.
+Explain the business point: **D5 keeps the customer's earlier funding details within one example, asks about the missing relationship, and changes only the corrected detail before requesting confirmation.** Receiving money still does not establish how it is used. The transcript records one live run; the final confirmation layout was checked offline afterwards. It does not guarantee new wording or service availability. If a live request fails, the session stops. A saved transcript must be shown as a labelled recording, never as live inference.
 
 ## Try your own wording
 
 Use the same `chat` command and type your own fictional D5 answer instead of the demonstration sequence. Use `/new` between independent examples and `/change` to replace an answer within the same example. Read the proposed meaning before using `/confirm`.
 
-For follow-ups, you can answer the question just asked without repeating all earlier details. For corrections, name what changes; `/change` retains earlier replies within this example. If a reference is unclear, the demo should ask rather than guess. Without `/new`, you remain in the same example: do not introduce a different fictional customer as though it were a continuation. Read the whole confirmation before using `/confirm`. This context behaviour is implemented but has not been measured live in this update.
+For follow-ups, you can answer the question just asked without repeating all earlier details. For corrections, name what changes; `/change` retains earlier replies within this example. If a reference is unclear, the demo should ask rather than guess. Without `/new`, you remain in the same example: do not introduce a different fictional customer as though it were a continuation. Read the whole confirmation before using `/confirm`. The recorded sequence demonstrates this behaviour for those inputs; new wording can still require clarification.
 
 ## Local records and access failures
 
@@ -124,6 +125,6 @@ No model, prompt, schema, semantic validator, business definition or follow-up w
 
 The subsequent context update changes the packaged prompt, context-aware evidence validation, authored follow-up wording and request data. It keeps the financial JSON output schema, model and one-call resolver interface unchanged. It adds no retraining, second interpreter, classifier or dependency. Exact quotations may now come from a single earlier user reply, never from assistant text or a fabricated join across replies. The current reply must also be evidenced for a non-abstaining contextual interpretation.
 
-Numerical packages are import dependencies of existing shared types; the demo does not train or call those classifiers. The [runtime manifest](runtime-manifest.json) records original and current hashes, portability differences, runtime updates and pinned versions. The earlier repair's offline results do not validate this later context update. No tests or live requests were run for the context change.
+Numerical packages are import dependencies of existing shared types; the demo does not train or call those classifiers. The [runtime manifest](runtime-manifest.json) records original and current hashes, portability differences, runtime updates and pinned versions. The [context report](../../docs/d5-context-verification-2026-10-13/REPORT.md) separates live interpretation results, offline checks and the post-live confirmation repair. Earlier evidence is preserved unchanged.
 
 For the semantic method and all eleven before/after cases, read the [technical handoff](../../docs/d5-semantic-method-handoff.md).
