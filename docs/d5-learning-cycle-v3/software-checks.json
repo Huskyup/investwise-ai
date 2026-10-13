@@ -1,0 +1,20 @@
+{
+  "stage": "formal_software_gate",
+  "started_at": "2026-10-13T20:35:08.279684+00:00",
+  "completed_at": "2026-10-13T20:35:08.431721+00:00",
+  "runs": 1,
+  "tests_run": 19,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "log_sha256": "1939f727bfabf6be9531e822c8206e3d1079c6d38dc73ae1b0f016a9129916e3",
+  "source_sha256": {
+    "demos/d5/learning_cycle_v3.py": "ade7c95813b3220cd0761d996affb351564ae8742f1b7eef88cb5011f5b9e95e",
+    "demos/d5/test_learning_cycle_v3.py": "94b3d9391f44e3687ff0e737a576b1818548607fff4cb05667841f6a5892072b"
+  },
+  "candidate_fits": 0,
+  "semantic_inference": 0,
+  "actual_gpt_calls": 0,
+  "scope": "Pure integrity/scoring fixtures; model imports, deserialisation, network and subprocesses blocked. No additional language cases."
+}

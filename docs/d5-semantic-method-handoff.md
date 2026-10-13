@@ -4,7 +4,15 @@ Updated 13 October 2026 · `feature/all-question-ml-prototype`
 
 Maintained delivery repository: [Huskyup/investwise-ai](https://github.com/Huskyup/investwise-ai/tree/feature/all-question-ml-prototype). Use the explicit repository URL below when updating an older checkout whose `origin` may point elsewhere.
 
-## Latest D5 learning result: both classifiers updated once
+## Latest D5 learning result: reviewed wording repair, one comparison
+
+The owner approved [15 wording changes within the existing 64 option-training rows](d5-learning-cycle-v3/SAMPLE_REVIEW.md). The [v3 cycle](d5-learning-cycle-v3/README.md) reused the complete v2 intent artifact unchanged, fitted only the D5 option classifier once, and recalibrated with the original forty rows, algorithm and alpha. Architecture, hyperparameters, validators, all fifteen questions, GPT configuration and defaults remain unchanged.
+
+**The comparison failed: no new correct ML financial acceptance, and one v2 raw savings success regressed.** The two designated savings replies pass the intent gate but retain three and four source candidates. Across the same 27 opened replies, all 25 candidate-eligible replies escalate (12 at intent, 13 at option); none reaches business validation. Two Help controls are separate. Correct raw source totals remain 10/15 compared with v2: the earlier savings/future-pension result is recovered, but D5-LV-01 is lost. Preservation is 67/68 reference checks, or 27/28 distinct case/axis requirements. See [measured results](d5-learning-cycle-v3/RESULTS.md) and [all per-case outcomes](d5-learning-cycle-v3/PER_CASE.md).
+
+The single software gate passed 19 pure fixtures. The semantic comparison then stopped the attempt: no extra fit, new samples, threshold adjustment, contextual replay, GPT request or live dialogue followed. There is **no learning-v3 launch profile**; current commands below still use the existing demo. The [company account](d5-learning-cycle-v3/COMPANY_CASE.md) describes a reviewed learning attempt, not a completed successful flywheel. Both artifacts, exact commands, hashes and the stop receipt are retained for audit and reproducibility.
+
+## Earlier D5 learning result: both classifiers updated once
 
 The owner approved 24 new fictional rows for a separate [v2 learning cycle](d5-learning-cycle-v2/README.md). One isolated candidate fitted the existing D5 intent classifier on 80 rows and option classifier on 64 clear rows, with the original calibration sets, algorithm and hyperparameters. The single comparison covered 19 opened cases plus eight separately authored, training-excluded replies.
 

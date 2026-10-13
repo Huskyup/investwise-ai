@@ -1,0 +1,55 @@
+{
+  "status": "built_not_promoted",
+  "completed_at": "2026-10-13T20:35:21.019202+00:00",
+  "identity": {
+    "protocol_sha256": "ad96e47a3359c9b0e9f915306850112a17993cd941f8670c06f526c5b95455df",
+    "artifacts": {
+      "intent": "24086a0f0efe05eb3a69f6ef852c4714cd5e8f954584fa7c210f3cc643402831",
+      "option": "f0a24bb1632a224a9b3007796929025e90397a0e997b2a2b42a7982375187c2b"
+    },
+    "baseline_identity": "48cb3f1b0799cd8d8758f7a0eddf7cd789ef29b4da8f0ea062b66b5087bda2d1",
+    "baseline_source_hash": "13b6a8f494c773e90d28e8d105cc1b2de7bbebba20db980331b23397f253c4b8",
+    "proposal_sha256": "ccf9707df15b0ca522878af200a6c4cbbc109d361b55d5b9bd6339398af13ddd",
+    "calibration_sha256": "3b63ebddf80f8b5758bcbef9cb8d662741e68de38660455dcc4649106d5792be",
+    "inherited_v2_candidate_identity": "1c0ca5bee75b70192305617449bd589be8437ebe0f4d785c9bea9fd945ef9e19"
+  },
+  "candidate_identity_sha256": "8f96f9db7cdabf5f2ae52321b355557bef5ab02491738a64796a57b7dac00e0a",
+  "candidate_fit_counts": {
+    "intent": 0,
+    "option": 1
+  },
+  "candidate_calibration_counts": {
+    "intent": 0,
+    "option": 1
+  },
+  "option_training_rows": 64,
+  "option_calibration_rows": 40,
+  "intent_reused_sha256": "24086a0f0efe05eb3a69f6ef852c4714cd5e8f954584fa7c210f3cc643402831",
+  "alpha": 0.1,
+  "thresholds": {
+    "intent": 0.7331168060984319,
+    "option": 0.8773703613464233
+  },
+  "baseline_startup": "unchanged original routine reconstructs 15 intent and 15 option predictors",
+  "other_fourteen_retained": true,
+  "all_questions": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D8",
+    "D9",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15"
+  ],
+  "actual_gpt_calls": 0,
+  "default_changed": false,
+  "candidate_ready_for_demo": false
+}

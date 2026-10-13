@@ -1,0 +1,64 @@
+{
+  "stage": "formal_first_turn_comparison",
+  "status": "stopped_required_gates_failed",
+  "recorded_at": "2026-10-13T20:36:46.981303+00:00",
+  "candidate_fits": {
+    "intent": 0,
+    "option": 1
+  },
+  "formal_comparisons": 1,
+  "completed_cases": 27,
+  "blocking_gates": [
+    {
+      "gate": "all_four_second_opened_clear_raw_options",
+      "case_id": "D5-V2-LV-03",
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "gate": "all_four_second_opened_clear_raw_options",
+      "case_id": "D5-V2-LV-04",
+      "compared_with": "unchanged_baseline"
+    },
+    {
+      "gate": "all_eight_opened_clear_raw_options",
+      "case_id": "D5-LV-01"
+    },
+    {
+      "gate": "all_eight_opened_clear_raw_options",
+      "case_id": "D5-V2-LV-03"
+    },
+    {
+      "gate": "all_eight_opened_clear_raw_options",
+      "case_id": "D5-V2-LV-04"
+    },
+    {
+      "gate": "no_new_raw_error_preserve_previous_success",
+      "case_id": "D5-LV-01",
+      "compared_with": "frozen_previous_v2_candidate"
+    },
+    {
+      "gate": "all_four_second_opened_clear_raw_options",
+      "case_id": "D5-V2-LV-03",
+      "compared_with": "frozen_previous_v2_candidate"
+    },
+    {
+      "gate": "all_four_second_opened_clear_raw_options",
+      "case_id": "D5-V2-LV-04",
+      "compared_with": "frozen_previous_v2_candidate"
+    },
+    {
+      "gate": "designated_opened_savings_escalation_becomes_ml_acceptance",
+      "case_id": null
+    }
+  ],
+  "actual_gpt_calls": 0,
+  "context_replay_run": false,
+  "live_dialogue_run": false,
+  "candidate_profile_added": false,
+  "default_changed": false,
+  "retry": false,
+  "completed_flywheel": false,
+  "protocol_sha256": "ad96e47a3359c9b0e9f915306850112a17993cd941f8670c06f526c5b95455df",
+  "candidate_identity_sha256": "8f96f9db7cdabf5f2ae52321b355557bef5ab02491738a64796a57b7dac00e0a",
+  "stop_scope": "No further model calls, fits, recalibration, comparison, context replay or live requests; documentation, preservation checks and own-branch publication only."
+}

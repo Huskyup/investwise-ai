@@ -1,0 +1,16 @@
+{
+  "status": "byte_identical_publication_copy",
+  "recorded_at": "2026-10-13T20:36:46.984758+00:00",
+  "source_cycle": "/Users/husky/.local/state/investwise/d5-learning-v3/first-reviewed-cycle",
+  "files": {
+    "STOP.json": "8c08051ae58b2ea2da9a8d1d46b331116c5be52a8fe7b6859be4ea174bd65cbd",
+    "build.json": "c0a2ec6511683aa9605a16ec5360cc75256e101d8139c48a6036c253ba48dd21",
+    "build.started.json": "975d838000360c3ea3c942bfdcaa7197e5a291e8d0440ff905daba468af4f752",
+    "compare.json": "3a447b36d7cf570905b5f0437d0e101f466b910a04d1fd0ecf6caf74cb64df8d",
+    "compare.started.json": "6b29d836c5cb6dd2155f442c5cdffe325ad6364b152cfa1f9c32963e98050130",
+    "d5-intent-candidate.joblib": "24086a0f0efe05eb3a69f6ef852c4714cd5e8f954584fa7c210f3cc643402831",
+    "d5-option-candidate.joblib": "f0a24bb1632a224a9b3007796929025e90397a0e997b2a2b42a7982375187c2b",
+    "freeze.json": "a5590c47a3afe3a0afaee3eccc88552f72e2d355332ecbd899ca9d746c856750",
+    "protocol.json": "ad96e47a3359c9b0e9f915306850112a17993cd941f8670c06f526c5b95455df"
+  }
+}

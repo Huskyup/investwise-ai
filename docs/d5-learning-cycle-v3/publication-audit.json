@@ -1,0 +1,13 @@
+{
+  "scope": "Exact staged files; pattern scan and explicit path allowlist. Does not claim universal secret detection.",
+  "staged_files": 30,
+  "credential_pattern_hits": [],
+  "unrelated_files_staged": false,
+  "unrelated_files_unchanged": true,
+  "frozen_files_unchanged": true,
+  "destination": "https://github.com/Huskyup/investwise-ai.git",
+  "branch": "feature/all-question-ml-prototype",
+  "git_diff_check": "passed",
+  "software_log_included": true,
+  "credentials_or_private_transcript_directories_read": false
+}

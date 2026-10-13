@@ -1,0 +1,1018 @@
+{
+  "status": "text_and_identity_review_only",
+  "reviewer": "root AI assistant",
+  "draft_sha256": "ccf9707df15b0ca522878af200a6c4cbbc109d361b55d5b9bd6339398af13ddd",
+  "rows": 64,
+  "changed": 15,
+  "unchanged": 49,
+  "ids_labels_sources_and_original_text_verified": true,
+  "option_counts": {
+    "D5_SALARY": 10,
+    "D5_SELF_EMPLOYMENT": 6,
+    "D5_PENSION_PAYMENTS": 6,
+    "D5_BENEFITS_SUPPORT": 6,
+    "D5_WITHDRAWALS": 14,
+    "D5_OTHER_REGULAR": 6,
+    "D5_NO_REGULAR": 6,
+    "D5_MULTIPLE": 10
+  },
+  "protected_rows": 87,
+  "normalised_duplicate_training_groups": [],
+  "exact_protected_overlap": 0,
+  "changed_near_overlap_flags": [],
+  "unchanged_near_overlap_flags": [],
+  "method": "Normalised equality and max forward/reverse SequenceMatcher character ratio; >=0.80 is a review flag, not a semantic proof. Known calibration60 and opened27 are used for exclusion checks only, not as training text.",
+  "coverage": {
+    "D5_BENEFITS_SUPPORT": {
+      "current_living_expenses": {
+        "before": 0,
+        "after": 1
+      },
+      "day_to_day": {
+        "before": 0,
+        "after": 1
+      }
+    },
+    "D5_MULTIPLE": {
+      "current_living_expenses": {
+        "before": 0,
+        "after": 1
+      },
+      "day_to_day": {
+        "before": 0,
+        "after": 1
+      }
+    },
+    "D5_NO_REGULAR": {
+      "current_living_expenses": {
+        "before": 0,
+        "after": 1
+      },
+      "day_to_day": {
+        "before": 0,
+        "after": 1
+      }
+    },
+    "D5_OTHER_REGULAR": {
+      "current_living_expenses": {
+        "before": 0,
+        "after": 1
+      },
+      "day_to_day": {
+        "before": 0,
+        "after": 1
+      }
+    },
+    "D5_PENSION_PAYMENTS": {
+      "current_living_expenses": {
+        "before": 0,
+        "after": 1
+      },
+      "day_to_day": {
+        "before": 0,
+        "after": 1
+      }
+    },
+    "D5_SALARY": {
+      "current_living_expenses": {
+        "before": 0,
+        "after": 1
+      },
+      "day_to_day": {
+        "before": 2,
+        "after": 2
+      }
+    },
+    "D5_SELF_EMPLOYMENT": {
+      "current_living_expenses": {
+        "before": 0,
+        "after": 1
+      },
+      "day_to_day": {
+        "before": 0,
+        "after": 1
+      }
+    },
+    "D5_WITHDRAWALS": {
+      "current_living_expenses": {
+        "before": 0,
+        "after": 1
+      },
+      "day_to_day": {
+        "before": 0,
+        "after": 1
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "SYNTH-V1-D5-TRAIN-001",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-STD-08",
+          "bank": "opened_27",
+          "ratio": 0.574257,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-002",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-003",
+          "bank": "original_calibration",
+          "ratio": 0.57732,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-003",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-009",
+          "bank": "original_calibration",
+          "ratio": 0.594203,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-004",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-026",
+          "bank": "original_calibration",
+          "ratio": 0.516129,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-005",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-STD-05",
+          "bank": "opened_27",
+          "ratio": 0.519231,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-006",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-STD-08",
+          "bank": "opened_27",
+          "ratio": 0.503937,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-007",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-STD-03",
+          "bank": "opened_27",
+          "ratio": 0.609524,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-008",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-013",
+          "bank": "original_calibration",
+          "ratio": 0.5,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-009",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-040",
+          "bank": "original_calibration",
+          "ratio": 0.586466,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-010",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-008",
+          "bank": "original_calibration",
+          "ratio": 0.539007,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-011",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-STD-05",
+          "bank": "opened_27",
+          "ratio": 0.589286,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-012",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-026",
+          "bank": "original_calibration",
+          "ratio": 0.510638,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-013",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-026",
+          "bank": "original_calibration",
+          "ratio": 0.604651,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-014",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-040",
+          "bank": "original_calibration",
+          "ratio": 0.542636,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-015",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-037",
+          "bank": "original_calibration",
+          "ratio": 0.592,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-016",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-039",
+          "bank": "original_calibration",
+          "ratio": 0.544218,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-017",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-012",
+          "bank": "original_calibration",
+          "ratio": 0.557576,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-018",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-006",
+          "bank": "original_calibration",
+          "ratio": 0.529032,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-019",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-026",
+          "bank": "original_calibration",
+          "ratio": 0.610169,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-020",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-040",
+          "bank": "original_calibration",
+          "ratio": 0.621622,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-021",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-057",
+          "bank": "original_calibration",
+          "ratio": 0.48,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-022",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-STD-08",
+          "bank": "opened_27",
+          "ratio": 0.672566,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-023",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-024",
+          "bank": "original_calibration",
+          "ratio": 0.484375,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-024",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-STD-04",
+          "bank": "opened_27",
+          "ratio": 0.557692,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-025",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-023",
+          "bank": "original_calibration",
+          "ratio": 0.605634,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-026",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-027",
+          "bank": "original_calibration",
+          "ratio": 0.525547,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-027",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-025",
+          "bank": "original_calibration",
+          "ratio": 0.589928,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-028",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-038",
+          "bank": "original_calibration",
+          "ratio": 0.54902,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-029",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-026",
+          "bank": "original_calibration",
+          "ratio": 0.575758,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-030",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-038",
+          "bank": "original_calibration",
+          "ratio": 0.445946,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-031",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-026",
+          "bank": "original_calibration",
+          "ratio": 0.596774,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-032",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-003",
+          "bank": "original_calibration",
+          "ratio": 0.571429,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-033",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-037",
+          "bank": "original_calibration",
+          "ratio": 0.661417,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-034",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-035",
+          "bank": "original_calibration",
+          "ratio": 0.522523,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-035",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-005",
+          "bank": "original_calibration",
+          "ratio": 0.535433,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-036",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-030",
+          "bank": "original_calibration",
+          "ratio": 0.476923,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-037",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-STD-08",
+          "bank": "opened_27",
+          "ratio": 0.738739,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-038",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-037",
+          "bank": "original_calibration",
+          "ratio": 0.601504,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-039",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-031",
+          "bank": "original_calibration",
+          "ratio": 0.744828,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-040",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-032",
+          "bank": "original_calibration",
+          "ratio": 0.598425,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-041",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-031",
+          "bank": "original_calibration",
+          "ratio": 0.621212,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-042",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-STD-08",
+          "bank": "opened_27",
+          "ratio": 0.504065,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-043",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-038",
+          "bank": "original_calibration",
+          "ratio": 0.569536,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-044",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-037",
+          "bank": "original_calibration",
+          "ratio": 0.560606,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-045",
+      "changed": true,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-029",
+          "bank": "original_calibration",
+          "ratio": 0.671756,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-046",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-STD-04",
+          "bank": "opened_27",
+          "ratio": 0.603448,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-047",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-039",
+          "bank": "original_calibration",
+          "ratio": 0.521127,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "SYNTH-V1-D5-TRAIN-048",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-006",
+          "bank": "original_calibration",
+          "ratio": 0.506173,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-LT-01",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-058",
+          "bank": "original_calibration",
+          "ratio": 0.307692,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-LT-02",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-STD-06",
+          "bank": "opened_27",
+          "ratio": 0.376812,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-LT-03",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-STD-06",
+          "bank": "opened_27",
+          "ratio": 0.475248,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-LT-04",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-024",
+          "bank": "original_calibration",
+          "ratio": 0.535433,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-LT-05",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-STD-02",
+          "bank": "opened_27",
+          "ratio": 0.285714,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-LT-06",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-STD-03",
+          "bank": "opened_27",
+          "ratio": 0.637363,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-LT-07",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-052",
+          "bank": "original_calibration",
+          "ratio": 0.525424,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-LT-08",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-040",
+          "bank": "original_calibration",
+          "ratio": 0.516556,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-V2-LT-01",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-V2-LV-01",
+          "bank": "opened_27",
+          "ratio": 0.533333,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-V2-LT-02",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-LV-02",
+          "bank": "opened_27",
+          "ratio": 0.486188,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-V2-LT-03",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-011",
+          "bank": "original_calibration",
+          "ratio": 0.490323,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-V2-LT-04",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-LV-08",
+          "bank": "opened_27",
+          "ratio": 0.450867,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-V2-LT-05",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-029",
+          "bank": "original_calibration",
+          "ratio": 0.598639,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-V2-LT-06",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-V2-LV-04",
+          "bank": "opened_27",
+          "ratio": 0.52809,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-V2-LT-07",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "SYNTH-V1-D5-CALIBRATION-036",
+          "bank": "original_calibration",
+          "ratio": 0.497462,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    },
+    {
+      "id": "D5-V2-LT-08",
+      "changed": false,
+      "exact_matches": [],
+      "nearest": [
+        {
+          "id": "D5-LV-07",
+          "bank": "opened_27",
+          "ratio": 0.4625,
+          "exact": false
+        }
+      ],
+      "near_matches": []
+    }
+  ],
+  "model_executions": 0,
+  "formal_comparisons": 0,
+  "training_runs": 0,
+  "gpt_calls": 0,
+  "limitations": [
+    "AI-authored, pending human approval.",
+    "Root has read earlier diagnostic evidence; this is development preparation, not blind evaluation.",
+    "No new held-out accuracy or conformal coverage claim is made."
+  ],
+  "pre_human_review_editorial_changes": [
+    "Root clarified inherited pending-review notes as historical provenance; v1/v2 original approvals remain valid.",
+    "Separate static reviewer requested numerical proportion instead of allocation in LT-07 annotation; training text and label remain unchanged."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "reviewer": "fca_method_assessment AI agent",
+  "kind": "separate_static_semantic_and_scope_review",
+  "human_approval": false,
+  "draft_sha256": "ccf9707df15b0ca522878af200a6c4cbbc109d361b55d5b9bd6339398af13ddd",
+  "conclusion": "No material label, business-meaning, source-exclusion or time-scope defect identified across64rows and15edits; two editorial annotations clarified before user review.",
+  "editorial_clarifications": [
+    "Root clarified inherited pending-review notes as historical provenance; v1/v2 original approvals remain valid.",
+    "Separate static reviewer requested numerical proportion instead of allocation in LT-07 annotation; training text and label remain unchanged."
+  ],
+  "models_executed_by_reviewer": 0,
+  "semantic_performance_verified": false,
+  "limits": [
+    "This is AI static review, not human approval or evidence of ML acceptance.",
+    "All sixteen later v1/v2 clarity additions remain verbatim."
+  ]
+}

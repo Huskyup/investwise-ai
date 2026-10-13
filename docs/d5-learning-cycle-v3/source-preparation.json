@@ -1,0 +1,30 @@
+{
+  "stage": "source_prepared_awaiting_human_approval",
+  "recorded_at": "2026-10-13T18:36:59.445154+00:00",
+  "source": {
+    "demos/d5/learning_cycle_v3.py": {
+      "sha256": "ade7c95813b3220cd0761d996affb351564ae8742f1b7eef88cb5011f5b9e95e",
+      "syntax": "parsed_without_execution",
+      "test_methods": 0
+    },
+    "demos/d5/test_learning_cycle_v3.py": {
+      "sha256": "94b3d9391f44e3687ff0e737a576b1818548607fff4cb05667841f6a5892072b",
+      "syntax": "parsed_without_execution",
+      "test_methods": 19
+    }
+  },
+  "static_review": "Separate AI reviewer fca_method_assessment found no material runner defect; root subsequently checked the explicit missing-review guard and exclusion of mutable README from the frozen protocol.",
+  "test_execution": "not_run",
+  "models_deserialised": 0,
+  "candidate_training_runs": 0,
+  "formal_comparisons": 0,
+  "gpt_calls": 0,
+  "cycle_frozen": false,
+  "profile_available": false,
+  "review_received": false,
+  "tracked_files_checked": 457,
+  "tracked_files_changed": [],
+  "unrelated_files_changed": [],
+  "head": "3f91dd233c6f4018a54a43587837df32f93e0384",
+  "commit_or_push": false
+}

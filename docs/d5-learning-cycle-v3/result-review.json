@@ -1,0 +1,50 @@
+{
+  "recorded_at": "2026-10-13T20:41:19.942100+00:00",
+  "reviewer": "Separate AI reviewer /root/fca_method_assessment; documentation corrections applied and checked by root",
+  "scope": "Read-only saved JSON/artifact-hash and report review. No model deserialisation, prediction, scoring rerun or tests.",
+  "result": "Required first-turn gates fail; stop before context and live stages. No scoring defect found.",
+  "verified_summary": {
+    "correct_candidate_financial_acceptance": 0,
+    "wrong_candidate_financial_acceptance": 0,
+    "candidate_eligible": 25,
+    "candidate_escalations": 25,
+    "first_stop_intent": 12,
+    "first_stop_option": 13,
+    "business_validator_reached": 0,
+    "help_controls": 2,
+    "actual_gpt_calls": 0,
+    "preserved_reference_records": 67,
+    "required_reference_records": 68,
+    "preserved_distinct_case_axes": 27,
+    "required_distinct_case_axes": 28,
+    "raw_clear_sources_correct": 10,
+    "raw_clear_sources_scored": 15,
+    "raw_intent_correct": 17,
+    "raw_intent_scored": 19,
+    "raw_regression_case": "D5-LV-01",
+    "raw_recovered_case": "D5-STD-06",
+    "target_savings_option_set_sizes": [
+      3,
+      4
+    ]
+  },
+  "documentation_corrections": [
+    "Distinguish unchanged hyperparameters from newly fitted coefficients.",
+    "Use saved v2 inclusion cutoff 0.1167199552227606.",
+    "Baseline parity covers semantic decision fields, not every probability/output byte."
+  ],
+  "root_correction_checks": {
+    "hyperparameter_wording": true,
+    "correct_v2_cutoff": true,
+    "parity_scope": true
+  },
+  "reviewed_documents_sha256": {
+    "docs/d5-learning-cycle-v3/README.md": "91ba03ca78d1446736e8c78b088853f0a7075cf936ac78c7f8faa7e5a057ee15",
+    "docs/d5-learning-cycle-v3/RESULTS.md": "aa587cdafa056c6bb365607b74a38fcce083c88d11d261110cb251c3f69792ff",
+    "docs/d5-learning-cycle-v3/PER_CASE.md": "08357c01644a00c6f3c3bd5d774f2a8bed7faf96fb63a1e74d2a693507aac718",
+    "docs/d5-learning-cycle-v3/COMPANY_CASE.md": "b848eb182ce7fb7953e89f7fc0b16fea7e1b67011efed1a9d8f2247cf0743250",
+    "docs/d5-semantic-method-handoff.md": "ab931363039d978ae8fea6a9686dd0ccf1b5fe3c30422b2501b1cca6f8c5fc23"
+  },
+  "candidate_ready_for_demo": false,
+  "flywheel_complete": false
+}

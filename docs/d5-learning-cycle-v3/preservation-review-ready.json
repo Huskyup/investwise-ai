@@ -1,0 +1,14 @@
+{
+  "stage": "awaiting_human_review",
+  "at": "2026-10-13T18:29:13.119160+00:00",
+  "tracked_files_checked": 457,
+  "tracked_files_changed": [],
+  "unrelated_files_checked": 7,
+  "unrelated_files_changed": [],
+  "head_unchanged": true,
+  "candidate_training_runs": 0,
+  "formal_comparisons": 0,
+  "gpt_calls": 0,
+  "commit_or_push": false,
+  "proposal_sha256": "ccf9707df15b0ca522878af200a6c4cbbc109d361b55d5b9bd6339398af13ddd"
+}

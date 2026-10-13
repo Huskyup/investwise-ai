@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-10-13T20:39:55.450322+00:00",
+  "tracked_files_checked": 457,
+  "tracked_files_changed": [
+    "docs/d5-semantic-method-handoff.md"
+  ],
+  "authorised_changes": "Handoff result update only; all previous code, training/calibration/evaluation data, models and defaults byte-identical.",
+  "other_tracked_files_unchanged": 456,
+  "unrelated_untracked_checked": 7,
+  "unrelated_untracked_changed": [],
+  "frozen_files_checked": 85,
+  "frozen_files_changed": [],
+  "published_evidence_files_verified": 9,
+  "new_model_runtime_enabled": false,
+  "actual_gpt_calls": 0,
+  "formal_comparisons": 1,
+  "candidate_fit_counts": {
+    "intent": 0,
+    "option": 1
+  },
+  "post_stop_work": "Read-only evidence review and publication preparation; no extra model prediction, training, software run, replay or live dialogue."
+}
