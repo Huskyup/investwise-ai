@@ -1,0 +1,255 @@
+{
+  "purpose": "Previously published fictional outputs; offline replay only, not new inference",
+  "records": {
+    "D5-STD-01": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/D5-STD-01.json",
+      "sha256": "57a788d4fefae8b98a0ba21ed182da65f86dbcb1c8ad5613a97a35e69d57b8b5"
+    },
+    "D5-STD-02": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/D5-STD-02.json",
+      "sha256": "42955468ecf2aa1a21b66577d69bc2499c60aa654876250944e22c981af5aeb2"
+    },
+    "D5-STD-03": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/D5-STD-03.json",
+      "sha256": "1d6f0197c162a913899a75f0c80eda9c5a83efa98230f636cd812ba9d5066478"
+    },
+    "D5-STD-04": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/D5-STD-04.json",
+      "sha256": "ead468b2ed4899c5a079d2cebf0199af55a79611f323b80f25b32cf2e170f3b1"
+    },
+    "D5-STD-05": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/D5-STD-05.json",
+      "sha256": "45c5149555053db63a182bb663c31a21992f806a6643cbe0fe62cbd382583f53"
+    },
+    "D5-STD-06": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/D5-STD-06.json",
+      "sha256": "4a189811688dddf50b7dff18f59589899ec2bb91cca9f097bcd244896544df0c"
+    },
+    "D5-STD-07": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/D5-STD-07.json",
+      "sha256": "920fc0c7b7df6ccf4104ecef40e9c86a605bfca02a4a780e7ad80878dfce9dc3"
+    },
+    "D5-STD-08": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/D5-STD-08.json",
+      "sha256": "659c317be698e86da806c80115c8891b1812ba621b6550956ecf74f911f13878"
+    },
+    "D5-STD-09": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/D5-STD-09.json",
+      "sha256": "5caea2dfddad3813fcbb0e8838e4d8fcae9d18e15a27bdcd6059c7d1ec998251"
+    },
+    "D5-STD-10": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/D5-STD-10.json",
+      "sha256": "cd6d14aa336d61119d429c1ce27098ee8f1ae6218ed97e9738f53115404f1ee7"
+    },
+    "D5-STD-11": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/D5-STD-11.json",
+      "sha256": "4e9b16af1e8d566ea2a2b4906471cb5177b49ae2d531bb111b6b5f7f7f2823ff"
+    },
+    "CONTEXT-01": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/CONTEXT-01.json",
+      "sha256": "f76d06cc696961d77a6bfd16e0e9872d67eb63e2ecf9b8be7ed854c7c6e057a2"
+    },
+    "CONTEXT-02": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/CONTEXT-02.json",
+      "sha256": "725a081cffd9a78d0e7df950563980221bffc69fd3c117750dcae60bea3040dc"
+    },
+    "CONTEXT-03": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/CONTEXT-03.json",
+      "sha256": "c9140ea48ee70345e6f96ee3e8fb59e12c3deb2ba41f6aa691666ed8c4740770"
+    },
+    "CONTEXT-04": {
+      "path": "docs/d5-ml-gpt-2026-10-13/evidence/run/CONTEXT-04.json",
+      "sha256": "d40c594ad3873f50ff20bf540721a8ac0467a1d512fe3d0b1a1c5ede6ba83009"
+    }
+  },
+  "request_identity": {
+    "current_question": {
+      "id": "D5",
+      "text": "What currently pays for your everyday living costs?"
+    },
+    "allowed_options": [
+      {
+        "definition": "Salary or wages currently provide funds for living costs.",
+        "id": "D5_SALARY",
+        "label": "Salary or wages"
+      },
+      {
+        "definition": "Self-employment earnings currently provide funds for living costs.",
+        "id": "D5_SELF_EMPLOYMENT",
+        "label": "Self-employment income"
+      },
+      {
+        "definition": "Pension payments received currently provide funds for living costs.",
+        "id": "D5_PENSION_PAYMENTS",
+        "label": "Pension payments"
+      },
+      {
+        "definition": "Benefits, regular support from someone else, or both. Both within this listed category remain one answer category. A different listed source such as salary plus benefits uses the mixed option.",
+        "id": "D5_BENEFITS_SUPPORT",
+        "label": "Benefits or regular support from someone else"
+      },
+      {
+        "definition": "Withdrawals from savings or investments currently provide funds for living costs.",
+        "id": "D5_WITHDRAWALS",
+        "label": "Savings or investment withdrawals"
+      },
+      {
+        "definition": "Rental receipts or another customer-named recurring source currently provide funds for living costs.",
+        "id": "D5_OTHER_REGULAR",
+        "label": "Rental income or another regular source"
+      },
+      {
+        "definition": "The user identifies no regular source for living costs; this is not an inference that no assets or one-off resources exist.",
+        "id": "D5_NO_REGULAR",
+        "label": "No regular source"
+      },
+      {
+        "definition": "At least two distinct listed regular-source categories fund living costs. Benefits and regular support are one existing category, even when both are received. No regular source is not compatible with a stated regular source.",
+        "id": "D5_MULTIPLE",
+        "label": "More than one listed source category"
+      }
+    ],
+    "system_sha256": "474f95b7bdbf2dd5b0b2f3ea499b7eab1a06a588ab592c51f9045a1706b7c003",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "answer_scope",
+        "evidence",
+        "facts",
+        "missing_information",
+        "model_abstain",
+        "option_id",
+        "semantic_bucket"
+      ],
+      "properties": {
+        "semantic_bucket": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "clarity",
+            "confusion",
+            "undecided",
+            null
+          ]
+        },
+        "option_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "D5_BENEFITS_SUPPORT",
+            "D5_MULTIPLE",
+            "D5_NO_REGULAR",
+            "D5_OTHER_REGULAR",
+            "D5_PENSION_PAYMENTS",
+            "D5_SALARY",
+            "D5_SELF_EMPLOYMENT",
+            "D5_WITHDRAWALS",
+            null
+          ]
+        },
+        "answer_scope": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "partial",
+            "unknown"
+          ]
+        },
+        "model_abstain": {
+          "type": "boolean"
+        },
+        "facts": {
+          "type": "array",
+          "maxItems": 24,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "evidence",
+              "owner",
+              "pays_living_costs",
+              "source_category",
+              "source_instance_id",
+              "time"
+            ],
+            "properties": {
+              "source_instance_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64
+              },
+              "source_category": {
+                "type": "string",
+                "enum": [
+                  "D5_BENEFITS_SUPPORT",
+                  "D5_NO_REGULAR",
+                  "D5_OTHER_REGULAR",
+                  "D5_PENSION_PAYMENTS",
+                  "D5_SALARY",
+                  "D5_SELF_EMPLOYMENT",
+                  "D5_WITHDRAWALS"
+                ]
+              },
+              "owner": {
+                "type": "string",
+                "enum": [
+                  "other",
+                  "self",
+                  "unknown"
+                ]
+              },
+              "time": {
+                "type": "string",
+                "enum": [
+                  "current",
+                  "future",
+                  "past",
+                  "unknown"
+                ]
+              },
+              "pays_living_costs": {
+                "type": "string",
+                "enum": [
+                  "no",
+                  "unknown",
+                  "yes"
+                ]
+              },
+              "evidence": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 32768
+              }
+            }
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32768
+          },
+          "maxItems": 32
+        },
+        "missing_information": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32768
+          },
+          "maxItems": 8
+        }
+      }
+    }
+  }
+}

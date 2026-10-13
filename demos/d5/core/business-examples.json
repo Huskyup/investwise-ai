@@ -1,0 +1,351 @@
+{
+  "schema_version": "d5_business_examples_v1",
+  "purpose": "Offline business reference and visible demonstration explanation; not a runtime interpreter, prompt, validator, training update or new evaluation bank.",
+  "question_id": "D5",
+  "question": "What currently pays for your everyday living costs?",
+  "review_status": "agent_authored_pending_human_business_sign_off",
+  "review_limit": "Annotations were authored from existing evidence; no independent human business sign-off is claimed.",
+  "case_status": "Existing opened fictional examples, already used for development and repair; not unseen evaluation.",
+  "sources": [
+    {
+      "path": "docs/d5-semantic-repair/evidence/after/inputs.json",
+      "sha256": "6ab9c5e390c849a396f0821b97b6a509bbab54e3d1804405e69c9124987466e2"
+    },
+    {
+      "path": "docs/d5-semantic-repair/evidence/after/expectations.json",
+      "sha256": "1bc13701fbdd50105db38e8ad776587ef5ff672d7af86dc8c5b5e37ead001df6"
+    },
+    {
+      "path": "docs/d5-semantic-method-handoff.md",
+      "sha256": "6ac06c5ebb57903294491fc05558d5f13d98db633ca0233dad0763cf7e4de319"
+    }
+  ],
+  "interpretation_boundary": "Gold fields are copied unchanged from the saved expectations. Business annotations and proposed wording are offline explanatory material, not model requests or accepted runtime financial facts.",
+  "nonclear_boundary": "For missing_information, do not force an exact raw bucket. For undecided/confusion, keep option and financial facts empty in the runtime contract. Supported facts listed here do not override that requirement.",
+  "cases": [
+    {
+      "id": "D5-STD-01",
+      "text": "My wages stay in savings. My pension pays the bills.",
+      "gold": {
+        "kind": "clear",
+        "option": "D5_PENSION_PAYMENTS",
+        "meaning": "Pension pays bills; wages are retained, not spent.",
+        "next": "Confirm pension and exclusion of wages."
+      },
+      "business_annotations": {
+        "sources": [
+          {
+            "source_description": "Wages",
+            "category_id": "D5_SALARY",
+            "pays_living_costs": "no",
+            "time_scope": "current",
+            "evidence_quote": "My wages stay in savings.",
+            "note": "Explicitly retained; do not count receiving or saving wages as current spending."
+          },
+          {
+            "source_description": "Pension payments",
+            "category_id": "D5_PENSION_PAYMENTS",
+            "pays_living_costs": "yes",
+            "time_scope": "current",
+            "evidence_quote": "My pension pays the bills.",
+            "note": "The payment-use link is explicit."
+          }
+        ],
+        "category_reason": "One active category: pension payments. Mentioning wages does not make this MULTIPLE.",
+        "excluded_sources": [
+          "Wages retained in savings"
+        ],
+        "missing_facts": []
+      },
+      "proposed_follow_up": "Your pension pays the bills, while your wages stay in savings. Have I understood correctly?"
+    },
+    {
+      "id": "D5-STD-02",
+      "text": "Both my wages and pension pay for everyday costs.",
+      "gold": {
+        "kind": "clear",
+        "option": "D5_MULTIPLE",
+        "meaning": "Salary and pension both currently pay costs.",
+        "next": "Confirm the two named categories."
+      },
+      "business_annotations": {
+        "sources": [
+          {
+            "source_description": "Wages",
+            "category_id": "D5_SALARY",
+            "pays_living_costs": "yes",
+            "time_scope": "current",
+            "evidence_quote": "Both my wages and pension pay for everyday costs.",
+            "note": "The sentence explicitly links both categories to current costs."
+          },
+          {
+            "source_description": "Pension payments",
+            "category_id": "D5_PENSION_PAYMENTS",
+            "pays_living_costs": "yes",
+            "time_scope": "current",
+            "evidence_quote": "Both my wages and pension pay for everyday costs.",
+            "note": "The shared quotation supports a second, different category."
+          }
+        ],
+        "category_reason": "Two different active funding categories support D5_MULTIPLE.",
+        "excluded_sources": [],
+        "missing_facts": []
+      },
+      "proposed_follow_up": "Both your wages and pension payments pay your everyday costs. Have I understood correctly?"
+    },
+    {
+      "id": "D5-STD-03",
+      "text": "Pay from my two employers covers my living costs.",
+      "gold": {
+        "kind": "clear",
+        "option": "D5_SALARY",
+        "meaning": "Two employers fund costs; one salary category, not multiple categories.",
+        "next": "Confirm salary or wages."
+      },
+      "business_annotations": {
+        "sources": [
+          {
+            "source_description": "Pay from two employers",
+            "category_id": "D5_SALARY",
+            "pays_living_costs": "yes",
+            "time_scope": "current",
+            "evidence_quote": "Pay from my two employers covers my living costs.",
+            "note": "Two payers share one salary category and one current-use relationship."
+          }
+        ],
+        "category_reason": "Count funding categories, not employers: this is salary only, not D5_MULTIPLE.",
+        "excluded_sources": [],
+        "missing_facts": []
+      },
+      "proposed_follow_up": "Pay from your two employers covers your living costs. That is one salary or wages category. Have I understood correctly?"
+    },
+    {
+      "id": "D5-STD-04",
+      "text": "Benefits and regular help from my family pay my bills.",
+      "gold": {
+        "kind": "clear",
+        "option": "D5_BENEFITS_SUPPORT",
+        "meaning": "Benefits and family help are distinct sources in one category.",
+        "next": "Confirm benefits or regular support."
+      },
+      "business_annotations": {
+        "sources": [
+          {
+            "source_description": "Benefits and regular family help",
+            "category_id": "D5_BENEFITS_SUPPORT",
+            "pays_living_costs": "yes",
+            "time_scope": "current",
+            "evidence_quote": "Benefits and regular help from my family pay my bills.",
+            "note": "Both sources belong to the existing benefits or regular support category."
+          }
+        ],
+        "category_reason": "Two kinds of support share one approved category; do not select D5_MULTIPLE or reject a repeated payer.",
+        "excluded_sources": [],
+        "missing_facts": []
+      },
+      "proposed_follow_up": "Benefits and regular help from your family pay your bills. Have I understood correctly?"
+    },
+    {
+      "id": "D5-STD-05",
+      "text": "My brother sends me money every week for rent and food.",
+      "gold": {
+        "kind": "clear",
+        "option": "D5_BENEFITS_SUPPORT",
+        "meaning": "Customer receives regular support for living costs; do not classify brother's earnings.",
+        "next": "Confirm regular support."
+      },
+      "business_annotations": {
+        "sources": [
+          {
+            "source_description": "Weekly support from a brother",
+            "category_id": "D5_BENEFITS_SUPPORT",
+            "pays_living_costs": "yes",
+            "time_scope": "current",
+            "evidence_quote": "My brother sends me money every week for rent and food.",
+            "note": "Classify support received by the customer. The brother's underlying earnings are not stated or required."
+          }
+        ],
+        "category_reason": "Regular support for rent and food is one benefits or support category.",
+        "excluded_sources": [],
+        "missing_facts": []
+      },
+      "proposed_follow_up": "Your brother sends you money every week for rent and food. Have I understood correctly?"
+    },
+    {
+      "id": "D5-STD-06",
+      "text": "I use my savings for bills. My pension starts next year.",
+      "gold": {
+        "kind": "clear",
+        "option": "D5_WITHDRAWALS",
+        "meaning": "Current savings withdrawals fund bills; pension is future and excluded.",
+        "next": "Confirm withdrawals without asking irrelevant future-pension details."
+      },
+      "business_annotations": {
+        "sources": [
+          {
+            "source_description": "Savings used for bills",
+            "category_id": "D5_WITHDRAWALS",
+            "pays_living_costs": "yes",
+            "time_scope": "current",
+            "evidence_quote": "I use my savings for bills.",
+            "note": "The use of savings is explicit; do not claim investment withdrawals were mentioned."
+          },
+          {
+            "source_description": "Pension starting next year",
+            "category_id": "D5_PENSION_PAYMENTS",
+            "pays_living_costs": "no",
+            "time_scope": "future",
+            "evidence_quote": "My pension starts next year.",
+            "note": "Future pension payments do not fund current costs."
+          }
+        ],
+        "category_reason": "One current withdrawals category, specifically savings. Future pension payments do not make this MULTIPLE.",
+        "excluded_sources": [
+          "Pension starting next year"
+        ],
+        "missing_facts": []
+      },
+      "proposed_follow_up": "You use your savings for bills, and your pension starts next year. Have I understood correctly?"
+    },
+    {
+      "id": "D5-STD-07",
+      "text": "I have a pension fund, but I have not started drawing from it.",
+      "gold": {
+        "kind": "missing_information",
+        "option": null,
+        "meaning": "Undrawn pension holding establishes no active source. Other funding is not known; not no regular source.",
+        "next": "Ask what currently pays living costs; do not infer that the customer misunderstands or is undecided."
+      },
+      "business_annotations": {
+        "sources": [
+          {
+            "source_description": "Undrawn pension fund",
+            "category_id": "D5_PENSION_PAYMENTS",
+            "pays_living_costs": "no",
+            "time_scope": "current",
+            "evidence_quote": "I have a pension fund, but I have not started drawing from it.",
+            "note": "The category is the payment category being considered, not a claim that holding a fund produces payments. No current drawing is established."
+          }
+        ],
+        "category_reason": "An excluded pension holding does not identify the source that actually pays costs, or establish no regular source.",
+        "excluded_sources": [
+          "Pension fund not yet drawn"
+        ],
+        "missing_facts": [
+          "Which sources, if any, currently pay living costs"
+        ]
+      },
+      "proposed_follow_up": "What currently pays your everyday living costs? You can name another source or say if you do not have a regular source."
+    },
+    {
+      "id": "D5-STD-08",
+      "text": "I have no regular source paying my living costs at the moment.",
+      "gold": {
+        "kind": "clear",
+        "option": "D5_NO_REGULAR",
+        "meaning": "Explicit current absence of a regular funding source, not absence of assets.",
+        "next": "Confirm no regular source."
+      },
+      "business_annotations": {
+        "sources": [],
+        "category_reason": "The user explicitly states no regular source currently pays living costs. This does not say that they have no assets.",
+        "excluded_sources": [],
+        "missing_facts": []
+      },
+      "proposed_follow_up": "You currently have no regular source paying your living costs. Have I understood correctly?"
+    },
+    {
+      "id": "D5-STD-09",
+      "text": "I receive wages and pension payments",
+      "gold": {
+        "kind": "missing_information",
+        "option": null,
+        "meaning": "Receipt of wages and pension alone does not establish spending; do not default to multiple or customer indecision.",
+        "next": "Ask which sources actually fund costs now, allowing another source or neither."
+      },
+      "business_annotations": {
+        "sources": [
+          {
+            "source_description": "Wages received",
+            "category_id": "D5_SALARY",
+            "pays_living_costs": "unknown",
+            "time_scope": "current",
+            "evidence_quote": "I receive wages and pension payments",
+            "note": "Receipt is stated; expenditure is not."
+          },
+          {
+            "source_description": "Pension payments received",
+            "category_id": "D5_PENSION_PAYMENTS",
+            "pays_living_costs": "unknown",
+            "time_scope": "current",
+            "evidence_quote": "I receive wages and pension payments",
+            "note": "Receipt is stated; expenditure is not."
+          }
+        ],
+        "category_reason": "Two received income categories do not establish two active cost-funding categories. Do not guess MULTIPLE, no regular source or customer indecision.",
+        "excluded_sources": [],
+        "missing_facts": [
+          "Whether wages pay current living costs",
+          "Whether pension payments pay current living costs",
+          "Whether another source, or no regular source, instead pays these costs"
+        ]
+      },
+      "proposed_follow_up": "Which sources currently pay your everyday living costs: your wages, your pension payments, both, or something else? It is fine to say neither or that this is still unclear."
+    },
+    {
+      "id": "D5-STD-10",
+      "text": "My pension pays some bills; I cannot tell whether my wages also do.",
+      "gold": {
+        "kind": "undecided",
+        "option": null,
+        "meaning": "Customer explicitly cannot establish whether wages also pay costs; no financial facts/option in nonclear contract output.",
+        "next": "Neutral question focused on wage use; allow unresolved, avoid a generic menu alone."
+      },
+      "business_annotations": {
+        "sources": [
+          {
+            "source_description": "Pension payments",
+            "category_id": "D5_PENSION_PAYMENTS",
+            "pays_living_costs": "yes",
+            "time_scope": "current",
+            "evidence_quote": "My pension pays some bills",
+            "note": "This supported relationship is an offline business annotation only; do not put financial facts in a nonclear model output."
+          },
+          {
+            "source_description": "Wages",
+            "category_id": "D5_SALARY",
+            "pays_living_costs": "unknown",
+            "time_scope": "current",
+            "evidence_quote": "I cannot tell whether my wages also do.",
+            "note": "The customer explicitly cannot establish wage use, so the gold kind is Undecided."
+          }
+        ],
+        "category_reason": "Do not silently reduce this to pension only or assume MULTIPLE. The complete answer remains unresolved.",
+        "excluded_sources": [],
+        "missing_facts": [
+          "Whether wages also currently pay any living costs"
+        ]
+      },
+      "proposed_follow_up": "It is fine to be unsure. Do your wages also pay any of your living costs, or is that still unclear?"
+    },
+    {
+      "id": "D5-STD-11",
+      "text": "Does pension mean my fund or payments?",
+      "gold": {
+        "kind": "confusion",
+        "option": null,
+        "meaning": "Terminology question, no personal financial assertion; no financial facts/option.",
+        "next": "Explain current payments used for bills versus a pension holding. If pre-model Help handles it, report dialogue success with zero interpretation calls, not model success."
+      },
+      "business_annotations": {
+        "sources": [],
+        "category_reason": "This is a question about terminology, not an assertion of personal pension ownership or payments.",
+        "excluded_sources": [],
+        "missing_facts": [
+          "Understanding the distinction between a pension holding and payments used for costs"
+        ]
+      },
+      "proposed_follow_up": "Here, pension means payments you currently receive and use for living costs. Simply holding money in a pension fund does not count. What currently pays your everyday living costs?"
+    }
+  ]
+}

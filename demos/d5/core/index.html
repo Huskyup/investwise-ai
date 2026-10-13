@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-GB">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>InvestWise · D5 conversation</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<header><div class="brand">InvestWise <span>RESEARCH PROTOTYPE</span></div><div id="mode" class="mode">Connecting locally…</div></header>
+<main>
+ <section class="intro"><p class="eyebrow">QUESTION 05 / 15 · ISOLATED DEMONSTRATION</p><h1>Understand the source.<br>Confirm the meaning.</h1><p class="subtitle">A conversation about what currently pays for everyday living costs.</p></section>
+ <div id="notice" class="notice" role="status"></div>
+ <section class="workflow" aria-label="Workflow"><span>01 <b>Controls</b></span><i>→</i><span>02 <b>ML first reply</b></span><i>→</i><span>03 <b>GPT if needed / context</b></span><i>→</i><span>04 <b>Validate & confirm</b></span></section>
+ <div class="layout">
+  <section class="conversation panel"><div class="panel-heading"><h2>Conversation</h2><span id="history">0 replies in memory</span></div>
+   <div id="transcript" aria-live="polite"></div>
+   <div id="guide"><div class="guide-top"><b id="step-title">Guided example</b><span id="step-count"></span></div><p id="step-purpose"></p><blockquote id="step-text"></blockquote><button id="next" type="button">Run next recorded step</button></div>
+   <form id="reply-form"><label for="reply">Your fictional answer</label><textarea id="reply" rows="3" maxlength="32768" placeholder="Type your answer in your own words…"></textarea><div class="send-row"><span>Earlier replies stay in this example until New example.</span><button id="send" type="submit">Interpret answer</button></div></form>
+   <div id="controls" aria-label="Conversation controls"><button data-command="/confirm" id="confirm">Confirm answer</button><button data-command="/change">Change answer</button><button data-command="/help">Help</button><button data-command="/pause">Pause</button><button data-command="/resume">Resume</button><button data-command="/stop">Stop</button><button data-command="/new">New example</button></div>
+   <div id="error" role="alert" hidden></div><button id="refresh" class="quiet" hidden>Refresh state without repeating the request</button>
+  </section>
+  <aside>
+   <section class="panel meaning"><p class="eyebrow">CURRENT ANSWER STATE</p><h2 id="status">Ready</h2><p id="bucket"></p><p id="category"></p><div id="facts"></div><p class="footnote">A questionnaire category is a grouping. Exact quotations retain the customer's more specific wording. Nothing is accepted without confirmation.</p></section>
+   <section class="panel metrics"><h2>This session</h2><div class="metric"><b id="ml-count">0</b><span>local ML checks</span></div><div class="metric"><b id="gpt-count">0</b><span>actual GPT requests</span></div><div class="metric"><b id="replay-count">0</b><span>saved outputs replayed</span></div><p class="footnote">On the existing 10 model-interpreted first replies, ML escalated all 10. This demo does not claim an ML efficiency improvement.</p></section>
+   <section class="panel standard"><h2>What we are teaching D5</h2><ul><li>Money received ≠ money used for bills.</li><li>Two employers are one salary category.</li><li>Keep saved, future and excluded money separate.</li><li>Ask about missing use; do not guess.</li><li>A correction replaces the affected relation.</li></ul></section>
+  </aside>
+ </div>
+ <footer>Fictional data only · D5 confirmation stays in this session · No profile saving or investment advice · All 15 questions and the main application default are unchanged.<br>Local diagnostics retain replies outside Git. New example clears active memory, not diagnostic files. Stop the local server to close the session.</footer>
+</main></body></html>

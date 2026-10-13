@@ -1,0 +1,255 @@
+{
+  "mode": "offline saved-output and loopback software verification",
+  "passed": true,
+  "checks": 8,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "live_gpt_calls": 0,
+  "authentication_calls": 0,
+  "new_semantic_cases": 0,
+  "ml": "Unchanged real baseline, including its existing startup fit from unchanged train/calibration; no tuning or saved weight changes",
+  "limits": "Saved output replay and software checks, not new live free-text accuracy or a human business review",
+  "details": {
+    "business_asset_cases": 11,
+    "context_steps": [
+      {
+        "step": 1,
+        "action": "explain",
+        "option": null,
+        "history_count": 0,
+        "ml_calls": 0,
+        "replayed_outputs": 0
+      },
+      {
+        "step": 2,
+        "action": "clarify",
+        "option": null,
+        "history_count": 1,
+        "ml_calls": 1,
+        "replayed_outputs": 1
+      },
+      {
+        "step": 3,
+        "action": "pause",
+        "option": null,
+        "history_count": 1,
+        "ml_calls": 0,
+        "replayed_outputs": 0
+      },
+      {
+        "step": 4,
+        "action": "paused",
+        "option": null,
+        "history_count": 1,
+        "ml_calls": 0,
+        "replayed_outputs": 0
+      },
+      {
+        "step": 5,
+        "action": "resume",
+        "option": null,
+        "history_count": 1,
+        "ml_calls": 0,
+        "replayed_outputs": 0
+      },
+      {
+        "step": 6,
+        "action": "confirm",
+        "option": "D5_MULTIPLE",
+        "history_count": 2,
+        "ml_calls": 0,
+        "replayed_outputs": 1
+      },
+      {
+        "step": 7,
+        "action": "d5_complete",
+        "option": "D5_MULTIPLE",
+        "history_count": 2,
+        "ml_calls": 0,
+        "replayed_outputs": 0
+      },
+      {
+        "step": 8,
+        "action": "reask",
+        "option": null,
+        "history_count": 2,
+        "ml_calls": 0,
+        "replayed_outputs": 0
+      },
+      {
+        "step": 9,
+        "action": "confirm",
+        "option": "D5_PENSION_PAYMENTS",
+        "history_count": 3,
+        "ml_calls": 0,
+        "replayed_outputs": 1
+      },
+      {
+        "step": 10,
+        "action": "d5_complete",
+        "option": "D5_PENSION_PAYMENTS",
+        "history_count": 3,
+        "ml_calls": 0,
+        "replayed_outputs": 0
+      },
+      {
+        "step": 11,
+        "action": "new_example",
+        "option": null,
+        "history_count": 0,
+        "ml_calls": 0,
+        "replayed_outputs": 0
+      },
+      {
+        "step": 12,
+        "action": "clarify",
+        "option": null,
+        "history_count": 1,
+        "ml_calls": 1,
+        "replayed_outputs": 1
+      },
+      {
+        "step": 13,
+        "action": "stop",
+        "option": null,
+        "history_count": 0,
+        "ml_calls": 0,
+        "replayed_outputs": 0
+      },
+      {
+        "step": 14,
+        "action": "stop",
+        "option": null,
+        "history_count": 0,
+        "ml_calls": 0,
+        "replayed_outputs": 0
+      },
+      {
+        "step": 15,
+        "action": "stop",
+        "option": null,
+        "history_count": 0,
+        "ml_calls": 0,
+        "replayed_outputs": 0
+      },
+      {
+        "step": 16,
+        "action": "new_example",
+        "option": null,
+        "history_count": 0,
+        "ml_calls": 0,
+        "replayed_outputs": 0
+      },
+      {
+        "step": 17,
+        "action": "safety_stop",
+        "option": null,
+        "history_count": 0,
+        "ml_calls": 0,
+        "replayed_outputs": 0
+      },
+      {
+        "step": 18,
+        "action": "safety_stop",
+        "option": null,
+        "history_count": 0,
+        "ml_calls": 0,
+        "replayed_outputs": 0
+      }
+    ],
+    "context_turns": 4,
+    "zero_call_controls": 14,
+    "http_security": {
+      "loopback_only": true,
+      "host_origin_token": true,
+      "request_bounds": true,
+      "fixed_assets_only": true,
+      "stale_duplicate_busy_no_repeated_action": true,
+      "response_token_absent": true
+    },
+    "baseline_parity_cases": 11,
+    "existing_cases": [
+      {
+        "id": "D5-STD-01",
+        "candidate": "D5_PENSION_PAYMENTS",
+        "action": "confirm",
+        "passed": true
+      },
+      {
+        "id": "D5-STD-02",
+        "candidate": "D5_MULTIPLE",
+        "action": "confirm",
+        "passed": true
+      },
+      {
+        "id": "D5-STD-03",
+        "candidate": "D5_SALARY",
+        "action": "confirm",
+        "passed": true
+      },
+      {
+        "id": "D5-STD-04",
+        "candidate": "D5_BENEFITS_SUPPORT",
+        "action": "confirm",
+        "passed": true
+      },
+      {
+        "id": "D5-STD-05",
+        "candidate": "D5_BENEFITS_SUPPORT",
+        "action": "confirm",
+        "passed": true
+      },
+      {
+        "id": "D5-STD-06",
+        "candidate": "D5_WITHDRAWALS",
+        "action": "confirm",
+        "passed": true
+      },
+      {
+        "id": "D5-STD-07",
+        "candidate": null,
+        "action": "clarify",
+        "passed": true
+      },
+      {
+        "id": "D5-STD-08",
+        "candidate": "D5_NO_REGULAR",
+        "action": "confirm",
+        "passed": true
+      },
+      {
+        "id": "D5-STD-09",
+        "candidate": null,
+        "action": "clarify",
+        "passed": true
+      },
+      {
+        "id": "D5-STD-10",
+        "candidate": null,
+        "action": "clarify",
+        "passed": true
+      },
+      {
+        "id": "D5-STD-11",
+        "candidate": null,
+        "action": "explain",
+        "passed": true
+      }
+    ],
+    "overload_failure_envelope": {
+      "existing_input": "CONTEXT-01",
+      "simulated_provider_attempts": 1,
+      "actual_network_calls": 0,
+      "safe_message": true,
+      "no_financial_display": true,
+      "no_retry_for_any_following_action": true
+    }
+  },
+  "source_sha256": {
+    "demos/d5/core_verify.py": "d0f93e4dceb08484601dcf5ad005ff7fb51fa8e8a42cac00963813d8fdb89814",
+    "demos/d5/core_demo.py": "18b5eaa29d4e73580171e5f790d6cc6111ad790dcb94c5df371eb4fef38de660",
+    "demos/d5/core/business-examples.json": "72db6df2836282864d113d76a566f4757ba2aa0606aa84d76c1bf8d12a155a0d",
+    "demos/d5/core/recordings.json": "58707dc0665759c117d2048827d3580f9321fdab982548e2b49658374e26935e"
+  }
+}

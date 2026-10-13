@@ -1,0 +1,34 @@
+{
+  "mode": "live actual browser and existing GPTMLSession",
+  "completed_steps": 2,
+  "steps": [
+    {
+      "step": 1,
+      "status": "Needs your reply",
+      "bucket": "No financial bucket selected",
+      "category": "No accepted financial answer",
+      "history": "0 interpreted replies in memory",
+      "gpt": 0,
+      "ml": 0,
+      "replayed": 0,
+      "facts": "",
+      "error": null
+    },
+    {
+      "step": 2,
+      "status": "Session stopped",
+      "bucket": "No financial bucket selected",
+      "category": "No accepted financial answer",
+      "history": "0 interpreted replies in memory",
+      "gpt": 1,
+      "ml": 1,
+      "replayed": 0,
+      "facts": "",
+      "error": "The service or runtime stopped. No retry or recorded-output fallback was used."
+    }
+  ],
+  "script_errors": [],
+  "passed": false,
+  "failure": "'The service or runtime stopped. No retry or recorded-output fallback was used.' == null",
+  "in_progress": false
+}

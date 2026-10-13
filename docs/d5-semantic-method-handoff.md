@@ -4,7 +4,19 @@ Updated 13 October 2026 · `feature/all-question-ml-prototype`
 
 Maintained delivery repository: [Huskyup/investwise-ai](https://github.com/Huskyup/investwise-ai/tree/feature/all-question-ml-prototype). Use the explicit repository URL below when updating an older checkout whose `origin` may point elsewhere.
 
-## Latest repair: useful correction follow-up
+## Latest delivery: visible and reproducible D5 core demo
+
+A separate [local browser entry](../demos/d5/core/README.md) now wraps the same ML + GPT session. From the repository root, run `sh demos/d5/run_core_demo.sh replay` for the fixed recorded walkthrough or deliberately select `live` for new fictional text. The existing terminal and main app defaults are unchanged. No dependency, model, prompt, validator, financial rule or question changed.
+
+The page shows authored follow-ups, current candidate facts and exact quotations, confirmation/correction, memory count, and separate ML/GPT/replayed-output counts. Replay validates saved raw output through the existing engine after matching its full context and frozen request identity; it cannot accept new text or silently invoke GPT. The [eleven-case business matrix](../demos/d5/core/business-examples.json) and [business standard](../demos/d5/core/BUSINESS_STANDARD.md) support team review without adding a runtime FCA classifier. They remain pending human business sign-off.
+
+**Delivered verification:** eight focused offline groups passed, preserving the existing eleven outcomes and the full eighteen-action/four-turn context sequence. A real browser completed those eighteen recorded actions with four replayed outputs and zero GPT requests; desktop and narrow layouts were inspected. All fourteen controls used zero ML/GPT/replay calls. The unchanged baseline predictions matched all eleven original references.
+
+**Live boundary:** one real request through the new browser reached GPT but returned `server_is_overloaded` before any model output. The session stopped with no retry, output repair, model substitution or recorded fallback. Thus the visible recorded core demo is reproducible now, while a successful live browser conversation remains unverified in this delivery. Earlier terminal live results remain separate historical evidence. The [report](d5-core-demo-2026-10-13/REPORT.md) contains the safe failure receipt and reproduction commands.
+
+Pull only from Huskyup using the explicit repository URL below. Each server launch creates a fresh private session outside Git. Stop it with Ctrl+C before restarting; New example clears active memory but does not erase private diagnostics. The entry cannot save a profile or advance beyond D5.
+
+## Earlier repair: useful correction follow-up
 
 When a correction leaves its scope unclear, the standalone D5 follow-up now quotes the user's validated words and asks whether the sources pay living costs together, one replaces another, or a source is not used for those costs. In the saved wages/parental-support conversation, both sources are visible in those quotations. The template does not infer that received support is spent, and does not hard-code wages or parents.
 

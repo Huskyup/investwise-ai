@@ -4,6 +4,10 @@ A Challenge 2 conversational risk-profile prototype. All 15 questions use questi
 
 Use fictional situations in the demo. This checkpoint is a working prototype with substantial free-text abstention; it does not establish real-customer accuracy or provide investment advice.
 
+## Separate D5 company demonstration
+
+The [D5 core browser demo](demos/d5/core/README.md) shows the existing ML + GPT conversation, business interpretation, follow-up, correction and explicit confirmation. Launch a reproducible, clearly labelled recorded walkthrough with `sh demos/d5/run_core_demo.sh replay`; use `live` explicitly for new fictional text and the existing ChatGPT connection. This does not change the main application below. The latest live browser attempt stopped on a provider overload; replay is not evidence of live interpretation. See the [delivery report](docs/d5-core-demo-2026-10-13/REPORT.md).
+
 ## Run locally
 
 Python 3.12 is recommended for reproducing the tested environment (3.12.14).

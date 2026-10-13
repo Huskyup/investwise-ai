@@ -1,0 +1,188 @@
+{
+  "mode": "saved-output replay through actual browser",
+  "steps": [
+    {
+      "step": 1,
+      "status": "Needs your reply",
+      "bucket": "No financial bucket selected",
+      "category": "No accepted financial answer",
+      "history": "0 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "0",
+      "facts": ""
+    },
+    {
+      "step": 2,
+      "status": "Needs your reply",
+      "bucket": "Undecided",
+      "category": "No accepted financial answer",
+      "history": "1 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "1",
+      "facts": ""
+    },
+    {
+      "step": 3,
+      "status": "Paused",
+      "bucket": "No financial bucket selected",
+      "category": "No accepted financial answer",
+      "history": "1 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "1",
+      "facts": ""
+    },
+    {
+      "step": 4,
+      "status": "Paused",
+      "bucket": "No financial bucket selected",
+      "category": "No accepted financial answer",
+      "history": "1 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "1",
+      "facts": ""
+    },
+    {
+      "step": 5,
+      "status": "Needs your reply",
+      "bucket": "No financial bucket selected",
+      "category": "No accepted financial answer",
+      "history": "1 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "1",
+      "facts": ""
+    },
+    {
+      "step": 6,
+      "status": "Awaiting your confirmation",
+      "bucket": "Clarity",
+      "category": "Questionnaire category: More than one listed source category",
+      "history": "2 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "2",
+      "facts": "Pension paymentsLiving-cost use: yes · Time: current · Owner: selfMy pension pays some bills; I cannot tell whether my wages also do.Salary or wagesLiving-cost use: yes · Time: current · Owner: selfMy pension pays some bills; I cannot tell whether my wages also do."
+    },
+    {
+      "step": 7,
+      "status": "Confirmed in this session",
+      "bucket": "Clarity",
+      "category": "Questionnaire category: More than one listed source category",
+      "history": "2 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "2",
+      "facts": "Pension paymentsLiving-cost use: yes · Time: current · Owner: selfMy pension pays some bills; I cannot tell whether my wages also do.Salary or wagesLiving-cost use: yes · Time: current · Owner: selfMy pension pays some bills; I cannot tell whether my wages also do."
+    },
+    {
+      "step": 8,
+      "status": "Needs your reply",
+      "bucket": "No financial bucket selected",
+      "category": "No accepted financial answer",
+      "history": "2 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "2",
+      "facts": ""
+    },
+    {
+      "step": 9,
+      "status": "Awaiting your confirmation",
+      "bucket": "Clarity",
+      "category": "Questionnaire category: Pension payments",
+      "history": "3 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "3",
+      "facts": "Pension paymentsLiving-cost use: yes · Time: current · Owner: selfMy pension pays some bills; I cannot tell whether my wages also do.Salary or wagesLiving-cost use: no · Time: current · Owner: selfMy wages stay in savings."
+    },
+    {
+      "step": 10,
+      "status": "Confirmed in this session",
+      "bucket": "Clarity",
+      "category": "Questionnaire category: Pension payments",
+      "history": "3 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "3",
+      "facts": "Pension paymentsLiving-cost use: yes · Time: current · Owner: selfMy pension pays some bills; I cannot tell whether my wages also do.Salary or wagesLiving-cost use: no · Time: current · Owner: selfMy wages stay in savings."
+    },
+    {
+      "step": 11,
+      "status": "Needs your reply",
+      "bucket": "No financial bucket selected",
+      "category": "No accepted financial answer",
+      "history": "0 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "3",
+      "facts": ""
+    },
+    {
+      "step": 12,
+      "status": "Needs your reply",
+      "bucket": "Model uncertainty — not customer indecision",
+      "category": "No accepted financial answer",
+      "history": "1 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "4",
+      "facts": ""
+    },
+    {
+      "step": 13,
+      "status": "Stopped",
+      "bucket": "No financial bucket selected",
+      "category": "No accepted financial answer",
+      "history": "0 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "4",
+      "facts": ""
+    },
+    {
+      "step": 14,
+      "status": "Stopped",
+      "bucket": "No financial bucket selected",
+      "category": "No accepted financial answer",
+      "history": "0 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "4",
+      "facts": ""
+    },
+    {
+      "step": 15,
+      "status": "Stopped",
+      "bucket": "No financial bucket selected",
+      "category": "No accepted financial answer",
+      "history": "0 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "4",
+      "facts": ""
+    },
+    {
+      "step": 16,
+      "status": "Needs your reply",
+      "bucket": "No financial bucket selected",
+      "category": "No accepted financial answer",
+      "history": "0 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "4",
+      "facts": ""
+    },
+    {
+      "step": 17,
+      "status": "Stopped for safety",
+      "bucket": "No financial bucket selected",
+      "category": "No accepted financial answer",
+      "history": "0 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "4",
+      "facts": ""
+    },
+    {
+      "step": 18,
+      "status": "Stopped for safety",
+      "bucket": "No financial bucket selected",
+      "category": "No accepted financial answer",
+      "history": "0 interpreted replies in memory",
+      "gpt": "0",
+      "replayed": "4",
+      "facts": ""
+    }
+  ],
+  "script_errors": [],
+  "mobile_overflow": false,
+  "actual_gpt_calls": 0
+}
