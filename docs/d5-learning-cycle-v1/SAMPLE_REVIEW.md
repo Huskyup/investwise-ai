@@ -1,10 +1,10 @@
 # D5 learning cycle sample review
 
-Status: awaiting the business owner's review. These are fictional demonstration examples, not verified personal finances. Training and comparison have not started.
+Status: the business owner explicitly approved all sixteen meanings and uses on 13 October 2026. These are fictional demonstration examples, not verified personal finances. Exact draft bytes are retained; the hash-bound human review record is authoritative.
 
 D5 asks: **What currently pays for your everyday living costs?**
 
-Please review the exact wording and intended meaning below. The short answers rely on that question; holding or receiving money alone does not establish its use. The first saved `savings` interpretation was pending, so its training label requires review here.
+The owner reviewed the exact wording and intended meaning below. The short answers rely on that question; holding or receiving money alone does not establish its use. The first saved `savings` interpretation was pending in that conversation; its training label received explicit approval in this review.
 
 Both banks are AI-authored. The validation bank was drafted separately without seeing the new training draft or model outputs. Human review does not make it a human-original independent test.
 
@@ -14,7 +14,7 @@ These join the original 48 clear D5 option-training examples. They are never sco
 
 | ID | Exact wording | Proposed category | Business meaning |
 |---|---|---|---|
-| D5-LT-01 | savings | Savings or investment withdrawals | A direct answer to the current living-cost question names savings as the funding source. The original pending answer needs explicit business review; only the later mixed-source answer was user-confirmed. |
+| D5-LT-01 | savings | Savings or investment withdrawals | A direct answer to the current living-cost question names savings as the funding source. This review approves the original pending answer for training; only the later mixed-source answer was confirmed in the source conversation. |
 | D5-LT-02 | Just my savings. | Savings or investment withdrawals | Savings are the sole named source in a direct answer to the current living-cost question. |
 | D5-LT-03 | I cover my everyday bills using cash I saved up. | Savings or investment withdrawals | Previously saved cash is actively spent on current bills, not merely held. |
 | D5-LT-04 | The money I saved up pays for my food and rent now. | Savings or investment withdrawals | Accumulated savings currently fund food and rent. |
@@ -40,8 +40,8 @@ These are not used for fitting or calibration. Only their outcomes are compared 
 
 ## What approving this review means
 
-Approve the meanings and intended uses of all sixteen rows, or identify the rows to correct. Approval does not assert that the models will answer correctly. The existing contextual wages supplement remains dialogue evidence only, not a standalone training label.
+The business owner approved the meanings and intended uses of all sixteen rows. Approval does not assert that the models will answer correctly. The existing contextual wages supplement remains dialogue evidence only, not a standalone training label.
 
 No exact normalised duplicates were found against the original D5 train/calibration rows or between the two new banks. The accompanying overlap report lists the nearest wording for review; it is not proof of broad independence.
 
-Model weights, calibration data, validators, all fifteen questions and defaults remain untouched while this review is pending.
+Approval authorises one isolated D5 option fit and the frozen comparison. The original model, calibration data, validators, all fifteen questions and defaults remain unchanged.

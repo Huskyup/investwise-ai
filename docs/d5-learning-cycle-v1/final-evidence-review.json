@@ -1,0 +1,36 @@
+{
+  "review_type": "separate_agent_read_only_evidence_review",
+  "reviewer": "fca_method_assessment",
+  "human_business_approval": "separately recorded before freeze",
+  "conclusion": "Evidence is consistent; the first-turn comparison did not pass. Do not proceed to context or live checks.",
+  "candidate_fit_count": 1,
+  "validation_cases": 8,
+  "existing_regression_cases": 11,
+  "prior_correct_raw_checks_preserved": 17,
+  "new_wrong_accepted_financial_answers": 0,
+  "actual_gpt_calls": 0,
+  "existing_false_clarity_intent_case_ids": [
+    "D5-LV-07",
+    "D5-STD-10"
+  ],
+  "business_validator_reached_cases": 0,
+  "first_blockers": {
+    "intent_model_uncertainty": 4,
+    "option_model_uncertainty": 13
+  },
+  "candidate_ready_for_demo": false,
+  "evidence_sha256": {
+    "protocol.json": "a80fadcde782bd9c54a1464f4b9f0ffd458b98b69000a3d44546edc12914241a",
+    "freeze.json": "87a638c755223c873e170e9140ecd16a9ca509e4f999296a49ab728ea9532bd7",
+    "build.started.json": "ca251722708ddde318233dd3495ff71e1081fe629563f10cd385cce88ce6c806",
+    "build.json": "10c8eb7d2142536c9ceecda9403a757bc3b0c409abdca477fc2c88db59740d81",
+    "compare.started.json": "9f19f8effd5b55c78c0b2d10d64f203f054920701fa6cdea8cc0b25b1fbbf0a9",
+    "compare.json": "b6fa1dcccbbc251b0dcb3c5602a8194a79df765c5254fe6e918fd5bc1418dc88",
+    "d5-option-candidate.joblib": "59083731643e76a562b78b3d9278cb575422f95633c0a08e5b2a806622ec3977"
+  },
+  "notes": [
+    "The gain on D5-STD-06 is a raw option correction, not an accepted financial answer.",
+    "Baseline accepted no financial candidates, so no positive acceptance preservation is demonstrated.",
+    "Earlier GPT conversations are not revalidated by this offline comparison."
+  ]
+}

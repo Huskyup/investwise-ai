@@ -4,11 +4,13 @@ Updated 13 October 2026 · `feature/all-question-ml-prototype`
 
 Maintained delivery repository: [Huskyup/investwise-ai](https://github.com/Huskyup/investwise-ai/tree/feature/all-question-ml-prototype). Use the explicit repository URL below when updating an older checkout whose `origin` may point elsewhere.
 
-## D5 learning cycle preparation
+## D5 learning cycle: one completed fit and comparison
 
-A separate [D5 learning cycle](d5-learning-cycle-v1/README.md) is being prepared from the recorded savings-and-wages case. Its [sixteen-row sample table](d5-learning-cycle-v1/SAMPLE_REVIEW.md) contains eight proposed training additions and eight separately drafted validation expressions. Both are AI-authored and await the business owner's review; they are not human-original independent testing. No candidate has been fitted or compared and no live call has been made for this cycle. The preparation tool passed 27 pure software fixtures after static scoring review; these checks do not establish semantic improvement.
+The business owner approved all sixteen sample meanings and uses, then the [D5 learning cycle](d5-learning-cycle-v1/README.md) froze its data and recipe. One isolated D5 option classifier was fitted using the original 48 training rows plus eight reviewed additions, with unchanged architecture, settings and forty-row recalibration procedure. One comparison covered the eight training-excluded expressions and original eleven examples. The AI-authored, human-reviewed expressions are now opened material, not human-original independent testing.
 
-The authorised change is limited to one isolated D5 option classifier using the existing architecture and calibration procedure. Actual improvement requires a previously unaccepted new savings expression to pass the original gates, with preserved correct results. The existing working demo, intent model, fifteen-question specification, validators and defaults remain unchanged. A candidate launch option will only be added after the required comparison and context checks pass.
+**Measured result: existing clear raw options improved from 4/7 to 5/7, new clear raw options stayed 2/4, and correct ML financial acceptances stayed 0.** All seventeen eligible replies still required GPT escalation, which was intercepted without any GPT request. Both new savings replies stopped at the unchanged intent gate; none of the nineteen cases reached business validation. All seventeen previously correct raw case/axis checks were preserved; two existing raw Undecided-to-Clarity errors remain. See the [full results and counterexamples](d5-learning-cycle-v1/RESULTS.md), [approved review](d5-learning-cycle-v1/human-review.json) and [saved artifact and receipts](d5-learning-cycle-v1/evidence/).
+
+The required first-turn improvement did not pass, so no additional training, context replay, live dialogue or candidate launch interface followed. The original intent classifier, other fourteen questions, business checks, GPT configuration and defaults are unchanged. Keep using the existing launch commands below; the candidate is retained for audit only. This completed bounded learning attempt does not demonstrate a successful learning flywheel or an ML efficiency gain.
 
 ## Latest evidence: the user's own successful live conversation
 

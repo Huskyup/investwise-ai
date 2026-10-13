@@ -1,0 +1,42 @@
+{
+  "status": "built_not_promoted",
+  "completed_at": "2026-10-13T17:16:08.871840+00:00",
+  "identity": {
+    "protocol_sha256": "a80fadcde782bd9c54a1464f4b9f0ffd458b98b69000a3d44546edc12914241a",
+    "artifact_sha256": "59083731643e76a562b78b3d9278cb575422f95633c0a08e5b2a806622ec3977",
+    "baseline_identity": "48cb3f1b0799cd8d8758f7a0eddf7cd789ef29b4da8f0ea062b66b5087bda2d1",
+    "baseline_source_hash": "13b6a8f494c773e90d28e8d105cc1b2de7bbebba20db980331b23397f253c4b8",
+    "training_sha256": "8d012e23483bfa64b735a90b8dcfa829c3030a099fd449b4232f11c1a8c4dea4",
+    "calibration_sha256": "3b63ebddf80f8b5758bcbef9cb8d662741e68de38660455dcc4649106d5792be"
+  },
+  "candidate_identity_sha256": "10dec16514eb876efe815e38523c7d6a6170ff915f9358f19d29a3b4d55b16f5",
+  "candidate_fit_count": 1,
+  "candidate_training_rows": 56,
+  "candidate_calibration_rows": 40,
+  "alpha": 0.1,
+  "baseline_option_threshold": 0.8721306352047945,
+  "candidate_option_threshold": 0.8811152578401586,
+  "baseline_startup": "unchanged original procedure reconstructs 15 intent and 15 option predictors",
+  "d5_intent_retained": true,
+  "other_fourteen_retained": true,
+  "all_questions": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D8",
+    "D9",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15"
+  ],
+  "actual_gpt_calls": 0,
+  "default_changed": false,
+  "candidate_ready_for_demo": false
+}

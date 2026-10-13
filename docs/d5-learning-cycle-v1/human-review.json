@@ -1,14 +1,32 @@
 {
   "schema_version": "d5-learning-review-v1",
   "review_type": "human_business_review",
-  "status": "pending",
-  "reviewer": null,
-  "reviewed_at": null,
+  "status": "approved",
+  "reviewer": "Huskyup, project business owner, explicit approval in this chat",
+  "reviewed_at": "2026-10-13T18:15:58.683554+01:00",
   "dataset_sha256": {
     "training": "8d012e23483bfa64b735a90b8dcfa829c3030a099fd449b4232f11c1a8c4dea4",
     "validation": "c3bfe84294d23572f4ef690b8f73d7b522cfa1ee40b7da78a4de7f1ec0e7bc1c"
   },
-  "approved_case_ids": [],
+  "approved_case_ids": [
+    "D5-LT-01",
+    "D5-LT-02",
+    "D5-LT-03",
+    "D5-LT-04",
+    "D5-LT-05",
+    "D5-LT-06",
+    "D5-LT-07",
+    "D5-LT-08",
+    "D5-LV-01",
+    "D5-LV-02",
+    "D5-LV-03",
+    "D5-LV-04",
+    "D5-LV-05",
+    "D5-LV-06",
+    "D5-LV-07",
+    "D5-LV-08"
+  ],
   "provenance_acknowledgement": "agent_authored_human_reviewed",
-  "notes": "Drafts are AI-authored and pending human review. LT-04 was clarified before approval to say money I saved up, avoiding possible earmarked current wages. No model outputs were used."
+  "notes": "The business owner explicitly approved the meanings and uses of all sixteen exact draft rows, including the clarified LT-04. AI authorship is retained; these are fictional examples, not verified personal financial facts.",
+  "approval_statement": "这16条样本的业务含义和用途都同意。继续冻结、训练一次D5候选并和原版比较，通过后再跑实时对话。保持原架构、校验、15道题和默认版本不变，只更新我的Huskyup分支。"
 }
