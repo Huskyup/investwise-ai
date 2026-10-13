@@ -3,7 +3,7 @@ from pathlib import Path
 import pytest
 
 from ai.all_question_ml import QuestionMLResolution
-from ai.conversation_engine import ConversationEngine
+from ai.conversation_engine import ConversationEngine, UNDERSTANDING_FOLLOWUP
 from ai.question_spec import BusinessSpec
 
 SPEC = BusinessSpec.load(Path(__file__).parents[1] / "config/business-decision-spec.json")
@@ -125,3 +125,86 @@ def test_material_ml_candidate_cannot_override_an_explicit_earlier_need():
     result = engine._profile_evidence("D12", "The earliest realistic need for this same money is in two years")
     assert spy.calls
     assert result.option_id is None
+
+
+def unresolved_with_options(*oids):
+    return QuestionMLResolution(model_uncertain=True, reason="option_model_uncertainty",
+                                intent_set=frozenset({"clarity"}), option_set=frozenset(oids))
+
+
+def test_option_set_uncertainty_names_the_two_contending_labels():
+    engine, _ = at("D5", unresolved_with_options("D5_SALARY", "D5_WITHDRAWALS"))
+    result = engine.submit_answer("My wages cover everything; my savings are untouched.")
+    assert result["followup_kind"] == "set_informed"
+    assert "Salary or wages" in result["followup"]
+    assert "Savings or investment withdrawals" in result["followup"]
+    assert result["bucket"] is None
+    assert engine.state.answers["D5"].candidate_option_id is None
+
+
+def test_option_set_uncertainty_names_three_contending_labels():
+    engine, _ = at("D5", unresolved_with_options("D5_MULTIPLE", "D5_SALARY", "D5_WITHDRAWALS"))
+    result = engine.submit_answer("My wages cover rent and I use savings for everything else.")
+    assert result["followup_kind"] == "set_informed"
+    for label in ("More than one listed source category", "Salary or wages", "Savings or investment withdrawals"):
+        assert label in result["followup"]
+
+
+def test_large_option_set_keeps_generic_path():
+    engine, _ = at("D5", unresolved_with_options("D5_MULTIPLE", "D5_SALARY", "D5_WITHDRAWALS", "D5_PENSION_PAYMENTS"))
+    result = engine.submit_answer("Money comes from various places.")
+    assert "followup_kind" not in result
+
+
+def test_intent_uncertainty_has_no_option_labels_to_present():
+    engine, _ = at("D5", QuestionMLResolution(model_uncertain=True, reason="intent_model_uncertainty",
+                                              intent_set=frozenset({"clarity", "confusion", "undecided"})))
+    result = engine.submit_answer("I get by somehow, you know?")
+    assert "followup_kind" not in result
+
+
+@pytest.mark.parametrize(("hold", "expected_action"), [
+    ("care", "care_pause"),
+    ("pace", "pace_pause"),
+    ("support", "support_before_confirmation"),
+])
+def test_held_ml_uncertainty_does_not_claim_an_undisplayed_option_followup(hold, expected_action):
+    engine, spy = at("D5", unresolved_with_options("D5_SALARY", "D5_WITHDRAWALS"))
+    text = "My wages cover everything; my savings are untouched."
+    engine.state.answers["D5"].raw_text = text
+    result = engine._submit_ml_answer(
+        "D5", text, care=hold == "care", support=hold == "support", pace=hold == "pace",
+        teachback=False, previous_raw=None, flags=set(),
+    )
+    assert result["action"] == expected_action
+    assert "followup_kind" not in result
+    assert "followup" not in result
+    assert engine.state.answers["D5"].candidate_option_id is None
+    assert spy.calls == [("D5", text)]
+
+
+def test_option_uncertainty_preserves_the_required_own_words_followup():
+    engine, spy = at("D11", unresolved_with_options("D11_LOSS_POSSIBLE", "D11_RECOVERY_ALWAYS"))
+    record = engine.state.answers["D11"]
+    record.context_details["understanding.teachback_required"] = "true"
+    text = SPEC.question("D11").options[0].label
+    result = engine.submit_answer(text)
+    assert result["action"] == "understanding_hold"
+    assert result["followup"] == UNDERSTANDING_FOLLOWUP
+    assert "followup_kind" not in result
+    assert record.candidate_option_id is None
+    assert record.selected_option_id is None
+    assert spy.calls == [("D11", text)]
+
+
+def test_option_uncertainty_cap_does_not_offer_another_option_followup():
+    engine, spy = at("D5", unresolved_with_options("D5_SALARY", "D5_WITHDRAWALS"))
+    text = "My wages cover everything; my savings are untouched."
+    for _ in range(3):
+        result = engine.submit_answer(text)
+    assert result["action"] == "finish_incomplete_or_pause"
+    assert "followup" not in result
+    assert "followup_kind" not in result
+    assert engine.state.answers["D5"].candidate_option_id is None
+    assert engine.state.answers["D5"].selected_option_id is None
+    assert spy.calls == [("D5", text)] * 3

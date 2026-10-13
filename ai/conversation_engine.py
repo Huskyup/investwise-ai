@@ -538,6 +538,31 @@ class ConversationEngine:
             "free_text_not_enabled_for_this_question_in_mvp",
         )
 
+    def _set_informed_followup(self, qid: str, resolved) -> str | None:
+        """Name the unresolved conformal options using their approved labels.
+
+        Only applies to option-model uncertainty with 2-3 candidates. The
+        wording adds no financial content: it presents the already-approved
+        option labels the system cannot separate, plus the unchanged escapes
+        (own words / not sure). Larger sets keep the existing generic path.
+        """
+        if resolved.reason != "option_model_uncertainty":
+            return None
+        options = sorted(resolved.option_set)
+        if not 2 <= len(options) <= 3:
+            return None
+        try:
+            labels = [self.spec.option(qid, oid).label for oid in options]
+        except KeyError:
+            return None
+        if len(labels) == 2:
+            choices = f"'{labels[0]}', or '{labels[1]}'"
+        else:
+            choices = f"'{labels[0]}', '{labels[1]}', or '{labels[2]}'"
+        return ("I want to record this accurately rather than guess. "
+                f"Which is closest to your meaning: {choices}? "
+                "You can also answer in your own words, or say you are not sure.")
+
     def _submit_ml_answer(self, qid: str, text: str, care: bool, support: bool, pace: bool, teachback: bool, previous_raw: str | None, flags: set[str]) -> dict[str, Any]:
         """ML alone proposes financial options; business validation can veto."""
         record = self._record(qid)
@@ -566,7 +591,7 @@ class ConversationEngine:
                 result = self._understanding_recheck(qid)
             else:
                 result = self._mark_unresolved(qid, AnswerStatus.UNDECIDED if undecided else AnswerStatus.CONFUSION, reason, model_uncertain=uncertain)
-            if followup:
+            if followup and result.get("action") != "finish_incomplete_or_pause":
                 result["followup"] = followup
             if uncertain:
                 # An ambiguous conformal set does not establish Confusion or
@@ -577,7 +602,12 @@ class ConversationEngine:
             return result
 
         if resolved.candidate_option_id is None:
-            return held_or_unresolved(resolved.reason or "ml_unresolved", undecided=resolved.semantic_undecided or resolved.ordinary_bucket == "Undecided", uncertain=resolved.model_uncertain)
+            # An own-words understanding check must keep its authored prompt.
+            followup = None if teachback else self._set_informed_followup(qid, resolved)
+            result = held_or_unresolved(resolved.reason or "ml_unresolved", undecided=resolved.semantic_undecided or resolved.ordinary_bucket == "Undecided", uncertain=resolved.model_uncertain, followup=followup)
+            if followup and result.get("followup") == followup:
+                result["followup_kind"] = "set_informed"
+            return result
 
         # Legacy interpretation is a validation oracle here, never a fallback
         # proposal: disagreement or explicit uncertainty blocks ML acceptance.
